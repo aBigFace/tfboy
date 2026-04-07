@@ -11385,5 +11385,573 @@
         "need": 1
       }
     ]
+  },
+  {
+    "at": 1775532734509,
+    "atLocal": "2026-04-07 11:32:14.509",
+    "wave": "1775532734350",
+    "waveLocal": "2026-04-07 11:32:14.350",
+    "goodsId": 1545,
+    "goodsTitle": "TF_ING《自在出发》纪念套装",
+    "shelfFetchMs": 157,
+    "hits": [
+      {
+        "taskId": "83868ce7-576e-40ab-960c-3f802700d7b3",
+        "taskLabel": "「秒」",
+        "accountId": "19235337-9c2a-442c-bad3-34358c2f73aa",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "235f29b0-02dc-49fb-bb2d-2b072f62487a",
+        "taskLabel": "「秒」",
+        "accountId": "52e076c3-07a2-4e5e-86a4-a948c5b362b1",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "ac5cf5e8-7ade-4e97-9ef3-8da6241cb6b0",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "702f7e7a-c3ed-4d22-90d9-149f5df9b42d",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "cb131639-fbf5-45a4-aaa6-e3954d4ec9f7",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "5a4f35ab-a908-45b2-9d43-0a019e07a73c",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "b81dff6f-115b-423e-a045-c08fda45221a",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "b44306ec-24d7-453f-99d3-daf90c9d3047",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "119d3edb-410d-47e1-9f48-776a4817704c",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "928c0936-f6a6-4cfe-bb9a-138165e018b7",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      }
+    ]
+  },
+  {
+    "at": 1775532734531,
+    "atLocal": "2026-04-07 11:32:14.531",
+    "wave": "1775532734475",
+    "waveLocal": "2026-04-07 11:32:14.475",
+    "goodsId": 1545,
+    "goodsTitle": "TF_ING《自在出发》纪念套装",
+    "shelfFetchMs": 55,
+    "hits": [
+      {
+        "taskId": "83868ce7-576e-40ab-960c-3f802700d7b3",
+        "taskLabel": "「秒」",
+        "accountId": "19235337-9c2a-442c-bad3-34358c2f73aa",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "235f29b0-02dc-49fb-bb2d-2b072f62487a",
+        "taskLabel": "「秒」",
+        "accountId": "52e076c3-07a2-4e5e-86a4-a948c5b362b1",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "ac5cf5e8-7ade-4e97-9ef3-8da6241cb6b0",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "702f7e7a-c3ed-4d22-90d9-149f5df9b42d",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "cb131639-fbf5-45a4-aaa6-e3954d4ec9f7",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "5a4f35ab-a908-45b2-9d43-0a019e07a73c",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "b81dff6f-115b-423e-a045-c08fda45221a",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "b44306ec-24d7-453f-99d3-daf90c9d3047",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "119d3edb-410d-47e1-9f48-776a4817704c",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "928c0936-f6a6-4cfe-bb9a-138165e018b7",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      }
+    ]
+  },
+  {
+    "at": 1775532734603,
+    "atLocal": "2026-04-07 11:32:14.603",
+    "wave": "1775532734525",
+    "waveLocal": "2026-04-07 11:32:14.525",
+    "goodsId": 1545,
+    "goodsTitle": "TF_ING《自在出发》纪念套装",
+    "shelfFetchMs": 77,
+    "hits": [
+      {
+        "taskId": "83868ce7-576e-40ab-960c-3f802700d7b3",
+        "taskLabel": "「秒」",
+        "accountId": "19235337-9c2a-442c-bad3-34358c2f73aa",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "235f29b0-02dc-49fb-bb2d-2b072f62487a",
+        "taskLabel": "「秒」",
+        "accountId": "52e076c3-07a2-4e5e-86a4-a948c5b362b1",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "ac5cf5e8-7ade-4e97-9ef3-8da6241cb6b0",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "702f7e7a-c3ed-4d22-90d9-149f5df9b42d",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "cb131639-fbf5-45a4-aaa6-e3954d4ec9f7",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "5a4f35ab-a908-45b2-9d43-0a019e07a73c",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "b81dff6f-115b-423e-a045-c08fda45221a",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "b44306ec-24d7-453f-99d3-daf90c9d3047",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "119d3edb-410d-47e1-9f48-776a4817704c",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "928c0936-f6a6-4cfe-bb9a-138165e018b7",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      }
+    ]
+  },
+  {
+    "at": 1775532734619,
+    "atLocal": "2026-04-07 11:32:14.619",
+    "wave": "1775532734413",
+    "waveLocal": "2026-04-07 11:32:14.413",
+    "goodsId": 1545,
+    "goodsTitle": "TF_ING《自在出发》纪念套装",
+    "shelfFetchMs": 205,
+    "hits": [
+      {
+        "taskId": "83868ce7-576e-40ab-960c-3f802700d7b3",
+        "taskLabel": "「秒」",
+        "accountId": "19235337-9c2a-442c-bad3-34358c2f73aa",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "235f29b0-02dc-49fb-bb2d-2b072f62487a",
+        "taskLabel": "「秒」",
+        "accountId": "52e076c3-07a2-4e5e-86a4-a948c5b362b1",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "ac5cf5e8-7ade-4e97-9ef3-8da6241cb6b0",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "702f7e7a-c3ed-4d22-90d9-149f5df9b42d",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "cb131639-fbf5-45a4-aaa6-e3954d4ec9f7",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "5a4f35ab-a908-45b2-9d43-0a019e07a73c",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "b81dff6f-115b-423e-a045-c08fda45221a",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "b44306ec-24d7-453f-99d3-daf90c9d3047",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "119d3edb-410d-47e1-9f48-776a4817704c",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "928c0936-f6a6-4cfe-bb9a-138165e018b7",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      }
+    ]
+  },
+  {
+    "at": 1775532734644,
+    "atLocal": "2026-04-07 11:32:14.644",
+    "wave": "1775532734584",
+    "waveLocal": "2026-04-07 11:32:14.584",
+    "goodsId": 1545,
+    "goodsTitle": "TF_ING《自在出发》纪念套装",
+    "shelfFetchMs": 58,
+    "hits": [
+      {
+        "taskId": "83868ce7-576e-40ab-960c-3f802700d7b3",
+        "taskLabel": "「秒」",
+        "accountId": "19235337-9c2a-442c-bad3-34358c2f73aa",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "235f29b0-02dc-49fb-bb2d-2b072f62487a",
+        "taskLabel": "「秒」",
+        "accountId": "52e076c3-07a2-4e5e-86a4-a948c5b362b1",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "ac5cf5e8-7ade-4e97-9ef3-8da6241cb6b0",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "702f7e7a-c3ed-4d22-90d9-149f5df9b42d",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "cb131639-fbf5-45a4-aaa6-e3954d4ec9f7",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "5a4f35ab-a908-45b2-9d43-0a019e07a73c",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "b81dff6f-115b-423e-a045-c08fda45221a",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "b44306ec-24d7-453f-99d3-daf90c9d3047",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "119d3edb-410d-47e1-9f48-776a4817704c",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "928c0936-f6a6-4cfe-bb9a-138165e018b7",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      }
+    ]
+  },
+  {
+    "at": 1775532868324,
+    "atLocal": "2026-04-07 11:34:28.324",
+    "wave": "1775532868212",
+    "waveLocal": "2026-04-07 11:34:28.212",
+    "goodsId": 1545,
+    "goodsTitle": "TF_ING《自在出发》纪念套装",
+    "shelfFetchMs": 110,
+    "hits": [
+      {
+        "taskId": "83868ce7-576e-40ab-960c-3f802700d7b3",
+        "taskLabel": "「秒」",
+        "accountId": "19235337-9c2a-442c-bad3-34358c2f73aa",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "235f29b0-02dc-49fb-bb2d-2b072f62487a",
+        "taskLabel": "「秒」",
+        "accountId": "52e076c3-07a2-4e5e-86a4-a948c5b362b1",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "ac5cf5e8-7ade-4e97-9ef3-8da6241cb6b0",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "702f7e7a-c3ed-4d22-90d9-149f5df9b42d",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "cb131639-fbf5-45a4-aaa6-e3954d4ec9f7",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "5a4f35ab-a908-45b2-9d43-0a019e07a73c",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "b81dff6f-115b-423e-a045-c08fda45221a",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "b44306ec-24d7-453f-99d3-daf90c9d3047",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "119d3edb-410d-47e1-9f48-776a4817704c",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "928c0936-f6a6-4cfe-bb9a-138165e018b7",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      }
+    ]
+  },
+  {
+    "at": 1775532879449,
+    "atLocal": "2026-04-07 11:34:39.449",
+    "wave": "1775532879312",
+    "waveLocal": "2026-04-07 11:34:39.312",
+    "goodsId": 1545,
+    "goodsTitle": "TF_ING《自在出发》纪念套装",
+    "shelfFetchMs": 136,
+    "hits": [
+      {
+        "taskId": "83868ce7-576e-40ab-960c-3f802700d7b3",
+        "taskLabel": "「秒」",
+        "accountId": "19235337-9c2a-442c-bad3-34358c2f73aa",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "235f29b0-02dc-49fb-bb2d-2b072f62487a",
+        "taskLabel": "「秒」",
+        "accountId": "52e076c3-07a2-4e5e-86a4-a948c5b362b1",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "ac5cf5e8-7ade-4e97-9ef3-8da6241cb6b0",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "702f7e7a-c3ed-4d22-90d9-149f5df9b42d",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "cb131639-fbf5-45a4-aaa6-e3954d4ec9f7",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "5a4f35ab-a908-45b2-9d43-0a019e07a73c",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "b81dff6f-115b-423e-a045-c08fda45221a",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "b44306ec-24d7-453f-99d3-daf90c9d3047",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "119d3edb-410d-47e1-9f48-776a4817704c",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "928c0936-f6a6-4cfe-bb9a-138165e018b7",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      }
+    ]
+  },
+  {
+    "at": 1775532879466,
+    "atLocal": "2026-04-07 11:34:39.466",
+    "wave": "1775532879366",
+    "waveLocal": "2026-04-07 11:34:39.366",
+    "goodsId": 1545,
+    "goodsTitle": "TF_ING《自在出发》纪念套装",
+    "shelfFetchMs": 99,
+    "hits": [
+      {
+        "taskId": "83868ce7-576e-40ab-960c-3f802700d7b3",
+        "taskLabel": "「秒」",
+        "accountId": "19235337-9c2a-442c-bad3-34358c2f73aa",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "235f29b0-02dc-49fb-bb2d-2b072f62487a",
+        "taskLabel": "「秒」",
+        "accountId": "52e076c3-07a2-4e5e-86a4-a948c5b362b1",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "ac5cf5e8-7ade-4e97-9ef3-8da6241cb6b0",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "702f7e7a-c3ed-4d22-90d9-149f5df9b42d",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "cb131639-fbf5-45a4-aaa6-e3954d4ec9f7",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "5a4f35ab-a908-45b2-9d43-0a019e07a73c",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "b81dff6f-115b-423e-a045-c08fda45221a",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "b44306ec-24d7-453f-99d3-daf90c9d3047",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      },
+      {
+        "taskId": "119d3edb-410d-47e1-9f48-776a4817704c",
+        "taskLabel": "「task-1545-2955」",
+        "accountId": "928c0936-f6a6-4cfe-bb9a-138165e018b7",
+        "goodsName": "TF_ING《自在出发》纪念套装",
+        "skuId": 2955,
+        "skuName": "TF-ING:穆祉丞",
+        "stock": 100,
+        "need": 1
+      }
+    ]
   }
 ]

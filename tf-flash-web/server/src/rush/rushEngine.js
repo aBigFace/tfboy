@@ -346,6 +346,40 @@ function appendPlaceRecord(taskId, rec) {
   saveTasks();
 }
 
+function normOrderIdsKey(ids) {
+  if (!Array.isArray(ids)) return "";
+  const nums = ids
+    .map((x) => Number(x))
+    .filter((x) => Number.isFinite(x))
+    .sort((a, b) => a - b);
+  return nums.join(",");
+}
+
+/**
+ * 按前端行数据删除一条 placeRecords（body: { at, orderIds }）；仅本地 JSON，不调官方。
+ */
+function removePlaceRecord(taskId, body) {
+  const rawAt = body?.at;
+  const orderIds = body?.orderIds;
+  const task = tasks.find((t) => t.id === taskId);
+  if (!task) throw new Error("任务不存在");
+  if (!Array.isArray(task.placeRecords)) task.placeRecords = [];
+  const atMs = Number(rawAt);
+  if (!Number.isFinite(atMs)) {
+    throw new Error("缺少或无效的 at");
+  }
+  const wantKey = normOrderIdsKey(orderIds);
+  const idx = task.placeRecords.findIndex((rec) => {
+    const recAt = Number(rec?.at);
+    if (!Number.isFinite(recAt) || recAt !== atMs) return false;
+    return normOrderIdsKey(rec.orderIds) === wantKey;
+  });
+  if (idx === -1) throw new Error("未找到匹配的提交记录");
+  task.placeRecords.splice(idx, 1);
+  saveTasks();
+  return task;
+}
+
 /** personal 接口 body：{ code, data: { memberSubjectVOS } } */
 function memberSubjectsFromPersonalBody(apiBody) {
   const vos = apiBody?.data?.memberSubjectVOS;
@@ -1263,6 +1297,7 @@ module.exports = {
   addTask,
   updateTask,
   deleteTask,
+  removePlaceRecord,
   startTask,
   stopTask,
   getLogs: logs.getLogs,
