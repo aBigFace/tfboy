@@ -32,6 +32,7 @@ const {
 } = require("./tfApi");
 const { DEFAULT_GOODS_BODY, DEFAULT_ADDRESS_BODY } = require("./apiDefaults");
 const { DATA_DIR } = require("./store/persist");
+const proxyCache = require("./proxyCache");
 
 const PORT = Number(process.env.PORT || 10094);
 
@@ -154,6 +155,7 @@ const io = new Server(server, {
 attachRushMonitor(io);
 
 server.listen(PORT, () => {
+  proxyCache.startProxyPoolMaintenance();
   console.log(`tf-flash-server http://localhost:${PORT} DATA_DIR=${DATA_DIR}`);
   console.log(`socket.io path=/socket.io ns=/rush-monitor`);
 });

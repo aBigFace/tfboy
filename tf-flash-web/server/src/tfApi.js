@@ -207,22 +207,53 @@ async function goodsPageList(token, body) {
 
 /** token 传 null 时不带 Bearer（rush SKU 与波次内查库存；与 goodsPageList 为仅两类无 token 查询） */
 async function getShelvesSku(token, goodsId, applyType = 1, reqOptions = {}) {
-  const {
-    httpsAgent: _omitHttpsAgent,
-    httpAgent: _omitHttpAgent,
-    proxy: _omitProxy,
-    _proxyPoolMeta: _omitPoolMeta,
-    ...restReq
-  } = reqOptions && typeof reqOptions === "object" ? reqOptions : {};
+  const { _proxyPoolMeta: _omitPoolMeta, ...restReq } =
+    reqOptions && typeof reqOptions === "object" ? reqOptions : {};
+  const opts =
+    restReq.httpsAgent != null ? { ...restReq, proxy: false } : restReq;
   const res = await ax.get(
     `/goods/shelves/getShelvesSku/${goodsId}?applyType=${applyType}`,
     {
       headers: headers(token),
-      ...restReq,
-      proxy: false,
+      ...opts,
     }
   );
   return assertTfOk(res, "getShelvesSku");
+}
+
+/**
+ * 代理池探活：与 getShelvesSku 同 URL / 头 / 代理选项，但不校验业务 body（避免 code≠200 误判线路不可用）。
+ */
+async function getShelvesSkuReachableProbe(
+  goodsId,
+  applyType = 1,
+  reqOptions = {}
+) {
+  const { _proxyPoolMeta: _omitPoolMeta, ...restReq } =
+    reqOptions && typeof reqOptions === "object" ? reqOptions : {};
+  const opts =
+    restReq.httpsAgent != null ? { ...restReq, proxy: false } : restReq;
+  const t0 = Date.now();
+  try {
+    const res = await ax.get(
+      `/goods/shelves/getShelvesSku/${goodsId}?applyType=${applyType}`,
+      {
+        headers: headers(null),
+        ...opts,
+      }
+    );
+    const ms = Date.now() - t0;
+    if (res.status !== 200) {
+      return { ok: false, ms, httpStatus: res.status };
+    }
+    return { ok: true, ms, httpStatus: res.status };
+  } catch (e) {
+    return {
+      ok: false,
+      ms: Date.now() - t0,
+      err: e.code || e.message || String(e),
+    };
+  }
 }
 
 async function personal(token) {
@@ -280,10 +311,13 @@ async function placeOrder(token, body, reqOptions = {}, logAccountTag = null) {
   }
   const t0 = Date.now();
   let res;
+  const opts = reqOptions && typeof reqOptions === "object" ? reqOptions : {};
+  const axiosOpts =
+    opts.httpsAgent != null ? { ...opts, proxy: false } : opts;
   try {
     res = await ax.post("/place-order/mallOrder/placeOrder", body, {
       headers: headers(token),
-      ...reqOptions,
+      ...axiosOpts,
     });
   } catch (e) {
     const elapsed = Date.now() - t0;
@@ -357,6 +391,7 @@ module.exports = {
   loginPassword,
   goodsPageList,
   getShelvesSku,
+  getShelvesSkuReachableProbe,
   personal,
   bookPageQuery,
   orderFee,

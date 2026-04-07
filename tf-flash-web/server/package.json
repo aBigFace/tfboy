@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "dotenv": "^16.4.7",
+    "https-proxy-agent": "^7.0.6",
     "axios": "^1.7.9",
     "cors": "^2.8.5",
     "express": "^4.21.2",

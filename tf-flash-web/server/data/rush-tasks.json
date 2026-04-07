@@ -13,7 +13,7 @@
     "pollIntervalMs": 50,
     "scheduledAt": null,
     "scheduledDurationSec": null,
-    "running": false,
+    "running": true,
     "createdAt": 1775229345066,
     "placeRecords": [],
     "companyId": 2,
@@ -45,7 +45,7 @@
     "pollIntervalMs": 50,
     "scheduledAt": null,
     "scheduledDurationSec": null,
-    "running": false,
+    "running": true,
     "createdAt": 1775260950224,
     "placeRecords": [],
     "companyId": 2,
@@ -62,36 +62,6 @@
       "bookDefaultStatus": 1,
       "bookType": 1
     }
-  },
-  {
-    "id": "736b5653-efb5-477c-8164-f02111b9bfae",
-    "name": "task-1545-2955",
-    "accountId": "ad083555-8490-437f-bd33-f724505ed7b0",
-    "goodsId": 1545,
-    "skuId": 2955,
-    "goodsName": "TF_ING《自在出发》纪念套装",
-    "skuName": "TF-ING:穆祉丞 · ¥69",
-    "quantity": 1,
-    "addressBookId": 15459745,
-    "mode": "reflow",
-    "pollIntervalMs": 50,
-    "scheduledAt": null,
-    "scheduledDurationSec": null,
-    "addressBookSnapshot": {
-      "id": 15459745,
-      "bookName": "木鱼小噜",
-      "bookPhone": "18396846092",
-      "bookProvince": "山东省",
-      "bookCity": "济南市",
-      "bookCounty": "章丘区",
-      "bookAddress": "双山街道中麓府",
-      "bookDefaultStatus": 1,
-      "bookType": 1
-    },
-    "running": false,
-    "createdAt": 1775355760842,
-    "createdAtLocal": "2026-04-05 10:22:40.842",
-    "placeRecords": []
   },
   {
     "id": "ac5cf5e8-7ade-4e97-9ef3-8da6241cb6b0",
@@ -118,7 +88,7 @@
       "bookDefaultStatus": 1,
       "bookType": 1
     },
-    "running": false,
+    "running": true,
     "createdAt": 1775367027388,
     "createdAtLocal": "2026-04-05 13:30:27.388",
     "placeRecords": []
@@ -148,7 +118,7 @@
       "bookDefaultStatus": 1,
       "bookType": 1
     },
-    "running": false,
+    "running": true,
     "createdAt": 1775368748986,
     "createdAtLocal": "2026-04-05 13:59:08.986",
     "placeRecords": []
@@ -178,7 +148,7 @@
       "bookDefaultStatus": 0,
       "bookType": 1
     },
-    "running": false,
+    "running": true,
     "createdAt": 1775368902250,
     "createdAtLocal": "2026-04-05 14:01:42.250",
     "placeRecords": []
@@ -208,98 +178,74 @@
       "bookDefaultStatus": 1,
       "bookType": 1
     },
-    "running": false,
+    "running": true,
     "createdAt": 1775450100506,
     "createdAtLocal": "2026-04-06 12:35:00.506",
     "placeRecords": []
   },
   {
-    "id": "6556adf2-afb1-4ca6-8b96-a680cdbf64de",
-    "name": "task-1500-2760",
-    "accountId": "b44306ec-24d7-453f-99d3-daf90c9d3047",
-    "goodsId": 1503,
-    "skuId": 2773,
-    "goodsName": "TF家族新年音乐会《荣耀》随机卡包-TF家族五代练习生款",
-    "skuName": "TF家族新年音乐会《荣耀》随机卡包-TF家族五代练习生款 · ¥29",
+    "id": "9b076dfd-1ebc-4666-9a02-ce0c86d00a16",
+    "name": "秒",
+    "accountId": "928c0936-f6a6-4cfe-bb9a-138165e018b7",
+    "goodsId": 1496,
+    "skuId": 2743,
+    "goodsName": "TF家族新年音乐会《荣耀》随机卡包-TF家族四代练习生单人款",
+    "skuName": "TF家族-四代:杨博文 · ¥29",
     "quantity": 1,
-    "addressBookId": 15432866,
+    "addressBookId": 13242442,
     "mode": "reflow",
-    "pollIntervalMs": 10000,
+    "pollIntervalMs": 2000,
     "scheduledAt": null,
     "scheduledDurationSec": null,
     "addressBookSnapshot": {
-      "id": 15432866,
-      "bookName": "金金",
-      "bookPhone": "15221950195",
-      "bookProvince": "上海市",
-      "bookCity": "上海城区",
-      "bookCounty": "普陀区",
-      "bookAddress": "上海市普陀区长征镇千阳南路99弄馨越公寓64-907",
-      "bookDefaultStatus": 0,
+      "id": 13242442,
+      "bookName": "雨点",
+      "bookPhone": "17857497919",
+      "bookProvince": "浙江省",
+      "bookCity": "金华市",
+      "bookCounty": "武义县",
+      "bookAddress": "王宅镇",
+      "bookDefaultStatus": 1,
       "bookType": 1
     },
     "running": false,
-    "createdAt": 1775461964374,
-    "createdAtLocal": "2026-04-06 15:52:44.374",
+    "createdAt": 1775532548133,
+    "createdAtLocal": "2026-04-07 11:29:08.133",
     "placeRecords": [
       {
-        "at": 1775464676792,
-        "atLocal": "2026-04-06 16:37:56.792",
-        "wave": "1775464676528",
-        "waveLocal": "2026-04-06 16:37:56.528",
+        "at": 1775532552318,
+        "atLocal": "2026-04-07 11:29:12.318",
+        "wave": "1775532551227",
+        "waveLocal": "2026-04-07 11:29:11.227",
         "orderIds": [
-          116299637
+          116339079
         ],
-        "goodsId": 1503,
-        "skuId": 2773,
+        "goodsId": 1496,
+        "skuId": 2743,
         "quantity": 1
       },
       {
-        "at": 1775465075540,
-        "atLocal": "2026-04-06 16:44:35.540",
-        "wave": "1775465075222",
-        "waveLocal": "2026-04-06 16:44:35.222",
+        "at": 1775532552320,
+        "atLocal": "2026-04-07 11:29:12.320",
+        "wave": "1775532551227",
+        "waveLocal": "2026-04-07 11:29:11.227",
         "orderIds": [
-          116300090
+          116339080
         ],
-        "goodsId": 1503,
-        "skuId": 2773,
+        "goodsId": 1496,
+        "skuId": 2743,
         "quantity": 1
       },
       {
-        "at": 1775465087209,
-        "atLocal": "2026-04-06 16:44:47.209",
-        "wave": "1775465086955",
-        "waveLocal": "2026-04-06 16:44:46.955",
+        "at": 1775532552322,
+        "atLocal": "2026-04-07 11:29:12.322",
+        "wave": "1775532551227",
+        "waveLocal": "2026-04-07 11:29:11.227",
         "orderIds": [
-          116300106
+          116339078
         ],
-        "goodsId": 1503,
-        "skuId": 2773,
-        "quantity": 1
-      },
-      {
-        "at": 1775465285537,
-        "atLocal": "2026-04-06 16:48:05.537",
-        "wave": "1775465285285",
-        "waveLocal": "2026-04-06 16:48:05.285",
-        "orderIds": [
-          116300327
-        ],
-        "goodsId": 1503,
-        "skuId": 2773,
-        "quantity": 1
-      },
-      {
-        "at": 1775476091949,
-        "atLocal": "2026-04-06 19:48:11.949",
-        "wave": "1775476091636",
-        "waveLocal": "2026-04-06 19:48:11.636",
-        "orderIds": [
-          116313044
-        ],
-        "goodsId": 1503,
-        "skuId": 2773,
+        "goodsId": 1496,
+        "skuId": 2743,
         "quantity": 1
       }
     ]

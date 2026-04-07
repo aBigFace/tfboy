@@ -111,6 +111,20 @@ const PLACE_ORDER_FANOUT = (() => {
   return Math.max(1, Math.min(32, n));
 })();
 
+/**
+ * placeOrder 全失败且含 401 时：刷新 token 再整轮 fanout；可连续执行多次（默认 2 次）。
+ * 环境变量 TF_RUSH_PLACE_401_RETRIES（0～5，默认 2）；0 表示不重试。
+ */
+const DEFAULT_PLACE_ORDER_401_RETRIES = 2;
+const PLACE_ORDER_401_RETRIES = (() => {
+  const raw = Number(process.env.TF_RUSH_PLACE_401_RETRIES);
+  const n =
+    Number.isFinite(raw) && raw >= 0
+      ? Math.floor(raw)
+      : DEFAULT_PLACE_ORDER_401_RETRIES;
+  return Math.max(0, Math.min(5, n));
+})();
+
 /** 任务里持久化的地址快照允许的字段（与 bookPageQuery records 项一致） */
 const ADDRESS_SNAPSHOT_KEYS = [
   "id",
@@ -458,7 +472,7 @@ function rushReq(waveProxy) {
   return { ...rest, timeout: RUSH_OFFICIAL_TIMEOUT_MS };
 }
 
-/** 用抢购账号 token 调商城接口；401 时自动刷新 token 重试一次 */
+/** 用抢购账号 token 调商城接口；401 时自动刷新 token 再请求一次 */
 async function withAccountApi(accountId, apiCall) {
   const account = accounts.find((a) => a.id === accountId);
   if (!account) throw new Error("账号不存在");
@@ -478,7 +492,8 @@ async function withAccountApi(accountId, apiCall) {
 }
 
 /**
- * 已确认有货后的下单链：只用任务里已保存的 addressBookSnapshot 组单；placeOrder **直连官方**（不经代理池）。
+ * 已确认有货后的下单链：只用任务里已保存的 addressBookSnapshot 组单。
+ * 若配置了 DM_PROXY_FETCH_URL（或 data/proxy-pool-fetch-url.txt），placeOrder 从代理池轮询取线；否则直连官方。
  * 错误写入该任务日志，不向外抛。任意时刻任务已停止或不在轮询窗口则不再调用 placeOrder。
  */
 async function tryPlaceOrderForTask(task, detail, sku, wave, skuMs) {
@@ -505,8 +520,6 @@ async function tryPlaceOrderForTask(task, detail, sku, wave, skuMs) {
     });
     return;
   }
-
-  const px = rushReq(null);
 
   const book = bookFromTaskSnapshot(t);
 
@@ -572,7 +585,22 @@ async function tryPlaceOrderForTask(task, detail, sku, wave, skuMs) {
     return;
   }
 
-  const pm = proxyMetaForPlaceWave(null);
+  await proxyCache.ensurePlaceProxyAvailable();
+
+  t = liveTask();
+  if (!t || !taskStillActiveForOrder(t)) {
+    logs.pushMonitor({
+      event: "skip_inactive",
+      taskLabel: taskMonLabel(task),
+      goodsId: task.goodsId,
+      skuId: task.skuId,
+      stock: sku.stock,
+      need,
+    });
+    return;
+  }
+
+  const pm = proxyCache.getPlaceIntentLogMeta();
 
   const placeBody = buildPlaceBody({
     companyId,
@@ -584,8 +612,11 @@ async function tryPlaceOrderForTask(task, detail, sku, wave, skuMs) {
   });
 
   const poLogTag = placeOrderLogTag(t, account);
-  const callPlace = (curTok) =>
-    placeOrder(curTok, placeBody, px, poLogTag);
+  const callPlace = (curTok) => {
+    const waveProxy = proxyCache.takeProxyWaveOptions();
+    const px = rushReq(waveProxy);
+    return placeOrder(curTok, placeBody, px, poLogTag);
+  };
 
   const is401 = (err) => err?.response?.status === 401;
 
@@ -619,13 +650,16 @@ async function tryPlaceOrderForTask(task, detail, sku, wave, skuMs) {
     .filter((s) => s.status === "rejected")
     .map((s) => s.reason);
 
-  if (
+  let retries401Left = PLACE_ORDER_401_RETRIES;
+  while (
     successes.length === 0 &&
+    retries401Left > 0 &&
     failures.some(
       (e) =>
         is401(e) && !proxyCache.shouldInvalidateProxyForError(e)
     )
   ) {
+    retries401Left -= 1;
     t = liveTask();
     if (!t || !taskStillActiveForOrder(t)) return;
     const newTok = await refreshAccountToken(account);
@@ -679,15 +713,33 @@ async function tryPlaceOrderForTask(task, detail, sku, wave, skuMs) {
       waveLocal,
       snippet: okSnippet,
     });
+    const idsStr =
+      orderIds.length > 0 ? orderIds.map((x) => String(x)).join(",") : "—";
+    console.log(
+      `[rush] ${atLocal} 提交成功 ${taskMonLabel(t)} goodsId=${t.goodsId} skuId=${t.skuId} orderIds=${idsStr} resp=${okSnippet}`
+    );
   }
 
   if (successes.length === 0) {
-    throw failures[failures.length - 1] || new Error("placeOrder 全部失败");
+    const last = failures[failures.length - 1];
+    const fb = last
+      ? summarizeTfErrorForLog(
+          last.response?.status,
+          last.response?.data != null ? last.response.data : last.message,
+          360
+        )
+      : "";
+    console.warn(
+      `[rush] ${logs.formatLocalTimestamp(new Date())} 提交全部失败 ${taskMonLabel(
+        liveTask() || t
+      )} goodsId=${t.goodsId} skuId=${t.skuId} ${fb}`
+    );
+    throw last || new Error("placeOrder 全部失败");
   }
 }
 
 /**
- * 同一 goodsId 单次查货架直连官方；有货后的 placeOrder 亦直连官方。setInterval 到点即发。
+ * 同一 goodsId 单次查货架直连官方；有货后的 placeOrder 在配置取号 URL 时走代理池。setInterval 到点即发。
  */
 async function runWaveForGoods(goodsId) {
   const gid = Number(goodsId);
@@ -772,6 +824,20 @@ async function runWaveForGoods(goodsId) {
     }
 
     if (toPlace.length > 0) {
+      const tsHit = logs.formatLocalTimestamp(new Date());
+      for (const { task, sku } of toPlace) {
+        const needHit = Number(task.quantity) || 1;
+        const snHit =
+          sku.skuName != null && String(sku.skuName).trim() !== ""
+            ? String(sku.skuName).trim()
+            : task.skuName != null
+              ? String(task.skuName).trim()
+              : "";
+        const namePart = snHit ? ` ${snHit}` : "";
+        console.log(
+          `[rush] ${tsHit} 有库存可下单 ${taskMonLabel(task)} goodsId=${gid} skuId=${sku.id} stock=${sku.stock} 需购=${needHit}${namePart}`
+        );
+      }
       logAllSkusToConsoleOnStockHit(gid, gTitle, skuList);
       const hitsPayload = toPlace.map(({ task, sku }) => {
         const need = Number(task.quantity) || 1;
@@ -833,6 +899,9 @@ async function runWaveForGoods(goodsId) {
             e.response?.data != null ? e.response.data : e.message,
             280
           );
+          console.warn(
+            `[rush] ${logs.formatLocalTimestamp(new Date())} 提交失败 ${taskMonLabel(task)} goodsId=${gid} skuId=${task.skuId}${timeoutHint ? " timeout" : ""} ${body}`
+          );
           logs.pushMonitor({
             event: "place_fail",
             taskLabel: taskMonLabel(task),
@@ -850,7 +919,7 @@ async function runWaveForGoods(goodsId) {
       skuCount: skuList.length,
       durationMs: skuMs,
       shelfDirect: true,
-      placeDirect: true,
+      placeDirect: !proxyCache.isPlaceProxyConfigured(),
       proxyUsed: pxMeta.used,
       proxyHost: pxMeta.host,
       proxyPort: pxMeta.port,

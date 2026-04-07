@@ -7,7 +7,8 @@ export default defineConfig({
     port: 5173,
     proxy: {
       "/api": {
-        target: "https://api.tf.marzen.cn",
+        target: "http://localhost:10094",
+        // target: "https://api.tf.marzen.cn",
         changeOrigin: true,
         configure: (proxy) => {
           proxy.on("proxyReq", (proxyReq, req) => {
@@ -19,7 +20,8 @@ export default defineConfig({
       },
       /** Socket.IO（监控日志客户端 io({ path: "/socket.io" })） */
       "/socket.io": {
-        target: "https://api.tf.marzen.cn",
+        target: "http://localhost:10094",
+        // target: "https://api.tf.marzen.cn",
         changeOrigin: true,
         ws: true,
       },
