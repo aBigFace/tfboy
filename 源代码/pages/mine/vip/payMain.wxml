@@ -1,0 +1,51 @@
+<view class="page">
+    <view class="pay-main">
+        <view class="banner">
+            <view class="vip-icon">
+                <image class="team-img" src="{{a}}"></image>
+            </view>
+            <view class="vip-info">
+                <view class="vip-info-name">{{b}}</view>
+                <view class="vip-info-club">粉丝俱乐部</view>
+            </view>
+            <view class="{{['vip-isopen',f&&'orange-bg',g&&'red-bg']}}">
+                <text wx:if="{{c}}">未开通</text>
+                <text wx:if="{{d}}">{{e}}</text>
+            </view>
+        </view>
+        <scroll-view class="vip-type" scrollX="true">
+            <view class="vip-type-item" wx:if="{{h}}">
+                <view class="{{['vip-type-box',l&&'activeClick']}}">
+                    <view class="vip-type-item-name">
+                        <image class="vip-icon" mode="widthFix" src="{{i}}"></image>
+                        <view>{{j}}</view>
+                    </view>
+                    <view class="vip-type-item-account">￥{{k}}<text class="vip-type-item-year">/年</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="pay-method-list base-white-radius-container">
+        <view class="text-bold m-t-5 pay-method-tip">选择支付方式</view>
+        <view bindtap="{{item.n}}" class="{{['pay-method-item','flex-center','m-t-8',item.m&&'active']}}" wx:for="{{m}}" wx:key="l">
+            <view class="item-pay" wx:if="{{item.a}}">
+                <image class="width-56 m-r-20" src="{{item.b}}"></image>
+                <text>{{item.c}}</text>
+            </view>
+            <view class="item-pay" wx:if="{{item.d}}">
+                <image class="width-56 m-r-20" src="{{item.e}}"></image>
+                <text>{{item.f}}</text>
+            </view>
+            <view class="item-pay" wx:if="{{item.g}}">
+                <image class="width-56 m-r-20" src="{{item.h}}"></image>
+                <text>{{item.i}}</text>
+            </view>
+            <image class="checked-icon width-38" src="{{item.k}}" wx:if="{{item.j}}"></image>
+        </view>
+    </view>
+    <view class="btn-group">
+        <button bindtap="{{n}}" class="primary-btn" type="primary">支付</button>
+    </view>
+    <parent-auth-dialog bind:__l="__l" class="r" uI="0f125952-0" uR="parentAuthDialogRef"></parent-auth-dialog>
+</view>

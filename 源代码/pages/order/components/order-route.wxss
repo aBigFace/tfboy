@@ -1,0 +1,83 @@
+.order-route-list {
+    border-radius: 8rpx;
+    padding: 24rpx 0
+}
+
+.order-route-list .route-item {
+    color: #999;
+    font-size: 24rpx;
+    padding-bottom: 20rpx;
+    position: relative
+}
+
+.order-route-list .route-item::after {
+    border: 1px dashed #eee;
+    bottom: 0;
+    content: "";
+    left: 14rpx;
+    position: absolute;
+    top: 0
+}
+
+.order-route-list .route-item:last-child::after {
+    content: none
+}
+
+.order-route-list .route-item .route-name {
+    font-size: 26rpx;
+    width: 100rpx
+}
+
+.order-route-list .route-item .route-icon {
+    height: 40rpx;
+    margin-right: 20rpx;
+    width: 40rpx
+}
+
+.order-route-list .route-item .route-time {
+    margin-bottom: 4rpx
+}
+
+.order-route-list .route-item .route-detail {
+    -webkit-flex: 1;
+    flex: 1
+}
+
+.order-route-list .route-item .receive-icon {
+    background: #e85252
+}
+
+.order-route-list .route-item .receive-icon,.order-route-list .route-item .send-icon {
+    border-radius: 50%;
+    color: #fff;
+    height: 32rpx;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 32rpx;
+    z-index: 1
+}
+
+.order-route-list .route-item .icon {
+    background-color: #ddd;
+    border-radius: 50%;
+    height: 16rpx;
+    margin: 0 auto;
+    position: relative;
+    width: 16rpx;
+    z-index: 1
+}
+
+.order-route-list .route-item .icon.active {
+    background-color: #e85252;
+    height: 20rpx;
+    width: 20rpx
+}
+
+.order-route-list .route-item:first-child {
+    color: #666
+}
+
+.order-route-list .route-item:first-child .route-name {
+    color: #333
+}

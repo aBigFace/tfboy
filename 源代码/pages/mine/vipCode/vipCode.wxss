@@ -1,0 +1,130 @@
+.page {
+    overflow: auto
+}
+
+.page .uni-forms {
+    background: #fff;
+    border-radius: 32rpx 32rpx 0 0;
+    margin-top: 380rpx;
+    padding: 20rpx 28rpx;
+    position: relative;
+    z-index: 2
+}
+
+.my-balance .uni-forms-item {
+    margin-bottom: 0rpx
+}
+
+.my-balance .banner {
+    -webkit-align-items: center;
+    align-items: center;
+    background: url("https://cos.tfent.cn/xgg-file-folder/tf-app/wechat/static/image/mine/vipcodeBanner.png") no-repeat;
+    background-size: 100%;
+    display: -webkit-flex;
+    display: flex;
+    height: 450rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.my-balance .banner .balance-num {
+    margin-left: 36rpx
+}
+
+.my-balance .banner .balance-num .name {
+    color: #8d5f10;
+    font-size: 26rpx;
+    font-weight: 400
+}
+
+.my-balance .banner .balance-num .num {
+    color: #8d5f10;
+    font-size: 64rpx;
+    font-weight: 500
+}
+
+.my-balance .banner .description {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 24rpx;
+    color: #8d5f10;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 24rpx;
+    font-weight: 400;
+    height: 48rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-right: 24rpx;
+    width: 136rpx
+}
+
+.my-balance .uni-forms-item__label {
+    margin-left: 28rpx
+}
+
+.my-balance .item {
+    margin-bottom: 32rpx
+}
+
+.my-balance .item .title {
+    color: #333;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 28rpx;
+    font-weight: 400;
+    margin-left: 12rpx
+}
+
+.my-balance .item .ba-input {
+    background: #fff;
+    border: 2rpx solid #eee;
+    border-radius: 50rpx;
+    height: 100rpx;
+    padding: 0 30rpx;
+    width: 634rpx
+}
+
+.my-balance .item .code-view {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.my-balance .item .code-view .code {
+    width: 400rpx
+}
+
+.my-balance .item .code-view .btn,.my-balance .item .code-view .send {
+    color: #ff7272;
+    font-size: 26rpx;
+    font-weight: 400;
+    height: 100rpx;
+    line-height: 100rpx
+}
+
+.my-balance .confirm-btn {
+    background: #ffc6c6;
+    border-radius: 44rpx;
+    color: #fff;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 32rpx;
+    font-weight: 400;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    width: 688rpx
+}
+
+.my-balance .primary-btn {
+    border-radius: 44rpx;
+    margin-top: 34rpx
+}

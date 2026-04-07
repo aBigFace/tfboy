@@ -1,0 +1,62 @@
+.setting-page.data-v-61a3b3d9 {
+    box-sizing: border-box
+}
+
+.setting-page .setting-info.data-v-61a3b3d9 {
+    border-radius: 8rpx
+}
+
+.setting-page .setting-info .text-item-value.data-v-61a3b3d9 {
+    color: #444;
+    font-size: 28rpx;
+    font-weight: 500
+}
+
+.setting-page .order-item-icon-other.data-v-61a3b3d9 {
+    height: 32rpx;
+    margin-left: 20rpx;
+    vertical-align: middle;
+    width: 32rpx
+}
+
+.setting-page .order-item-icon-red.data-v-61a3b3d9 {
+    height: 16rpx;
+    margin-left: 20rpx;
+    vertical-align: middle;
+    width: 16rpx
+}
+
+.setting-page .function-list .function-item.data-v-61a3b3d9 {
+    background-color: #fff;
+    padding: 34rpx 24rpx
+}
+
+.setting-page .function-list .function-item.data-v-61a3b3d9:not(:last-child) {
+    border-bottom: 1px solid #eee
+}
+
+.setting-page .function-list .function-item.data-v-61a3b3d9:nth-child(2n-1) {
+    border-radius: 12rpx 12rpx 0 0
+}
+
+.setting-page .function-list .function-item.data-v-61a3b3d9:nth-child(2n) {
+    border-radius: 0 0 12rpx 12rpx
+}
+
+.setting-page .function-list .setting-pay.data-v-61a3b3d9 {
+    margin-bottom: 10rpx
+}
+
+.setting-page .logout-btn.data-v-61a3b3d9 {
+    background-color: #fff;
+    border-radius: 56rpx;
+    bottom: 124rpx;
+    color: #333;
+    font-size: 32rpx;
+    height: 88rpx;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    width: 94%
+}

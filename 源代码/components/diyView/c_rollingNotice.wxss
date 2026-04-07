@@ -1,0 +1,17 @@
+.diy_view_c_rollingNotice.data-v-12f7e2ea {
+    text-align: center;
+    width: 100%
+}
+
+.diy_view_c_rollingNotice-view.data-v-12f7e2ea {
+    width: 100%
+}
+
+.diy_view_c_rollingNotice .marquee.data-v-12f7e2ea {
+    height: 52rpx;
+    line-height: 52rpx
+}
+
+.diy_view_c_rollingNotice .marquee.data-v-12f7e2ea .uni-noticebar__content-wrapper {
+    margin-top: 8rpx!important
+}

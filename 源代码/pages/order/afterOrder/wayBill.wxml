@@ -1,0 +1,35 @@
+<view class="base-container setting-page">
+    <view class="waybill-box">
+        <view class="express-item flex-space-between-center">
+            <text class="text-item-left">快递类型</text>
+            <view bindtap="{{d}}" class="flex-end-center">
+                <text class="text-item-express" wx:if="{{a}}">{{b}}</text>
+                <text class="text-item-right" wx:else>请选择寄回的快递类型</text>
+                <uni-icons bind:__l="__l" class="arrow-icon" uI="406f41b9-0" uP="{{c}}" wx:if="{{c}}"></uni-icons>
+            </view>
+        </view>
+        <view class="express-item flex-space-between-center">
+            <text class="text-item-left">快递运单号</text>
+            <view>
+                <input bindinput="{{f}}" class="flex-1" placeholder="请填写您的寄回运单号" placeholderStyle="font-size: 28upx;font-weight: 400;color: #bbbbbb;" value="{{e}}"></input>
+            </view>
+        </view>
+    </view>
+    <uni-popup bind:__l="__l" class="r" uI="406f41b9-1" uP="{{k}}" uR="expressPopup" uS="{{['d']}}" wx:if="{{k}}">
+        <view class="modal cancel-order-modal">
+            <view class="modal-header">
+                <text class="modal-header-title">选择快递类型</text>
+                <uni-icons bind:__l="__l" bindclick="{{g}}" class="close-icon" uI="406f41b9-2,406f41b9-1" uP="{{h}}" wx:if="{{h}}"></uni-icons>
+            </view>
+            <view class="modal-content">
+                <view class="express-list">
+                    <view bindtap="{{item.d}}" class="{{['item','flex-justify-center',item.b&&'active']}}" wx:for="{{i}}" wx:key="c">
+                        <view class="reason">{{item.a}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </uni-popup>
+    <confirm-dialog bind:__l="__l" class="r" uI="406f41b9-3" uR="confirmDialogRef"></confirm-dialog>
+    <button bindtap="{{m}}" class="submit-btn primary-btn" disabled="{{n}}" type="primary">提交</button>
+</view>

@@ -1,0 +1,10 @@
+<view class="page base-container">
+    <view class="order-package" wx:if="{{a}}">
+        <view class="base-white-radius-container history-route-content">
+            <view class="logistics-content">
+                <history-route bind:__l="__l" uI="c36d1b5e-0" uP="{{b}}" wx:if="{{b}}"></history-route>
+            </view>
+        </view>
+    </view>
+    <no-data bind:__l="__l" uI="c36d1b5e-1" uP="{{d}}" uS="{{['d']}}" wx:if="{{c}}">暂无申请历史</no-data>
+</view>

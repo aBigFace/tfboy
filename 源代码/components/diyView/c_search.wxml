@@ -1,0 +1,7 @@
+<view class="diy_view_c_search data-v-7fd2900a" style="{{'background:'+g}}">
+    <view class="diy_view_c_search-view data-v-7fd2900a">
+        <type-one bind:__l="__l" class="data-v-7fd2900a" uI="7fd2900a-0" uP="{{b}}" wx:if="{{a}}"></type-one>
+        <type-two bind:__l="__l" class="data-v-7fd2900a" uI="7fd2900a-1" uP="{{d}}" wx:elif="{{c}}"></type-two>
+        <otype-three bind:__l="__l" class="data-v-7fd2900a" uI="7fd2900a-2" uP="{{f}}" wx:elif="{{e}}"></otype-three>
+    </view>
+</view>

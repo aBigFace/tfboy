@@ -1,0 +1,14 @@
+<view class="order-route-list">
+    <view class="route-item" wx:for="{{a}}" wx:key="d">
+        <view class="route-inner flex">
+            <view class="route-name"></view>
+            <view class="route-icon">
+                <view class="{{['icon',item.a&&'active']}}"></view>
+            </view>
+            <view class="route-detail">
+                <view class="route-time">{{item.b}}</view>
+                <view class="rout-desc">{{item.c}}</view>
+            </view>
+        </view>
+    </view>
+</view>

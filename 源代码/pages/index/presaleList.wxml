@@ -1,0 +1,37 @@
+<view class="presaleList data-v-3bc08017">
+    <view class="presaleList-banner data-v-3bc08017"></view>
+    <view class="productContent data-v-3bc08017">
+        <view bindtap="{{item.p}}" class="productItem data-v-3bc08017" wx:for="{{a}}" wx:key="o">
+            <view class="item-image data-v-3bc08017">
+                <view class="img data-v-3bc08017">
+                    <image class="data-v-3bc08017" src="{{item.a}}"></image>
+                </view>
+            </view>
+            <view class="content data-v-3bc08017">
+                <view class="title data-v-3bc08017">{{item.b}}</view>
+                <view class="sold-out-container data-v-3bc08017" wx:if="{{item.c}}">
+                    <view class="pre-sale data-v-3bc08017">{{item.d}}</view>
+                </view>
+                <view class="sold-out-container data-v-3bc08017" style="background:unset" wx:elif="{{item.e}}">
+                    <view class="presale-time data-v-3bc08017" wx:if="{{item.f}}">{{item.g}}</view>
+                    <view class="presale-time data-v-3bc08017" wx:else>
+                        <view class="data-v-3bc08017" wx:if="{{item.h}}">
+                            <text class="data-v-3bc08017">距结束时间剩余</text>
+                            <uni-countdown bind:__l="__l" bindtimeup="{{item.i}}" class="countdown-box data-v-3bc08017" uI="{{item.j}}" uP="{{item.k}}" wx:if="{{item.k}}"></uni-countdown>
+                        </view>
+                    </view>
+                </view>
+                <view class="priceAndCart data-v-3bc08017">
+                    <view class="price data-v-3bc08017">
+                        <view class="iconNum data-v-3bc08017">
+                            <view class="icon data-v-3bc08017">￥</view>
+                            <view class="num data-v-3bc08017">{{item.l}}</view>
+                            <view class="up data-v-3bc08017" wx:if="{{item.m}}">起</view>
+                        </view>
+                        <view class="market data-v-3bc08017">￥{{item.n}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

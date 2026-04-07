@@ -1,0 +1,22 @@
+<uni-popup bind:__l="__l" class="r" uI="6749b635-0" uP="{{f}}" uR="popupRef" uS="{{['d']}}" wx:if="{{f}}">
+    <view class="modal select-sku-modal">
+        <view class="modal-header flex-space-between-center">
+            <text class="modal-header-title">选择规格</text>
+            <uni-icons bind:__l="__l" bindclick="{{a}}" class="close-icon" uI="6749b635-1,6749b635-0" uP="{{b}}" wx:if="{{b}}"></uni-icons>
+        </view>
+        <view class="select-modal-content">
+            <view class="sku-list m-b-30 m-t-10">
+                <view bindtap="{{item.h}}" class="sku-item" wx:for="{{c}}" wx:key="g">
+                    <view>{{item.a}}</view>
+                    <view class="check-box">
+                        <uni-icons bind:__l="__l" uI="{{item.c}}" uP="{{item.d}}" wx:if="{{item.b}}"></uni-icons>
+                        <uni-icons bind:__l="__l" uI="{{item.e}}" uP="{{item.f||''}}" wx:else></uni-icons>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="modal-footer base-container">
+            <button bindtap="{{d}}" class="primary-btn" type="primary">确定</button>
+        </view>
+    </view>
+</uni-popup>

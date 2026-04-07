@@ -1,0 +1,17 @@
+<view class="page">
+    <view class="open-vip">
+        <view class="banner"></view>
+        <scroll-view class="vip-type" scrollY="true">
+            <view class="type-item">
+                <rich-text class="item-content" nodes="{{a}}"></rich-text>
+                <view class="certify-argument">
+                    <radio bindtap="{{b}}" checked="{{c}}" class="certify-checkbox" color="#ff7272"></radio>
+                    <text class="argument-tip">已阅读《规则说明》并确认进行转换</text>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="btn-group">
+            <button bindtap="{{f}}" class="{{['primary-btn',d&&'btn-disabled']}}" disabled="{{e}}" type="primary">确定转换</button>
+        </view>
+    </view>
+</view>

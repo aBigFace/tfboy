@@ -1,0 +1,31 @@
+<uni-popup bind:__l="__l" class="r" uI="6adf5128-0" uP="{{D}}" uR="popupRef" uS="{{['d']}}" wx:if="{{D}}">
+    <view class="modal confirm-modal" style="{{'min-height:'+B}}">
+        <view class="content-box" style="{{'min-height:'+p}}">
+            <view class="modal-header-center">
+                <text class="modal-header-title" wx:if="{{a}}">{{b}}</text>
+                <text class="modal-header-title" wx:else>
+                    <slot name="header"></slot>
+                </text>
+                <uni-icons bind:__l="__l" bindclick="{{d}}" class="close-icon" uI="6adf5128-1,6adf5128-0" uP="{{e}}" wx:if="{{c}}"></uni-icons>
+            </view>
+            <view class="confirm-modal-content" style="margin-top:20rpx">
+                <view class="modal-content" wx:if="{{f}}">{{g}}</view>
+                <view class="modal-content" wx:else>
+                    <slot name="message"></slot>
+                </view>
+            </view>
+            <view class="confirm-modal-content" style="display:block">
+                <view bindtap="{{l}}" class="modal-content" style="margin:20rpx 40rpx;font-size:14px;color:cornflowerblue;display:block">填写补充说明<uni-icons bind:__l="__l" class="arrow-icon" uI="6adf5128-2,6adf5128-0" uP="{{i}}" wx:if="{{h}}"></uni-icons>
+                    <uni-icons bind:__l="__l" class="arrow-icon" uI="6adf5128-3,6adf5128-0" uP="{{k}}" wx:if="{{j}}"></uni-icons>
+                </view>
+                <view style="align-items:left;margin:20rpx 40rpx" wx:if="{{m}}">
+                    <textarea bindinput="{{o}}" cols="50" maxlength="200" placeholder="" rows="3" style="border:1px solid #ccc;text-align:left;height:120px;width:100%;box-sizing:border-box;padding:20rpx" value="{{n}}" wx:if="{{r0}}"></textarea>
+                </view>
+            </view>
+        </view>
+        <view class="modal-footer flex">
+            <button bindtap="{{t}}" class="{{['default-btn',s]}}" style="{{'color:'+v}}" wx:if="{{q}}">{{r}}</button>
+            <button bindtap="{{A}}" class="{{['default-btn','confirm-btn',y]}}" style="{{'color:'+z}}" wx:if="{{w}}">{{x}}</button>
+        </view>
+    </view>
+</uni-popup>

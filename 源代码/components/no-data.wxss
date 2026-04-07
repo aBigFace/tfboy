@@ -1,0 +1,25 @@
+.no-data {
+    color: #666;
+    padding-top: 10vh;
+    text-align: center
+}
+
+.no-data .icon-container {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: -webkit-flex;
+    display: flex;
+    height: 160rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 30rpx auto 20rpx;
+    width: 160rpx
+}
+
+.no-data .image-container {
+    height: 288rpx;
+    margin: 0 auto;
+    width: 360rpx
+}

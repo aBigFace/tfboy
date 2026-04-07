@@ -1,0 +1,19 @@
+<view class="page base-container data-v-a0c26c8e">
+    <view class="changeInfo data-v-a0c26c8e">
+        <view class="image data-v-a0c26c8e">
+            <image class="img-max data-v-a0c26c8e" src="{{b}}" wx:if="{{a}}"></image>
+            <image class="img-max data-v-a0c26c8e" src="{{c}}" wx:else></image>
+        </view>
+        <view class="info-tips text-center data-v-a0c26c8e">
+            <text class="safe-tip data-v-a0c26c8e" wx:if="{{d}}">为确认您的身份，请先进行安全验证</text>
+            <text class="safe-tip data-v-a0c26c8e" wx:else>为确认家长的身份，请先进行安全验证</text>
+            <view class="changeNum font-32 data-v-a0c26c8e" wx:if="{{e}}">通过绑定手机号<text class="text-primary data-v-a0c26c8e">{{f}}</text>验证</view>
+            <view class="changeNum font-32 data-v-a0c26c8e" wx:else>通过绑定邮箱<text class="text-primary data-v-a0c26c8e">{{g}}</text>验证</view>
+        </view>
+        <button bindtap="{{k}}" class="{{['primary-btn','base-btn-footer','data-v-a0c26c8e',i&&'notActive']}}" disabled="{{j}}" type="primary">{{h}}</button>
+    </view>
+    <view bindtap="{{o}}" class="bottom-btn data-v-a0c26c8e" wx:if="{{l}}">
+        <text class="data-v-a0c26c8e" wx:if="{{m}}">手机号无法使用</text>
+        <text class="data-v-a0c26c8e" wx:if="{{n}}">邮箱账号无法使用</text>
+    </view>
+</view>

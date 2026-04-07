@@ -1,0 +1,5 @@
+<view style="background:#fff;width:100%;height:100%">
+    <scroll-view class="custom-tabs" scrollY="true" style="width:100%;height:100%">
+        <image mode="widthFix" src="{{b}}" style="margin-left:2%;width:96%" wx:if="{{a}}"></image>
+    </scroll-view>
+</view>

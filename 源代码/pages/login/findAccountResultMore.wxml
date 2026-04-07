@@ -1,0 +1,17 @@
+<view class="certify-page page">
+    <view class="certify-bg"></view>
+    <view class="certify-body">
+        <text class="certify-text">该证件已绑定多个账号，存在安全风险，建议您尽快确认处理。</text>
+    </view>
+    <view class="base-container">
+        <view class="acquire-box">
+            <view class="itemline"></view>
+            <view class="item" wx:for="{{a}}">
+                <view class="left">{{item.a}}</view>
+                <view class="right">{{item.b}}</view>
+            </view>
+        </view>
+    </view>
+    <no-data bind:__l="__l" uI="64701311-0" uP="{{c}}" uS="{{['d']}}" wx:if="{{b}}">暂无记录</no-data>
+    <uni-load-more bind:__l="__l" uI="64701311-1" uP="{{d||''}}" wx:else></uni-load-more>
+</view>

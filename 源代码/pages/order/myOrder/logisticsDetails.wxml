@@ -1,0 +1,24 @@
+<view class="page base-container">
+    <view class="order-package" wx:if="{{a}}">
+        <view class="flex-center" wx:if="{{b}}">
+            <view bindtap="{{item.d}}" class="{{item.c}}" wx:for="{{c}}" wx:key="b">
+                <text>包裹{{item.a}}</text>
+            </view>
+        </view>
+        <view class="base-white-radius-container m-t-10 m-b-10">
+            <view class="flex-space-between-center order-item-header">
+                <view class="text-gray-xs m-r-10">{{d}}</view>
+                <view class="text-gray-xs">
+                    <text bindtap="{{e}}" class="logistics-copy">复制</text>
+                </view>
+            </view>
+            <view class="logistics-content m-t-10">
+                <order-route bind:__l="__l" uI="7866e208-0" uP="{{f}}" wx:if="{{f}}"></order-route>
+                <no-data bind:__l="__l" uI="7866e208-1" uP="{{h}}" uS="{{['d']}}" wx:if="{{g}}">暂无物流信息</no-data>
+            </view>
+        </view>
+    </view>
+    <view wx:else>
+        <no-data bind:__l="__l" uI="7866e208-2" uP="{{j}}" uS="{{['d']}}" wx:if="{{i}}">暂无物流信息</no-data>
+    </view>
+</view>

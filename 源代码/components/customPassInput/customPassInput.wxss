@@ -1,0 +1,97 @@
+.page.data-v-74e6edbe {
+    background-color: #fff
+}
+
+.page .pay-box.data-v-74e6edbe {
+    display: -webkit-flex;
+    display: flex;
+    position: absolute
+}
+
+.page .pay-box .pay-item-box.data-v-74e6edbe {
+    height: 136rpx;
+    margin-right: 8px;
+    position: relative;
+    width: 104rpx
+}
+
+.page .pay-box .pay-item-box .pay-item-box-num.data-v-74e6edbe {
+    background: #333;
+    border-radius: 50%;
+    bottom: 0;
+    height: 24rpx;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24rpx
+}
+
+.page .codeNum.data-v-74e6edbe {
+    position: relative
+}
+
+.page .codeNum .code-input-item.data-v-74e6edbe {
+    border: 2rpx solid #ddd;
+    border-radius: 8rpx;
+    color: #333;
+    font-size: 12rpx;
+    height: 136rpx;
+    text-align: center;
+    width: 104rpx
+}
+
+.page .codeNum .code-input-item.active.data-v-74e6edbe {
+    border: 2rpx solid #e85252
+}
+
+.page .codeNum .code-input.data-v-74e6edbe {
+    height: 0;
+    width: 0
+}
+
+.page .codeNum .second.data-v-74e6edbe {
+    bottom: -12rpx;
+    position: absolute;
+    right: 15rpx
+}
+
+.page .box-input-group.data-v-74e6edbe {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly
+}
+
+.page .box_stack.data-v-74e6edbe {
+    position: relative
+}
+
+.page .box-light.data-v-74e6edbe {
+    border: 1px solid #ff4500;
+    border-radius: 4px;
+    height: 111rpx;
+    line-height: 110rpx;
+    text-align: center;
+    width: 100rpx
+}
+
+.page .box-gray.data-v-74e6edbe {
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    height: 111rpx;
+    line-height: 110rpx;
+    text-align: center;
+    top: 0;
+    width: 100rpx
+}
+
+.page .box-input.data-v-74e6edbe {
+    font-size: 1px;
+    height: 111rpx;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 700rpx
+}

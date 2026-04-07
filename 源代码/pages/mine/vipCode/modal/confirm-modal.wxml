@@ -1,0 +1,16 @@
+<uni-popup bind:__l="__l" class="r" uI="9f2cf148-0" uP="{{n}}" uR="popupRef" uS="{{['d']}}" wx:if="{{n}}">
+    <view class="modal confirm-modal">
+        <view class="modal-header">
+            <image src="{{a}}"></image>
+            <uni-icons bind:__l="__l" bindclick="{{b}}" class="close-icon" uI="9f2cf148-1,9f2cf148-0" uP="{{c}}" wx:if="{{c}}"></uni-icons>
+        </view>
+        <view class="confirm-modal-content">
+            <view class="modal-content" wx:if="{{d}}">{{e}}</view>
+            <view class="modal-title">{{f}}</view>
+        </view>
+        <view class="modal-footer flex">
+            <button bindtap="{{i}}" class="default-btn" wx:if="{{g}}">{{h}}</button>
+            <button bindtap="{{l}}" class="default-btn confirm-btn" style="{{'color:'+k+';'+'background:'+'#FF7272'}}">{{j}}</button>
+        </view>
+    </view>
+</uni-popup>

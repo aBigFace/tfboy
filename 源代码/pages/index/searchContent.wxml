@@ -1,0 +1,51 @@
+<view class="searchContent data-v-feee6b40">
+    <view class="search-input-box data-v-feee6b40">
+        <search-nav-bar bind:__l="__l" bindsearch="{{a}}" class="data-v-feee6b40" uI="feee6b40-0" uP="{{b}}" wx:if="{{b}}"></search-nav-bar>
+    </view>
+    <view class="content-box data-v-feee6b40">
+        <view class="search-noResult data-v-feee6b40" wx:if="{{c}}">
+            <image class="img data-v-feee6b40" src="{{d}}"></image>
+            <text class="search-text data-v-feee6b40">没有搜到相关内容</text>
+            <text class="search-text-tip data-v-feee6b40">换个关键词试试呢</text>
+        </view>
+        <view class="search-result data-v-feee6b40" wx:else>
+            <view class="search-content data-v-feee6b40">
+                <view bindtap="{{item.r}}" class="search-item data-v-feee6b40" wx:for="{{e}}" wx:key="s">
+                    <view class="item-image data-v-feee6b40">
+                        <view class="marketing_icon data-v-feee6b40" style="width:55px" wx:if="{{item.a}}">
+                            <text class="info data-v-feee6b40" style="font-size:10px"> 即将开售 </text>
+                        </view>
+                        <view class="marketing_icon data-v-feee6b40" style="width:50px" wx:elif="{{item.b}}">
+                            <image class="icon-img data-v-feee6b40" mode="scaleToFill" src="/static/icon/hot.png" style="width:10px;height:11.6px"></image>
+                            <text class="info data-v-feee6b40" style="font-size:10px">   热销  </text>
+                        </view>
+                        <image class="data-v-feee6b40" src="{{item.c}}"></image>
+                        <view class="shopping-state data-v-feee6b40" wx:if="{{item.d}}">预售</view>
+                    </view>
+                    <view class="item-info data-v-feee6b40">
+                        <text class="info-name data-v-feee6b40">{{item.e}}</text>
+                        <view class="sold-out-container data-v-feee6b40" wx:if="{{item.f}}">
+                            <view class="pre-sale data-v-feee6b40">{{item.g}}</view>
+                        </view>
+                        <view class="sold-out-container data-v-feee6b40" style="background:unset" wx:elif="{{item.h}}">
+                            <view class="presale-time data-v-feee6b40" wx:if="{{item.i}}">{{item.j}}</view>
+                            <view class="presale-time data-v-feee6b40" wx:else>
+                                <view class="data-v-feee6b40" wx:if="{{item.k}}">
+                                    <text class="data-v-feee6b40">距结束时间剩余</text>
+                                    <uni-countdown bind:__l="__l" bindtimeup="{{item.l}}" class="countdown-box data-v-feee6b40" uI="{{item.m}}" uP="{{item.n}}" wx:if="{{item.n}}"></uni-countdown>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="info-price data-v-feee6b40">
+                            <view class="price-sale data-v-feee6b40">
+                                <price bind:__l="__l" class="data-v-feee6b40" uI="{{item.o}}" uP="{{item.p}}" wx:if="{{item.p}}"></price>
+                                <view class="icon2 data-v-feee6b40" wx:if="{{item.q}}">起</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <uni-load-more bind:__l="__l" class="data-v-feee6b40" uI="feee6b40-3" uP="{{f}}" wx:if="{{f}}"></uni-load-more>
+        </view>
+    </view>
+</view>

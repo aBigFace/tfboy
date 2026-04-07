@@ -1,0 +1,10 @@
+<view class="outer-box data-v-6415a256">
+    <view class="typeThree data-v-6415a256">
+        <view class="input-box data-v-6415a256" style="{{'background-color:'+i}}">
+            <view class="search-box data-v-6415a256">
+                <image class="search-icon data-v-6415a256" src="{{a}}"></image>
+                <input bindinput="{{h}}" bindtap="{{e}}" class="search-input data-v-6415a256" key="3" placeholder="{{f}}" placeholderStyle="margin-left:10rpx" style="{{'background-color:'+b+';'+'border-radius:'+c+';'+'padding-left:'+d}}" value="{{g}}"></input>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "搜索内容",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "search-nav-bar": "../../components/searchNavbar",
+    "price": "../../components/price",
+    "uni-countdown": "../../uni_modules/uni-countdown/components/uni-countdown/uni-countdown",
+    "uni-load-more": "../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

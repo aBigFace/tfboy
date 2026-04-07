@@ -1,0 +1,16 @@
+<view class="page login-page data-v-23b3be22">
+    <view class="app-logo data-v-23b3be22">
+        <image class="img-max logo-img data-v-23b3be22" src="{{a}}"></image>
+    </view>
+    <view class="login-title data-v-23b3be22">TF-FAMILY FANCLUB</view>
+    <button bindtap="{{c}}" class="primary-btn flex-justify-center weixin-login-btn data-v-23b3be22" type="primary" wx:if="{{b}}">手机号快捷登录</button>
+    <button bindgetphonenumber="{{e}}" bindtap="{{f}}" class="primary-btn flex-justify-center weixin-login-btn data-v-23b3be22" openType="{{d}}" type="primary" wx:else>手机号快捷登录</button>
+    <button bindtap="{{g}}" class="primary-btn flex-justify-center weixin-login-btn account-login data-v-23b3be22" type="primary">账号密码登录/注册</button>
+    <view class="agree-on data-v-23b3be22">
+        <radio bindtap="{{h}}" checked="{{i}}" class="data-v-23b3be22" color="#FF7272" style="transform:scale(0.7)"></radio>
+        <text class="privacy-text data-v-23b3be22">已阅读并同意</text>
+        <text bindtap="{{j}}" class="data-v-23b3be22">《用户协议》</text>
+        <text bindtap="{{k}}" class="data-v-23b3be22">《隐私政策》</text>
+        <text bindtap="{{l}}" class="data-v-23b3be22">《未成年人用户隐私政策》</text>
+    </view>
+</view>

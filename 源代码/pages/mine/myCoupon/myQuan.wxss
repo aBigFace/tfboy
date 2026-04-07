@@ -1,0 +1,23 @@
+.page.data-v-dccb92bc {
+    height: 100vh;
+    overflow: auto
+}
+
+.page .history.data-v-dccb92bc {
+    height: 100rpx;
+    margin: 56rpx auto;
+    text-align: center
+}
+
+.page .primary-btn.data-v-dccb92bc {
+    border-radius: 8rpx 8rpx 8rpx 8rpx;
+    margin: 0
+}
+
+.page .use-btn.data-v-dccb92bc {
+    font-size: 26rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    margin: 0;
+    width: 135rpx
+}

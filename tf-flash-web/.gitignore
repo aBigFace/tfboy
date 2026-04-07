@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.env
+server/.env
+server/data/proxy-pool-fetch-url.txt
+data/proxy-pool-fetch-url.txt

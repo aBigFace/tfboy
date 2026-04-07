@@ -1,0 +1,19 @@
+.page.data-v-7b6bccd8 {
+    background-color: #fff;
+    height: 100%
+}
+
+.page .title.data-v-7b6bccd8 {
+    font-size: 38rpx;
+    font-weight: 500;
+    margin: 20rpx
+}
+
+.page .html-content.data-v-7b6bccd8,.page .time.data-v-7b6bccd8 {
+    margin-bottom: 20rpx;
+    margin-left: 20rpx
+}
+
+.page .html-content.data-v-7b6bccd8 {
+    margin-right: 20rpx
+}

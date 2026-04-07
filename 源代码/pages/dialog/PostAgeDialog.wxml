@@ -1,0 +1,30 @@
+<view class="data-v-15e5d844">
+    <uni-popup bind:__l="__l" class="r data-v-15e5d844" uI="15e5d844-0" uR="popup" uS="{{['d']}}">
+        <view class="post-age-pop data-v-15e5d844">
+            <view class="head data-v-15e5d844">
+                <image class="head-bg data-v-15e5d844" src="{{a}}"></image>
+                <view class="title data-v-15e5d844">{{b}}</view>
+            </view>
+            <view class="dialog data-v-15e5d844">
+                <text class="content-title data-v-15e5d844">原收货地址</text>
+                <view class="address-view data-v-15e5d844">
+                    <view class="revicer data-v-15e5d844">{{c}} {{d}}</view>
+                    <view class="address data-v-15e5d844">{{e}}</view>
+                </view>
+                <text class="content-title data-v-15e5d844">新收货地址</text>
+                <view class="address-view new data-v-15e5d844">
+                    <view class="revicer data-v-15e5d844">{{f}} {{g}}</view>
+                    <view class="address data-v-15e5d844">{{h}}</view>
+                </view>
+                <view class="money data-v-15e5d844">运费补差:<text class="need-pay data-v-15e5d844">{{i}}元</text>
+                </view>
+                <view class="btns data-v-15e5d844">
+                    <view bindtap="{{k}}" class="btn cancle data-v-15e5d844">{{j}}</view>
+                    <view bindtap="{{m}}" class="btn confirm data-v-15e5d844">{{l}}</view>
+                </view>
+            </view>
+        </view>
+        <confirm-modal bind:__l="__l" class="r data-v-15e5d844" uI="15e5d844-1,15e5d844-0" uR="confirmModalRef"></confirm-modal>
+    </uni-popup>
+    <parent-auth-dialog bind:__l="__l" class="r data-v-15e5d844" uI="15e5d844-2" uR="parentAuthDialogRef"></parent-auth-dialog>
+</view>

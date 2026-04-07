@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "详情",
+  "backgroundColor": "#ffffff",
+  "usingComponents": {
+    "custom-nav": "components/customNav/customNav"
+  }
+}

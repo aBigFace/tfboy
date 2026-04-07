@@ -1,0 +1,8 @@
+<view class="data-v-2ae7c091">
+    <view class="oneLineFour data-v-2ae7c091" style="{{'font-size:'+0+';'+'margin-left:'+b+';'+'margin-right:'+c}}">
+        <view class="data-v-2ae7c091" style="{{i.f}}" wx:for="{{a}}" wx:for-item="i">
+            <image bindtap="{{i.b}}" class="avatar data-v-2ae7c091" mode="widthFix" src="{{i.a}}" style="{{'width:'+'100%'}}"></image>
+            <view class="{{[i.e&&'content-fillet-txt','txt','data-v-2ae7c091']}}" wx:if="{{i.c}}">{{i.d}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,23 @@
+<view class="data-v-05ca1189">
+    <view class="search-input-box data-v-05ca1189">
+        <search-nav-bar bind:__l="__l" class="data-v-05ca1189" uI="05ca1189-0" uP="{{a}}" wx:if="{{a}}"></search-nav-bar>
+    </view>
+    <view class="search data-v-05ca1189">
+        <view class="search-hotWords data-v-05ca1189">
+            <view class="data-v-05ca1189" wx:for="{{b}}" wx:key="L">
+                <c_swiper bind:__l="__l" class="data-v-05ca1189" uI="{{item.b}}" uP="{{item.c}}" wx:if="{{item.a}}"></c_swiper>
+                <c_img-box bind:__l="__l" class="data-v-05ca1189" uI="{{item.e}}" uP="{{item.f}}" wx:elif="{{item.d}}"></c_img-box>
+                <c_goods-list bind:__l="__l" class="data-v-05ca1189" uI="{{item.h}}" uP="{{item.i}}" wx:elif="{{item.g}}"></c_goods-list>
+                <c_magic bind:__l="__l" class="data-v-05ca1189" uI="{{item.k}}" uP="{{item.l}}" wx:elif="{{item.j}}"></c_magic>
+                <c_rolling-notice bind:__l="__l" class="data-v-05ca1189" uI="{{item.n}}" uP="{{item.o}}" wx:elif="{{item.m}}"></c_rolling-notice>
+                <c_search bind:__l="__l" class="data-v-05ca1189" uI="{{item.q}}" uP="{{item.r}}" wx:elif="{{item.p}}"></c_search>
+                <c_module-spacing bind:__l="__l" class="data-v-05ca1189" uI="{{item.t}}" uP="{{item.v}}" wx:elif="{{item.s}}"></c_module-spacing>
+                <c_rolling-notice bind:__l="__l" class="data-v-05ca1189" uI="{{item.x}}" uP="{{item.y}}" wx:elif="{{item.w}}"></c_rolling-notice>
+                <c_video bind:__l="__l" class="data-v-05ca1189" uI="{{item.A}}" uP="{{item.B}}" wx:elif="{{item.z}}"></c_video>
+                <c_title bind:__l="__l" class="data-v-05ca1189" uI="{{item.D}}" uP="{{item.E}}" wx:elif="{{item.C}}"></c_title>
+                <c_search-hot-word bind:__l="__l" class="data-v-05ca1189" uI="{{item.G}}" uP="{{item.H}}" wx:elif="{{item.F}}"></c_search-hot-word>
+                <c_presale bind:__l="__l" class="data-v-05ca1189" uI="{{item.J}}" uP="{{item.K}}" wx:elif="{{item.I}}"></c_presale>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,48 @@
+<view class="page">
+    <view class="page-content base-container">
+        <view class="main-goods">
+            <view class="shop_list">
+                <image alt="" src="{{a}}"></image>
+                <view class="shop-name">
+                    <view class="name double">{{b}}</view>
+                    <view class="msg">
+                        <text class="num">数量:</text>
+                        <text>{{c}}</text>
+                        <text class="left">规格:</text>
+                        <text>{{d}}</text>
+                    </view>
+                    <view class="price">
+                        <text>¥{{e}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="title">商品评价</view>
+            <view class="evaluate-box">
+                <image bindtap="{{item.b}}" src="{{item.a}}" style="{{'margin-right:'+'20rpx'}}" wx:for="{{f}}"></image>
+                <view class="text">{{g}}</view>
+            </view>
+            <view class="desc">
+                <textarea bindblur="{{j}}" bindinput="{{i}}" class="area-text" confirmType="done" cursorSpacing="20" data-show="yes" disableDefaultPadding="true" focus="true" maxlength="200" placeholder="描述下您对此商品的感受吧～" placeholderClass="input-placeholder" value="{{k}}" wx:if="{{h}}"></textarea>
+                <view bindtap="{{o}}" class="area-text textarea-view" data-show="no" wx:if="{{l}}">{{m}} {{n}}</view>
+                <label class="box-input-bottom-ran">{{p}}/200</label>
+            </view>
+            <view class="box-upload">
+                <view class="upload-item" wx:for="{{q}}" wx:key="j">
+                    <block wx:if="{{item.a}}">
+                        <image class="imageUpload" src="{{item.b}}"></image>
+                        <image bindtap="{{item.c}}" class="close-img" src="{{item.d}}"></image>
+                    </block>
+                    <view class="video-bg" wx:if="{{item.e}}">
+                        <image bindtap="{{item.f}}" class="play" src="{{item.g}}"></image>
+                        <image bindtap="{{item.h}}" class="close-img" src="{{item.i}}"></image>
+                    </view>
+                </view>
+                <view bindtap="{{t}}" class="upload-item" wx:if="{{r}}">
+                    <image class="image" src="{{s}}"></image>
+                    <text class="upload-text">上传照片/视频</text>
+                </view>
+            </view>
+        </view>
+        <button bindtap="{{x}}" class="{{['primary-btn',v&&'background']}}" disabled="{{w}}" type="primary">提交</button>
+    </view>
+</view>

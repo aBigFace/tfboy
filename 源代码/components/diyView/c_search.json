@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "type-one": "searchItem/typeOne",
+    "type-two": "searchItem/typeTwo",
+    "otype-three": "searchItem/typeThree",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

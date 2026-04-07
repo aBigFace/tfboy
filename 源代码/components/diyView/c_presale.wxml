@@ -1,0 +1,28 @@
+<view class="diy_view_c_presale data-v-7c6c4478" style="{{'background:'+c}}" wx:if="{{a}}">
+    <scroll-view class="diy_view_c_presale-content data-v-7c6c4478" scrollX="true">
+        <view class="{{['data-v-7c6c4478',i.r&&'diy_view_c_presale-more-activity',i.s&&'diy_view_c_presale-activity']}}" wx:for="{{b}}" wx:for-item="i" wx:key="q">
+            <block wx:if="{{i.a}}">
+                <view bindtap="{{i.l}}" class="diy_view_c_presale-box data-v-7c6c4478">
+                    <image class="diy_view_c_presale-box-img data-v-7c6c4478" src="{{i.b}}"></image>
+                    <view class="diy_view_c_presale-box-time text-center data-v-7c6c4478" wx:if="{{i.c}}">{{i.d}}</view>
+                    <view class="diy_view_c_presale-box-time text-center data-v-7c6c4478" wx:elif="{{i.e}}">
+                        <view class="sold-out-container data-v-7c6c4478" style="background:unset">
+                            <view class="presale-time data-v-7c6c4478" wx:if="{{i.f}}">{{i.g}}</view>
+                            <view class="diy_view_c_presale-box-time text-center data-v-7c6c4478" wx:else>
+                                <view class="data-v-7c6c4478" wx:if="{{i.h}}">
+                                    <text class="data-v-7c6c4478">距结束时间剩余</text>
+                                    <uni-countdown bind:__l="__l" bindtimeup="{{i.i}}" class="countdown-box data-v-7c6c4478" uI="{{i.j}}" uP="{{i.k}}" wx:if="{{i.k}}"></uni-countdown>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="diy_view_c_presale-name text-center data-v-7c6c4478">{{i.m}}</view>
+            </block>
+            <view bindtap="{{i.p}}" class="diy_view_c_presale-more text-center mroe-bg data-v-7c6c4478" wx:if="{{i.n}}">
+                <image alt="" class="diy_view_c_presale-box-more-icon data-v-7c6c4478" src="{{i.o}}"></image>
+                <view class="diy_view_c_presale-box-more data-v-7c6c4478">查看更多</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

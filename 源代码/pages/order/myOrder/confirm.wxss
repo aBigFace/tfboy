@@ -1,0 +1,112 @@
+.order-confirm-page {
+    padding-bottom: 100rpx
+}
+
+.shop-name {
+    font-size: 32rpx;
+    margin-bottom: 20rpx
+}
+
+.fixed-bottom-container wx-button {
+    font-size: 32rpx;
+    height: 72rpx;
+    line-height: 72rpx
+}
+
+.coupon-container {
+    padding-bottom: 30rpx;
+    padding-top: 30rpx
+}
+
+.coupon-container .coupon {
+    background-color: #ffded4;
+    border-radius: 4rpx;
+    color: #e85252;
+    font-size: 24rpx;
+    padding: 4rpx 10rpx
+}
+
+.order-remark-input {
+    border: none;
+    color: #333;
+    font-size: 28rpx;
+    height: 60rpx;
+    text-align: right
+}
+
+.address-container .address-tips {
+    font-size: 32rpx;
+    font-weight: 700
+}
+
+.address-container .default-address-icon {
+    background-color: #e85252;
+    border-radius: 6rpx;
+    color: #fff;
+    display: inline-block;
+    font-size: 20rpx;
+    height: 28rpx;
+    line-height: 30rpx;
+    margin-right: 6rpx;
+    text-align: center;
+    width: 60rpx
+}
+
+.address-container .address-region,.address-container .address-text {
+    max-width: 590rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.address-container .address-text {
+    color: #333;
+    font-size: 32rpx;
+    padding-bottom: 12rpx;
+    padding-top: 8rpx
+}
+
+.address-container .name,.address-container .phone {
+    color: #444
+}
+
+.address-container .phone {
+    padding-left: 20rpx
+}
+
+.gift {
+    border-top: 1rpx solid #eee
+}
+
+.product-list-item:not(:last-child) {
+    border-bottom: 1rpx solid #eee
+}
+
+.price-sum {
+    color: #333;
+    font-size: 24rpx
+}
+
+.gray-sum,.text-500 {
+    color: #333
+}
+
+.text-500 {
+    font-size: 28rpx;
+    font-weight: 500
+}
+
+.price-label {
+    color: #333
+}
+
+.submit-btn {
+    background-color: #ff7272;
+    border-radius: 40rpx;
+    height: 72 rpx;
+    width: 192 rpx
+}
+
+.noDataSubmit {
+    background-color: #efa0a0
+}

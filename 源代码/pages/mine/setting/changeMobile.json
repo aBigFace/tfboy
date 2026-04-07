@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "更改绑定手机",
+  "backgroundColor": "#ffffff",
+  "usingComponents": {
+    "custom-nav": "components/customNav/customNav"
+  }
+}

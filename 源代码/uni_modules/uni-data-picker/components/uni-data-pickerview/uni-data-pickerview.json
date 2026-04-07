@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "uni-load-more": "../../../uni-load-more/components/uni-load-more/uni-load-more",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

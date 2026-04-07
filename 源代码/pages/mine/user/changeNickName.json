@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "修改昵称",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "custom-nav": "components/customNav/customNav"
+  }
+}

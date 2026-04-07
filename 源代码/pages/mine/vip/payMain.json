@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "支付",
+  "usingComponents": {
+    "parent-auth-dialog": "../../dialog/parentAuthDialog",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

@@ -1,0 +1,48 @@
+.realNamePopup .realNamePopup-modal.data-v-da246632 {
+    background-color: #fff;
+    border-radius: 32rpx 32rpx 0rpx 0rpx;
+    height: 754rpx
+}
+
+.realNamePopup .realNamePopup-modal .header-box.data-v-da246632 {
+    background: url("https://cos.tfent.cn/xgg-file-folder/tf-app/wechat/static/image/order/realbanner@2x.png") no-repeat;
+    background-size: 100% 100%;
+    height: 412rpx
+}
+
+.realNamePopup .realNamePopup-modal .header-box .modal-header.data-v-da246632 {
+    padding: 40rpx 30rpx 0
+}
+
+.realNamePopup .realNamePopup-modal .modal-content.data-v-da246632 {
+    text-align: center
+}
+
+.realNamePopup .realNamePopup-modal .modal-content .modal-tip.data-v-da246632 {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 700;
+    margin: 52rpx 0 20rpx
+}
+
+.realNamePopup .realNamePopup-modal .modal-content .modal-intro.data-v-da246632 {
+    color: #999;
+    font-size: 28rpx
+}
+
+.btn.data-v-da246632 {
+    display: inline-block;
+    width: 45%
+}
+
+.cancel.data-v-da246632 {
+    background-color: #e6e6e6!important;
+    color: #666!important
+}
+
+.btnparent.data-v-da246632 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}

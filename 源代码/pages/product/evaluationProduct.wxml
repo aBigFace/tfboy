@@ -1,0 +1,31 @@
+<view class="page">
+    <view class="page-content base-container" wx:if="{{a}}">
+        <view class="evaluation-detail" wx:for="{{b}}" wx:key="k">
+            <view class="evaluation-detail-header">
+                <view class="left">
+                    <image src="{{item.a}}"></image>
+                    <text>{{item.b}}</text>
+                </view>
+                <view class="right">{{item.c}}</view>
+            </view>
+            <view class="evaluation-detail-score">
+                <image src="{{c}}" wx:for="{{item.d}}" wx:for-item="i" wx:key="a"></image>
+            </view>
+            <view class="evaluation-detail-content">{{item.e}}</view>
+            <view class="evaluation-detail-pic">
+                <block wx:for="{{item.f}}" wx:for-item="i" wx:key="g">
+                    <image bindtap="{{i.c}}" class="item" src="{{i.b}}" wx:if="{{i.a}}"></image>
+                    <view class="item video-bg" wx:if="{{i.d}}">
+                        <image bindtap="{{i.e}}" class="play" src="{{i.f}}"></image>
+                    </view>
+                </block>
+            </view>
+            <view class="evaluation-detail-reply" wx:if="{{item.g}}">店家回复:{{item.h}}</view>
+            <view class="evaluation-detail-sku-box" wx:if="{{item.i}}">
+                <view class="evaluation-detail-sku">{{item.j}}</view>
+            </view>
+        </view>
+    </view>
+    <no-data bind:__l="__l" uI="47ff3c84-0" uP="{{e}}" uS="{{['d']}}" wx:if="{{d}}">暂无评价记录</no-data>
+    <uni-load-more bind:__l="__l" uI="47ff3c84-1" uP="{{f||''}}" wx:else></uni-load-more>
+</view>

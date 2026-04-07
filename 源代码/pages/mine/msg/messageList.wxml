@@ -1,0 +1,18 @@
+<view class="page data-v-ad9e8a02">
+    <button bindtap="{{a}}" class="btn data-v-ad9e8a02">客服</button>
+    <view class="msg-view data-v-ad9e8a02">
+        <view bindtap="{{item.h}}" class="message-item data-v-ad9e8a02" wx:for="{{b}}" wx:key="g">
+            <image class="icon data-v-ad9e8a02" src="{{item.a}}"></image>
+            <view class="right-view data-v-ad9e8a02">
+                <view class="title-time data-v-ad9e8a02">
+                    <view class="title data-v-ad9e8a02">{{item.b}}</view>
+                    <view class="time data-v-ad9e8a02">{{item.c}}</view>
+                </view>
+                <view class="title-time data-v-ad9e8a02">
+                    <view class="content data-v-ad9e8a02">{{item.d}}</view>
+                    <view class="unread data-v-ad9e8a02" wx:if="{{item.e}}">{{item.f}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

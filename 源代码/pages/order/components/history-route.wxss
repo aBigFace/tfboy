@@ -1,0 +1,95 @@
+.order-route-list {
+    border-radius: 8rpx;
+    margin-bottom: 20rpx;
+    padding: 24rpx
+}
+
+.order-route-list .route-item {
+    color: #999;
+    font-size: 24rpx;
+    padding-bottom: 40rpx;
+    position: relative
+}
+
+.order-route-list .route-item::after {
+    border: 1px solid #eee;
+    bottom: 0;
+    content: "";
+    left: 39rpx;
+    position: absolute;
+    top: 0
+}
+
+.order-route-list .route-item:last-child {
+    padding-bottom: 0
+}
+
+.order-route-list .route-item:last-child::after {
+    content: none
+}
+
+.order-route-list .route-item .route-name {
+    font-size: 26rpx;
+    width: 0rpx
+}
+
+.order-route-list .route-item .route-icon {
+    height: 40rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    width: 40rpx
+}
+
+.order-route-list .route-item .route-time {
+    margin-bottom: 4rpx
+}
+
+.order-route-list .route-item .route-detail {
+    -webkit-flex: 1;
+    flex: 1;
+    margin-top: -4rpx
+}
+
+.order-route-list .route-item .receive-icon {
+    background: #e85252
+}
+
+.order-route-list .route-item .receive-icon,.order-route-list .route-item .send-icon {
+    border-radius: 50%;
+    color: #fff;
+    height: 32rpx;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 32rpx;
+    z-index: 1
+}
+
+.order-route-list .route-item .send-icon {
+    background: #333
+}
+
+.order-route-list .route-item .icon {
+    background-color: initial;
+    border: 1px solid #e85252;
+    border-radius: 50%;
+    height: 16rpx;
+    margin: 0 auto;
+    position: relative;
+    width: 16rpx;
+    z-index: 1
+}
+
+.order-route-list .route-item .icon.active {
+    background-color: #e85252;
+    height: 20rpx;
+    width: 20rpx
+}
+
+.order-route-list .route-item:first-child {
+    color: #666
+}
+
+.order-route-list .route-item:first-child .route-name {
+    color: #333
+}

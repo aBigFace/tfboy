@@ -1,0 +1,31 @@
+.package-group {
+    background: #fff;
+    border: 2rpx solid #fff;
+    border-radius: 8rpx 8rpx 8rpx 8rpx;
+    margin-right: 25rpx;
+    padding: 16rpx 54rpx
+}
+
+.package-group.active {
+    background: #ffe7e5;
+    border: 2rpx solid #e85252;
+    color: #333
+}
+
+.logistics-company {
+    background: #ffdfdf;
+    border-radius: 4rpx;
+    color: #e85252;
+    font-size: 16rpx;
+    font-size: 20rpx;
+    margin-right: 5rpx;
+    padding: 4rpx 12rpx;
+    position: relative;
+    top: -1rpx
+}
+
+.order-item-header {
+    border-bottom: 1px solid #eee;
+    margin: 0 -24rpx;
+    padding: 18rpx 24rpx 38rpx
+}

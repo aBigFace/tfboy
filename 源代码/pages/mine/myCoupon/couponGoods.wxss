@@ -1,0 +1,54 @@
+.card.data-v-36dab01b {
+    background-color: #fff;
+    padding: 24rpx
+}
+
+.card .goods-image.data-v-36dab01b {
+    border-radius: 8rpx;
+    height: 186rpx;
+    position: relative;
+    width: 186rpx
+}
+
+.card .goods-info .goods-name.data-v-36dab01b {
+    font-size: 28rpx;
+    font-weight: 500;
+    line-height: 36rpx;
+    width: 450rpx
+}
+
+.card .goods-info .sale-ifno.data-v-36dab01b {
+    height: 25rpx;
+    padding: 16rpx 0 24rpx;
+    width: 450rpx
+}
+
+.card .goods-info .history-price.data-v-36dab01b {
+    color: #858585;
+    font-size: 22rpx;
+    text-decoration: line-through
+}
+
+.card .goods-info .price-item.data-v-36dab01b {
+    -webkit-align-items: center;
+    align-items: center;
+    width: 300rpx
+}
+
+.card .goods-info .price-item .hot-price.data-v-36dab01b {
+    color: #e85252;
+    font-size: 28rpx
+}
+
+.card .goods-info .price-item .hot-price .price.data-v-36dab01b {
+    font-size: 40rpx
+}
+
+.card .goods-info .buy-btn.data-v-36dab01b {
+    font-size: 28rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin: 0;
+    padding: 0 5rpx;
+    width: 144rpx
+}

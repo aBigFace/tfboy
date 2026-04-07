@@ -1,0 +1,14 @@
+<view class="outer-box data-v-b9acfff8">
+    <view class="typeTwo data-v-b9acfff8">
+        <view class="input-box data-v-b9acfff8" style="{{'background-color:'+m}}">
+            <view class="search-box data-v-b9acfff8">
+                <image class="search-icon data-v-b9acfff8" src="{{a}}"></image>
+                <input bindinput="{{h}}" bindtap="{{e}}" class="search-input data-v-b9acfff8" key="2" placeholder="{{f}}" placeholderStyle="margin-left:10rpx" style="{{'background-color:'+b+';'+'border-radius:'+c+';'+'padding-left:'+d}}" value="{{g}}"></input>
+                <view class="btn-box data-v-b9acfff8">
+                    <image bindtap="{{j}}" class="search-img data-v-b9acfff8" src="{{k}}" wx:if="{{i}}"></image>
+                    <image class="search-img data-v-b9acfff8" src="{{l}}" wx:else></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

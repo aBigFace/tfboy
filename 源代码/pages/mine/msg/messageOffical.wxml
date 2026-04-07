@@ -1,0 +1,27 @@
+<view class="page data-v-de8acc3a">
+    <view class="data-v-de8acc3a" wx:if="{{a}}">
+        <view class="info-tip data-v-de8acc3a">
+            <view class="handle-box data-v-de8acc3a">官方信息</view>
+            <view bindtap="{{b}}" class="handle-box data-v-de8acc3a">标记已读</view>
+        </view>
+        <view bindtap="{{item.e}}" class="item-view data-v-de8acc3a" wx:for="{{c}}" wx:key="d">
+            <view class="top-view data-v-de8acc3a">
+                <view class="title data-v-de8acc3a">
+                    <image class="icon data-v-de8acc3a" src="{{d}}"></image>{{e}}<view class="unread data-v-de8acc3a" wx:if="{{item.a}}"></view>
+                </view>
+                <view class="time data-v-de8acc3a">{{item.b}}</view>
+            </view>
+            <view class="item-center-view data-v-de8acc3a">
+                <view class="data-v-de8acc3a">
+                    <view class="desc-title data-v-de8acc3a">{{item.c}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="noMessage-box data-v-de8acc3a" wx:else>
+        <image class="noMessage-img data-v-de8acc3a" src="/static/image/mine/noMessage.png"></image>
+        <view class="noMessage-tip-one data-v-de8acc3a">还没有消息哦</view>
+        <view class="noMessage-tip-two data-v-de8acc3a">暂无消息通知，明天再来看看吧</view>
+    </view>
+    <uni-load-more bind:__l="__l" class="data-v-de8acc3a" uI="de8acc3a-0" uP="{{f}}" wx:if="{{f}}"></uni-load-more>
+</view>

@@ -1,0 +1,10 @@
+<view class="uni-countdown data-v-d8982dea">
+    <text class="uni-countdown__number data-v-d8982dea" style="{{c}}" wx:if="{{a}}">{{b}}</text>
+    <text class="uni-countdown__splitor data-v-d8982dea" style="{{f}}" wx:if="{{d}}">{{e}}</text>
+    <text class="uni-countdown__number data-v-d8982dea" style="{{i}}" wx:if="{{g}}">{{h}}</text>
+    <text class="uni-countdown__splitor data-v-d8982dea" style="{{l}}" wx:if="{{j}}">{{k}}</text>
+    <text class="uni-countdown__number data-v-d8982dea" style="{{o}}" wx:if="{{m}}">{{n}}</text>
+    <text class="uni-countdown__splitor data-v-d8982dea" style="{{r}}" wx:if="{{p}}">{{q}}</text>
+    <text class="uni-countdown__number data-v-d8982dea" style="{{t}}">{{s}}</text>
+    <text class="uni-countdown__splitor data-v-d8982dea" style="{{x}}" wx:if="{{v}}">{{w}}</text>
+</view>

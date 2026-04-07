@@ -1,0 +1,112 @@
+<view class="page search-page">
+    <view class="page-content base-container">
+        <view class="main-goods">
+            <view class="shop_list" wx:for="{{a}}" wx:key="n">
+                <image alt="" src="{{item.a}}"></image>
+                <view class="shop-name" style="{{'width:'+item.f}}">
+                    <view class="name double">{{item.b}}</view>
+                    <view class="msg max-line-one">
+                        <text class="num">购买数量:</text>
+                        <text>{{item.c}}</text>
+                        <text class="left">规格:</text>
+                        <text>{{item.d}}</text>
+                    </view>
+                    <view class="price">
+                        <text>¥{{item.e}}</text>
+                    </view>
+                </view>
+                <view class="handle" wx:if="{{item.g}}">
+                    <view catchtap="{{item.h}}" class="{{['handle-subtract',item.i&&'minStu']}}">-</view>
+                    <text catchtap="{{item.k}}" class="handle-total">{{item.j}}</text>
+                    <view catchtap="{{item.m}}" class="{{['handle-add',item.l&&'minStu']}}">+</view>
+                </view>
+            </view>
+        </view>
+        <view class="apply-info">
+            <view class="refund-reason">
+                <view class="left" wx:if="{{b}}">退款原因<text class="require"> *</text>
+                </view>
+                <view class="left" wx:if="{{c}}">换货原因<text class="require"> *</text>
+                </view>
+                <view class="left" wx:if="{{d}}">补寄原因<text class="require"> *</text>
+                </view>
+                <view bindtap="{{g}}" class="reason">{{e}}<uni-icons bind:__l="__l" class="arrow-icon" uI="47402a21-0" uP="{{f}}" wx:if="{{f}}"></uni-icons>
+                </view>
+            </view>
+            <view class="refund-money" wx:if="{{h}}">
+                <view class="left">{{i}}<text class="require"> *</text>
+                </view>
+                <view class="money-input">
+                    <text wx:if="{{j}}">¥ </text>
+                    <input bindinput="{{n}}" class="show-money-input" placeholder="{{l}}" placeholderClass="col_c" placeholderStyle="color:#999999;text-align:left;font-size: 28rpx" type="text" value="{{m}}" wx:if="{{k}}"></input>
+                    <input bindinput="{{r}}" class="show-money-input" placeholder="{{p}}" placeholderClass="col_c" placeholderStyle="color:#999999;text-align:left;font-size: 28rpx" type="text" value="{{q}}" wx:if="{{o}}"></input>
+                    <input bindinput="{{w}}" class="show-money-input" placeholder="{{t}}" placeholderClass="col_c" placeholderStyle="color:#999999;text-align:left;font-size: 28rpx" type="text" value="{{v}}" wx:if="{{s}}"></input>
+                </view>
+            </view>
+        </view>
+        <view class="statement">
+            <view class="main-state">
+                <view class="box-input-top">补充说明<text class="require"> *</text>
+                </view>
+                <view class="box-input-bottom">
+                    <textarea bindblur="{{z}}" bindinput="{{y}}" class="area-text" confirmType="done" cursorSpacing="20" data-show="yes" disableDefaultPadding="true" focus="true" maxlength="400" placeholder="补充您的描述，便于更好通过申诉" placeholderClass="input-placeholder" value="{{A}}" wx:if="{{x}}"></textarea>
+                    <view bindtap="{{E}}" class="area-text textarea-view" data-show="no" wx:if="{{B}}">{{C}} {{D}}</view>
+                    <label class="box-input-bottom-ran">{{F}}/400</label>
+                </view>
+            </view>
+            <view class="main-upload">
+                <view class="upload-title" wx:if="{{G}}">上传视频</view>
+                <view class="m-b-16" wx:if="{{H}}">
+                    <view class="text-gray m-t-8 m-b-16">{{I}}</view>
+                    <uni-easyinput bind:__l="__l" bindupdateModelValue="{{J}}" uI="47402a21-1" uP="{{K}}" wx:if="{{K}}"></uni-easyinput>
+                </view>
+                <view class="box-upload" wx:if="{{L}}">
+                    <view class="upload-item" wx:if="{{M}}">
+                        <view class="video-bg">
+                            <image bindtap="{{N}}" class="play" src="{{O}}"></image>
+                            <image bindtap="{{P}}" class="close-img" src="{{Q}}"></image>
+                        </view>
+                    </view>
+                    <view bindtap="{{T}}" class="upload-item" wx:if="{{R}}">
+                        <image class="image" src="{{S}}"></image>
+                        <text class="upload-text">上传凭证</text>
+                    </view>
+                </view>
+                <view class="upload-title">上传图片</view>
+                <view class="box-upload" style="margin-bottom:20rpx">
+                    <view class="upload-item" wx:for="{{U}}" wx:key="e">
+                        <block wx:if="{{item.a}}">
+                            <image class="imageUpload" src="{{item.b}}"></image>
+                            <image bindtap="{{item.c}}" class="close-img" src="{{item.d}}"></image>
+                        </block>
+                    </view>
+                    <view bindtap="{{X}}" class="upload-item" wx:if="{{V}}">
+                        <image class="image" src="{{W}}"></image>
+                        <text class="upload-text">上传凭证</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="address" wx:if="{{Y}}">
+            <view class="address-top">
+                <view class="title">
+                    <text>收货地址</text>
+                    <text class="require"> *</text>
+                </view>
+                <view bindtap="{{aa}}" class="change">
+                    <image src="{{Z}}"></image>
+                    <text>换一个</text>
+                </view>
+            </view>
+            <view class="address-bottom">
+                <view class="name">{{ab}} {{ac}}</view>
+                <view class="detail">{{ad}}</view>
+            </view>
+        </view>
+        <view bindtap="{{ae}}" class="shop-statement">《退换货说明》</view>
+    </view>
+    <view class="submit">
+        <view bindtap="{{af}}" class="primary-btn">提交</view>
+    </view>
+    <refund-reason bind:__l="__l" bindreasonData="{{ah}}" class="r" uI="47402a21-2" uP="{{ai}}" uR="popupRef" wx:if="{{ai}}"></refund-reason>
+</view>

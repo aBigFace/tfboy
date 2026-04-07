@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "物流详情",
+  "navigationBarBackgroundColor": "#f6f6f6",
+  "usingComponents": {
+    "no-data": "../../../components/no-data",
+    "order-route": "../components/order-route",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

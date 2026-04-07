@@ -1,0 +1,7 @@
+<view class="search-area">
+    <view class="search">
+        <uni-icons bind:__l="__l" class="search-icon" uI="43cbb6a3-0" uP="{{a}}" wx:if="{{a}}"></uni-icons>
+        <input bindconfirm="{{c}}" bindinput="{{e}}" class="flex-1" confirmType="search" placeholder="{{b}}" placeholderStyle="color:#999999" value="{{d}}"></input>
+        <uni-icons bind:__l="__l" bindclick="{{g}}" class="clear-icon" uI="43cbb6a3-1" uP="{{h}}" wx:if="{{f}}"></uni-icons>
+    </view>
+</view>

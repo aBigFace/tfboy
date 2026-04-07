@@ -1,0 +1,149 @@
+.certifyt-parent-checkbox .uni-radio-input {
+    border-radius: 50%!important;
+    height: 32rpx!important;
+    margin-right: 10rpx!important;
+    width: 32rpx!important
+}
+
+.certify-parent-page.data-v-36222b46 {
+    background: #fff;
+    height: 100%;
+    padding: 0 28rpx
+}
+
+.certify-parent-page .certify-parent-page-form .certify-form-item.data-v-36222b46 {
+    background: #fff;
+    margin: 32rpx 0 24rpx
+}
+
+.certify-parent-page .certify-parent-page-form.data-v-36222b46:first-child {
+    margin-top: 0;
+    padding-top: 32rpx
+}
+
+.certify-parent-page .certify-form-label.data-v-36222b46 {
+    color: #333;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 28rpx;
+    font-weight: 400;
+    margin-bottom: 24rpx;
+    padding-left: 12rpx
+}
+
+.certify-parent-page .uni-input.data-v-36222b46 {
+    background: #fff;
+    border: 2rpx solid #eee;
+    border-radius: 50rpx;
+    color: #333;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-weight: 400;
+    height: 100rpx;
+    padding-left: 30rpx
+}
+
+.certify-parent-page .uni-input.data-v-36222b46::-moz-placeholder {
+    color: #bbb;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.certify-parent-page .uni-input.data-v-36222b46::-webkit-input-placeholder {
+    color: #bbb;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.certify-parent-page .uni-input.data-v-36222b46::placeholder {
+    color: #bbb;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.certify-parent-page .certify-phone.data-v-36222b46 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    padding-left: 95rpx
+}
+
+.certify-parent-page .before-tip.data-v-36222b46 {
+    left: 30rpx;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-45%);
+    transform: translateY(-45%);
+    z-index: 1
+}
+
+.certify-parent-page .certify-send-code.data-v-36222b46 {
+    height: 100rpx;
+    position: relative
+}
+
+.certify-parent-page .certify-send-code .uni-input.data-v-36222b46 {
+    left: 0;
+    position: absolute;
+    right: 0
+}
+
+.certify-parent-page .certify-send-code .certify-code-btn.data-v-36222b46 {
+    -webkit-align-items: center;
+    align-items: center;
+    background: transparent;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    padding: 0 32rpx;
+    position: absolute;
+    right: 0;
+    z-index: 10
+}
+
+.certify-parent-page .relative-box.data-v-36222b46 {
+    position: relative
+}
+
+.certify-parent-page .certify-code-btn.data-v-36222b46 {
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 26rpx;
+    font-weight: 400
+}
+
+.certify-parent-page .certify-code-send.data-v-36222b46 {
+    color: #999
+}
+
+.certify-parent-page .certify-code-no-send.data-v-36222b46 {
+    color: #ff7272
+}
+
+.certify-parent-page .certifyt-parent-checkbox.data-v-36222b46 {
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 22rpx;
+    font-weight: 400
+}
+
+.certify-parent-page .certifyt-parent-checkbox .argument-tip.data-v-36222b46 {
+    color: #aeaeae
+}
+
+.certify-parent-page .primary-btn.data-v-36222b46 {
+    background: #ff7272;
+    border-radius: 44rpx;
+    box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(253,115,89,.4);
+    color: #fff
+}
+
+.certify-parent-page .can-commit.data-v-36222b46 {
+    opacity: 1
+}
+
+.certify-parent-page .no-can-commit.data-v-36222b46 {
+    opacity: .5
+}

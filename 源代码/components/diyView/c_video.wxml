@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="box">
+        <view class="box-video">
+            <video controls class="product-video" objectFit="fill" showMuteBtn="true" src="{{a}}"></video>
+        </view>
+        <view class="box-content">
+            <text>{{b}}</text>
+        </view>
+    </view>
+</view>

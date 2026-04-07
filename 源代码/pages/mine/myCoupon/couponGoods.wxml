@@ -1,0 +1,26 @@
+<view class="base-container data-v-36dab01b">
+    <view class="card flex m-b-10 data-v-36dab01b" wx:for="{{a}}" wx:key="j">
+        <view bindtap="{{item.b}}" class="goods-image m-r-10 data-v-36dab01b">
+            <image class="img-max data-v-36dab01b" src="{{item.a}}"></image>
+        </view>
+        <view class="goods-info data-v-36dab01b">
+            <view class="goods-name max-line-two text-primary-grey data-v-36dab01b">{{item.c}}</view>
+            <view class="sale-ifno max-line-one text-gray-xs p-t-10 data-v-36dab01b">
+                <text class="data-v-36dab01b">{{item.d}}</text>
+            </view>
+            <view class="flex-space-between data-v-36dab01b">
+                <view class="price-item flex data-v-36dab01b">
+                    <view class="hot-price data-v-36dab01b">￥<text class="price data-v-36dab01b">{{item.e}}</text>
+                    </view>
+                    <view class="history-price m-l-5 data-v-36dab01b" wx:if="{{item.f}}">
+                        <text class="data-v-36dab01b">￥{{item.g}}</text>
+                    </view>
+                </view>
+                <button bindtap="{{item.i}}" class="primary-btn buy-btn data-v-36dab01b" disabled="{{item.h}}" type="primary">立即购买</button>
+            </view>
+        </view>
+    </view>
+    <no-data bind:__l="__l" class="data-v-36dab01b" uI="36dab01b-0" uP="{{c}}" uS="{{['d']}}" wx:if="{{b}}">暂无可选商品</no-data>
+    <uni-load-more bind:__l="__l" class="data-v-36dab01b" uI="36dab01b-1" uP="{{d||''}}" wx:else></uni-load-more>
+    <select-sku bind:__l="__l" class="r data-v-36dab01b" uI="36dab01b-2" uP="{{f}}" uR="selectSkuRef" wx:if="{{f}}"></select-sku>
+</view>

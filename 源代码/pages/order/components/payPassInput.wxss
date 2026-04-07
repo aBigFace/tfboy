@@ -1,0 +1,114 @@
+.pay-box-container.data-v-05cfccb5 {
+    display: -webkit-flex;
+    display: flex;
+    position: absolute
+}
+
+.pay-box-container .pay-item-box.data-v-05cfccb5 {
+    height: 136rpx;
+    margin-right: 16rpx;
+    position: relative;
+    width: 104rpx
+}
+
+.pay-box-container .pay-item-box .pay-item-box-num.data-v-05cfccb5 {
+    background: #333;
+    border-radius: 50%;
+    bottom: 0;
+    height: 24rpx;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24rpx
+}
+
+.popupPayModal-box.data-v-05cfccb5 {
+    background-color: #fff;
+    border-radius: 24rpx 24rpx 0 0;
+    height: 664rpx;
+    padding: 34rpx 28rpx 0;
+    text-align: center
+}
+
+.pay-content .pay-money.data-v-05cfccb5 {
+    color: #fd6262;
+    font-size: 56rpx;
+    font-weight: 500;
+    margin-top: 50rpx
+}
+
+.pay-content .pay-tip.data-v-05cfccb5 {
+    color: #999;
+    font-size: 26rpx;
+    margin: 12rpx 0 32rpx
+}
+
+.codeNum.data-v-05cfccb5 {
+    position: relative
+}
+
+.codeNum .code-input-item.data-v-05cfccb5 {
+    border: 2rpx solid #ddd;
+    border-radius: 8rpx;
+    color: transparent;
+    font-size: 12rpx;
+    height: 136rpx;
+    text-align: center;
+    width: 104rpx
+}
+
+.codeNum .code-input-item.active.data-v-05cfccb5 {
+    border: 2rpx solid #e85252
+}
+
+.codeNum .code-input.data-v-05cfccb5 {
+    color: #fd6262;
+    height: 0;
+    width: 0
+}
+
+.codeNum .second.data-v-05cfccb5 {
+    bottom: -12rpx;
+    position: absolute;
+    right: 15rpx
+}
+
+.box-input-group.data-v-05cfccb5 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly
+}
+
+.box_stack.data-v-05cfccb5 {
+    position: relative
+}
+
+.box-light.data-v-05cfccb5 {
+    border: 1px solid #ff4500;
+    border-radius: 4px
+}
+
+.box-gray.data-v-05cfccb5,.box-light.data-v-05cfccb5 {
+    height: 111rpx;
+    line-height: 110rpx;
+    text-align: center;
+    width: 100rpx
+}
+
+.box-gray.data-v-05cfccb5 {
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    top: 0
+}
+
+.box-input.data-v-05cfccb5 {
+    font-size: 1px;
+    height: 111rpx;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 700rpx
+}

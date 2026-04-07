@@ -1,0 +1,17 @@
+<view class="data-v-10d768ac" style="{{'padding-left:'+j+';'+'padding-right:'+k}}">
+    <view class="oneLineMore data-v-10d768ac" style="{{'position:'+'relative'}}">
+        <view class="oneLineMore-title data-v-10d768ac" style="{{'text-align:'+c+';'+'color:'+d}}" wx:if="{{a}}">{{b}}</view>
+        <swiper autoplay="{{false}}" class="data-v-10d768ac" indicatorPosition="outside" style="{{'height:'+i}}">
+            <swiper-item class="test data-v-10d768ac" wx:for="{{e}}" wx:key="b">
+                <view class="item data-v-10d768ac">
+                    <view bindtap="{{i.c}}" class="itemBox data-v-10d768ac" style="{{'width:'+h}}" wx:for="{{item.a}}" wx:for-item="i">
+                        <view class="itemBox-img data-v-10d768ac">
+                            <image class="{{['data-v-10d768ac',f]}}" src="{{i.a}}" style="{{'width:'+'44px'+';'+'height:'+'44px'}}"></image>
+                        </view>
+                        <view class="itemBox-text data-v-10d768ac" style="{{'color:'+g}}">{{i.b}}</view>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

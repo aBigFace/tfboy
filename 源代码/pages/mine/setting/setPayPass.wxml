@@ -1,0 +1,18 @@
+<view class="page base-container data-v-650b009e">
+    <view class="changeInfo data-v-650b009e">
+        <view class="info-tips text-center data-v-650b009e">
+            <text class="changeNum font-32 data-v-650b009e">{{a}}</text>
+            <view class="safe-tip data-v-650b009e">{{b}}</view>
+        </view>
+        <view class="data-v-650b009e" wx:if="{{c}}">
+            <custom-pass-input bind:__l="__l" bindcheckingPassWord="{{e}}" class="r data-v-650b009e" uI="650b009e-0" uP="{{f}}" uR="customPassInputRef" wx:if="{{f}}"></custom-pass-input>
+            <button bindtap="{{g}}" class="submit-btn base-btn-footer data-v-650b009e" type="primary">确定</button>
+        </view>
+        <view class="data-v-650b009e" wx:else>
+            <custom-pass-input bind:__l="__l" bindsetPassWord="{{j}}" class="r data-v-650b009e" uI="650b009e-1" uP="{{k}}" uR="customPassInputRef" wx:if="{{h}}"></custom-pass-input>
+            <custom-pass-input bind:__l="__l" bindsetPassWordConfirm="{{n}}" class="r data-v-650b009e" uI="650b009e-2" uP="{{o}}" uR="customPassInputRef" wx:if="{{l}}"></custom-pass-input>
+            <button bindtap="{{q}}" class="submit-btn base-btn-footer data-v-650b009e" type="primary" wx:if="{{p}}">确定</button>
+        </view>
+    </view>
+    <confirm-modal bind:__l="__l" class="r data-v-650b009e" uI="650b009e-3" uR="confirmModalRef"></confirm-modal>
+</view>

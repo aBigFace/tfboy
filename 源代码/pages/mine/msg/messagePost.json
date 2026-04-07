@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "交易物流",
+  "backgroundColor": "#ffffff",
+  "enablePullDownRefresh": true,
+  "onReachBottonDistance": 10,
+  "usingComponents": {
+    "uni-load-more": "../../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "custom-nav": "components/customNav/customNav"
+  },
+  "__warning__": "invalid page.json [\"onReachBottonDistance\"]"
+}

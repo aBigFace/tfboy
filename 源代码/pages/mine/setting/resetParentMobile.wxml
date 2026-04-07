@@ -1,0 +1,19 @@
+<view class="page base-container data-v-4312ffa4">
+    <uni-forms bind:__l="__l" class="mobileForm r data-v-4312ffa4" uI="4312ffa4-0" uP="{{l}}" uR="formRef" uS="{{['d']}}" wx:if="{{l}}">
+        <uni-forms-item bind:__l="__l" class="data-v-4312ffa4" uI="4312ffa4-1,4312ffa4-0" uP="{{d}}" uS="{{['d']}}" wx:if="{{d}}">
+            <view class="mobile data-v-4312ffa4">
+                <uni-easyinput bind:__l="__l" bindupdateModelValue="{{b}}" class="mobile-input r data-v-4312ffa4" uI="4312ffa4-2,4312ffa4-1" uP="{{c}}" uR="mobile" wx:if="{{c}}"></uni-easyinput>
+                <view class="tip font-28 data-v-4312ffa4">+86</view>
+            </view>
+        </uni-forms-item>
+        <uni-forms-item bind:__l="__l" class="text-primary-grey font-28 data-v-4312ffa4" uI="4312ffa4-3,4312ffa4-0" uP="{{j}}" uS="{{['d']}}" wx:if="{{j}}">
+            <view class="codeNum data-v-4312ffa4">
+                <input bindinput="{{f}}" class="input-item border data-v-4312ffa4" maxlength="6" placeholder="请填写验证码" placeholderClass="placeholder" ref="mobile" value="{{e}}"></input>
+                <view class="code data-v-4312ffa4">
+                    <text bindtap="{{i}}" class="{{['data-v-4312ffa4',h&&'text-gray']}}">{{g}}</text>
+                </view>
+            </view>
+        </uni-forms-item>
+    </uni-forms>
+    <button bindtap="{{n}}" class="primary-btn data-v-4312ffa4" disabled="{{m}}" type="primary">提交认证</button>
+</view>

@@ -1,0 +1,16 @@
+.content.data-v-f3c08834 {
+    border-radius: 8rpx;
+    padding-top: 8rpx
+}
+
+.bold.data-v-f3c08834 {
+    font-weight: 700
+}
+
+.italic.data-v-f3c08834 {
+    font-style: italic
+}
+
+.underline.data-v-f3c08834 {
+    text-decoration: underline
+}

@@ -1,0 +1,11 @@
+.customer-service {
+    bottom: 288rpx;
+    position: fixed;
+    right: 0;
+    z-index: 10
+}
+
+.customer-service,.customer-service wx-image {
+    height: 120rpx;
+    width: 120rpx
+}

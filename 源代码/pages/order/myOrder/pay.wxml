@@ -1,0 +1,35 @@
+<view class="order-pay-page base-container pay-page-box">
+    <view class="text-center base-white-radius-container m-b-10">
+        <price bind:__l="__l" uI="0b2d942a-0" uP="{{b}}" wx:if="{{a}}"></price>
+        <price bind:__l="__l" uI="0b2d942a-1" uP="{{d}}" wx:if="{{c}}"></price>
+        <view class="left-pay-time text-gray flex-justify-center">
+            <text class="pay-time">剩余时间</text>
+            <uni-countdown bind:__l="__l" bindtimeup="{{e}}" class="text-gray" uI="0b2d942a-2" uP="{{f}}" wx:if="{{f}}"></uni-countdown>
+        </view>
+    </view>
+    <view class="pay-method-list base-white-radius-container">
+        <view class="text-bold m-t-5 pay-method-tip">支付方式</view>
+        <view bindtap="{{item.l}}" class="{{['pay-method-item','flex-center','m-t-10',item.k&&'active']}}" wx:for="{{g}}" wx:key="j">
+            <view class="item-pay" wx:if="{{item.a}}">
+                <image class="width-56 m-r-10" src="{{item.b}}"></image>
+                <text>{{item.c}}</text>
+            </view>
+            <view class="item-pay" wx:if="{{item.d}}">
+                <image class="width-56 m-r-10" src="{{item.e}}"></image>
+                <text>{{item.f}} <text class="surplus-num">(剩余：{{item.g}})</text>
+                </text>
+            </view>
+            <image class="checked-icon width-38" src="{{item.i}}" wx:if="{{item.h}}"></image>
+        </view>
+    </view>
+    <view class="footer-container">
+        <button bindtap="{{h}}" class="primary-btn base-btn-footer" disabled="{{i}}" type="primary">去支付</button>
+    </view>
+    <view class="pay-box" hidden="{{!m}}">
+        <pay-pass-input bind:__l="__l" bindchangePayPopupShowFlag="{{k}}" class="payPass-box r" uI="0b2d942a-3" uP="{{l}}" uR="payPopupRef" wx:if="{{l}}"></pay-pass-input>
+    </view>
+</view>
+<confirm-modal bind:__l="__l" class="r" uI="0b2d942a-4" uR="confirmModalRef" uS="{{['message']}}">
+    <view class="text-gray" slot="message">放弃支付后订单将在10分钟内取消</view>
+</confirm-modal>
+<confirm-modal bind:__l="__l" class="r" uI="0b2d942a-5" uR="confirmRef"></confirm-modal>

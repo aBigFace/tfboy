@@ -1,0 +1,24 @@
+<uni-popup bind:__l="__l" class="r" uI="452076a6-0" uP="{{t}}" uR="confirmDialogRef" uS="{{['d']}}" wx:if="{{t}}">
+    <view class="dialog confirm-modal">
+        <view class="dialog-header">
+            <view class="dialog-header-title dialog-description">
+                <view class="header-info">{{a}}</view>
+                <view class="tip-box">
+                    <view class="header-tip" wx:if="{{b}}">{{c}}</view>
+                </view>
+            </view>
+            <view class="{{['dialog-content',g]}}">
+                <view class="name-phone">
+                    <text class="name-tip">{{d}}</text>
+                    <text class="phone-tip">{{e}}</text>
+                </view>
+                <view class="address-tip">{{f}}</view>
+            </view>
+            <uni-icons bind:__l="__l" bindclick="{{i}}" class="close-icon" uI="452076a6-1,452076a6-0" uP="{{j}}" wx:if="{{h}}"></uni-icons>
+        </view>
+        <view class="dialog-footer flex">
+            <button bindtap="{{m}}" class="default-btn" style="{{'color:'+n}}" wx:if="{{k}}">{{l}}</button>
+            <button bindtap="{{r}}" class="default-btn confirm-btn" style="{{'color:'+q}}" wx:if="{{o}}">{{p}}</button>
+        </view>
+    </view>
+</uni-popup>

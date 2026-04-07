@@ -1,0 +1,31 @@
+.page.data-v-776e262c {
+    background-color: #fff;
+    height: 100vh
+}
+
+.page .uni-input.data-v-776e262c {
+    background: #fff;
+    border: 2rpx solid #eee;
+    border-radius: 50rpx;
+    color: #333;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 28rpx;
+    font-weight: 400;
+    height: 100rpx;
+    line-height: 42rpx;
+    padding-left: 30rpx
+}
+
+.page .primary-btn.data-v-776e262c {
+    background: #ff7272;
+    border-radius: 44rpx;
+    box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(253,115,89,.4)
+}
+
+.page .can-submit.data-v-776e262c {
+    opacity: 1
+}
+
+.page .no-can-submit.data-v-776e262c {
+    opacity: .5
+}

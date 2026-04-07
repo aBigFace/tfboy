@@ -1,0 +1,136 @@
+.uni-easyinput {
+    color: #333;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    position: relative;
+    text-align: left;
+    width: 100%
+}
+
+.uni-easyinput__content {
+    -webkit-align-items: center;
+    align-items: center;
+    border-color: #fff;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    transition-duration: .3s;
+    transition-property: border-color;
+    width: 100%
+}
+
+.uni-easyinput__content-input {
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    height: 35px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    width: auto
+}
+
+.uni-easyinput__placeholder-class {
+    color: #999;
+    font-size: 12px
+}
+
+.is-textarea {
+    -webkit-align-items: flex-start;
+    align-items: flex-start
+}
+
+.is-textarea-icon {
+    margin-top: 5px
+}
+
+.uni-easyinput__content-textarea {
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    height: 80px;
+    line-height: 1.5;
+    margin: 6px 6px 6px 0;
+    min-height: 80px;
+    overflow: hidden;
+    position: relative;
+    width: auto
+}
+
+.input-padding {
+    padding-left: 10px
+}
+
+.content-clear-icon {
+    padding: 0 5px
+}
+
+.label-icon {
+    margin-right: 5px;
+    margin-top: -1px
+}
+
+.is-input-border {
+    -webkit-align-items: center;
+    align-items: center;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.uni-error-message {
+    bottom: -17px;
+    color: #e43d33;
+    font-size: 12px;
+    left: 0;
+    line-height: 12px;
+    position: absolute;
+    text-align: left
+}
+
+.uni-error-msg--boeder {
+    bottom: 0;
+    line-height: 22px;
+    position: relative
+}
+
+.is-input-error-border {
+    border-color: #e43d33
+}
+
+.is-input-error-border .uni-easyinput__placeholder-class {
+    color: #f29e99
+}
+
+.uni-easyinput--border {
+    border-top: 1px solid #eee;
+    margin-bottom: 0;
+    padding: 10px 15px
+}
+
+.uni-easyinput-error {
+    padding-bottom: 0
+}
+
+.is-first-border {
+    border: none
+}
+
+.is-disabled {
+    background-color: #f7f6f6;
+    color: #d5d5d5
+}
+
+.is-disabled .uni-easyinput__placeholder-class {
+    color: #d5d5d5;
+    font-size: 12px
+}

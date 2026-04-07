@@ -1,0 +1,25 @@
+<view class="page">
+    <view class="page-content base-container">
+        <view class="main-goods" wx:for="{{a}}" wx:key="i">
+            <checkbox-group>
+                <view class="shop_list">
+                    <image alt="" src="{{item.a}}"></image>
+                    <view class="shop-name">
+                        <view class="name double">{{item.b}}</view>
+                        <view class="msg">
+                            <text class="num">数量:</text>
+                            <text>{{item.c}}</text>
+                            <text class="left">规格:</text>
+                            <text>{{item.d}}</text>
+                        </view>
+                        <view class="price">¥{{item.e}}</view>
+                    </view>
+                    <view class="evaluation-btn">
+                        <checkbox bindtap="{{item.f}}" checked="{{item.g}}" class="checkboxSelect" value="{{item.h}}"></checkbox>
+                    </view>
+                </view>
+            </checkbox-group>
+        </view>
+        <button bindtap="{{d}}" class="{{['primary-btn','fixed-bottom-container','m-b-20',b&&'background']}}" disabled="{{c}}" type="primary">确定</button>
+    </view>
+</view>

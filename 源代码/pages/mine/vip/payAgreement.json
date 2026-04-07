@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "会员协议",
+  "usingComponents": {
+    "custom-nav": "components/customNav/customNav"
+  }
+}

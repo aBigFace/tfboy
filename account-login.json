@@ -1,0 +1,47 @@
+{
+  "id": "5a4f35ab-a908-45b2-9d43-0a019e07a73c",
+  "username": "15699086987",
+  "password": "271199Llmm",
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50VXNlciI6eyJ1c2VySWQiOjIyNDY3NjA5LCJzeXNDb2RlIjoidGYiLCJhY2NvdW50IjoiMTU2OTkwODY5ODciLCJhY2NvdW50VHlwZSI6MiwiY29tcGFueUlkIjoyLCJpbnRlcmlvcklkIjpudWxsLCJtYWluT3JnSWQiOm51bGwsInBsYXRmb3JtIjoxLCJvcmdJZCI6bnVsbCwib3JnSWRzIjpudWxsLCJkZXZpY2VDb2RlIjpudWxsLCJvcGVuSWQiOiIiLCJhcHBsZXRPcGVuSWQiOiIiLCJwaG9uZSI6IjE1Njk5MDg2OTg3IiwiZW1haWwiOm51bGwsIm5pY2tOYW1lIjoiIiwiY29tcGFueU5hbWUiOiJURiIsIm9yZ05hbWUiOm51bGwsInVzZXJLaW5kIjoyLCJwbGF0Zm9ybUNvbXBhbnlJZCI6MiwicGxhdGZvcm1PcmdJZCI6MzUsInBsYXRmb3JtQ29tcGFueU5hbWUiOiJURiIsInBsYXRmb3JtT3JnTmFtZSI6IlRGIiwicm9sZVR5cGUiOm51bGwsImNoYW5uZWwiOjAsImxvZ2luUGxhdGZvcm0iOjJ9LCJjb2RlIjoyMDAsInVzZXJfbmFtZSI6IjE1Njk5MDg2OTg3Iiwic2NvcGUiOlsiYXBwIl0sImV4cCI6MTc3ODA0Mzc0NCwiZXhwaXJhdGlvbl9kYXRlIjoxNzc4MDQzNzQ0ODI4LCJqdGkiOiIwZWViMWFjMi0yMTViLTQ4MDYtOWNlOS1kZTY0NmZmMzgzYjMiLCJjbGllbnRfaWQiOiJ0ZiJ9.RC23kTWQlcJQdnHPckjwIGvwbUT87GLxasNIqMpKWZjtd7T12VF6f7u9G144LXkv6ql9zY8lSN5knN9kDr10ami2WP04-WQNtwXnM4kMa1U7CjRbRRtqCfnmE6309ctveFq7i9Gt9JV9km-V0i6_pnFGgX0IMKkZHRcxbB7hEEj8PJTBywcUHQhK3PqtpvsQR7f15kMg6wUXvTzwZLcoSSrdbqzCKvf9Y8BmD7JhnwvMDJYjP7BcS0mXuam5_JcMOeeWoc2XtVJnUrUpGW7Q2sBG_renTqvognOM68UMaOLkh_pfhbUw8dIyMEnrFencET2SZuqcxRtlRje9zY9j0Q",
+  "currentUser": {
+    "userId": 22467609,
+    "sysCode": "tf",
+    "account": "15699086987",
+    "accountType": 2,
+    "companyId": 2,
+    "interiorId": null,
+    "mainOrgId": null,
+    "platform": 1,
+    "orgId": null,
+    "orgIds": null,
+    "deviceCode": null,
+    "openId": "",
+    "appletOpenId": "",
+    "phone": "15699086987",
+    "email": null,
+    "nickName": "",
+    "companyName": "TF",
+    "orgName": null,
+    "userKind": 2,
+    "platformCompanyId": 2,
+    "platformOrgId": 35,
+    "platformCompanyName": "TF",
+    "platformOrgName": "TF",
+    "roleType": null,
+    "channel": 0,
+    "loginPlatform": 2
+  },
+  "updatedAt": 1775451744753,
+  "remark": "唏哩呼噜",
+  "memberSubjects": [
+    {
+      "subjectName": "登陆计划",
+      "termDay": null
+    },
+    {
+      "subjectName": "TF家族",
+      "termDay": null
+    }
+  ],
+  "personalAt": 1775451744986
+}

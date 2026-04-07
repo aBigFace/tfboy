@@ -1,0 +1,229 @@
+.order-detail-page {
+    background-position: no-repeat;
+    background-size: 100vw 220rpx
+}
+
+.order-detail-page .surplus-pay-num {
+    color: #fd6262;
+    font-size: 26rpx
+}
+
+.order-detail-page wx-button {
+    min-width: 160rpx
+}
+
+.order-detail-page .header-bg {
+    background: linear-gradient(1turn,#f5f5f5,#f9eff5 49%,#eef);
+    height: 230rpx;
+    position: relative
+}
+
+.order-detail-page .header-bg .order-status {
+    position: relative
+}
+
+.order-detail-page .header-bg .order-status .order-status-icon {
+    height: 48rpx;
+    margin-right: 20rpx;
+    width: 48rpx
+}
+
+.order-detail-page .header-bg .order-status .status-text {
+    color: #222;
+    font-size: 40rpx;
+    font-weight: 500;
+    margin-bottom: 6rpx;
+    padding-top: 10rpx
+}
+
+.order-detail-page .header-bg .order-desc {
+    font-size: 24rpx;
+    margin-top: 10rpx
+}
+
+.order-detail-page .header-bg .order-desc .text-ashy {
+    color: #333;
+    font-size: 28rpx
+}
+
+.order-detail-page .header-bg .order-status-bg-icon {
+    bottom: 100rpx;
+    height: 120rpx;
+    opacity: .15;
+    position: absolute;
+    right: 40rpx;
+    width: 120rpx
+}
+
+.order-detail-page .page-content {
+    position: relative;
+    top: -144rpx
+}
+
+.order-detail-page .order-products {
+    background-color: #fff;
+    border-radius: 8rpx;
+    min-height: 260rpx;
+    padding-bottom: 24rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx
+}
+
+.order-detail-page .order-item-header {
+    border-bottom: 1px solid #eee;
+    margin: 0 -24rpx;
+    padding: 30rpx 24rpx 24rpx
+}
+
+.order-detail-page .order-detail-section {
+    padding-bottom: 6rpx;
+    padding-top: 6rpx
+}
+
+.order-detail-page .order-detail-section-item {
+    padding-bottom: 20rpx;
+    padding-top: 20rpx
+}
+
+.order-detail-page .order-detail-section .order-copy {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end
+}
+
+.order-detail-page .buyer-remark-item {
+    padding-bottom: 35rpx;
+    padding-top: 35rpx
+}
+
+.order-detail-page .last-view {
+    margin-bottom: 40rpx
+}
+
+.order-detail-page .copy-icon {
+    text-decoration: underline
+}
+
+.order-detail-page .fixed-bottom-container {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.04);
+    text-align: right;
+    z-index: 2
+}
+
+.order-detail-page .fixed-bottom-container wx-button {
+    border-radius: 44rpx;
+    height: 64rpx
+}
+
+.order-detail-page .package-group {
+    background: #fff;
+    border: 2rpx solid #fff;
+    border-radius: 34rpx;
+    color: #666;
+    font-size: 28rpx;
+    height: 68rpx;
+    line-height: 68rpx;
+    margin-right: 25rpx;
+    text-align: center;
+    width: 192rpx
+}
+
+.order-detail-page .package-group.active {
+    background: #fff3f3;
+    border: 2rpx solid #ff7272;
+    color: #fd6262
+}
+
+.order-detail-page .logistics-company {
+    background: #ffdfdf;
+    border-radius: 4rpx;
+    color: #e85252;
+    font-size: 16rpx;
+    font-size: 20rpx;
+    margin-right: 5rpx;
+    padding: 4rpx 12rpx;
+    position: relative;
+    top: -1rpx
+}
+
+.order-detail-page .logistics-content {
+    background: #f6f6f6;
+    border-radius: 8rpx;
+    opacity: 1;
+    padding: 16rpx 24rpx
+}
+
+.order-detail-page .logistics-content .logistics-status {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 600;
+    line-height: 36rpx
+}
+
+.order-detail-page .logistics-content .logistics-current {
+    color: #999;
+    font-size: 24rpx;
+    line-height: 32rpx
+}
+
+.order-detail-page .logistics-copy {
+    border-right: 2rpx solid #d8d8d8;
+    display: inline-block;
+    height: 28rpx;
+    line-height: 24rpx;
+    margin-right: 16rpx;
+    padding: 0 16rpx
+}
+
+.order-detail-page .uni-easyinput {
+    text-align: right
+}
+
+.order-detail-page .plain-btn {
+    border: 2rpx solid #ddd!important;
+    color: #333!important;
+    height: 62rpx;
+    line-height: 62rpx;
+    margin-right: 10rpx
+}
+
+.order-detail-page .order-total {
+    border-top: 20rpx;
+    font-size: 26rpx
+}
+
+.order-detail-page .order-total .text-tip {
+    margin-right: 5rpx
+}
+
+.order-detail-page .order-total:nth-last-child(2) {
+    border-bottom: 1rpx solid #eee
+}
+
+.order-detail-page .totlePrice {
+    float: left
+}
+
+.order-detail-page .new-copy-icon {
+    border: 2rpx solid #ddd;
+    border-radius: 4rpx;
+    color: #999;
+    display: inline-block;
+    font-size: 20rpx;
+    padding: 1rpx 6rpx
+}
+
+.order-detail-page .order-product {
+    padding-bottom: 24rpx;
+    padding-top: 24rpx
+}
+
+.order-detail-page .img-box {
+    border-radius: 8rpx;
+    height: 100rpx;
+    margin-top: 6rpx;
+    width: 100rpx
+}

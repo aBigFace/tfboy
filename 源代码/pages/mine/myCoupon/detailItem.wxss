@@ -1,0 +1,36 @@
+.goods.data-v-0e6612ee {
+    background-color: #f5f5f5;
+    padding: 15rpx
+}
+
+.goods .goods-img.data-v-0e6612ee {
+    background-color: #fff;
+    height: 104rpx;
+    position: relative;
+    width: 104rpx
+}
+
+.goods .goods-img .grey.data-v-0e6612ee {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%)
+}
+
+.goods .zengpin.data-v-0e6612ee {
+    background: #e85252;
+    border-radius: 0rpx 0rpx 10rpx 0rpx;
+    color: #fff;
+    font-size: 14rpx;
+    height: 20rpx;
+    left: 0;
+    line-height: 20rpx;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 45rpx
+}
+
+.goods .goods-name.data-v-0e6612ee {
+    color: #444;
+    font-size: 24rpx;
+    margin-left: 20rpx
+}

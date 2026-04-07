@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "confirm-modal": "../../../components/modal/confirm-modal",
+    "uni-icons": "../../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

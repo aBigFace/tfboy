@@ -1,0 +1,4 @@
+<view class="search-box data-v-039d9830">
+    <uni-search-bar bind:__l="__l" bindconfirm="{{b}}" bindfocus="{{a}}" bindupdateModelValue="{{c}}" class="search-inp data-v-039d9830" uI="039d9830-0" uP="{{d}}" wx:if="{{d}}"></uni-search-bar>
+    <view bindtap="{{e}}" class="cancel-btn data-v-039d9830">取消</view>
+</view>

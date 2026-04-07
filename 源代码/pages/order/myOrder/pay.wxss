@@ -1,0 +1,109 @@
+.pay-page-box {
+    box-sizing: border-box;
+    height: 100%;
+    position: relative
+}
+
+.pay-time {
+    margin-bottom: 4rpx
+}
+
+.footer-container {
+    margin-top: 72rpx
+}
+
+.pay-method-list .pay-method-tip {
+    font-size: 28rpx
+}
+
+.pay-method-list .pay-method-item {
+    border: 2rpx solid #ebebeb;
+    border-radius: 8rpx;
+    height: 112rpx;
+    margin: 20rpx 0;
+    position: relative
+}
+
+.pay-method-list .pay-method-item .item-pay {
+    display: -webkit-flex;
+    display: flex;
+    margin-left: 26rpx
+}
+
+.pay-method-list .pay-method-item .item-pay wx-text {
+    -webkit-align-self: center;
+    align-self: center;
+    font-size: 28rpx
+}
+
+.pay-method-list .pay-method-item .item-pay .surplus-num {
+    font-size: 24rpx
+}
+
+.pay-method-list .pay-method-item.active {
+    border: 1px solid #e85252;
+    border-radius: 10rpx
+}
+
+.pay-method-list .pay-method-item.active .checked-icon {
+    bottom: 0;
+    position: absolute;
+    right: 0
+}
+
+.order-result {
+    background-color: #fff;
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 100rpx 28rpx
+}
+
+.order-result .result-icon {
+    text-align: center
+}
+
+.order-result .result-icon wx-image {
+    height: 200rpx;
+    width: 244rpx
+}
+
+.order-result .money {
+    font-size: 44rpx
+}
+
+.order-result .operate-btn {
+    color: #fd6262;
+    margin-top: 100rpx
+}
+
+.order-result .operate-btn wx-button {
+    border: 2rpx solid #ff7272;
+    color: #fd6262;
+    font-size: 28rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 240rpx
+}
+
+.next-tip {
+    color: #999;
+    font-size: 26rpx;
+    margin-top: 16rpx
+}
+
+.pay-box {
+    background: rgba(0,0,0,.6);
+    height: 100%;
+    position: fixed;
+    top: 0
+}
+
+.pay-box,.payPass-box {
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.payPass-box {
+    position: absolute
+}

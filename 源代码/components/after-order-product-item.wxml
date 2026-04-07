@@ -1,0 +1,29 @@
+<view class="{{['order-product','flex',q&&'invalid-product']}}">
+    <view class="left-image">
+        <image class="img-max" src="{{a}}"></image>
+        <view class="invalid-tip" wx:if="{{b}}">已失效</view>
+        <view class="img-tips" wx:if="{{c}}">{{d}}</view>
+        <view class="img-tips" wx:if="{{e}}">赠品</view>
+    </view>
+    <view class="flex-1">
+        <view class="product-info flex-space-between">
+            <view class="">
+                <view class="product-name max-line-two flex-1">{{f}}</view>
+            </view>
+            <view class="product-price-number" wx:if="{{g}}"></view>
+        </view>
+        <view class="product-spec">
+            <view class="flex-space-between-center">
+                <view bindtap="{{l}}" class="spec-name flex-center">
+                    <text class="spec-text text-gray-xs" wx:if="{{h}}">规格: {{i}}</text>
+                    <uni-icons bind:__l="__l" class="arrow-icon" uI="310968d6-0" uP="{{k}}" wx:if="{{j}}"></uni-icons>
+                </view>
+                <view class="product-number text-gray"></view>
+            </view>
+        </view>
+        <view class="product-spec m-t-5" wx:if="{{m}}">
+            <price bind:__l="__l" uI="310968d6-1" uP="{{n}}" wx:if="{{n}}"></price>
+        </view>
+        <view class="error-message m-t-5" wx:if="{{o}}">{{p}}</view>
+    </view>
+</view>

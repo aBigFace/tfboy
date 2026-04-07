@@ -1,0 +1,33 @@
+<view class="certify-parent-page page data-v-36222b46">
+    <view class="certify-parent-page-form data-v-36222b46">
+        <view class="certify-form-item data-v-36222b46">
+            <view class="certify-form-label data-v-36222b46">家长姓名</view>
+            <input bindinput="{{b}}" class="uni-input data-v-36222b46" placeholder="请填写家长真实姓名" placeholderStyle="font-size: 28rpx;color: #BBBBBB" value="{{a}}"></input>
+        </view>
+        <view class="certify-form-item data-v-36222b46">
+            <view class="certify-form-label data-v-36222b46">家长证件号</view>
+            <input bindinput="{{d}}" class="uni-input data-v-36222b46" placeholder="请填写家长身份证号码" placeholderStyle="font-size: 28rpx;color: #BBBBBB" value="{{c}}"></input>
+        </view>
+        <view class="certify-form-item data-v-36222b46">
+            <view class="certify-form-label data-v-36222b46">手机号</view>
+            <view class="relative-box data-v-36222b46">
+                <view class="before-tip data-v-36222b46">+86</view>
+                <input bindinput="{{f}}" class="uni-input certify-phone data-v-36222b46" placeholder="请填写家长手机号码" placeholderStyle="font-size: 28rpx;color: #BBBBBB" type="tel" value="{{e}}"></input>
+            </view>
+        </view>
+        <view class="certify-form-item data-v-36222b46">
+            <view class="certify-form-label data-v-36222b46">验证码</view>
+            <view class="certify-send-code data-v-36222b46">
+                <input bindinput="{{h}}" class="uni-input certify-code data-v-36222b46" maxlength="20" placeholder="请填写验证码" placeholderStyle="font-size: 28rpx;color: #BBBBBB" type="number" value="{{g}}"></input>
+                <view bindtap="{{k}}" class="{{['data-v-36222b46','certify-code-btn',j]}}">{{i}}</view>
+            </view>
+        </view>
+        <view class="certify-agreement data-v-36222b46">
+            <radio bindtap="{{n}}" checked="{{m}}" class="certifyt-parent-checkbox data-v-36222b46" color="#ff7272">
+                <text class="argument-tip data-v-36222b46">已阅读并同意</text>
+                <text bindtap="{{l}}" class="data-v-36222b46">《实名认证协议》</text>
+            </radio>
+            <button bindtap="{{q}}" class="{{['data-v-36222b46',o,'primary-btn','m-t-30']}}" disabled="{{p}}" type="button">提交</button>
+        </view>
+    </view>
+</view>

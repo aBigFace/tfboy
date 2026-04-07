@@ -1,0 +1,19 @@
+<view class="order-result">
+    <view class="failure-result">
+        <view class="result-icon failure-icon">
+            <image src="{{a}}"></image>
+        </view>
+        <view class="text-light text-semi-bold text-center">支付失败</view>
+        <view class="text-center">
+            <text class="next-tip">请重新支付</text>
+        </view>
+        <view class="operate-btn flex-space-between-center">
+            <button plain bindtap="{{b}}" class="base-btn-plain-footer" type="primary">返回首页</button>
+            <button bindtap="{{c}}" class="base-btn-footer" type="primary">重新支付</button>
+        </view>
+    </view>
+    <confirm-modal bind:__l="__l" class="r" uI="67820da6-0" uR="confirmModalRef" uS="{{['message']}}">
+        <view class="text-gray" slot="message">放弃支付后订单将在10分钟内取消</view>
+    </confirm-modal>
+</view>
+<confirm-modal bind:__l="__l" class="r" uI="67820da6-1" uR="confirmRef"></confirm-modal>

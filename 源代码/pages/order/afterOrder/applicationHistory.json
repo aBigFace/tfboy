@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "申请历史",
+  "usingComponents": {
+    "no-data": "../../../components/no-data",
+    "history-route": "../components/history-route",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "订单支付",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "price": "../../../components/price",
+    "confirm-modal": "../../../components/modal/confirm-modal",
+    "pay-pass-input": "../components/payPassInput",
+    "uni-countdown": "../../../uni_modules/uni-countdown/components/uni-countdown/uni-countdown",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

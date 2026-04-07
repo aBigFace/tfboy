@@ -1,0 +1,28 @@
+<view class="page">
+    <view class="open-vip">
+        <view class="banner"></view>
+        <scroll-view class="vip-type" scrollY="true">
+            <view class="type-item" wx:for="{{a}}" wx:key="j">
+                <image class="team-img" src="{{item.a}}"></image>
+                <view class="team-info">
+                    <view class="fans-club">
+                        <text>粉丝俱乐部</text>
+                    </view>
+                    <view class="team-name">
+                        <text>{{item.b}}</text>
+                    </view>
+                    <view class="vip-time">
+                        <text wx:if="{{item.c}}">有效期剩余{{item.d}}天</text>
+                    </view>
+                </view>
+                <view class="open-btn" style="{{item.i}}">
+                    <view bindtap="{{item.h}}" class="{{['miss-btn',item.g]}}" wx:if="{{b}}">
+                        <text class="{{[item.f]}}">{{item.e}}</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <real-name-popup bind:__l="__l" class="r" uI="53610744-0" uR="realNamePopupRef"></real-name-popup>
+    <real-name-abnormal-popup bind:__l="__l" class="r" uI="53610744-1" uR="realNameAbnormalPopupRef"></real-name-abnormal-popup>
+</view>

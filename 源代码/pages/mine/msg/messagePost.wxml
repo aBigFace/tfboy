@@ -1,0 +1,30 @@
+<view class="page data-v-f3ca5bfe">
+    <view class="data-v-f3ca5bfe" wx:if="{{a}}">
+        <view class="info-tip data-v-f3ca5bfe">
+            <view class="handle-box data-v-f3ca5bfe">交易信息</view>
+            <view bindtap="{{b}}" class="handle-box data-v-f3ca5bfe">标记已读</view>
+        </view>
+        <view bindtap="{{item.n}}" class="item-view data-v-f3ca5bfe" wx:for="{{c}}" wx:key="m">
+            <view class="top-view data-v-f3ca5bfe">
+                <view class="title data-v-f3ca5bfe">{{item.a}}<view class="unread data-v-f3ca5bfe" wx:if="{{item.b}}"></view>
+                </view>
+                <view class="time data-v-f3ca5bfe">{{item.c}}</view>
+            </view>
+            <view class="item-center-view data-v-f3ca5bfe">
+                <image class="img data-v-f3ca5bfe" src="{{item.d}}"></image>
+                <view class="desc-box data-v-f3ca5bfe">
+                    <view class="desc-title data-v-f3ca5bfe" wx:if="{{item.e}}">请确认收货地址</view>
+                    <view class="desc data-v-f3ca5bfe" wx:if="{{item.f}}">{{item.g}}</view>
+                    <view class="desc data-v-f3ca5bfe" wx:if="{{item.h}}">{{item.i}}</view>
+                    <text bind:__l="__l" class="desc data-v-f3ca5bfe" uI="{{item.l}}" uS="{{['d']}}" wx:if="{{item.j}}">{{item.k}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="noMessage-box data-v-f3ca5bfe" wx:else>
+        <image class="noMessage-img data-v-f3ca5bfe" src="/static/image/mine/noMessage.png"></image>
+        <view class="noMessage-tip-one data-v-f3ca5bfe">还没有消息哦</view>
+        <view class="noMessage-tip-two data-v-f3ca5bfe">暂无消息通知，明天再来看看吧</view>
+    </view>
+    <uni-load-more bind:__l="__l" class="data-v-f3ca5bfe" uI="f3ca5bfe-1" uP="{{d}}" wx:if="{{d}}"></uni-load-more>
+</view>

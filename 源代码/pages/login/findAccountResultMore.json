@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "找回账号",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#F3F4FF",
+  "backgroundColor": "#ffffff",
+  "usingComponents": {
+    "no-data": "../../components/no-data",
+    "uni-load-more": "../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

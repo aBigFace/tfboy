@@ -1,0 +1,15 @@
+<view bindtap="{{F}}" class="uni-noticebar data-v-edcb72ac" style="{{'background-color:'+E}}" wx:if="{{a}}">
+    <uni-icons bind:__l="__l" class="uni-noticebar-icon data-v-edcb72ac" uI="edcb72ac-0" uP="{{c}}" wx:if="{{b}}"></uni-icons>
+    <view class="{{['uni-noticebar__content-wrapper','data-v-edcb72ac',s&&'uni-noticebar__content-wrapper--scrollable',t&&'uni-noticebar__content-wrapper--single']}}" ref="textBox">
+        <view class="{{['uni-noticebar__content','data-v-edcb72ac',q&&'uni-noticebar__content--scrollable',r&&'uni-noticebar__content--single']}}" id="{{p}}">
+            <text class="{{['uni-noticebar__content-text','data-v-edcb72ac',f&&'uni-noticebar__content-text--scrollable',g&&'uni-noticebar__content-text--single']}}" id="{{e}}" ref="animationEle" style="{{'color:'+h+';'+'width:'+i+';'+'animation-duration:'+j+';'+'-webkit-animation-duration:'+k+';'+'animation-play-state:'+l+';'+'-webkit-animation-play-state:'+m+';'+'animation-delay:'+n+';'+'-webkit-animation-delay:'+o}}">{{d}}</text>
+        </view>
+    </view>
+    <view bindtap="{{A}}" class="uni-noticebar__more uni-cursor-point data-v-edcb72ac" wx:if="{{v}}">
+        <text class="uni-noticebar__more-text data-v-edcb72ac" style="{{'color:'+y}}" wx:if="{{w}}">{{x}}</text>
+        <uni-icons bind:__l="__l" class="data-v-edcb72ac" uI="edcb72ac-1" uP="{{z||''}}" wx:else></uni-icons>
+    </view>
+    <view class="uni-noticebar-close uni-cursor-point data-v-edcb72ac" wx:if="{{B}}">
+        <uni-icons bind:__l="__l" bindclick="{{C}}" class="data-v-edcb72ac" uI="edcb72ac-2" uP="{{D}}" wx:if="{{D}}"></uni-icons>
+    </view>
+</view>

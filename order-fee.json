@@ -1,0 +1,53 @@
+{
+  "code": 200,
+  "message": null,
+  "data": {
+    "orderFee": 99,
+    "goodsFee": 99,
+    "freightFee": 0,
+    "discountFee": 0,
+    "companies": [
+      {
+        "companyId": 2,
+        "shops": [
+          {
+            "orgId": 35,
+            "orgName": "TF",
+            "shopOrderFee": 99,
+            "shopGoodsFee": 99,
+            "shopDiscountFee": 0,
+            "shopFreightFee": 0,
+            "doGoods": [
+              {
+                "goodsId": 1541,
+                "imgUrl": "https://cos.tfent.cn/xgg-file-folder/tf/importtemplate/fae987d19302806aea4c688f5b2db1b1.jpg",
+                "number": 1,
+                "spuName": "TF家族四代练习生一班《荣耀之战Battle of Glory》纪念套装官网线上版",
+                "saleName": "TF家族四代练习生一班《荣耀之战Battle of Glory》纪念套装官网线上版",
+                "skuCode": "SKU202602011637746812",
+                "skuId": 2937,
+                "skuName": "TF家族-四代:王橹杰",
+                "totalPrice": 99,
+                "sellPrice": 99,
+                "stock": 0,
+                "discoutFlag": false,
+                "discountSubjectId": null,
+                "discout": null,
+                "totalDiscountPrice": null,
+                "discoutDesc": "",
+                "discoutRankTitle": null
+              }
+            ],
+            "undoGoods": [],
+            "voucherItems": []
+          }
+        ],
+        "companyFreightFee": 0,
+        "companyGoodsFee": 99,
+        "companyDiscountFee": 0,
+        "companyOrderFee": 99
+      }
+    ],
+    "couponList": []
+  }
+}

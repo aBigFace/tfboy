@@ -1,0 +1,134 @@
+.status_bar.data-v-1badc801 {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999
+}
+
+.page-title.data-v-1badc801 {
+    color: #222;
+    font-size: 36rpx;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    width: 100%
+}
+
+.page-title wx-image.data-v-1badc801 {
+    bottom: 0;
+    height: 40rpx;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 40rpx
+}
+
+.noDataBox.data-v-1badc801 {
+    text-align: center
+}
+
+.noDataBox .noDataImg.data-v-1badc801 {
+    height: 118px;
+    margin-top: 96px;
+    width: 118px
+}
+
+.noDataBox .noDataText.data-v-1badc801 {
+    color: #3d3d3d;
+    font-size: 14px;
+    margin-top: 20px
+}
+
+.home-page .location-place.data-v-1badc801 {
+    background-color: #fff;
+    width: 100%
+}
+
+.home-page .banner wx-image.data-v-1badc801 {
+    height: 406rpx;
+    width: 750rpx
+}
+
+.home-page.data-v-1badc801 .uni-navbar__header-btns-left {
+    width: 200px!important
+}
+
+.home-page .login-btn.data-v-1badc801 {
+    border-radius: 26rpx;
+    height: 52rpx;
+    line-height: 50rpx
+}
+
+.home-page .home-content.data-v-1badc801 {
+    background-color: #f0f0f0;
+    position: relative;
+    z-index: 1
+}
+
+.home-page .home-content .not-login.data-v-1badc801 {
+    background: #fff0d3 linear-gradient(90deg,#fdeedb,#ffdfcd);
+    border-radius: 16rpx;
+    color: #6d5d5d;
+    font-size: 24rpx;
+    margin-top: 30rpx;
+    padding: 16rpx 28rpx
+}
+
+.home-page .home-content .not-login .avatar.data-v-1badc801 {
+    height: 56rpx;
+    margin-right: 20rpx;
+    width: 56rpx
+}
+
+.home-page .home-content .paddingBox.data-v-1badc801 {
+    padding: 0 20rpx
+}
+
+.home-page .home-content .noPaddingBox.data-v-1badc801 {
+    padding: 0
+}
+
+.home-page .noDiy.data-v-1badc801 {
+    background: #fff
+}
+
+.home-page .noData.data-v-1badc801 {
+    -webkit-align-content: center;
+    align-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    color: #fff;
+    height: 100vh;
+    text-align: center
+}
+
+.home-page .noData .img.data-v-1badc801 {
+    height: auto;
+    margin-top: 30%;
+    width: 65%
+}
+
+.home-page .noData .title.data-v-1badc801 {
+    color: #6c6c6c
+}
+
+.home-page .noData .txt.data-v-1badc801 {
+    color: #a3a3a3
+}
+
+.home-page .noData .btn.data-v-1badc801 {
+    border: 1px solid #e85252;
+    border-radius: 30rpx;
+    color: #e85252;
+    margin: 30rpx auto 0;
+    padding-bottom: 12rpx;
+    padding-top: 12rpx;
+    text-align: center;
+    width: 150rpx
+}
+
+page {
+    background: #fff
+}

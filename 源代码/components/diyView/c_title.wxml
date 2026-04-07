@@ -1,0 +1,8 @@
+<view class="content data-v-f3c08834" style="{{'background:'+n}}">
+    <view class="diy_view_c_title data-v-f3c08834" style="{{'position:'+'relative'+';'+'font-size:'+0+';'+'margin-left:'+l+';'+'margin-right:'+m}}">
+        <view bindtap="{{k}}" class="{{['data-v-f3c08834','content']}}" style="{{'text-align:'+j}}">
+            <text class="data-v-f3c08834" style="{{'font-size:'+c}}" wx:if="{{a}}">{{b}}</text>
+            <text class="{{['data-v-f3c08834',g&&'bold',h&&'italic',i&&'underline']}}" style="{{'color:'+e+';'+'font-size:'+f}}" wx:else>{{d}}</text>
+        </view>
+    </view>
+</view>

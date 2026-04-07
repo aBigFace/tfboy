@@ -1,0 +1,505 @@
+.page {
+    background: #f5f5f5;
+    height: 100vh;
+    overflow: auto
+}
+
+.search-page .page-content {
+    margin-bottom: 100rpx
+}
+
+.search-page .main-goods {
+    background-color: #fff;
+    border-radius: 12rpx;
+    margin-bottom: 16rpx;
+    padding: 0 24rpx
+}
+
+.search-page .main-goods .shop_list {
+    border-bottom: 1rpx solid #eee;
+    display: -webkit-flex;
+    display: flex;
+    height: 120rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding-bottom: 24rpx;
+    padding-top: 24rpx
+}
+
+.search-page .main-goods .shop_list wx-image {
+    border-radius: 8rpx;
+    height: 120rpx;
+    width: 120rpx
+}
+
+.search-page .main-goods .shop_list .shop-name {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-left: 16rpx;
+    width: 560rpx
+}
+
+.search-page .main-goods .shop_list .shop-name .name {
+    color: #333;
+    font-size: 26rpx;
+    font-weight: 500;
+    line-height: 40rpx
+}
+
+.search-page .main-goods .shop_list .shop-name .msg {
+    color: #999;
+    font-size: 22rpx;
+    font-weight: 400;
+    line-height: 34rpx
+}
+
+.search-page .main-goods .shop_list .shop-name .msg .left {
+    margin-left: 16rpx
+}
+
+.search-page .main-goods .shop_list .shop-name .msg .price {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500;
+    line-height: 42rpx
+}
+
+.search-page .main-goods .shop_list .handle {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+    background: #fff;
+    border: 2rpx solid #ddd;
+    border-radius: 8rpx;
+    display: -webkit-flex;
+    display: flex;
+    height: 48rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 24rpx;
+    width: 160rpx
+}
+
+.search-page .main-goods .shop_list .handle-total {
+    color: #333;
+    font-size: 26rpx;
+    font-weight: 400;
+    padding: 6rpx 20rpx
+}
+
+.search-page .main-goods .shop_list .handle-subtract {
+    background: #fff;
+    border-radius: 8px 0 0 8px;
+    border-right: 2rpx solid #ddd;
+    cursor: pointer;
+    font-size: 32rpx;
+    font-weight: 700;
+    height: 100%;
+    text-align: center;
+    width: 48rpx
+}
+
+.search-page .main-goods .shop_list .handle .minStu {
+    color: #ddd
+}
+
+.search-page .main-goods .shop_list .handle-add {
+    background: #fff;
+    border-left: 2rpx solid #ddd;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 32rpx;
+    font-weight: 700;
+    height: 100%;
+    text-align: center;
+    width: 48rpx
+}
+
+.search-page .main-goods .shop-list:last-child {
+    border: none
+}
+
+.search-page .apply-info {
+    background-color: #fff;
+    border-radius: 12rpx;
+    margin-bottom: 16rpx;
+    padding: 24rpx
+}
+
+.search-page .apply-info .refund-num {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1rpx solid #eee;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 100rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 654rpx
+}
+
+.search-page .apply-info .refund-num .show-num-left {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500
+}
+
+.search-page .apply-info .refund-num .show-num-left .require {
+    color: #f30
+}
+
+.search-page .apply-info .refund-num .more {
+    color: #bbb;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 24rpx;
+    font-weight: 400;
+    margin-left: 16rpx
+}
+
+.search-page .apply-info .refund-reason {
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1rpx solid #eee;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 100rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 654rpx
+}
+
+.search-page .apply-info .refund-reason .left {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500
+}
+
+.search-page .apply-info .refund-reason .left .require {
+    color: #f30
+}
+
+.search-page .apply-info .refund-reason .reason {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.search-page .apply-info .refund-money {
+    height: 148rpx
+}
+
+.search-page .apply-info .refund-money .left {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-bottom: 24rpx;
+    margin-top: 28rpx
+}
+
+.search-page .apply-info .refund-money .left .require {
+    color: #f30
+}
+
+.search-page .apply-info .refund-money .money-input {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #ff7272;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 36rpx;
+    font-weight: 500;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start
+}
+
+.search-page .apply-info .refund-money .money-input .show-money-input {
+    width: 450rpx
+}
+
+.search-page .apply-info .refund-money .money-input .desc {
+    color: #999;
+    font-size: 24rpx;
+    font-weight: 400
+}
+
+.search-page .statement {
+    background-color: #fff;
+    border-radius: 12rpx;
+    margin-bottom: 16rpx;
+    padding: 24rpx
+}
+
+.search-page .statement .main-state {
+    margin-bottom: 10rpx
+}
+
+.search-page .statement .main-state .box-input-top {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-bottom: 30rpx
+}
+
+.search-page .statement .main-state .box-input-top .require {
+    color: #f30
+}
+
+.search-page .statement .main-state .box-input-bottom {
+    height: 176rpx;
+    position: relative
+}
+
+.search-page .statement .main-state .box-input-bottom .area-text {
+    height: 176rpx;
+    overflow: auto
+}
+
+.search-page .statement .main-state .box-input-bottom .box-input-bottom-ran {
+    bottom: 2rpx;
+    color: #c5c5c5;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 22rpx;
+    font-weight: 400;
+    position: absolute;
+    right: 5rpx
+}
+
+.search-page .statement .main-state .box-input-bottom ::-webkit-input-placeholder {
+    font-size: 22rpx;
+    padding-left: 2rpx
+}
+
+.search-page .statement .main-state .box-input-bottom wx-textarea {
+    width: 100%
+}
+
+.search-page .statement .main-state .box-input-bottom .textarea-view,.search-page .statement .main-state .box-input-bottom wx-textarea {
+    background: #f8f8f8;
+    border-radius: 8rpx;
+    box-sizing: border-box;
+    color: #bbb;
+    font-size: 28rpx;
+    height: 176urpx;
+    padding: 24rpx 20rpx;
+    resize: none
+}
+
+.search-page .statement .main-state .box-input-bottom .textarea-view {
+    overflow-y: auto;
+    width: 724rpx;
+    width: 100%;
+    word-break: break-all
+}
+
+.search-page .statement .main-upload .upload-title {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500
+}
+
+.search-page .statement .main-upload .box-upload {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding-top: 24rpx
+}
+
+.search-page .statement .main-upload .box-upload .upload-item {
+    background: #fff;
+    border: 2rpx dashed #bbb;
+    border-radius: 8rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 144rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-right: 16rpx;
+    position: relative;
+    width: 144rpx
+}
+
+.search-page .statement .main-upload .box-upload .upload-item .close-img {
+    height: 38rpx;
+    position: absolute;
+    right: 0rpx;
+    top: 0rpx;
+    width: 38rpx;
+    z-index: 1
+}
+
+.search-page .statement .main-upload .box-upload .upload-item .close-img wx-image {
+    height: 36rpx;
+    width: 36rpx
+}
+
+.search-page .statement .main-upload .box-upload .upload-item .video-bg {
+    background: url("https://cos.tfent.cn/xgg-file-folder/tf-app/cover/video-bg.png") no-repeat;
+    background-size: cover;
+    height: 144rpx;
+    width: 144rpx
+}
+
+.search-page .statement .main-upload .box-upload .upload-item .image {
+    height: 56rpx;
+    margin: 0 auto;
+    width: 56rpx
+}
+
+.search-page .statement .main-upload .box-upload .upload-item .imageUpload {
+    border-radius: 8rpx;
+    height: 100%;
+    width: 100%
+}
+
+.search-page .statement .main-upload .box-upload .upload-item .play {
+    height: 80rpx;
+    left: 33rpx;
+    position: absolute;
+    top: 34rpx;
+    width: 80rpx
+}
+
+.search-page .statement .main-upload .box-upload .upload-item .close {
+    border-radius: 50%;
+    height: 30rpx;
+    position: absolute;
+    right: 5rpx;
+    top: 5rpx;
+    width: 30rpx;
+    z-index: 20
+}
+
+.search-page .statement .main-upload .box-upload .upload-item .upload-text {
+    color: #999;
+    font-size: 20rpx;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding-top: 8rpx;
+    text-align: center
+}
+
+.search-page .statement .main-upload .box-upload .upload-item:last-child {
+    margin-right: 0
+}
+
+.search-page .address {
+    background-color: #fff;
+    border-radius: 12rpx;
+    height: 232rpx;
+    padding: 0 24rpx
+}
+
+.search-page .address .address-top {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 88rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 668rpx
+}
+
+.search-page .address .address-top .title {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500
+}
+
+.search-page .address .address-top .title .require {
+    color: #f30
+}
+
+.search-page .address .address-top .change {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #ff7272;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 26rpx;
+    font-weight: 400
+}
+
+.search-page .address .address-top .change wx-image {
+    height: 32rpx;
+    margin-right: 6rpx;
+    width: 32rpx
+}
+
+.search-page .address .address-bottom {
+    background: #f8f8f8;
+    border-radius: 8rpx;
+    height: 116rpx;
+    width: 654rpx
+}
+
+.search-page .address .address-bottom .name {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-left: 20rpx;
+    padding-top: 24rpx
+}
+
+.search-page .address .address-bottom .detail {
+    color: #999;
+    font-size: 26rpx;
+    font-weight: 400;
+    margin-left: 20rpx;
+    padding-top: 12rpx
+}
+
+.search-page .shop-statement {
+    color: #666;
+    font-size: 24rpx;
+    font-weight: 400;
+    margin-top: 28rpx;
+    text-align: center
+}
+
+.search-page .submit {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    bottom: 0;
+    box-shadow: 0rpx -2rpx 8rpx 0rpx rgba(0,0,0,.08);
+    display: -webkit-flex;
+    display: flex;
+    height: 100rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    width: 100%
+}
+
+.search-page .submit .primary-btn {
+    background: #ff7272;
+    border-radius: 40rpx;
+    box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(222,44,44,.3);
+    color: #fff;
+    font-size: 32rpx;
+    font-weight: 400;
+    height: 72rpx;
+    line-height: 72rpx;
+    text-align: center;
+    width: 688rpx
+}

@@ -1,0 +1,15 @@
+.customNav {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 32rpx;
+    font-weight: 700;
+    left: 0;
+    padding-left: 26rpx;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 999
+}

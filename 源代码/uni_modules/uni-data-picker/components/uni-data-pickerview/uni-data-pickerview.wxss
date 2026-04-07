@@ -1,0 +1,139 @@
+.uni-data-pickerview {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden
+}
+
+.error-text {
+    color: #dd524d
+}
+
+.loading-cover {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: hsla(0,0%,100%,.5);
+    bottom: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1001
+}
+
+.load-more {
+    margin: auto
+}
+
+.error-message {
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    opacity: .9;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 102
+}
+
+.selected-list {
+    border-bottom: 1px solid #f8f8f8;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 0 5px
+}
+
+.selected-item {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 12px 0;
+    text-align: center;
+    white-space: nowrap
+}
+
+.selected-item-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 168px;
+    width: 6em
+}
+
+.selected-item-active {
+    border-bottom: 2px solid #007aff
+}
+
+.selected-item-text {
+    color: #007aff
+}
+
+.tab-c {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative
+}
+
+.list {
+    -webkit-flex: 1;
+    flex: 1
+}
+
+.item {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 12px 15px
+}
+
+.is-disabled {
+    opacity: .5
+}
+
+.item-text {
+    color: #333
+}
+
+.item-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 280px;
+    width: 20em
+}
+
+.check {
+    border: 2px solid #007aff;
+    border-left: 0;
+    border-top: 0;
+    height: 12px;
+    margin-right: 5px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    transition: all .3s;
+    width: 6px
+}

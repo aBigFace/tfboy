@@ -1,0 +1,24 @@
+<view class="page base-container data-v-792dfb75">
+    <uni-forms bind:__l="__l" class="mobileForm r data-v-792dfb75" uI="792dfb75-0" uP="{{q}}" uR="formRef" uS="{{['d']}}" wx:if="{{q}}">
+        <uni-forms-item bind:__l="__l" class="data-v-792dfb75" uI="792dfb75-1,792dfb75-0" uP="{{d}}" uS="{{['d']}}" wx:if="{{d}}">
+            <view class="mobile data-v-792dfb75">
+                <uni-easyinput bind:__l="__l" bindupdateModelValue="{{b}}" class="mobile-input r data-v-792dfb75" uI="792dfb75-2,792dfb75-1" uP="{{c}}" uR="mobile" wx:if="{{c}}"></uni-easyinput>
+            </view>
+        </uni-forms-item>
+        <view class="certify-form-item data-v-792dfb75" wx:if="{{e}}">
+            <view class="certify-form-label data-v-792dfb75">证件类型</view>
+            <view bindtap="{{k}}" class="{{['data-v-792dfb75','certify-type-picker',j]}}">
+                <view class="{{['data-v-792dfb75','picker-current',g]}}">{{f}}</view>
+                <view class="picker-body data-v-792dfb75" hidden="{{!i}}">
+                    <view bindtap="{{v.c}}" class="picker-item data-v-792dfb75" wx:for="{{h}}" wx:for-item="v" wx:key="b">{{v.a}}</view>
+                </view>
+            </view>
+        </view>
+        <uni-forms-item bind:__l="__l" class="text-primary-grey font-28 data-v-792dfb75" uI="792dfb75-3,792dfb75-0" uP="{{o}}" uS="{{['d']}}" wx:if="{{o}}">
+            <view class="codeNum data-v-792dfb75">
+                <input bindinput="{{n}}" class="input-item border data-v-792dfb75" maxlength="20" placeholder="{{l}}" placeholderClass="placeholder" ref="mobile" value="{{m}}"></input>
+            </view>
+        </uni-forms-item>
+    </uni-forms>
+    <button bindtap="{{s}}" class="primary-btn data-v-792dfb75" disabled="{{r}}" type="primary">提交认证</button>
+</view>

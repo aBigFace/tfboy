@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "new-tabs-vertical": "../../../../components/newTabs/newTabsVertical",
+    "product-item": "../../productItem",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

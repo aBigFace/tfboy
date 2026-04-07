@@ -1,0 +1,3 @@
+<scroll-view class="custom-tabs data-v-6261480f" scrollX="true" style="{{'width:'+b+';'+'margin-left:'+c}}">
+    <view bindtap="{{i.b}}" class="custom-tabs-item data-v-6261480f" style="{{i.c}}" wx:for="{{a}}" wx:for-item="i">{{i.a}}</view>
+</scroll-view>

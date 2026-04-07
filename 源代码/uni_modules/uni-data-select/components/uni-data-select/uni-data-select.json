@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "uni-icons": "../../../uni-icons/components/uni-icons/uni-icons",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

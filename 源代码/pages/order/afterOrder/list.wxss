@@ -1,0 +1,106 @@
+.page {
+    background: #f6f6f6
+}
+
+.search-page .top-bar.high-index {
+    z-index: 10000
+}
+
+.search-page .tab-bar {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    position: relative
+}
+
+.search-page .login-btn {
+    width: 45%
+}
+
+.search-page .order-list .order-item {
+    margin-bottom: 20rpx;
+    padding-top: 0
+}
+
+.search-page .order-list .order-item .order-item-header {
+    border-bottom: 1px solid #eee;
+    margin: 0 -24rpx;
+    padding: 30rpx 24rpx 24rpx
+}
+
+.search-page .order-list .order-tips {
+    border-bottom: 1px solid #eee;
+    color: #666;
+    font-size: 22rpx;
+    padding-bottom: 24rpx
+}
+
+.search-page .order-list .btn-bar wx-button {
+    line-height: 59rpx;
+    margin-left: 16rpx;
+    min-width: 160rpx
+}
+
+.search-page .order-list .pay-price {
+    color: #e85252;
+    font-weight: 500
+}
+
+.search-page .order-list .pay-price .money-value {
+    font-size: 40rpx;
+    margin-left: 4rpx
+}
+
+.search-page .filter {
+    color: #666;
+    font-size: 26rpx
+}
+
+.search-page .filter.active {
+    color: #ff5928
+}
+
+.search-page .order-total {
+    border-top: 20rpx
+}
+
+.search-page .btn-group {
+    margin-bottom: 0rpx;
+    margin-top: 24rpx
+}
+
+.totlePrice {
+    float: left;
+    margin-top: 4rpx
+}
+
+.plain-btn {
+    border: 2rpx solid #ddd!important;
+    color: #333!important
+}
+
+.uni-countdown__splitor {
+    margin-top: -4rpx!important
+}
+
+.order-countdown {
+    font-size: 24rpx
+}
+
+.refundStatus {
+    color: #333;
+    margin-left: -4rpx;
+    margin-right: 24rpx;
+    white-space: nowrap
+}
+
+.empty-item {
+    border-radius: 8rpx;
+    height: 128rpx;
+    width: 128rpx
+}
+
+.empty-item-row {
+    display: -webkit-flex;
+    display: flex;
+    padding-top: 5rpx
+}

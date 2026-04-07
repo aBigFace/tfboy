@@ -1,0 +1,80 @@
+.address-list-page {
+    height: 100vh;
+    padding-bottom: 130rpx;
+    padding-top: 100rpx
+}
+
+.address-list-page .no-data {
+    padding-top: 200px
+}
+
+.address-list-page .has-bar {
+    padding-top: 200rpx
+}
+
+.address-list-page .address-list {
+    margin-bottom: 80rpx;
+    padding: 24rpx 20rpx 0
+}
+
+.address-list-page .address-list .address-list-item {
+    position: relative
+}
+
+.address-list-page .address-list .check-box {
+    margin-right: 24rpx;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.address-list-page .address-list .base-white-radius-container {
+    padding-bottom: 0!important
+}
+
+.address-list-page .address-list .address-item {
+    overflow: hidden
+}
+
+.address-list-page .address-list .address-item .address-top {
+    border-bottom: 1rpx solid #eee;
+    padding-bottom: 26rpx;
+    padding-top: 8rpx
+}
+
+.address-list-page .address-list .address-item .address-bottom {
+    height: 90rpx
+}
+
+.address-list-page .address-list .address-item .name {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 500
+}
+
+.address-list-page .address-list .address-item .phone {
+    color: #333
+}
+
+.address-list-page .address-list .address-item .default-address-icon {
+    border: 1rpx solid #e85252;
+    border-radius: 6rpx;
+    color: #e85252;
+    display: inline-block;
+    font-size: 22rpx;
+    height: 28rpx;
+    line-height: 30rpx;
+    margin-right: 10rpx;
+    text-align: center;
+    width: 60rpx
+}
+
+.address-list-page .address-list.edit .address-item {
+    left: 60rpx;
+    position: relative
+}
+
+.address-list-page .fixed-bottom-container .default-btn {
+    width: 36%
+}

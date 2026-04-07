@@ -1,0 +1,35 @@
+.package-group {
+    background: #fff;
+    border: 2rpx solid #fff;
+    border-radius: 8rpx 8rpx 8rpx 8rpx;
+    margin-right: 25rpx;
+    padding: 16rpx 54rpx
+}
+
+.package-group.active {
+    background: #ffe7e5;
+    border: 2rpx solid #e85252
+}
+
+.logistics-company {
+    background: #ffdfdf;
+    color: #e85252;
+    font-size: 16rpx;
+    margin-right: 3rpx;
+    padding: 2rpx 6rpx
+}
+
+.order-item-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30rpx;
+    padding-top: 24rpx
+}
+
+.base-container {
+    padding-top: 16rpx
+}
+
+.history-route-content {
+    padding-bottom: 0;
+    padding-top: 10rpx
+}

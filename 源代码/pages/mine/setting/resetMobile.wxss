@@ -1,0 +1,101 @@
+.page.data-v-2ff8814c {
+    background-color: #fff;
+    height: 100vh;
+    padding-top: 30rpx
+}
+
+.page .labelSlot.data-v-2ff8814c {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 700;
+    line-height: 28rpx;
+    padding: 32rpx 0 28rpx
+}
+
+.page.data-v-2ff8814c .uni-easyinput__content {
+    border-radius: 50rpx!important;
+    height: 100rpx!important
+}
+
+.page .codeSlot.data-v-2ff8814c {
+    color: #ff7272;
+    font-size: 26rpx;
+    line-height: 32rpx;
+    padding-right: 32rpx
+}
+
+.page.data-v-2ff8814c .uni-easyinput__content-input {
+    height: 100rpx
+}
+
+.page.data-v-2ff8814c .uni-easyinput wx-input {
+    border-radius: 8rpx;
+    font-size: 28rpx;
+    padding-left: 70rpx!important
+}
+
+.page.data-v-2ff8814c .uni-forms-item__label {
+    color: #333;
+    font-size: 28rpx
+}
+
+.page.data-v-2ff8814c .uni-forms-item__error {
+    font-size: 20rpx!important
+}
+
+.page.data-v-2ff8814c .uni-forms-item {
+    padding-top: 15rpx!important
+}
+
+.page .mobile.data-v-2ff8814c {
+    position: relative;
+    width: 100%
+}
+
+.page .mobile .tip.data-v-2ff8814c {
+    display: block;
+    left: 10rpx;
+    position: absolute;
+    top: 32%
+}
+
+.page .input-item.data-v-2ff8814c {
+    background-color: #fff;
+    border-radius: 8rpx;
+    font-size: 28rpx;
+    height: 100rpx;
+    padding-left: 15rpx
+}
+
+.page .input-item.border.data-v-2ff8814c {
+    border: 1px solid #eee;
+    border-radius: 50rpx
+}
+
+.page .codeNum.data-v-2ff8814c {
+    position: relative;
+    width: 100%
+}
+
+.page .codeNum .code.data-v-2ff8814c {
+    color: #ff5928;
+    font-size: 26rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0 30rpx;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 9999!important
+}
+
+.page .codeNum .placeholder.data-v-2ff8814c {
+    font-size: 28rpx
+}
+
+.page .primary-btn.data-v-2ff8814c {
+    border-radius: 8rpx 8rpx 8rpx 8rpx;
+    margin-top: 95rpx
+}

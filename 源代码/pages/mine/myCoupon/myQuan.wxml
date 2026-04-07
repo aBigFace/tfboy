@@ -1,0 +1,11 @@
+<view class="page data-v-dccb92bc" style="{{'background:'+e}}">
+    <view class="base-container data-v-dccb92bc">
+        <view class="card flex-space-between-center data-v-dccb92bc" wx:for="{{a}}" wx:for-item="i" wx:key="d">
+            <coupon-item bind:__l="__l" class="data-v-dccb92bc" uI="{{i.b}}" uP="{{i.c}}" uS="{{['checkbox']}}" wx:if="{{i.c}}">
+                <button bindtap="{{i.a}}" class="primary-btn use-btn data-v-dccb92bc" slot="checkbox" type="primary">去使用</button>
+            </coupon-item>
+        </view>
+    </view>
+    <no-data bind:__l="__l" class="data-v-dccb92bc" uI="dccb92bc-1" uP="{{c}}" uS="{{['d']}}" wx:if="{{b}}">您暂无卡券哦~</no-data>
+    <view bindtap="{{d}}" class="text-gray-s history data-v-dccb92bc">历史赠品券</view>
+</view>

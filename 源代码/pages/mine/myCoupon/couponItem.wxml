@@ -1,0 +1,33 @@
+<view class="nav_item data-v-0b67115e">
+    <view class="img data-v-0b67115e">
+        <image alt="" class="img-max data-v-0b67115e" src="{{a}}"></image>
+    </view>
+    <view class="item-info data-v-0b67115e">
+        <view class="info-desc data-v-0b67115e">
+            <view class="title max-line-two data-v-0b67115e">{{b}}</view>
+            <view class="time max-line-one data-v-0b67115e">有效期至{{c}}</view>
+            <view bindtap="{{f}}" class="con flex data-v-0b67115e">使用条件<uni-icons bind:__l="__l" bindclick="{{d}}" class="m-l-5 data-v-0b67115e" uI="0b67115e-0" uP="{{e}}" wx:if="{{e}}"></uni-icons>
+            </view>
+        </view>
+        <slot name="checkbox"></slot>
+    </view>
+</view>
+<view class="data-v-0b67115e" hidden="{{!p}}">
+    <view class="detail data-v-0b67115e">
+        <view class="detail-info data-v-0b67115e">
+            <view class="tip data-v-0b67115e" wx:if="{{g}}">1、限购买指定商品使用；<text class="data-v-0b67115e" wx:if="{{h}}"> 2、限购买商品现价满{{i}}元使用; </text>
+                <text class="data-v-0b67115e" wx:if="{{j}}"> 2、限购买商品数量满{{k}}件使用; </text>
+            </view>
+            <view class="quanNum flex data-v-0b67115e">
+                <view class="data-v-0b67115e">
+                    <text class="num-title data-v-0b67115e">券编码：</text>
+                    <text class="num-info data-v-0b67115e">{{l}}</text>
+                </view>
+                <view bindtap="{{m}}" class="copy data-v-0b67115e">复制</view>
+            </view>
+            <block wx:if="{{n}}">
+                <detail-item bind:__l="__l" class="data-v-0b67115e" uI="{{v.b}}" uP="{{v.c}}" wx:for="{{o}}" wx:for-item="v" wx:key="a"></detail-item>
+            </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,56 @@
+.modelOne .item {
+    border-radius: 8rpx;
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 16rpx;
+    padding-top: 16rpx
+}
+
+.modelOne .item-left {
+    background: #d7d7d7;
+    margin-right: 20rpx
+}
+
+.modelOne .item-right {
+    color: #666;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 28rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    line-height: 33rpx;
+    margin-top: 10rpx
+}
+
+.modelOne .item-right-txt {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    margin-bottom: 14rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    word-break: break-word
+}
+
+.modelOne .item-right .btn {
+    background: transparent;
+    border: 1px solid #f3aab8;
+    border-radius: 30rpx;
+    color: #f3aab8;
+    min-width: 60rpx
+}
+
+.modelOne .item .circle {
+    border-radius: 12rpx
+}
+
+.modelOne::after {
+    clear: both;
+    content: "";
+    display: table
+}

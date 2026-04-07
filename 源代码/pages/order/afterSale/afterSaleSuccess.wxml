@@ -1,0 +1,10 @@
+<view class="apply-success-page">
+    <view class="img">
+        <image alt="" src="{{a}}"></image>
+    </view>
+    <view class="tip">提交成功</view>
+    <view class="notice">请至售后订单中查看</view>
+    <view class="button-list">
+        <view bindtap="{{b}}" class="go-back">返回我的订单</view>
+    </view>
+</view>

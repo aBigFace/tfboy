@@ -1,0 +1,23 @@
+<uni-popup bind:__l="__l" class="r" uI="05d6ad19-0" uP="{{s}}" uR="popupRef" uS="{{['d']}}" wx:if="{{s}}">
+    <view class="modal confirm-modal">
+        <view class="content-box">
+            <view class="modal-header-center">
+                <text class="modal-header-title" wx:if="{{a}}">{{b}}</text>
+                <text class="modal-header-title" wx:else>
+                    <slot name="header"></slot>
+                </text>
+                <uni-icons bind:__l="__l" bindclick="{{d}}" class="close-icon" uI="05d6ad19-1,05d6ad19-0" uP="{{e}}" wx:if="{{c}}"></uni-icons>
+            </view>
+            <view class="confirm-modal-content">
+                <view class="modal-content" wx:if="{{f}}">{{g}}</view>
+                <view class="modal-content" wx:else>
+                    <slot name="message"></slot>
+                </view>
+            </view>
+        </view>
+        <view class="modal-footer flex">
+            <button bindtap="{{k}}" class="{{['default-btn',j]}}" style="{{'color:'+l}}" wx:if="{{h}}">{{i}}</button>
+            <button bindtap="{{q}}" class="{{['default-btn','confirm-btn',o]}}" style="{{'color:'+p}}" wx:if="{{m}}">{{n}}</button>
+        </view>
+    </view>
+</uni-popup>

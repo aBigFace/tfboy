@@ -1,0 +1,115 @@
+.presaleList .presaleList-banner.data-v-3bc08017 {
+    background: url("https://cos.tfent.cn/xgg-file-folder/tf-app/wechat/static/image/index/presaleBannerList.png") no-repeat;
+    background-size: 100% 100%;
+    height: 390rpx
+}
+
+.presaleList .productContent.data-v-3bc08017 {
+    background: #f5f5f5;
+    border-radius: 32rpx 32rpx 0rpx 0rpx;
+    margin-top: -28rpx;
+    padding: 40rpx 24rpx
+}
+
+.presaleList .productContent .productItem.data-v-3bc08017 {
+    background-color: #fff;
+    border-radius: 8rpx;
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 12rpx;
+    padding: 20rpx
+}
+
+.presaleList .productContent .productItem .item-image.data-v-3bc08017 {
+    margin-right: 14rpx;
+    position: relative
+}
+
+.presaleList .productContent .productItem .item-image .shopping-state.data-v-3bc08017 {
+    background: rgba(0,0,0,.5);
+    border-radius: 0 0 8rpx 8rpx;
+    bottom: 0;
+    color: #fff;
+    font-size: 24rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    position: absolute;
+    text-align: center;
+    width: 100%
+}
+
+.presaleList .productContent .productItem .img wx-image.data-v-3bc08017,.presaleList .productContent .productItem .img.data-v-3bc08017 {
+    border-radius: 8rpx;
+    height: 160rpx;
+    width: 160rpx
+}
+
+.presaleList .productContent .productItem .content.data-v-3bc08017 {
+    position: relative;
+    width: 100%
+}
+
+.presaleList .productContent .productItem .content .presale-time.data-v-3bc08017 {
+    color: #e85252;
+    font-size: 24rpx;
+    line-height: 34rpx
+}
+
+.presaleList .productContent .productItem .content .pre-sale.data-v-3bc08017 {
+    color: #e85252
+}
+
+.presaleList .productContent .productItem .content .title.data-v-3bc08017 {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500;
+    line-height: 36rpx;
+    padding-top: 6rpx
+}
+
+.presaleList .productContent .productItem .content .priceAndCart.data-v-3bc08017 {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    display: -webkit-flex;
+    display: flex;
+    font-weight: 500;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.presaleList .productContent .productItem .content .priceAndCart .price.data-v-3bc08017 {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    bottom: 10rpx;
+    color: #e85252;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 32rpx;
+    line-height: 40rpx;
+    position: absolute
+}
+
+.presaleList .productContent .productItem .content .priceAndCart .price .iconNum.data-v-3bc08017 {
+    -webkit-align-items: baseline;
+    align-items: baseline;
+    display: -webkit-flex;
+    display: flex;
+    font-weight: 700
+}
+
+.presaleList .productContent .productItem .content .priceAndCart .price .market.data-v-3bc08017 {
+    color: #bbb;
+    font-size: 11px;
+    line-height: 17px;
+    margin-left: 2px;
+    text-decoration: line-through
+}
+
+.presaleList .productContent .productItem .content .priceAndCart .price .icon.data-v-3bc08017 {
+    font-size: 24rpx
+}
+
+.presaleList .productContent .productItem .content .priceAndCart .price .up.data-v-3bc08017 {
+    font-size: 21rpx;
+    margin-left: 3rpx
+}

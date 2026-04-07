@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "找回账号",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#F3F4FF",
+  "backgroundColor": "#ffffff",
+  "usingComponents": {
+    "custom-nav": "components/customNav/customNav"
+  }
+}

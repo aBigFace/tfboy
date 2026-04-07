@@ -1,0 +1,57 @@
+<view class="littleList-box data-v-6b110082">
+    <view class="container data-v-6b110082" wx:for="{{a}}" wx:key="M">
+        <view bindtap="{{item.h}}" class="goods_image data-v-6b110082">
+            <image alt="" class="data-v-6b110082" mode="scaleToFill" src="{{item.a}}"></image>
+            <view class="shopping-state data-v-6b110082" wx:if="{{item.b}}">预售</view>
+            <view class="marketing_icon data-v-6b110082" style="width:72px" wx:if="{{item.c}}">
+                <text class="icon-text data-v-6b110082"> 即将开售 </text>
+            </view>
+            <view class="marketing_icon data-v-6b110082" style="width:62px" wx:elif="{{item.d}}">
+                <image class="icon-img data-v-6b110082" mode="scaleToFill" src="/static/icon/hot.png" style="width:11.56px;height:13.3px"></image>
+                <text class="icon-text data-v-6b110082">   热销  </text>
+            </view>
+            <view class="marketing_icon data-v-6b110082" wx:elif="{{b}}">
+                <image class="icon-img data-v-6b110082" mode="scaleToFill" src="{{item.f}}" wx:if="{{item.e}}"></image>
+                <text class="icon-text data-v-6b110082" wx:else>{{item.g}}</text>
+            </view>
+        </view>
+        <view class="goods_info data-v-6b110082">
+            <view bindtap="{{item.z}}" class="data-v-6b110082">
+                <view class="goods_name data-v-6b110082">{{item.i}}</view>
+                <view class="sold-out-container data-v-6b110082" wx:if="{{item.j}}">
+                    <view class="pre-sale data-v-6b110082" style="color:red">{{item.k}}</view>
+                </view>
+                <view class="sold-out-container data-v-6b110082" style="background:unset" wx:elif="{{item.l}}">
+                    <view class="presale-time data-v-6b110082" style="color:red" wx:if="{{item.m}}">{{item.n}}</view>
+                    <view class="presale-time data-v-6b110082" wx:else>
+                        <text class="data-v-6b110082">距结束时间剩余</text>
+                        <uni-countdown bind:__l="__l" bindtimeup="{{item.o}}" class="countdown-box data-v-6b110082" uI="{{item.p}}" uP="{{item.q}}" wx:if="{{item.q}}"></uni-countdown>
+                    </view>
+                </view>
+                <view class="goods_sell data-v-6b110082" wx:if="{{item.r}}">{{item.s}}</view>
+                <view class="goods_tag data-v-6b110082" wx:if="{{c}}">
+                    <view class="data-v-6b110082" wx:for="{{item.t}}" wx:for-item="i" wx:key="v">{{i.a}}</view>
+                </view>
+                <view class="showinfo-sales data-v-6b110082">
+                    <view class="item-stock data-v-6b110082" wx:if="{{d}}">{{item.w}}</view>
+                    <view class="slicer data-v-6b110082" wx:if="{{item.x}}">|</view>
+                    <view class="item-sellNum data-v-6b110082" wx:if="{{e}}">{{item.y}}</view>
+                </view>
+            </view>
+            <view class="item-shopinfo data-v-6b110082">
+                <view class="item-shopBox data-v-6b110082">
+                    <view class="item-sellPrice data-v-6b110082">
+                        <price bind:__l="__l" class="data-v-6b110082" uI="{{item.A}}" uP="{{item.B}}" wx:if="{{item.B}}"></price>
+                        <view class="icon2 data-v-6b110082" wx:if="{{item.C}}">起</view>
+                    </view>
+                    <view class="item-marketPrice data-v-6b110082" wx:if="{{item.D}}">¥{{item.E}}</view>
+                </view>
+                <view bindtap="{{item.L}}" class="item-shopIcon data-v-6b110082" wx:if="{{f}}">
+                    <image class="data-v-6b110082" src="{{item.G}}" wx:if="{{item.F}}"></image>
+                    <image class="data-v-6b110082" src="{{item.I}}" wx:if="{{item.H}}"></image>
+                    <view class="item-shop-box data-v-6b110082" wx:if="{{item.J}}">{{item.K}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

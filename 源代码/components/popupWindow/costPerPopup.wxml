@@ -1,0 +1,11 @@
+<view class="data-v-2e004f02">
+    <uni-popup bind:__l="__l" class="r data-v-2e004f02" uI="2e004f02-0" uP="{{h}}" uR="popupRef" uS="{{['d']}}" wx:if="{{h}}">
+        <view class="popup-content data-v-2e004f02">
+            <view class="popup-content-item data-v-2e004f02" type="center" wx:if="{{a}}">
+                <image bindtap="{{b}}" class="popup-img data-v-2e004f02" src="{{c}}"></image>
+                <view catchtap="{{d}}" class="close-icon data-v-2e004f02">x</view>
+                <view class="close-date data-v-2e004f02" wx:if="{{e}}">{{f}}后自动关闭</view>
+            </view>
+        </view>
+    </uni-popup>
+</view>

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "one-line-one": "magicItem/oneLineOne",
+    "one-line-more": "magicItem/oneLineMore",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

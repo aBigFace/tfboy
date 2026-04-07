@@ -1,0 +1,20 @@
+<view class="{{['uni-combox','data-v-1469e41e',o]}}">
+    <view class="uni-combox__label data-v-1469e41e" style="{{c}}" wx:if="{{a}}">
+        <text class="data-v-1469e41e">{{b}}</text>
+    </view>
+    <view class="uni-combox__input-box data-v-1469e41e">
+        <input bindblur="{{g}}" bindfocus="{{f}}" bindinput="{{e}}" class="uni-combox__input data-v-1469e41e" placeholder="{{d}}" placeholderClass="uni-combox__input-plac" type="text" value="{{h}}"></input>
+        <uni-icons bind:__l="__l" bindclick="{{i}}" class="data-v-1469e41e" uI="1469e41e-0" uP="{{j}}" wx:if="{{j}}"></uni-icons>
+    </view>
+    <view class="uni-combox__selector data-v-1469e41e" wx:if="{{k}}">
+        <view class="uni-popper__arrow data-v-1469e41e"></view>
+        <scroll-view class="uni-combox__selector-scroll data-v-1469e41e" scrollY="true">
+            <view class="uni-combox__selector-empty data-v-1469e41e" wx:if="{{l}}">
+                <text class="data-v-1469e41e">{{m}}</text>
+            </view>
+            <view bindtap="{{item.c}}" class="uni-combox__selector-item data-v-1469e41e" wx:for="{{n}}" wx:key="b">
+                <text class="data-v-1469e41e">{{item.a}}</text>
+            </view>
+        </scroll-view>
+    </view>
+</view>

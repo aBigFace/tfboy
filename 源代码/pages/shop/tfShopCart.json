@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "购物袋",
+  "usingComponents": {
+    "c_shopp-cart": "../../components/diyView/c_shoppCart",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

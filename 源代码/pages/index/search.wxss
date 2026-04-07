@@ -1,0 +1,64 @@
+.search-input-box.data-v-05ca1189 {
+    background-color: #fff;
+    padding: 18rpx 28rpx 14rpx
+}
+
+.search .search-box.data-v-05ca1189 {
+    background: #fff;
+    border-radius: 0rpx 0rpx 24rpx 24rpx;
+    box-sizing: border-box;
+    padding: 24rpx;
+    width: 750rpx
+}
+
+.search .search-box .search-record.data-v-05ca1189 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.search .search-box .search-record .search-title.data-v-05ca1189 {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 700
+}
+
+.search .search-box .search-record .search-delete.data-v-05ca1189 {
+    height: 26rpx;
+    width: 24rpx
+}
+
+.search .search-box .search-content.data-v-05ca1189 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 32rpx
+}
+
+.search .search-box .search-content .item.data-v-05ca1189 {
+    background: #f5f5f5;
+    border-radius: 36rpx;
+    box-sizing: border-box;
+    height: 56rpx;
+    line-height: 56rpx;
+    margin-bottom: 16rpx;
+    margin-right: 20rpx;
+    min-width: 120rpx;
+    padding: 0rpx 24rpx;
+    text-align: center
+}
+
+.search .search-box .search-content .item-text.data-v-05ca1189 {
+    color: #666;
+    font-size: 24rpx;
+    font-weight: 400
+}
+
+.search .search-hotWords.data-v-05ca1189 {
+    background: #fff;
+    width: 750rpx
+}

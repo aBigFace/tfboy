@@ -1,0 +1,13 @@
+<view class="{{['data-v-32da5d3c','cClass',k&&'cClass-noData']}}" hidden="{{!l}}">
+    <view bindtap="{{d}}" class="cClass-search data-v-32da5d3c">
+        <uni-easyinput bind:__l="__l" bindiconClick="{{a}}" bindupdateModelValue="{{b}}" class="data-v-32da5d3c" uI="32da5d3c-0" uP="{{c}}" wx:if="{{c}}"></uni-easyinput>
+    </view>
+    <one_-one bind:__l="__l" bindskuChange="{{f}}" class="data-v-32da5d3c" uI="32da5d3c-1" uP="{{g}}" wx:if="{{e}}"></one_-one>
+    <view class="noData data-v-32da5d3c" wx:else>
+        <image class="img data-v-32da5d3c" mode="widthFix" src="/static/bg_no_net.png"></image>
+        <view class="data-v-32da5d3c">网络出现异常啦</view>
+        <view class="txt data-v-32da5d3c">掘地三尺也没找到网络，呜呜～</view>
+        <view bindtap="{{h}}" class="btn data-v-32da5d3c">刷新页面</view>
+    </view>
+    <select-sku bind:__l="__l" class="r data-v-32da5d3c" uI="32da5d3c-2" uP="{{j}}" uR="selectSkuRef" wx:if="{{j}}"></select-sku>
+</view>

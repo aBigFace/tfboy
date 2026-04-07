@@ -1,0 +1,29 @@
+<view class="popupPayModal data-v-05cfccb5" wx:if="{{a}}">
+    <view class="popupPayModal-box data-v-05cfccb5">
+        <view class="modal-header data-v-05cfccb5">
+            <text class="modal-header-title data-v-05cfccb5">请输入支付密码</text>
+            <uni-icons bind:__l="__l" bindclick="{{b}}" class="close-icon data-v-05cfccb5" uI="05cfccb5-0" uP="{{c}}" wx:if="{{c}}"></uni-icons>
+        </view>
+        <view class="modal-content m-b-20 data-v-05cfccb5">
+            <view class="pay-content data-v-05cfccb5">
+                <view class="pay-money data-v-05cfccb5">{{d}}</view>
+                <view class="pay-tip data-v-05cfccb5">小葵花支付</view>
+            </view>
+        </view>
+        <view class="codeNum data-v-05cfccb5">
+            <view class="flex-space-between-center data-v-05cfccb5">
+                <view class="pay-box-container data-v-05cfccb5">
+                    <view class="pay-item-box data-v-05cfccb5" wx:for="{{e}}" wx:for-index="i0" wx:for-item="index" wx:key="a">
+                        <view class="pay-item-box-num data-v-05cfccb5"></view>
+                    </view>
+                </view>
+                <input disabled bindtap="{{g}}" class="{{['data-v-05cfccb5','code-input-item',item.c]}}" type="number" value="{{item.b}}" wx:for="{{f}}" wx:key="a"></input>
+            </view>
+            <input bindblur="{{i}}" bindinput="{{h}}" class="code-input data-v-05cfccb5" focus="{{k}}" maxlength="{{j}}" type="number" value="{{l}}"></input>
+        </view>
+        <view class="modal-footer base-white-container data-v-05cfccb5">
+            <button bindtap="{{n}}" class="primary-btn base-btn-footer data-v-05cfccb5" disabled="{{m}}" type="primary">支付</button>
+        </view>
+    </view>
+    <confirm-modal bind:__l="__l" class="r data-v-05cfccb5" uI="05cfccb5-1" uR="confirmModalRef"></confirm-modal>
+</view>

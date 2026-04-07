@@ -1,0 +1,15 @@
+<view class="outer-box data-v-ea7c61c4">
+    <view class="data-v-ea7c61c4">
+        <view class="typeOne data-v-ea7c61c4">
+            <view class="input-box data-v-ea7c61c4" style="{{'background-color:'+j}}">
+                <view class="search-box data-v-ea7c61c4">
+                    <image class="search-icon data-v-ea7c61c4" src="{{a}}"></image>
+                    <input bindinput="{{h}}" bindtap="{{f}}" class="search-input data-v-ea7c61c4" key="1" placeholder="请输入搜索内容" placeholderStyle="margin-left:10rpx" style="{{'background-color:'+b+';'+'border-radius:'+c+';'+'padding-left:'+d+';'+'color:'+e}}" value="{{g}}"></input>
+                    <view class="btn-box data-v-ea7c61c4">
+                        <view bindtap="{{i}}" class="search-btn data-v-ea7c61c4" confirmType="search">搜索</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

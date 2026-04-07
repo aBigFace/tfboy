@@ -1,0 +1,19 @@
+<view class="order-result">
+    <view class="success-result">
+        <view class="result-icon">
+            <image src="{{a}}"></image>
+        </view>
+        <view class="text-light text-semi-bold text-center">支付成功</view>
+        <view class="text-center">
+            <text class="next-tip">欢迎再次购买</text>
+        </view>
+        <view class="operate-btn flex-space-between-center">
+            <button bindtap="{{b}}" class="base-btn-plain-footer" type="plain">返回我的订单</button>
+            <button bindtap="{{c}}" class="base-btn-plain-footer" type="plain">查看订单详情</button>
+        </view>
+    </view>
+    <confirm-modal bind:__l="__l" class="r" uI="7f170d30-0" uR="confirmModalRef" uS="{{['message']}}">
+        <view class="text-gray" slot="message">放弃支付后订单将在10分钟内取消</view>
+    </confirm-modal>
+</view>
+<confirm-modal bind:__l="__l" class="r" uI="7f170d30-1" uR="confirmRef"></confirm-modal>

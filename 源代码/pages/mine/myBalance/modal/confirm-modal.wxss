@@ -1,0 +1,74 @@
+.confirm-modal {
+    background-color: #fff;
+    border-radius: 32rpx;
+    box-sizing: border-box;
+    height: 728rpx;
+    width: 600rpx
+}
+
+.confirm-modal .modal-header {
+    position: relative;
+    width: 600rpx
+}
+
+.confirm-modal .modal-header wx-image {
+    height: 408rpx;
+    width: 100%
+}
+
+.confirm-modal .modal-header .close-icon {
+    height: 48rpx;
+    position: absolute;
+    right: 24rpx;
+    top: 32rpx;
+    width: 48rpx
+}
+
+.confirm-modal .confirm-modal-content {
+    font-size: 30rpx;
+    padding: 0 50rpx 50rpx;
+    text-align: center
+}
+
+.confirm-modal .modal-content {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 400;
+    margin-bottom: 26rpx
+}
+
+.confirm-modal .modal-content .modal-image {
+    height: 320rpx;
+    margin: 40rpx auto;
+    width: 400rpx
+}
+
+.confirm-modal .modal-title {
+    color: #999;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.confirm-modal .modal-footer {
+    display: -webkit-flex;
+    display: flex
+}
+
+.confirm-modal .modal-footer wx-button {
+    border: 2rpx solid #ff7272;
+    border-radius: 44rpx;
+    color: #ff7272;
+    font-size: 32rpx;
+    font-weight: 400;
+    height: 88rpx;
+    width: 220rpx
+}
+
+.confirm-modal .modal-footer wx-button::after {
+    border: none;
+    border-radius: 0
+}
+
+.confirm-modal .modal-footer .confirm-btn {
+    color: #576b95
+}

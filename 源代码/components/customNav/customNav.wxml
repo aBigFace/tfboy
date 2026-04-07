@@ -1,0 +1,3 @@
+<view class="customNav" style="{{a}}">
+    <slot></slot>
+</view>

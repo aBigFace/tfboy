@@ -1,0 +1,53 @@
+.cancel-order-modal {
+    background-color: #fff;
+    border-top-left-radius: 24rpx;
+    border-top-right-radius: 24rpx
+}
+
+.cancel-order-modal .modal-content,.cancel-order-modal .modal-header {
+    padding: 28rpx 28rpx 0
+}
+
+.cancel-order-modal .cancel-tips {
+    font-size: 26rpx;
+    margin-bottom: 20rpx
+}
+
+.cancel-order-modal .cancel-reason-list .reason-item {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 6px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 20rpx
+}
+
+.cancel-order-modal wx-input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 28rpx;
+    margin-bottom: 6rpx;
+    padding: 28rpx
+}
+
+.cancel-order-modal .modal-footer {
+    box-shadow: 0 2rpx 8rpx 0 rgba(0,0,0,.04)
+}
+
+.cancel-order-modal .primary-btn {
+    width: 90%
+}
+
+.cancel-order-modal .btn-radius {
+    border-radius: 44rpx
+}
+
+.cancel-order-modal .submit-btn {
+    color: #fff;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 32rpx;
+    height: 88rpx
+}

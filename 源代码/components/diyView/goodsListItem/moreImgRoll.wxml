@@ -1,0 +1,34 @@
+<view class="oneLineThree data-v-02bb866d">
+    <scroll-view class="content data-v-02bb866d" scrollX="true">
+        <view class="content-item data-v-02bb866d" wx:for="{{a}}" wx:key="r">
+            <view bindtap="{{item.g}}" class="item-image data-v-02bb866d">
+                <image alt="" class="data-v-02bb866d" mode="scaleToFill" src="{{item.a}}"></image>
+                <view class="item-tips data-v-02bb866d" style="width:72px" wx:if="{{item.b}}">
+                    <text class="item-tips-text data-v-02bb866d"> 即将开售 </text>
+                </view>
+                <view class="item-tips data-v-02bb866d" style="width:62px" wx:elif="{{item.c}}">
+                    <image class="icon-img data-v-02bb866d" mode="scaleToFill" src="/static/icon/hot.png" style="width:11.56px;height:13.3px"></image>
+                    <text class="item-tips-text data-v-02bb866d">   热销  </text>
+                </view>
+                <view class="item-tips data-v-02bb866d" wx:elif="{{b}}">
+                    <image class="icon-img data-v-02bb866d" mode="scaleToFill" src="{{item.e}}" wx:if="{{item.d}}"></image>
+                    <text class="item-tips-text data-v-02bb866d" wx:else>{{item.f}}</text>
+                </view>
+            </view>
+            <view class="item-info data-v-02bb866d">
+                <view class="product-name data-v-02bb866d">{{item.h}}</view>
+                <view class="product-keywords data-v-02bb866d" wx:if="{{item.i}}">{{item.j}}</view>
+                <view class="product-tags data-v-02bb866d" wx:if="{{c}}">
+                    <view class="data-v-02bb866d" wx:for="{{item.k}}" wx:for-item="i" wx:key="l">{{i.a}}</view>
+                </view>
+                <view class="product-sales data-v-02bb866d" wx:if="{{d}}">{{item.m}}</view>
+                <view class="product-stock data-v-02bb866d" wx:if="{{e}}">{{item.n}}</view>
+                <view class="product-box data-v-02bb866d">
+                    <view class="product-price data-v-02bb866d">¥<text class="product-price-text data-v-02bb866d">{{item.o}}</text>
+                    </view>
+                    <view class="product-market data-v-02bb866d" wx:if="{{item.p}}">¥{{item.q}}</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

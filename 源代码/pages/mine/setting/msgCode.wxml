@@ -1,0 +1,46 @@
+<view class="page base-container text-center data-v-02f13797">
+    <view class="code-tip data-v-02f13797">
+        <view class="text-primary-grey font-28 data-v-02f13797" wx:if="{{a}}">已发送短信验证码至<text class="data-v-02f13797">+86 {{b}}</text>
+        </view>
+        <view class="text-primary-grey font-28 data-v-02f13797" wx:if="{{c}}">已发送邮箱验证码至<text class="data-v-02f13797">{{d}}</text>
+        </view>
+    </view>
+    <view class="codeNum data-v-02f13797">
+        <view class="flex-space-between-center data-v-02f13797">
+            <input disabled bindtap="{{f}}" class="{{['data-v-02f13797','code-input-item',item.c]}}" type="number" value="{{item.b}}" wx:for="{{e}}" wx:key="a"></input>
+        </view>
+        <view bindtap="{{h}}" class="second text-gray-xs data-v-02f13797">{{g}}</view>
+        <input bindblur="{{j}}" bindinput="{{i}}" class="code-input data-v-02f13797" focus="{{l}}" maxlength="{{k}}" type="number" value="{{m}}"></input>
+    </view>
+    <button bindtap="{{n}}" class="primary-btn base-btn-footer data-v-02f13797" type="primary">确定</button>
+    <uni-popup bind:__l="__l" class="r data-v-02f13797" uI="02f13797-0" uP="{{t}}" uR="popupRef" uS="{{['d']}}" wx:if="{{t}}">
+        <view class="modal confirm-modal data-v-02f13797">
+            <view class="modal-header data-v-02f13797">
+                <image class="data-v-02f13797" src="{{o}}"></image>
+                <uni-icons bind:__l="__l" bindclick="{{p}}" class="close-icon data-v-02f13797" uI="02f13797-1,02f13797-0" uP="{{q}}" wx:if="{{q}}"></uni-icons>
+            </view>
+            <view class="confirm-modal-content data-v-02f13797">
+                <view class="modal-content data-v-02f13797">您的账号已注销成功</view>
+                <view class="modal-title data-v-02f13797">期待未来与您再次相遇</view>
+            </view>
+            <view class="modal-footer flex data-v-02f13797">
+                <button bindtap="{{r}}" class="default-btn confirm-btn data-v-02f13797" style="{{'background:'+'#FF7272'}}">好的</button>
+            </view>
+        </view>
+    </uni-popup>
+    <uni-popup bind:__l="__l" class="r data-v-02f13797" uI="02f13797-2" uP="{{y}}" uR="failPopupRef" uS="{{['d']}}" wx:if="{{y}}">
+        <view class="modal fail-confirm-modal data-v-02f13797">
+            <view class="fail-modal-header flex-justify-center data-v-02f13797">
+                <image class="data-v-02f13797" src="{{v}}"></image>
+                <text class="data-v-02f13797">账号注销失败</text>
+            </view>
+            <view class="confirm-modal-content data-v-02f13797">
+                <view class="modal-content data-v-02f13797">您的账号可能存在以下原因：</view>
+                <view class="modal-title flex-center data-v-02f13797">存在进行中订单</view>
+            </view>
+            <view class="modal-footer flex data-v-02f13797">
+                <button bindtap="{{w}}" class="default-btn confirm-btn data-v-02f13797" style="{{'background:'+'#FF7272'}}">知道了</button>
+            </view>
+        </view>
+    </uni-popup>
+</view>

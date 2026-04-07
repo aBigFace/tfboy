@@ -1,0 +1,11 @@
+<view class="certify-page page">
+    <view class="certify-bg"></view>
+    <view class="certify-body">
+        <text class="certify-text">{{a}}</text>
+        <text class="certify-phone" wx:if="{{b}}">{{c}}</text>
+        <text class="certify-phone" wx:if="{{d}}">{{e}}</text>
+        <text class="certify-phone" wx:if="{{f}}">{{g}}</text>
+        <button bindtap="{{i}}" class="{{['can-commit','primary-btn','m-t-30']}}" type="button" wx:if="{{h}}">立即注册</button>
+        <button bindtap="{{k}}" class="{{['can-commit','primary-btn','m-t-30']}}" type="button" wx:if="{{j}}">立即登陆</button>
+    </view>
+</view>

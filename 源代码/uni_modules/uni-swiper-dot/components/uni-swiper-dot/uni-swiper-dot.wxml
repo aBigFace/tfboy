@@ -1,0 +1,20 @@
+<view class="uni-swiper__warp data-v-517c38d4">
+    <slot></slot>
+    <view class="uni-swiper__dots-box data-v-517c38d4" key="default" style="{{'bottom:'+d}}" wx:if="{{a}}">
+        <view bindtap="{{item.a}}" class="uni-swiper__dots-item uni-swiper__dots-bar data-v-517c38d4" style="{{'width:'+item.b+';'+'height:'+c+';'+'background-color:'+item.c+';'+'border-radius:'+'0px'}}" wx:for="{{b}}" wx:key="d"></view>
+    </view>
+    <view class="uni-swiper__dots-box data-v-517c38d4" key="dot" style="{{'bottom:'+i}}" wx:if="{{e}}">
+        <view bindtap="{{item.a}}" class="uni-swiper__dots-item data-v-517c38d4" style="{{'width:'+g+';'+'height:'+h+';'+'background-color:'+item.b+';'+'border:'+item.c}}" wx:for="{{f}}" wx:key="d"></view>
+    </view>
+    <view class="uni-swiper__dots-box data-v-517c38d4" key="round" style="{{'bottom:'+m}}" wx:if="{{j}}">
+        <view bindtap="{{item.a}}" class="{{[item.b,'uni-swiper__dots-item','data-v-517c38d4']}}" style="{{'width:'+item.c+';'+'height:'+l+';'+'background-color:'+item.d+';'+'border:'+item.e}}" wx:for="{{k}}" wx:key="f"></view>
+    </view>
+    <view class="uni-swiper__dots-box uni-swiper__dots-nav data-v-517c38d4" key="nav" style="{{'background-color:'+q+';'+'bottom:'+'0'}}" wx:if="{{n}}">
+        <text class="uni-swiper__dots-nav-item data-v-517c38d4" style="{{'color:'+p}}">{{o}}</text>
+    </view>
+    <view class="uni-swiper__dots-box data-v-517c38d4" key="indexes" style="{{'bottom:'+w}}" wx:if="{{r}}">
+        <view bindtap="{{item.b}}" class="uni-swiper__dots-item uni-swiper__dots-indexes data-v-517c38d4" style="{{'width:'+t+';'+'height:'+v+';'+'color:'+item.c+';'+'background-color:'+item.d+';'+'border:'+item.e}}" wx:for="{{s}}" wx:key="f">
+            <text class="uni-swiper__dots-indexes-text data-v-517c38d4">{{item.a}}</text>
+        </view>
+    </view>
+</view>

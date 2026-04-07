@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "收货地址",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "no-data": "../../../components/no-data",
+    "search-bar": "../../../components/search-bar",
+    "confirm-modal": "../../../components/modal/confirm-modal",
+    "confirm-dialog": "../../dialog/conformDialog",
+    "uni-icons": "../../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-load-more": "../../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

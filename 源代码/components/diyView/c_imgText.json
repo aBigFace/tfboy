@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "model-one": "imgTextItem/modelOne",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

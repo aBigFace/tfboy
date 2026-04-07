@@ -1,0 +1,29 @@
+<view class="page">
+    <view class="page-content base-container">
+        <view class="evaluation-detail">
+            <view class="evaluation-detail-header">
+                <view class="left">
+                    <image src="{{a}}"></image>
+                    <text>{{b}}</text>
+                </view>
+                <view class="right">{{c}}</view>
+            </view>
+            <view class="evaluation-detail-score">
+                <image src="{{e}}" wx:for="{{d}}" wx:key="a"></image>
+            </view>
+            <view class="evaluation-detail-content">{{f}}</view>
+            <view class="evaluation-detail-pic">
+                <block wx:for="{{g}}" wx:key="h">
+                    <image bindtap="{{item.c}}" class="item" src="{{item.b}}" wx:if="{{item.a}}"></image>
+                    <view class="item video-bg" style="{{'background:'+item.g}}" wx:if="{{item.d}}">
+                        <image bindtap="{{item.e}}" class="play" src="{{item.f}}"></image>
+                    </view>
+                </block>
+            </view>
+            <view class="evaluation-detail-reply" wx:if="{{h}}">店家回复:{{i}}</view>
+            <view class="evaluation-detail-sku-box" wx:if="{{j}}">
+                <view class="evaluation-detail-sku">{{k}}</view>
+            </view>
+        </view>
+    </view>
+</view>

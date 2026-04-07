@@ -1,0 +1,8 @@
+<view class="diyView-hotWords data-v-722bfaf4">
+    <text class="hotWords-text data-v-722bfaf4">热门搜索</text>
+    <view class="hotWords-list data-v-722bfaf4">
+        <view bindtap="{{item.b}}" class="hotWords-item data-v-722bfaf4" wx:for="{{a}}">
+            <view class="hotWords-item-text data-v-722bfaf4">{{item.a}}</view>
+        </view>
+    </view>
+</view>

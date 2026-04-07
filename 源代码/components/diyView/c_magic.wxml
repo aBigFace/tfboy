@@ -1,0 +1,6 @@
+<view class="data-v-f768de8a">
+    <view class="c_magic data-v-f768de8a" style="{{'background:'+e}}">
+        <one-line-one bind:__l="__l" class="data-v-f768de8a" uI="f768de8a-0" uP="{{b}}" wx:if="{{a}}"></one-line-one>
+        <one-line-more bind:__l="__l" class="data-v-f768de8a" uI="f768de8a-1" uP="{{d}}" wx:if="{{c}}"></one-line-more>
+    </view>
+</view>

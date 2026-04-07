@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "会员转换",
+  "usingComponents": {
+    "custom-nav": "components/customNav/customNav"
+  }
+}

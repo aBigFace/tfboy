@@ -1,0 +1,307 @@
+.page {
+    overflow-y: auto
+}
+
+.remind {
+    background: #2b2b2b;
+    border-radius: 8px 0 8px 0;
+    color: #fff;
+    margin-left: -22rpx;
+    margin-top: -8rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx
+}
+
+.order-detail-page {
+    background-position: no-repeat;
+    background-size: 100vw 220rpx
+}
+
+.order-detail-page wx-button {
+    min-width: 160rpx
+}
+
+.order-detail-page .header-bg {
+    background: linear-gradient(1turn,#f88359,#ff7272);
+    height: 240rpx
+}
+
+.order-detail-page .header-bg .order-status {
+    margin-top: 30rpx;
+    position: relative
+}
+
+.order-detail-page .header-bg .order-status .order-status-icon {
+    height: 48rpx;
+    margin-right: 20rpx;
+    width: 48rpx
+}
+
+.order-detail-page .header-bg .order-status .status-text {
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 500;
+    margin-bottom: 6rpx;
+    padding-top: 10rpx
+}
+
+.order-detail-page .header-bg .order-desc {
+    font-size: 24rpx;
+    margin-top: 10rpx
+}
+
+.order-detail-page .header-bg .order-desc .text-light-s {
+    color: #fff
+}
+
+.order-detail-page .header-bg .order-status-bg-icon {
+    bottom: 100rpx;
+    height: 120rpx;
+    opacity: .15;
+    position: absolute;
+    right: 40rpx;
+    width: 120rpx
+}
+
+.order-detail-page .page-content {
+    margin-top: -84rpx
+}
+
+.order-detail-page .order-products {
+    background-color: #fff;
+    border-radius: 8rpx;
+    padding-bottom: 24rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx
+}
+
+.order-detail-page .order-item-header {
+    border-bottom: 1px solid #eee;
+    margin: 0 -24rpx;
+    padding: 30rpx 24rpx 24rpx
+}
+
+.order-detail-page .order-detail-section {
+    padding-bottom: 6rpx;
+    padding-top: 6rpx
+}
+
+.order-detail-page .order-detail-section-item {
+    padding-bottom: 20rpx;
+    padding-top: 20rpx
+}
+
+.order-detail-page .order-detail-section-item .price-name {
+    color: #e85252;
+    margin-right: 5rpx
+}
+
+.order-detail-page .order-detail-section-item-desc {
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    overflow: hidden
+}
+
+.order-detail-page .order-examine-time {
+    background: #fff2d7;
+    border-radius: 12rpx 12rpx 0rpx 0rpx;
+    color: #ac7e40;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 22rpx;
+    font-weight: 400;
+    height: 48rpx;
+    margin-top: 16rpx;
+    width: 702rpx
+}
+
+.order-detail-page .order-detail-address {
+    background-color: #fff;
+    border-radius: 0 0 12rpx 12rpx;
+    height: 232rpx;
+    margin-top: 16rpx;
+    padding: 0 24rpx
+}
+
+.order-detail-page .order-detail-address .address-top {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 88rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 668rpx
+}
+
+.order-detail-page .order-detail-address .address-top .title {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500
+}
+
+.order-detail-page .order-detail-address .address-top .title .require {
+    color: #f30
+}
+
+.order-detail-page .order-detail-address .address-top .edit-address {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.order-detail-page .order-detail-address .address-top .edit-address wx-image {
+    height: 40rpx;
+    width: 40rpx
+}
+
+.order-detail-page .order-detail-address .address-top .edit-address wx-text {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-left: 5rpx
+}
+
+.order-detail-page .order-detail-address .address-top .change {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #ff7272;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 26rpx;
+    font-weight: 400
+}
+
+.order-detail-page .order-detail-address .address-top .change wx-image {
+    height: 32rpx;
+    margin-right: 6rpx;
+    width: 32rpx
+}
+
+.order-detail-page .order-detail-address .address-bottom {
+    background: #f8f8f8;
+    border-radius: 8rpx;
+    height: 116rpx;
+    width: 654rpx
+}
+
+.order-detail-page .order-detail-address .address-bottom .name {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-left: 20rpx;
+    padding-top: 24rpx
+}
+
+.order-detail-page .order-detail-address .address-bottom .detail {
+    color: #999;
+    font-size: 26rpx;
+    font-weight: 400;
+    margin-left: 20rpx;
+    padding-top: 12rpx
+}
+
+.order-detail-page .receive {
+    height: 328rpx;
+    padding-bottom: 100rpx
+}
+
+.order-detail-page .copy-icon {
+    text-decoration: underline
+}
+
+.order-detail-page .fixed-bottom-container {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.04);
+    text-align: right;
+    z-index: 2
+}
+
+.order-detail-page .package-group {
+    background: #fff;
+    border: 2rpx solid #fff;
+    border-radius: 8rpx 8rpx 8rpx 8rpx;
+    margin-right: 25rpx;
+    padding: 16rpx 54rpx
+}
+
+.order-detail-page .package-group.active {
+    background: #ffe7e5;
+    border: 2rpx solid #e85252
+}
+
+.order-detail-page .logistics-company {
+    background: #ffdfdf;
+    color: #e85252;
+    font-size: 16rpx;
+    margin-right: 3rpx;
+    padding: 2rpx 6rpx
+}
+
+.order-detail-page .logistics-content {
+    background: #f6f6f6;
+    border-radius: 8px 8px 8px 8px;
+    opacity: 1;
+    padding: 16rpx 24rpx
+}
+
+.order-detail-page .logistics-content .logistics-status {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 600;
+    line-height: 36rpx
+}
+
+.order-detail-page .logistics-content .logistics-current {
+    color: #999;
+    font-size: 24rpx;
+    line-height: 32rpx
+}
+
+.order-detail-page .logistics-copy {
+    border-right: 2rpx solid #d8d8d8;
+    display: inline-block;
+    height: 28rpx;
+    line-height: 24rpx;
+    margin-right: 16rpx;
+    padding: 0 16rpx
+}
+
+.order-detail-page .badge {
+    background: #e85252;
+    border-radius: 20rpx;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    height: 20rpx;
+    opacity: 1;
+    width: 22rpx
+}
+
+.order-detail-page wx-uni-button[type=primary][plain] {
+    border: 2rpx solid #ddd;
+    color: #333
+}
+
+.order-detail-page .order-product {
+    padding-bottom: 24rpx;
+    padding-top: 24rpx
+}
+
+.order-detail-page .plain-btn {
+    background: #fff;
+    border: 2rpx solid #ddd!important;
+    border-radius: 44rpx;
+    color: #333!important;
+    height: 60rpx;
+    width: 170rpx
+}
+
+.order-detail-page .primary-btn {
+    background: #ff7272;
+    border-radius: 44rpx;
+    height: 60rpx;
+    width: 160rpx
+}

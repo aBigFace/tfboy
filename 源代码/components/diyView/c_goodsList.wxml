@@ -1,0 +1,10 @@
+<view class="diy_view_c_goodsList data-v-59b8dcbc" style="{{'background-color:'+'#f5f5f5'}}">
+    <tabs bind:__l="__l" bindchange="{{b}}" class="data-v-59b8dcbc" uI="59b8dcbc-0" uP="{{c}}" wx:if="{{a}}"></tabs>
+    <view class="content data-v-59b8dcbc" style="{{'padding-left:'+s+';'+'padding-right:'+t}}">
+        <big-list bind:__l="__l" bindskuChange="{{e}}" class="data-v-59b8dcbc" uI="59b8dcbc-1" uP="{{f}}" wx:if="{{d}}"></big-list>
+        <little-list bind:__l="__l" bindskuChange="{{h}}" class="data-v-59b8dcbc" uI="59b8dcbc-2" uP="{{i}}" wx:if="{{g}}"></little-list>
+        <one-line-two bind:__l="__l" bindskuChange="{{k}}" class="data-v-59b8dcbc" uI="59b8dcbc-3" uP="{{l}}" wx:if="{{j}}"></one-line-two>
+        <one-line-three bind:__l="__l" bindskuChange="{{n}}" class="data-v-59b8dcbc" uI="59b8dcbc-4" uP="{{o}}" wx:if="{{m}}"></one-line-three>
+        <more-img-roll bind:__l="__l" bindskuChange="{{q}}" class="data-v-59b8dcbc" uI="59b8dcbc-5" uP="{{r}}" wx:if="{{p}}"></more-img-roll>
+    </view>
+</view>

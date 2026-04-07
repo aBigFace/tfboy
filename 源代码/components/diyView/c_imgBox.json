@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "one-line-one": "imgItem/oneLineOne",
+    "one-line-two": "imgItem/oneLineTwo",
+    "one-line-three": "imgItem/oneLineThree",
+    "one-line-four": "imgItem/oneLineFour",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

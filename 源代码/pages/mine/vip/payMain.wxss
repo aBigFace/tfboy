@@ -1,0 +1,211 @@
+.page {
+    background: #fff;
+    height: 100%;
+    overflow: auto;
+    position: relative
+}
+
+.page .vip-icon {
+    height: 30rpx;
+    margin-right: 8rpx;
+    width: 30rpx
+}
+
+.page .pay-main .banner {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    background: url("https://cos.tfent.cn/xgg-file-folder/tf-app/wechat/static/image/mine/bg-pay-banner.png") no-repeat;
+    background-size: 100%;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    height: 178rpx;
+    padding: 46rpx 24rpx 0rpx;
+    position: relative
+}
+
+.page .pay-main .banner .vip-icon {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 30%
+}
+
+.page .pay-main .banner .vip-icon .team-img {
+    border-radius: 60rpx;
+    height: 120rpx;
+    width: 120rpx
+}
+
+.page .pay-main .banner .vip-info {
+    height: 75%;
+    width: 70%;
+    z-index: 10
+}
+
+.page .pay-main .banner .vip-info-name {
+    color: #000;
+    font-size: 16px;
+    font-weight: 800;
+    height: 40%;
+    width: 100%
+}
+
+.page .pay-main .banner .vip-info-club {
+    color: #000;
+    height: 60%;
+    width: 100%
+}
+
+.page .pay-main .banner .vip-isopen {
+    border-bottom-left-radius: 30rpx 30rpx;
+    border-top-right-radius: 30rpx 30rpx;
+    color: #fff;
+    height: 40rpx;
+    padding: 0rpx 20rpx;
+    position: absolute;
+    right: 44rpx;
+    top: 50rpx
+}
+
+.page .pay-main .banner .orange-bg {
+    background: #ebd6c2
+}
+
+.page .pay-main .banner .red-bg {
+    background: #ffc6c6
+}
+
+.page .pay-main .vip-type {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 260rpx;
+    margin-top: 34rpx;
+    padding: 24rpx;
+    white-space: nowrap;
+    width: 100%
+}
+
+.page .pay-main .vip-type-box {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 16rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 200rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-right: 20rpx;
+    width: 280rpx
+}
+
+.page .pay-main .vip-type-item {
+    display: inline-block
+}
+
+.page .pay-main .vip-type-item-name {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 14px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-bottom: 20rpx
+}
+
+.page .pay-main .vip-type-item-account {
+    color: #333;
+    font-size: 40rpx;
+    font-weight: 800
+}
+
+.page .pay-main .vip-type-item-year {
+    font-size: 26rpx
+}
+
+.page .pay-main .vip-type .activeClick {
+    background: #fff;
+    border: 2rpx solid #ff7272;
+    box-shadow: 0rpx 8rpx 16rpx 0rpx rgba(0,0,0,.08)
+}
+
+.page .pay-main .vip-type .activeClick .vip-type-item-account,.page .pay-main .vip-type .activeClick .vip-type-item-year {
+    color: #ff7272
+}
+
+.page .pay-method-list .pay-method-tip {
+    font-size: 28rpx
+}
+
+.page .pay-method-list .pay-method-item {
+    border: 2rpx solid #ebebeb;
+    border-radius: 8rpx;
+    height: 112rpx;
+    margin: 20rpx 0;
+    position: relative
+}
+
+.page .pay-method-list .pay-method-item .item-pay {
+    display: -webkit-flex;
+    display: flex;
+    margin-left: 26rpx
+}
+
+.page .pay-method-list .pay-method-item .item-pay wx-text {
+    -webkit-align-self: center;
+    align-self: center
+}
+
+.page .pay-method-list .pay-method-item.active {
+    border: 1px solid #e85252;
+    border-radius: 10rpx
+}
+
+.page .pay-method-list .pay-method-item.active .checked-icon {
+    bottom: 0;
+    position: absolute;
+    right: 0
+}
+
+.page .btn-group {
+    background: #fff;
+    bottom: 0;
+    padding: 10rpx 0rpx;
+    position: absolute;
+    width: 100%
+}
+
+.page .btn-group .primary-btn {
+    border-radius: 44rpx;
+    width: 500rpx
+}
+
+.my-balance {
+    background: #fff
+}
+
+.my-balance .uni-forms-item {
+    margin-bottom: 0rpx
+}
+
+.my-balance .confirm-btn {
+    background: #ffc6c6;
+    border-radius: 44rpx;
+    color: #fff;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 32rpx;
+    font-weight: 400;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    width: 688rpx
+}

@@ -1,0 +1,17 @@
+<uni-popup bind:__l="__l" class="realNamePopup r data-v-54bb034f" uI="54bb034f-0" uP="{{e}}" uR="realNamePopupRef" uS="{{['d']}}" wx:if="{{e}}">
+    <view class="modal realNamePopup-modal data-v-54bb034f">
+        <view class="header-box data-v-54bb034f">
+            <view class="modal-header data-v-54bb034f">
+                <text class="modal-header-title data-v-54bb034f">认证提醒</text>
+                <uni-icons bind:__l="__l" bindclick="{{a}}" class="close-icon data-v-54bb034f" uI="54bb034f-1,54bb034f-0" uP="{{b}}" wx:if="{{b}}"></uni-icons>
+            </view>
+        </view>
+        <view class="modal-content m-b-20 data-v-54bb034f">
+            <view class="modal-tip data-v-54bb034f">抱歉，您还未实名认证</view>
+            <view class="modal-intro data-v-54bb034f">为保障您的权益，请认证后进行购买</view>
+        </view>
+        <view class="modal-footer base-white-container data-v-54bb034f">
+            <button bindtap="{{c}}" class="primary-btn base-btn-footer data-v-54bb034f" type="primary">查看认证</button>
+        </view>
+    </view>
+</uni-popup>

@@ -1,0 +1,7 @@
+<view class="diy_view_c_rollingNotice data-v-12f7e2ea">
+    <view class="diy_view_c_rollingNotice-view data-v-12f7e2ea">
+        <view class="grid-content bg-purple marquee scroll-box data-v-12f7e2ea" style="{{'color:'+'#999999'+';'+'background:'+'#F5F5F5'}}">
+            <uni-notice-bar bind:__l="__l" class="marquee data-v-12f7e2ea" uI="12f7e2ea-0" uP="{{b}}" wx:if="{{a}}"></uni-notice-bar>
+        </view>
+    </view>
+</view>

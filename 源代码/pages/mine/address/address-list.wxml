@@ -1,0 +1,56 @@
+<view class="{{['page','address-list-page',v&&'has-bar']}}" style="{{'background:'+w}}">
+    <view class="top-bar">
+        <view class="flex tab-bar m-b-5" wx:if="{{a}}">
+            <view bindtap="{{item.d}}" class="{{['tab-bar-item','flex-1',item.b]}}" wx:for="{{b}}" wx:key="c">{{item.a}}</view>
+        </view>
+        <search-bar bind:__l="__l" bindsearch="{{c}}" bindupdateModelValue="{{d}}" uI="9649b942-0" uP="{{e}}" wx:if="{{e}}"></search-bar>
+    </view>
+    <view class="{{['address-list',k]}}">
+        <view class="address-list-item m-b-10" wx:for="{{f}}" wx:key="A">
+            <view class="check-box" wx:if="{{g}}">
+                <uni-icons bind:__l="__l" bindclick="{{item.b}}" uI="{{item.c}}" uP="{{item.d}}" wx:if="{{item.a}}"></uni-icons>
+                <uni-icons bind:__l="__l" bindclick="{{item.e}}" uI="{{item.f}}" uP="{{item.g||''}}" wx:else></uni-icons>
+            </view>
+            <view bindtap="{{item.z}}" class="address-item base-white-radius-container">
+                <view class="address-top">
+                    <view class="name-phone m-b-5">
+                        <text class="name m-r-20">{{item.h}}</text>
+                        <text class="phone">{{item.i}}</text>
+                    </view>
+                    <view class="adress-detail text-gray-s max-line-two">
+                        <text class="default-address-icon m-r-5" wx:if="{{item.j}}">默认</text>
+                        <text>{{item.k}}{{item.l}}{{item.m}}{{item.n}}</text>
+                    </view>
+                </view>
+                <view catchtap="{{j}}" class="address-bottom flex-space-between-center">
+                    <view bindtap="{{item.t}}" class="flex-center">
+                        <uni-icons bind:__l="__l" uI="{{item.p}}" uP="{{item.q}}" wx:if="{{item.o}}"></uni-icons>
+                        <uni-icons bind:__l="__l" uI="{{item.r}}" uP="{{item.s||''}}" wx:else></uni-icons>
+                        <view class="text-gray-xs m-l-5">默认收货地址</view>
+                    </view>
+                    <view class="flex-center">
+                        <view bindtap="{{item.w}}" class="flex-center m-r-20">
+                            <uni-icons bind:__l="__l" uI="{{item.v}}" uP="{{h}}" wx:if="{{h}}"></uni-icons>
+                            <text class="text-light-s">编辑</text>
+                        </view>
+                        <view bindtap="{{item.y}}" class="flex-center">
+                            <uni-icons bind:__l="__l" uI="{{item.x}}" uP="{{i}}" wx:if="{{i}}"></uni-icons>
+                            <text class="text-light-s">删除</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <no-data bind:__l="__l" class="no-data" uI="9649b942-7" uP="{{m}}" uS="{{['d']}}" wx:if="{{l}}">暂无地址信息</no-data>
+    <uni-load-more bind:__l="__l" uI="9649b942-8" uP="{{n||''}}" wx:else></uni-load-more>
+    <view class="fixed-bottom-container base-white-container flex">
+        <block wx:if="{{o}}">
+            <button bindtap="{{p}}" class="default-btn radius m-r-15">完成</button>
+            <button bindtap="{{q}}" class="primary-btn radius flex-1" type="primary">删除地址</button>
+        </block>
+        <button bindtap="{{r}}" class="primary-btn flex-1 base-btn-footer" type="primary" wx:else>新建地址</button>
+    </view>
+    <confirm-modal bind:__l="__l" class="r" uI="9649b942-9" uR="confirmModalRef"></confirm-modal>
+    <confirm-dialog bind:__l="__l" class="r" uI="9649b942-10" uR="confirmDialogRef"></confirm-dialog>
+</view>

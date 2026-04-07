@@ -1,0 +1,89 @@
+.confirm-modal {
+    background-color: #fff;
+    border-radius: 32rpx;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    min-height: 320rpx;
+    width: 80vw
+}
+
+.confirm-modal .content-box {
+    -webkit-align-self: center;
+    align-self: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    min-height: 220rpx
+}
+
+.confirm-modal .modal-header-center {
+    font-weight: 500;
+    margin: 0 28rpx 16rpx;
+    text-align: center
+}
+
+.confirm-modal .confirm-modal-content {
+    display: -webkit-flex;
+    display: flex;
+    font-size: 32rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 0 24rpx;
+    text-align: center
+}
+
+.confirm-modal .modal-content {
+    -webkit-align-items: center;
+    align-items: center;
+    border-top: none;
+    display: -webkit-flex;
+    display: flex
+}
+
+.confirm-modal .modal-content .modal-image {
+    height: 320rpx;
+    margin: 40rpx auto;
+    width: 400rpx
+}
+
+.confirm-modal .modal-footer {
+    border-top: 1px solid #eee;
+    bottom: 0;
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    width: 100%
+}
+
+.confirm-modal .modal-footer wx-button {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    border-radius: 0 0 32rpx 0;
+    box-sizing: border-box;
+    font-size: 34rpx;
+    font-weight: 400;
+    width: 100%
+}
+
+.confirm-modal .modal-footer wx-button::after {
+    border: none;
+    border-radius: 0
+}
+
+.confirm-modal .modal-footer wx-button:first-child {
+    border-radius: 0 0 0 32rpx;
+    border-right: 1px solid #eee
+}
+
+.confirm-modal .modal-footer .one-btn-type:first-child,.confirm-modal .modal-footer .one-confirmbtn-type:first-child {
+    border-radius: 0 0 32rpx 32rpx
+}
+
+.confirm-modal .modal-footer .confirm-btn {
+    color: #576b95
+}

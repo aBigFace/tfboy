@@ -1,0 +1,50 @@
+<view class="page search-page">
+    <view class="page-content base-container">
+        <view class="order-list">
+            <view class="order-item base-white-radius-container" wx:for="{{a}}" wx:key="y">
+                <view class="order-item-header flex-space-between-center">
+                    <view class="flex-center text-light">售后单号：{{item.a}}</view>
+                    <view class="text-light flex-center">
+                        <image class="width-28 m-r-5" src="{{b}}"></image>{{item.b}}</view>
+                </view>
+                <view bindtap="{{item.e}}">
+                    <view class="product-goods" wx:for="{{item.c}}" wx:for-item="product" wx:key="c">
+                        <after-order-product-item bind:__l="__l" uI="{{product.a}}" uP="{{product.b}}" wx:if="{{product.b}}"></after-order-product-item>
+                    </view>
+                    <view class="empty-item-row" wx:if="{{item.d}}">
+                        <image class="empty-item" src="/static/icon_logo.png"></image>
+                        <view>仅退运费售后单</view>
+                    </view>
+                </view>
+                <view class="btn-bar">
+                    <view class="base-gray-container">
+                        <view class="flex-center">
+                            <text class="text-gray text-bold refundStatus">{{item.f}}</text>
+                            <text class="text-light-s" wx:if="{{item.g}}">审核中</text>
+                            <text class="text-light-s" wx:elif="{{item.h}}">正在进行退款，请耐心等待</text>
+                            <text class="text-light-s max-line-one" wx:elif="{{item.i}}">申请驳回 {{item.j}}</text>
+                            <text class="text-light-s max-line-one" wx:elif="{{item.k}}">
+                                <block wx:if="{{item.l}}">已退款成功</block>
+                                <block wx:else>已退款成功</block>
+                            </text>
+                            <text class="text-light-s" wx:elif="{{item.m}}">售后申请已关闭</text>
+                        </view>
+                        <view class="text-light-s" style="margin-left:-2px" wx:if="{{item.n}}">{{item.o}}</view>
+                    </view>
+                    <view class="m-t-10 text-right btn-group" wx:if="{{item.p}}">
+                        <button bindtap="{{item.r}}" class="plain-btn primary-btn" plain="{{true}}" size="mini" type="primary" wx:if="{{item.q}}">重新申请</button>
+                        <button bindtap="{{item.t}}" class="plain-btn primary-btn" plain="{{true}}" size="mini" type="primary" wx:if="{{item.s}}">删除</button>
+                        <button bindtap="{{item.w}}" class="primary-btn" size="mini" type="primary" wx:if="{{item.v}}">撤销申请</button>
+                        <button bindtap="{{item.x}}" class="plain-btn primary-btn" plain="{{true}}" size="mini" type="primary">查看详情</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <no-data bind:__l="__l" uI="155f718b-1" uP="{{d}}" uS="{{['d']}}" wx:if="{{c}}">暂无订单记录</no-data>
+        <uni-load-more bind:__l="__l" uI="155f718b-2" uP="{{e||''}}" wx:else></uni-load-more>
+        <view class="m-t-20" wx:if="{{f}}">
+            <button bindtap="{{g}}" class="primary-btn radius login-btn" type="primary">登录查看订单</button>
+        </view>
+    </view>
+    <confirm-modal bind:__l="__l" class="r" uI="155f718b-3" uR="confirmModalRef"></confirm-modal>
+</view>

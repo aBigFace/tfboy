@@ -1,0 +1,30 @@
+<view class="ceefaxPage">
+    <view wx:for="{{a}}" wx:key="i">
+        <rich-text nodes="{{item.b}}" wx:if="{{item.a}}"></rich-text>
+        <view wx:if="{{item.c}}">
+            <view class="presaleList">
+                <view class="productContent">
+                    <view class="productItem" key="{{item.h}}">
+                        <view class="item-image">
+                            <view class="img">
+                                <image src="{{item.d}}"></image>
+                            </view>
+                        </view>
+                        <view class="content">
+                            <view class="title">{{item.e}}</view>
+                            <view class="priceAndCart">
+                                <view class="price">
+                                    <view class="iconNum">
+                                        <view class="icon">￥</view>
+                                        <view class="num">{{item.f}}</view>
+                                    </view>
+                                    <view bindtap="{{item.g}}" class="lookDetail">去看看</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

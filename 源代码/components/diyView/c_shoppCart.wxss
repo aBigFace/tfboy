@@ -1,0 +1,72 @@
+.status_bar.data-v-323f1408 {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999
+}
+
+.diyView_c_shoppCart.data-v-323f1408 {
+    padding-bottom: 100rpx
+}
+
+.diyView_c_shoppCart .styleOne-miss.data-v-323f1408 {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    bottom: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0
+}
+
+.diyView_c_shoppCart .styleOne-miss .miss-image wx-image.data-v-323f1408 {
+    height: 240rpx;
+    width: 320rpx
+}
+
+.diyView_c_shoppCart .styleOne-miss .miss-content.data-v-323f1408 {
+    font-family: SourceHanSansCN-Medium,SourceHanSansCN;
+    font-size: 32rpx;
+    font-weight: 500;
+    margin-bottom: 16rpx
+}
+
+.diyView_c_shoppCart .styleOne-miss .text-tip.data-v-323f1408 {
+    color: #999;
+    font-family: SourceHanSansCN-Regular,SourceHanSansCN;
+    font-size: 26rpx
+}
+
+.diyView_c_shoppCart .styleOne-miss .miss-btn.data-v-323f1408 {
+    background: #e85252;
+    border-radius: 8rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    margin-top: 60rpx;
+    text-align: center;
+    width: 480rpx
+}
+
+.diyView_c_shoppCart .styleOne-miss .miss-btn-text.data-v-323f1408 {
+    color: #fff;
+    font-size: 32rpx;
+    font-weight: 400
+}
+
+.flex.data-v-323f1408 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}

@@ -1,0 +1,6 @@
+<view class="page base-container data-v-776e262c">
+    <view class="uni-form-item data-v-776e262c">
+        <input bindinput="{{b}}" class="uni-input data-v-776e262c" maxlength="15" placeholder="请输入昵称" value="{{a}}"></input>
+    </view>
+    <button bindtap="{{e}}" class="{{['data-v-776e262c','primary-btn','m-t-30',c]}}" disabled="{{d}}" type="primary">提交</button>
+</view>

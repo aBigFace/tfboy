@@ -1,0 +1,54 @@
+.page.data-v-0e9fccba {
+    background-color: #fff;
+    height: 100vh
+}
+
+.page .title.data-v-0e9fccba {
+    font-size: 36rpx;
+    font-weight: 600;
+    margin: 30rpx 0
+}
+
+.page .card.data-v-0e9fccba {
+    -webkit-align-items: center;
+    align-items: center;
+    border: 2rpx solid #eee;
+    border-radius: 8rpx;
+    padding: 26rpx 32rpx;
+    position: relative
+}
+
+.page .card.active.data-v-0e9fccba {
+    background: #fff;
+    border: 2rpx solid #ff7272;
+    border-radius: 8rpx
+}
+
+.page .card .image.data-v-0e9fccba {
+    border-radius: 50%;
+    height: 128rpx;
+    width: 128rpx
+}
+
+.page .card .tip.data-v-0e9fccba {
+    font-size: 32rpx;
+    font-weight: 500
+}
+
+.page .card .selected.data-v-0e9fccba {
+    bottom: -2rpx;
+    height: 44rpx;
+    position: absolute;
+    right: 0;
+    width: 44rpx
+}
+
+.page .space.data-v-0e9fccba {
+    padding-top: 60rpx
+}
+
+.page .primary-btn.data-v-0e9fccba {
+    background: #ff7272;
+    border-radius: 44rpx;
+    box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(253,115,89,.4)
+}

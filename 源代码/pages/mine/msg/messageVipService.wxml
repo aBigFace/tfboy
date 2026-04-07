@@ -1,0 +1,30 @@
+<view class="page data-v-c71ce30e">
+    <view class="data-v-c71ce30e" wx:if="{{a}}">
+        <view class="info-tip data-v-c71ce30e">
+            <view class="handle-box data-v-c71ce30e">通知信息</view>
+            <view bindtap="{{b}}" class="handle-box data-v-c71ce30e">标记已读</view>
+        </view>
+        <block wx:if="{{c}}">
+            <view bindtap="{{item.j}}" class="item-view data-v-c71ce30e" wx:for="{{d}}" wx:key="i">
+                <view class="top-view data-v-c71ce30e">
+                    <view class="title data-v-c71ce30e">{{item.a}}<view class="unread data-v-c71ce30e" wx:if="{{item.b}}"></view>
+                    </view>
+                    <view class="time data-v-c71ce30e">{{item.c}}</view>
+                </view>
+                <view class="item-center-view data-v-c71ce30e">
+                    <image class="img data-v-c71ce30e" src="{{item.d}}"></image>
+                    <view class="data-v-c71ce30e">
+                        <view class="desc-title data-v-c71ce30e">{{item.e}}</view>
+                        <text bind:__l="__l" class="desc data-v-c71ce30e" uI="{{item.h}}" uS="{{['d']}}" wx:if="{{item.f}}">{{item.g}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="noMessage-box data-v-c71ce30e" wx:else>
+        <image class="noMessage-img data-v-c71ce30e" src="/static/image/mine/noMessage.png"></image>
+        <view class="noMessage-tip-one data-v-c71ce30e">还没有消息哦</view>
+        <view class="noMessage-tip-two data-v-c71ce30e">暂无消息通知，明天再来看看吧</view>
+    </view>
+    <uni-load-more bind:__l="__l" class="data-v-c71ce30e" uI="c71ce30e-1" uP="{{e}}" wx:if="{{e}}"></uni-load-more>
+</view>

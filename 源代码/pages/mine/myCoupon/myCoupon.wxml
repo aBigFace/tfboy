@@ -1,0 +1,39 @@
+<view class="{{['page','data-v-97f2de92',k&&'bottom-bar']}}" style="{{'background:'+l}}">
+    <view class="tab_nav flex data-v-97f2de92">
+        <view class="navTitle data-v-97f2de92" wx:for="{{a}}" wx:for-item="tab" wx:key="f">
+            <view bindtap="{{tab.e}}" class="{{['data-v-97f2de92',tab.d&&'active']}}">
+                <text class="title data-v-97f2de92">
+                    <text class="data-v-97f2de92">{{tab.a}}</text>
+                    <text class="count flex-justify-center data-v-97f2de92" wx:if="{{tab.b}}">
+                        <text class="data-v-97f2de92">{{tab.c}}张</text>
+                    </text>
+                </text>
+            </view>
+        </view>
+    </view>
+    <view class="content base-container data-v-97f2de92">
+        <block wx:if="{{b}}">
+            <view class="card couponSelect data-v-97f2de92" wx:for="{{c}}" wx:for-item="i" wx:key="f">
+                <checkbox-group bindchange="{{i.e}}" class="data-v-97f2de92">
+                    <view class="data-v-97f2de92">
+                        <coupon-item bind:__l="__l" class="data-v-97f2de92" uI="{{i.c}}" uP="{{i.d}}" uS="{{['checkbox']}}" wx:if="{{i.d}}">
+                            <view class="checkbox-group data-v-97f2de92" slot="checkbox">
+                                <checkbox checked="{{i.b}}" class="data-v-97f2de92" color="{{d}}" size="{{32}}" value="{{i.a}}"></checkbox>
+                            </view>
+                        </coupon-item>
+                    </view>
+                </checkbox-group>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="card data-v-97f2de92" wx:for="{{e}}" wx:for-item="i" wx:key="c">
+                <coupon-item bind:__l="__l" class="data-v-97f2de92" uI="{{i.a}}" uP="{{i.b}}" wx:if="{{i.b}}"></coupon-item>
+            </view>
+        </block>
+        <view class="fixed-bottom-container data-v-97f2de92" wx:if="{{f}}">
+            <button bindtap="{{g}}" class="primary-btn data-v-97f2de92" type="primary">确认</button>
+        </view>
+        <no-data bind:__l="__l" class="data-v-97f2de92" uI="97f2de92-2" uP="{{i}}" uS="{{['d']}}" wx:if="{{h}}">暂无记录</no-data>
+        <uni-load-more bind:__l="__l" class="data-v-97f2de92" uI="97f2de92-3" uP="{{j||''}}" wx:else></uni-load-more>
+    </view>
+</view>

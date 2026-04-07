@@ -1,0 +1,13 @@
+<view class="data-v-74542a4c">
+    <view class="{{['swiper-content','data-v-74542a4c','uni-margin-wrap',v&&'avatarClass']}}" style="{{'background:'+w+';'+'height:'+x+';'+'font-size:'+0}}">
+        <uni-swiper-dot bind:__l="__l" class="{{['swiperBox','data-v-74542a4c',o]}}" style="{{'margin-left:'+p+';'+'margin-right:'+q+';'+'height:'+r+';'+'border-radius:'+s}}" uI="74542a4c-0" uP="{{t}}" uS="{{['d']}}" wx:if="{{t}}">
+            <swiper circular autoplay="{{f}}" bindchange="{{k}}" class="{{['swiper','data-v-74542a4c',j&&'avatarClass']}}" duration="{{h}}" indicatorColor="{{i}}" indicatorDots="{{false}}" interval="{{g}}" style="{{'height:'+l+';'+'margin-left:'+m+';'+'margin-right:'+n}}">
+                <swiper-item bindtap="{{item.c}}" class="{{['data-v-74542a4c',e&&'avatarClass']}}" wx:for="{{a}}" wx:key="b">
+                    <view class="{{['data-v-74542a4c','swiper-item',d&&'avatarClass']}}">
+                        <image class="{{['data-v-74542a4c','avatar',b&&'avatarClass']}}" src="{{item.a}}" style="{{'height:'+c}}"></image>
+                    </view>
+                </swiper-item>
+            </swiper>
+        </uni-swiper-dot>
+    </view>
+</view>

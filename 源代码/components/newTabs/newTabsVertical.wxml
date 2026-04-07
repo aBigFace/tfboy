@@ -1,0 +1,10 @@
+<view class="newTabsVertical data-v-d1921eba" wx:if="{{a}}">
+    <scroll-view scrollWithAnimation bindscroll="{{h}}" class="scroll-Y data-v-d1921eba" scrollTop="{{g}}" scrollY="true" style="{{'height:'+f}}">
+        <view class="tab data-v-d1921eba" id="tab_list">
+            <view class="tab__line data-v-d1921eba" style="{{'height:'+b+';'+'transform:'+c+';'+'transition-duration:'+d}}"></view>
+            <view class="tabsBox data-v-d1921eba">
+                <view bindtap="{{item.d}}" class="{{['data-v-d1921eba','tab__item',item.c]}}" id="tab_item" wx:for="{{e}}" wx:key="b">{{item.a}}</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

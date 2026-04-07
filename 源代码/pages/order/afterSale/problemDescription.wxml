@@ -1,0 +1,16 @@
+<view class="page base-container">
+    <view class="problem-description">
+        <view class="desc">{{a}}</view>
+        <view class="pic" wx:if="{{b}}">
+            <view class="upload-item" wx:for="{{c}}" wx:key="b">
+                <image bindtap="{{d}}" class="imageUpload" src="{{item.a}}"></image>
+            </view>
+            <view class="upload-item" wx:if="{{e}}">
+                <view class="video-bg" style="{{'background:'+h}}">
+                    <image bindtap="{{f}}" class="play" src="{{g}}"></image>
+                </view>
+            </view>
+        </view>
+        <view class="m-t-8" wx:if="{{i}}">{{j}}</view>
+    </view>
+</view>

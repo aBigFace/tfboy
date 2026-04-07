@@ -1,0 +1,7 @@
+<view class="goods m-t-5 flex data-v-0e6612ee">
+    <view class="goods-img data-v-0e6612ee">
+        <image alt="" class="{{['data-v-0e6612ee','img-max',a]}}" src="{{b}}"></image>
+        <view class="{{['data-v-0e6612ee','zengpin',c]}}">赠品</view>
+    </view>
+    <text class="goods-name data-v-0e6612ee">{{d}}</text>
+</view>

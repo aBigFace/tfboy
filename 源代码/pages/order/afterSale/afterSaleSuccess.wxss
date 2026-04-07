@@ -1,0 +1,65 @@
+.apply-success-page {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100vh
+}
+
+.apply-success-page .img {
+    height: 200rpx;
+    margin-bottom: 28rpx;
+    margin-top: 84rpx;
+    width: 244rpx
+}
+
+.apply-success-page .img wx-image {
+    height: 100%;
+    width: 100%
+}
+
+.apply-success-page .tip {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 500;
+    margin-bottom: 12rpx
+}
+
+.apply-success-page .notice {
+    color: #999;
+    font-size: 24rpx;
+    font-weight: 400;
+    margin-bottom: 56rpx
+}
+
+.apply-success-page .button-list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%
+}
+
+.apply-success-page .button-list .go-detail {
+    line-height: 80rpx;
+    margin-left: 112rpx
+}
+
+.apply-success-page .button-list .go-back,.apply-success-page .button-list .go-detail {
+    -webkit-align-items: center;
+    align-items: center;
+    border: 2rpx solid #ff7272;
+    border-radius: 40rpx;
+    color: #ff7272;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    font-weight: 400;
+    height: 80rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 240rpx
+}

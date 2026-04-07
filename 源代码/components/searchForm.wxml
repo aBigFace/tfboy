@@ -1,0 +1,36 @@
+<view class="searchForm data-v-e4ae0ac8">
+    <view class="search-title data-v-e4ae0ac8">
+        <text class="title-text data-v-e4ae0ac8">筛选</text>
+        <image bindtap="{{b}}" class="title-icon data-v-e4ae0ac8" mode="widthFix" src="{{a}}"></image>
+    </view>
+    <view class="search-price data-v-e4ae0ac8">
+        <text class="price-text data-v-e4ae0ac8">价格区间</text>
+        <view class="price-section data-v-e4ae0ac8">
+            <view bindtap="{{f}}" class="{{['price-min','data-v-e4ae0ac8',e&&'activeView']}}" wx:if="{{c}}">
+                <text class="{{['price-min-text','data-v-e4ae0ac8',d&&'activeText']}}">最低价</text>
+            </view>
+            <input bindinput="{{g}}" class="price-inp data-v-e4ae0ac8" value="{{h}}" wx:else></input>
+            <text class="price-content data-v-e4ae0ac8"></text>
+            <view bindtap="{{l}}" class="{{['price-max','data-v-e4ae0ac8',k&&'activeView']}}" wx:if="{{i}}">
+                <text class="{{['price-max-text','data-v-e4ae0ac8',j&&'activeText']}}">最高价</text>
+            </view>
+            <input bindinput="{{n}}" class="price-inp data-v-e4ae0ac8" value="{{m}}" wx:else></input>
+        </view>
+    </view>
+    <view class="search-class data-v-e4ae0ac8">
+        <text class="class-text data-v-e4ae0ac8">商品分类</text>
+        <view class="class-list data-v-e4ae0ac8">
+            <view bindtap="{{v.e}}" class="{{['class-item','data-v-e4ae0ac8',v.d&&'activeView']}}" wx:for="{{o}}" wx:for-item="v" wx:key="c">
+                <text class="{{['class-item-text','data-v-e4ae0ac8',v.b&&'activeText']}}">{{v.a}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="search-btn data-v-e4ae0ac8">
+        <view class="btn-res data-v-e4ae0ac8">
+            <text bindtap="{{p}}" class="btn-res-text data-v-e4ae0ac8">重置</text>
+        </view>
+        <view class="btn-confirm data-v-e4ae0ac8">
+            <text bindtap="{{q}}" class="btn-confirm-text data-v-e4ae0ac8">确定</text>
+        </view>
+    </view>
+</view>

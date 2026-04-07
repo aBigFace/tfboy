@@ -1,0 +1,125 @@
+<view class="diyView-styleThree data-v-0ad86295">
+    <view class="diyView-info data-v-0ad86295">
+        <view class="content-header data-v-0ad86295" wx:if="{{a}}">
+            <view class="data-v-0ad86295">
+                <text bindtap="{{v.e}}" class="{{['data-v-0ad86295','all',v.d&&'active']}}" wx:for="{{b}}" wx:for-item="v" wx:key="c">{{v.a}} {{v.b}}</text>
+            </view>
+            <text bindtap="{{e}}" class="{{['data-v-0ad86295','edit',d&&'finish']}}">{{c}}</text>
+        </view>
+        <view class="content-box data-v-0ad86295" wx:if="{{f}}">
+            <checkbox-group bindchange="{{h}}" class="data-v-0ad86295">
+                <view class="content-item data-v-0ad86295" wx:if="{{v.a}}" wx:for="{{g}}" wx:for-item="v" wx:key="c">
+                    <view class="goods-item data-v-0ad86295">
+                        <view class="goods-icon data-v-0ad86295" wx:for="{{v.b}}" wx:for-item="v2" wx:key="F">
+                            <view class="goods-radio data-v-0ad86295">
+                                <view class="checkBox data-v-0ad86295">
+                                    <checkbox checked="{{v2.a}}" class="checkboxSelect data-v-0ad86295" color="#CCCCCC" disabled="{{v2.c}}" value="{{v2.b}}"></checkbox>
+                                </view>
+                                <view bindtap="{{v2.E}}" class="item data-v-0ad86295">
+                                    <view class="goods-image data-v-0ad86295">
+                                        <image class="data-v-0ad86295" src="{{v2.d}}"></image>
+                                        <view class="goods-disabled-lose data-v-0ad86295" wx:if="{{v2.e}}">已失效</view>
+                                        <view class="goods-disabled data-v-0ad86295" wx:elif="{{v2.f}}">预售</view>
+                                    </view>
+                                    <view class="goods-info data-v-0ad86295">
+                                        <view class="goods-name data-v-0ad86295">{{v2.g}}</view>
+                                        <view class="goods-spec data-v-0ad86295" wx:if="{{v2.h}}">
+                                            <view catchtap="{{v2.k}}" class="picker data-v-0ad86295" wx:if="{{v2.i}}">
+                                                <view class="picker-name data-v-0ad86295">{{v2.j}}</view>
+                                                <view class="icon data-v-0ad86295"></view>
+                                            </view>
+                                            <view class="specBox data-v-0ad86295" wx:else></view>
+                                        </view>
+                                        <view class="err-msg data-v-0ad86295" wx:if="{{v2.l}}">{{v2.m}}</view>
+                                        <view class="count-down data-v-0ad86295" wx:if="{{v2.n}}">
+                                            <view class="data-v-0ad86295" wx:if="{{v2.o}}">{{v2.p}}</view>
+                                            <view class="data-v-0ad86295" wx:else>
+                                                <text class="data-v-0ad86295">距结束时间还剩</text>
+                                                <uni-countdown bind:__l="__l" class="data-v-0ad86295" uI="{{v2.q}}" uP="{{v2.r}}" wx:if="{{v2.r}}"></uni-countdown>
+                                            </view>
+                                        </view>
+                                        <view class="goods-price data-v-0ad86295" wx:if="{{v2.s}}">
+                                            <view class="price data-v-0ad86295">¥<text class="price-text data-v-0ad86295">{{v2.t}}</text>
+                                            </view>
+                                            <view class="activeInfo data-v-0ad86295" wx:if="{{v2.v}}">{{v2.w}}</view>
+                                            <view class="handle data-v-0ad86295" wx:else>
+                                                <view catchtap="{{v2.x}}" class="{{['handle-subtract','data-v-0ad86295',v2.y&&'minStu']}}">-</view>
+                                                <text catchtap="{{v2.A}}" class="handle-total data-v-0ad86295">{{v2.z}}</text>
+                                                <view catchtap="{{v2.C}}" class="{{['handle-add','data-v-0ad86295',v2.B&&'minStu']}}">+</view>
+                                            </view>
+                                        </view>
+                                        <view class="overSale data-v-0ad86295" wx:if="{{v2.D}}">即将售罄 </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </checkbox-group>
+        </view>
+        <view class="content-box-nodata data-v-0ad86295" wx:else>
+            <view class="nodata data-v-0ad86295">
+                <view class="nodata-tip data-v-0ad86295">
+                    <view class="miss-image data-v-0ad86295">
+                        <image class="data-v-0ad86295" mode="widthFix" src="{{i}}"></image>
+                    </view>
+                    <view class="miss-content data-v-0ad86295">
+                        <text class="data-v-0ad86295">空空如也</text>
+                    </view>
+                    <view class="text-tip data-v-0ad86295">
+                        <text class="data-v-0ad86295">快去加购您喜欢的吧</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="content-bottom data-v-0ad86295" wx:if="{{j}}">
+        <view class="content-bottom-left data-v-0ad86295">
+            <checkbox-group bindchange="{{o}}" class="all-radio data-v-0ad86295">
+                <checkbox checked="{{k}}" class="checkboxSelect data-v-0ad86295" color="#CCCCCC" value="allSelect"></checkbox>
+                <text class="allSelect data-v-0ad86295">全选</text>
+                <text class="allTotal data-v-0ad86295" wx:if="{{l}}">总计：</text>
+                <text class="price data-v-0ad86295" wx:if="{{m}}"> ¥<text class="price-text data-v-0ad86295">{{n}}</text>
+                </text>
+            </checkbox-group>
+        </view>
+        <view class="content-bottom-right data-v-0ad86295">
+            <text bindtap="{{q}}" class="data-v-0ad86295" wx:if="{{p}}">去结算</text>
+            <text bindtap="{{r}}" class="data-v-0ad86295" wx:else>删除</text>
+        </view>
+    </view>
+    <select-sku bind:__l="__l" bindonSuccess="{{t}}" class="r data-v-0ad86295" uI="0ad86295-1" uP="{{v}}" uR="selectSkuRef" wx:if="{{v}}"></select-sku>
+    <uni-popup bind:__l="__l" class="r data-v-0ad86295" uI="0ad86295-2" uP="{{A}}" uR="inputDialog" uS="{{['d']}}" wx:if="{{A}}">
+        <uni-popup-dialog bind:__l="__l" bindconfirm="{{x}}" class="r data-v-0ad86295" uI="0ad86295-3,0ad86295-2" uP="{{y}}" uR="inputClose" wx:if="{{y}}"></uni-popup-dialog>
+    </uni-popup>
+    <uni-popup bind:__l="__l" class="r data-v-0ad86295" uI="0ad86295-4" uP="{{E}}" uR="typePopup" uS="{{['d']}}" wx:if="{{E}}">
+        <view class="payType data-v-0ad86295">
+            <view class="top data-v-0ad86295">
+                <view class="title data-v-0ad86295">请分开结算以下商品</view>
+                <view bindtap="{{B}}" class="close data-v-0ad86295">×</view>
+            </view>
+            <view class="content data-v-0ad86295" wx:for="{{C}}" wx:key="g">
+                <view class="data-v-0ad86295" wx:if="{{item.a}}">{{item.b}}</view>
+                <view class="content-item data-v-0ad86295">
+                    <view class="item data-v-0ad86295" wx:for="{{item.c}}" wx:for-item="i" wx:key="d">
+                        <view class="img data-v-0ad86295">
+                            <image class="img-max data-v-0ad86295" src="{{i.a}}"></image>
+                        </view>
+                        <view class="price data-v-0ad86295">
+                            <text class="data-v-0ad86295">¥</text>{{i.b}}</view>
+                        <view class="num data-v-0ad86295">x{{i.c}}</view>
+                    </view>
+                </view>
+                <view class="operation data-v-0ad86295">
+                    <view class="priceBox data-v-0ad86295">
+                        <text class="total data-v-0ad86295">共{{item.d}}件</text>
+                        <view class="totalPrice data-v-0ad86295">总计:<text class="decimal data-v-0ad86295">¥</text>
+                            <text class="integer data-v-0ad86295">{{item.e}}</text>
+                        </view>
+                    </view>
+                    <button bindtap="{{item.f}}" class="settle data-v-0ad86295" type="primary">结算</button>
+                </view>
+            </view>
+        </view>
+    </uni-popup>
+</view>

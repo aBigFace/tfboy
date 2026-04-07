@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "开通会员",
+  "usingComponents": {
+    "real-name-popup": "../../order/components/realNamePopup",
+    "real-name-abnormal-popup": "../../order/components/realNameAbnormalPopup",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

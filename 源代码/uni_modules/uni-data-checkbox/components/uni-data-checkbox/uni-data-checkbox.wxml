@@ -1,0 +1,32 @@
+<view class="uni-data-checklist" style="{{'margin-top:'+v}}">
+    <view class="uni-data-loading" wx:if="{{a}}">
+        <uni-load-more bind:__l="__l" uI="3f93a63b-0" uP="{{c}}" wx:if="{{b}}"></uni-load-more>
+        <text wx:else>{{d}}</text>
+    </view>
+    <block wx:else>
+        <checkbox-group bindchange="{{l}}" class="{{['checklist-group',k&&'is-list']}}" wx:if="{{e}}">
+            <label class="{{['checklist-box',j,item.h,item.i,item.j]}}" style="{{item.k}}" wx:for="{{f}}" wx:key="l">
+                <checkbox hidden checked="{{item.c}}" class="hidden" disabled="{{item.a}}" value="{{item.b}}"></checkbox>
+                <view class="checkbox__inner" style="{{item.d}}" wx:if="{{g}}">
+                    <view class="checkbox__inner-icon"></view>
+                </view>
+                <view class="{{['checklist-content',i&&'list-content']}}">
+                    <text class="checklist-text" style="{{item.f}}">{{item.e}}</text>
+                    <view class="checkobx__list" style="{{item.g}}" wx:if="{{h}}"></view>
+                </view>
+            </label>
+        </checkbox-group>
+        <radio-group bindchange="{{t}}" class="{{['checklist-group',r&&'is-list',s&&'is-wrap']}}" wx:else>
+            <label class="{{['checklist-box',q,item.i,item.j,item.k]}}" style="{{item.l}}" wx:for="{{m}}" wx:key="m">
+                <radio hidden checked="{{item.c}}" class="hidden" disabled="{{item.a}}" value="{{item.b}}"></radio>
+                <view class="radio__inner" style="{{item.e}}" wx:if="{{n}}">
+                    <view class="radio__inner-icon" style="{{item.d}}"></view>
+                </view>
+                <view class="{{['checklist-content',p&&'list-content']}}">
+                    <text class="checklist-text" style="{{item.g}}">{{item.f}}</text>
+                    <view class="checkobx__list" style="{{item.h}}" wx:if="{{o}}"></view>
+                </view>
+            </label>
+        </radio-group>
+    </block>
+</view>

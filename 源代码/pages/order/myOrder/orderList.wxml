@@ -1,0 +1,75 @@
+<view class="page search-page">
+    <view class="{{['top-bar',i&&'high-index']}}">
+        <view class="flex">
+            <view class="flex-1">
+                <search-bar bind:__l="__l" bindsearch="{{a}}" bindupdateModelValue="{{b}}" uI="f67dc7e2-0" uP="{{c}}" wx:if="{{c}}"></search-bar>
+            </view>
+            <view bindtap="{{e}}" class="{{['filter','flex-center','m-r-15',f&&'active']}}">
+                <text style="{{'color:'+d}}">筛选</text>
+            </view>
+        </view>
+        <view class="tab-bar" hidden="{{!h}}">
+            <view class="flex-space-between-center">
+                <view class="flex-1 flex">
+                    <view bindtap="{{item.d}}" class="{{['tab-bar-item','flex-1',item.b]}}" wx:for="{{g}}" wx:key="c">{{item.a}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page-content base-container">
+        <view class="order-list" style="{{'overflow:'+k+';'+'max-height:'+l}}">
+            <view class="order-item base-white-radius-container" wx:for="{{j}}" wx:key="N">
+                <view class="order-item-header flex-space-between-center">
+                    <view class="flex-center">
+                        <text class="orderNumber">订单号: {{item.a}}</text>{{item.b}}</view>
+                    <view class="text-primary">{{item.c}}</view>
+                </view>
+                <view bindtap="{{item.e}}">
+                    <view class="product-goods" wx:for="{{item.d}}" wx:for-item="product" wx:key="c">
+                        <order-product-item bind:__l="__l" uI="{{product.a}}" uP="{{product.b}}" wx:if="{{product.b}}"></order-product-item>
+                    </view>
+                </view>
+                <view class="btn-bar text-right">
+                    <view class="order-total text-right">
+                        <text class="text-gray-xs m-r-10 totlePrice">共{{item.f}}件</text>
+                        <text class="text-gray">{{item.g}}</text>
+                        <text class="text-red text-bold font-30" wx:if="{{item.h}}">{{item.i}}</text>
+                        <text class="text-bold font-30" wx:else>{{item.j}}</text>
+                        <price bind:__l="__l" class="text-bold font-32" uI="{{item.k}}" uP="{{item.l}}" wx:if="{{item.l}}"></price>
+                    </view>
+                    <view class="m-t-10 flex-right flex-space-between">
+                        <view class="flex-1 flex-center order-countdown">
+                            <block wx:if="{{item.m}}">剩余时间<uni-countdown bind:__l="__l" uI="{{item.n}}" uP="{{item.o}}" wx:if="{{item.o}}"></uni-countdown>
+                            </block>
+                            <view wx:if="{{item.p}}">
+                                <image bindtap="{{item.q}}" class="point" src="/static/point.png"></image>
+                                <image bindtap="{{item.s}}" class="point_pop" src="/static/ic_kaifapiao.png" wx:if="{{item.r}}"></image>
+                            </view>
+                        </view>
+                        <view class="flex-5 text-right order-btn-group btn-list">
+                            <button bindtap="{{item.v}}" class="plain-btn primary-btn" plain="{{true}}" size="mini" type="primary" wx:if="{{item.t}}">取消订单</button>
+                            <button bindtap="{{item.x}}" class="plain-btn primary-btn" plain="{{true}}" size="mini" type="primary" wx:if="{{item.w}}">取消订单</button>
+                            <button bindtap="{{item.z}}" class="plain-btn primary-btn" plain="{{true}}" size="mini" type="primary" wx:if="{{item.y}}">售后中</button>
+                            <button bindtap="{{item.B}}" class="plain-btn primary-btn" plain="{{true}}" size="mini" type="primary" wx:if="{{item.A}}">查看物流</button>
+                            <button bindtap="{{item.D}}" class="primary-btn" size="mini" type="primary" wx:if="{{item.C}}">确认收货</button>
+                            <button bindtap="{{item.F}}" class="plain-btn primary-btn" plain="{{true}}" size="mini" type="primary" wx:if="{{item.E}}">修改地址</button>
+                            <button bindtap="{{item.H}}" class="plain-btn primary-btn" plain="{{true}}" size="mini" type="primary" wx:if="{{item.G}}">删除订单</button>
+                            <button bindtap="{{item.J}}" class="primary-btn" disabled="{{item.K}}" size="mini" type="primary" wx:if="{{item.I}}">立即支付</button>
+                            <button bindtap="{{item.M}}" class="primary-btn" size="mini" type="primary" wx:if="{{item.L}}">提醒发货</button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <no-data bind:__l="__l" uI="f67dc7e2-4" uP="{{n}}" uS="{{['d']}}" wx:if="{{m}}">暂无订单记录</no-data>
+        <uni-load-more bind:__l="__l" uI="f67dc7e2-5" uP="{{o||''}}" wx:else></uni-load-more>
+        <view class="m-t-20" wx:if="{{p}}">
+            <button bindtap="{{q}}" class="primary-btn radius login-btn" type="primary">登录查看订单</button>
+        </view>
+    </view>
+    <search-filter bind:__l="__l" bindconfirm="{{s}}" class="r" uI="f67dc7e2-6" uP="{{t}}" uR="searchFilterRef" wx:if="{{t}}"></search-filter>
+    <confirm-modal bind:__l="__l" class="r" uI="f67dc7e2-7" uR="confirmModalRef"></confirm-modal>
+    <confirm-modal-reason bind:__l="__l" bindcancel="{{y}}" bindconfirm="{{x}}" class="r" uI="f67dc7e2-8" uR="confirmModalReasonRef"></confirm-modal-reason>
+    <cancel-order-confirm bind:__l="__l" bindcancel="{{B}}" bindconfirm="{{A}}" class="r" uI="f67dc7e2-9" uR="cancelOrderConfirmRef"></cancel-order-confirm>
+</view>
+<post-age-dialog bind:__l="__l" class="post-age-dialog r" uI="f67dc7e2-10" uP="{{D}}" uR="postAgePopRefList" wx:if="{{D}}"></post-age-dialog>

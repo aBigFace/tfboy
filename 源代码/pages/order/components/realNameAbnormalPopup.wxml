@@ -1,0 +1,18 @@
+<uni-popup bind:__l="__l" class="realNamePopup r data-v-da246632" uI="da246632-0" uP="{{f}}" uR="realNamePopupRef" uS="{{['d']}}" wx:if="{{f}}">
+    <view class="modal realNamePopup-modal data-v-da246632">
+        <view class="header-box data-v-da246632">
+            <view class="modal-header data-v-da246632">
+                <text class="modal-header-title data-v-da246632">认证提醒</text>
+                <uni-icons bind:__l="__l" bindclick="{{a}}" class="close-icon data-v-da246632" uI="da246632-1,da246632-0" uP="{{b}}" wx:if="{{b}}"></uni-icons>
+            </view>
+        </view>
+        <view class="modal-content m-b-20 data-v-da246632">
+            <view class="modal-tip data-v-da246632">注意，此账号认证信息重复！</view>
+            <view class="modal-intro data-v-da246632">认证信息重复将无法参与线下活动购票。是否继续购买？</view>
+        </view>
+        <view class="modal-footer base-white-container btnparent data-v-da246632">
+            <button bindtap="{{c}}" class="primary-btn base-btn-footer btn cancel data-v-da246632" type="primary">修改认证</button>
+            <button bindtap="{{d}}" class="primary-btn base-btn-footer btn data-v-da246632" type="primary">继续购买</button>
+        </view>
+    </view>
+</uni-popup>

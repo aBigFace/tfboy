@@ -1,0 +1,33 @@
+<view class="data-v-1badc801">
+    <scroll-view refresherEnabled bindrefresherrefresh="{{g}}" bindscrolltolower="{{h}}" class="data-v-1badc801" lowerThreshold="{{50}}" refresherTriggered="{{i}}" scrollY="true" style="max-height:100vh">
+        <view class="page home-page data-v-1badc801">
+            <view class="{{['data-v-1badc801','home-content',f&&'noDiy']}}" style="{{e}}">
+                <block wx:if="{{a}}">
+                    <view class="data-v-1badc801" wx:for="{{b}}" wx:key="J">
+                        <view class="{{['data-v-1badc801','paddingBox','noPaddingBox']}}">
+                            <c_swiper bind:__l="__l" class="data-v-1badc801" uI="{{item.b}}" uP="{{item.c}}" wx:if="{{item.a}}"></c_swiper>
+                            <c_img-box bind:__l="__l" class="data-v-1badc801" uI="{{item.e}}" uP="{{item.f}}" wx:elif="{{item.d}}"></c_img-box>
+                            <c_img-text bind:__l="__l" class="data-v-1badc801" uI="{{item.h}}" uP="{{item.i}}" wx:elif="{{item.g}}"></c_img-text>
+                            <c_goods-list bind:__l="__l" bindskuChange="{{item.k}}" class="data-v-1badc801" uI="{{item.l}}" uP="{{item.m}}" wx:elif="{{item.j}}"></c_goods-list>
+                            <c_magic bind:__l="__l" class="data-v-1badc801" uI="{{item.o}}" uP="{{item.p}}" wx:elif="{{item.n}}"></c_magic>
+                            <c_rolling-notice bind:__l="__l" class="data-v-1badc801" uI="{{item.r}}" uP="{{item.s}}" wx:elif="{{item.q}}"></c_rolling-notice>
+                            <c_search bind:__l="__l" class="data-v-1badc801" uI="{{item.v}}" uP="{{item.w}}" wx:elif="{{item.t}}"></c_search>
+                            <c_module-spacing bind:__l="__l" class="data-v-1badc801" uI="{{item.y}}" uP="{{item.z}}" wx:elif="{{item.x}}"></c_module-spacing>
+                            <c_video bind:__l="__l" class="data-v-1badc801" uI="{{item.B}}" uP="{{item.C}}" wx:elif="{{item.A}}"></c_video>
+                            <c_title bind:__l="__l" class="data-v-1badc801" uI="{{item.E}}" uP="{{item.F}}" wx:elif="{{item.D}}"></c_title>
+                            <c_presale bind:__l="__l" class="data-v-1badc801" uI="{{item.H}}" uP="{{item.I}}" wx:elif="{{item.G}}"></c_presale>
+                        </view>
+                    </view>
+                </block>
+                <view class="noData data-v-1badc801" wx:if="{{c}}">
+                    <image class="img data-v-1badc801" mode="widthFix" src="/static/bg_no_net.png"></image>
+                    <view class="title data-v-1badc801">网络出现异常啦</view>
+                    <view class="txt data-v-1badc801">掘地三尺也没找到网络，呜呜～</view>
+                    <view bindtap="{{d}}" class="btn data-v-1badc801">刷新页面</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <cost-per-popup bind:__l="__l" class="data-v-1badc801" uI="1badc801-11"></cost-per-popup>
+    <select-sku bind:__l="__l" class="r data-v-1badc801" uI="1badc801-12" uP="{{k}}" uR="selectSkuRef" wx:if="{{k}}"></select-sku>
+</view>

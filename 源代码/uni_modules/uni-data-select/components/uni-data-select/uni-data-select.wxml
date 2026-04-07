@@ -1,0 +1,27 @@
+<view class="uni-stat__select">
+    <label class="uni-label-text hide-on-phone" wx:if="{{a}}">{{b}}</label>
+    <view class="{{['uni-stat-box',r&&'uni-stat__actived']}}">
+        <view class="{{['uni-select',q&&'uni-select--disabled']}}">
+            <view bindtap="{{j}}" class="uni-select__input-box">
+                <view class="uni-select__input-text" wx:if="{{c}}">{{d}}</view>
+                <view class="uni-select__input-text uni-select__input-placeholder" wx:else>{{e}}</view>
+                <uni-icons bind:__l="__l" bindclick="{{g}}" uI="af125fd8-0" uP="{{h}}" wx:if="{{f}}"></uni-icons>
+                <uni-icons bind:__l="__l" uI="af125fd8-1" uP="{{i||''}}" wx:else></uni-icons>
+            </view>
+            <view bindtap="{{l}}" class="uni-select--mask" wx:if="{{k}}"></view>
+            <view class="uni-select__selector" wx:if="{{m}}">
+                <view class="uni-popper__arrow"></view>
+                <scroll-view class="uni-select__selector-scroll" scrollY="true">
+                    <view class="uni-select__selector-empty" wx:if="{{n}}">
+                        <text>{{o}}</text>
+                    </view>
+                    <block wx:else>
+                        <view bindtap="{{item.d}}" class="uni-select__selector-item" wx:for="{{p}}" wx:key="c">
+                            <text class="{{[item.b&&'uni-select__selector__disabled']}}">{{item.a}}</text>
+                        </view>
+                    </block>
+                </scroll-view>
+            </view>
+        </view>
+    </view>
+</view>

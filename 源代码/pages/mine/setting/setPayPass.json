@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "backgroundColor": "#ffffff",
+  "usingComponents": {
+    "custom-pass-input": "../../../components/customPassInput/customPassInput",
+    "confirm-modal": "../../../components/modal/confirm-modal",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

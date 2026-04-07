@@ -1,0 +1,201 @@
+.price-label.red {
+    color: #e85252
+}
+
+.price-label.use-less {
+    color: #999;
+    text-decoration: line-through
+}
+
+.price-label .money-sign {
+    margin-right: 4rpx
+}
+
+.price-label.product-detail-main-price {
+    color: #e85252;
+    font-weight: 700
+}
+
+.price-label.product-detail-main-price .price-number {
+    font-size: 44rpx
+}
+
+.price-label.order-pay-price {
+    font-weight: 700
+}
+
+.price-label.order-pay-price .money-sign {
+    font-size: 32rpx
+}
+
+.price-label.order-pay-price .price-number {
+    font-size: 48rpx
+}
+
+.price-label.price-order-total {
+    color: #ff7272;
+    font-weight: 700
+}
+
+.price-label.price-order-total .money-sign {
+    font-size: 24rpx
+}
+
+.price-label.price-order-total .price-number {
+    font-size: 30rpx
+}
+
+.price-label.price-order-total .price-deciaml {
+    font-size: 24rpx
+}
+
+.price-label.price-list-order-total {
+    color: #ff7272;
+    font-weight: 700
+}
+
+.price-label.price-list-order-total .money-sign {
+    font-size: 24rpx
+}
+
+.price-label.price-list-order-total .price-number {
+    font-size: 32rpx
+}
+
+.price-label.price-list-order-total .price-deciaml {
+    font-size: 24rpx
+}
+
+.price-label.price-total-num {
+    color: #333;
+    font-weight: 700
+}
+
+.price-label.price-total-num .money-sign {
+    font-size: 24rpx
+}
+
+.price-label.price-total-num .price-number {
+    font-size: 32rpx
+}
+
+.price-label.list-item-total {
+    color: #333;
+    font-weight: 700
+}
+
+.price-label.list-item-total .money-sign {
+    font-size: 24rpx
+}
+
+.price-label.list-item-total .price-number {
+    font-size: 32rpx
+}
+
+.price-label.list-item-total .price-deciaml {
+    font-size: 24rpx
+}
+
+.price-label.list-item-price {
+    color: #333;
+    font-weight: 700
+}
+
+.price-label.list-item-price .money-sign {
+    font-size: 24rpx
+}
+
+.price-label.list-item-price .price-number {
+    font-size: 28rpx
+}
+
+.price-label.list-item-price .price-deciaml {
+    font-size: 24rpx
+}
+
+.price-label.light-actual-price {
+    color: #fd6262
+}
+
+.price-label.light-actual-price .money-sign {
+    font-size: 26rpx
+}
+
+.price-label.light-actual-price .price-number {
+    font-size: 36rpx
+}
+
+.price-label.light-actual-price .price-deciaml {
+    font-size: 26rpx
+}
+
+.price-label.actual-price {
+    color: #333;
+    font-weight: 700
+}
+
+.price-label.actual-price .money-sign {
+    font-size: 26rpx
+}
+
+.price-label.actual-price .price-number {
+    font-size: 36rpx
+}
+
+.price-label.sunflower-pay-price {
+    color: #fd6262;
+    font-size: 56rpx;
+    font-weight: 500
+}
+
+.price-label.light-list-item-total {
+    color: #fd6262;
+    font-weight: 700
+}
+
+.price-label.light-list-item-total .money-sign {
+    font-size: 24rpx
+}
+
+.price-label.light-list-item-total .price-number {
+    font-size: 32rpx
+}
+
+.price-label.light-list-item-total .price-deciaml {
+    font-size: 24rpx
+}
+
+.price-label.order-pay-price {
+    color: #fd6262
+}
+
+.price-label.order-pay-price .money-sign {
+    font-size: 36rpx
+}
+
+.price-label.order-pay-price .price-number {
+    font-size: 56rpx;
+    font-weight: 500
+}
+
+.price-label.order-pay-price .price-deciaml {
+    font-size: 36rpx
+}
+
+.price-label.littleList {
+    color: #fd6262;
+    font-family: SourceHanSansCN-Medium,SourceHanSansCN
+}
+
+.price-label.littleList .money-sign {
+    font-size: 24rpx
+}
+
+.price-label.littleList .price-number {
+    font-size: 32rpx;
+    font-weight: 600
+}
+
+.price-label.littleList .price-deciaml {
+    font-size: 24rpx
+}

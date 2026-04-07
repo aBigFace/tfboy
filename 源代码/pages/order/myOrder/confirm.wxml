@@ -1,0 +1,73 @@
+<view class="base-container order-confirm-page">
+    <view bindtap="{{j}}" class="address-container flex-space-between-center base-white-radius-container m-b-10">
+        <view wx:if="{{a}}">
+            <view class="address-region text-light-s">
+                <text class="default-address-icon m-r-5" wx:if="{{b}}">默认</text>
+                <text>{{c}}{{d}}{{e}}</text>
+            </view>
+            <view class="address-text bold">
+                <text>{{f}}</text>
+            </view>
+            <view class="name-phone m-b-5">
+                <text class="name">{{g}}</text>
+                <text class="phone">{{h}}</text>
+            </view>
+        </view>
+        <view class="address-tips flex-space-between-center" wx:else>
+            <view class="p-t-5 p-b-5">请填写地址</view>
+        </view>
+        <uni-icons bind:__l="__l" class="arrow-icon" uI="08265283-0" uP="{{i}}" wx:if="{{i}}"></uni-icons>
+    </view>
+    <view class="product-info">
+        <view wx:for="{{k}}" wx:for-item="shop" wx:key="h">
+            <view class="base-white-radius-container m-b-10">
+                <view class="product-list m-b-10 border-bottom">
+                    <view class="product-list-item" wx:for="{{shop.a}}" wx:for-item="product" wx:key="c">
+                        <order-product-item bind:__l="__l" uI="{{product.a}}" uP="{{product.b}}" wx:if="{{product.b}}"></order-product-item>
+                    </view>
+                </view>
+                <view class="pay-method flex-space-between-center m-b-25">
+                    <text class="">商品总价</text>
+                    <view class="relative flex-center">
+                        <price-label bind:__l="__l" uI="{{shop.b}}" uP="{{shop.c}}" wx:if="{{shop.c}}"></price-label>
+                    </view>
+                </view>
+                <view class="product-count flex-space-between-center m-b-25">
+                    <text class="">运费</text>
+                    <view class="flex-center">
+                        <price-label bind:__l="__l" uI="{{shop.d}}" uP="{{shop.e}}" wx:if="{{shop.e}}"></price-label>
+                    </view>
+                </view>
+                <view class="order-money text-right">
+                    <text class="price-sum">总计:</text>
+                    <price-label bind:__l="__l" class="gray-sum text-bold" uI="{{shop.f}}" uP="{{shop.g}}" wx:if="{{shop.g}}"></price-label>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="order-money base-white-radius-container flex-space-between-center m-b-20" wx:if="{{l}}">
+        <text class="text-500">备注</text>
+        <input bindinput="{{n}}" class="order-remark-input text-gray" placeholder="可填下你的留言备注" value="{{m}}"></input>
+    </view>
+    <view class="invalid-product-container" wx:if="{{o}}">
+        <view class="text-light m-b-10">失效商品</view>
+        <view class="base-white-radius-container">
+            <view class="product-list-item" wx:for="{{p}}" wx:for-item="product" wx:key="c">
+                <order-product-item bind:__l="__l" uI="{{product.a}}" uP="{{product.b}}" wx:if="{{product.b}}"></order-product-item>
+            </view>
+        </view>
+    </view>
+    <view class="fixed-bottom-container base-white-container flex-space-between-center">
+        <view class="inline-block">
+            <text class="m-r-10">共{{q}}件</text>
+            <view class="inline-block">总计:<price-label bind:__l="__l" uI="08265283-6" uP="{{r}}" wx:if="{{r}}"></price-label>
+            </view>
+        </view>
+        <view>
+            <button bindtap="{{s}}" class="{{['primary-btn','submit-btn',t&&'noDataSubmit']}}" disabled="{{v}}" type="primary">提交订单</button>
+        </view>
+    </view>
+    <select-sku bind:__l="__l" bindonSuccess="{{x}}" class="r" uI="08265283-7" uP="{{y}}" uR="selectSkuRef" wx:if="{{y}}"></select-sku>
+    <real-name-popup bind:__l="__l" class="r" uI="08265283-8" uR="realNamePopupRef"></real-name-popup>
+    <parent-auth-dialog bind:__l="__l" class="r" uI="08265283-9" uR="parentAuthDialogRef"></parent-auth-dialog>
+</view>

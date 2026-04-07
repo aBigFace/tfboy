@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "历史赠品券",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "no-data": "../../../components/no-data",
+    "coupon-item": "couponItem",
+    "uni-load-more": "../../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

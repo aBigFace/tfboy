@@ -1,0 +1,28 @@
+.search-area {
+    padding: 16rpx 24rpx
+}
+
+.search-area .search {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 34rpx;
+    display: -webkit-flex;
+    display: flex
+}
+
+.search-area .search wx-input {
+    box-sizing: border-box;
+    font-size: 26rpx;
+    height: 68rpx;
+    line-height: 68rpx;
+    padding: 0 20rpx 0 10rpx
+}
+
+.search-area .search .search-icon {
+    margin-left: 20rpx
+}
+
+.search-area .search .clear-icon {
+    padding: 6rpx 20rpx
+}

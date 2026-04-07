@@ -1,0 +1,35 @@
+<view class="page">
+    <view class="tabList">
+        <view bindtap="{{item.d}}" class="tab-item" wx:for="{{a}}" wx:key="c">
+            <view class="{{[item.b]}}">{{item.a}}</view>
+        </view>
+    </view>
+    <view class="base-container">
+        <view class="acquire-box">
+            <block wx:if="{{b}}">
+                <view class="item" wx:for="{{c}}">
+                    <view class="left">
+                        <view class="title">{{item.a}}</view>
+                        <view class="date">{{item.b}}</view>
+                    </view>
+                    <view class="right">{{item.c}}</view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="{{['item',item.h&&'shop-height']}}" wx:for="{{d}}">
+                    <view class="left">
+                        <view class="{{['title',item.b&&'shop-bottom']}}">{{item.a}}</view>
+                        <view class="order" wx:if="{{item.c}}">
+                            <text>订单号：{{item.d}}</text>
+                            <image src="{{item.e}}"></image>
+                        </view>
+                        <view class="date">{{item.f}}</view>
+                    </view>
+                    <view class="right">{{item.g}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <no-data bind:__l="__l" uI="82e7de5e-0" uP="{{f}}" uS="{{['d']}}" wx:if="{{e}}">暂无获取记录</no-data>
+    <uni-load-more bind:__l="__l" uI="82e7de5e-1" uP="{{g||''}}" wx:else></uni-load-more>
+</view>

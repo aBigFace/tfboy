@@ -1,0 +1,19 @@
+<view class="cClass-content data-v-625e17c6">
+    <new-tabs-vertical bind:__l="__l" bindchange="{{a}}" class="data-v-625e17c6" uI="625e17c6-0" uP="{{b}}" wx:if="{{b}}"></new-tabs-vertical>
+    <view class="cClass-content-tabs data-v-625e17c6">
+        <scroll-view scrollWithAnimation bindscrolltolower="{{i}}" class="scroll-Y data-v-625e17c6" lowerThreshold="{{50}}" scrollY="true" style="{{'height:'+'calc(100vh - 37px)'}}">
+            <view class="contentBox data-v-625e17c6">
+                <view bindtap="{{e}}" class="advertisement data-v-625e17c6" wx:if="{{c}}">
+                    <image class="data-v-625e17c6" src="{{d}}"></image>
+                </view>
+                <block wx:if="{{f}}">
+                    <product-item bind:__l="__l" bindskuChange="{{i.b}}" class="data-v-625e17c6" uI="{{i.c}}" uP="{{i.d}}" wx:for="{{g}}" wx:for-item="i" wx:key="a"></product-item>
+                </block>
+                <view class="noGoods data-v-625e17c6" wx:else>
+                    <text class="data-v-625e17c6" wx:if="{{h}}">数据加载中~</text>
+                    <text class="data-v-625e17c6" wx:else>暂无商品~</text>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

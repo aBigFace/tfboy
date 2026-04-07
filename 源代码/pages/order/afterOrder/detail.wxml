@@ -1,0 +1,209 @@
+<view class="page order-detail-page">
+    <view class="header-bg base-container p-b-0">
+        <block wx:if="{{a}}">
+            <view class="order-status">
+                <view class="status-text" wx:if="{{b}}">审核中</view>
+                <view class="status-text" wx:if="{{c}}">退款中</view>
+                <view class="status-text" wx:if="{{d}}">退款成功</view>
+                <view class="status-text" wx:if="{{e}}">关闭退款</view>
+                <view class="status-text" wx:if="{{f}}">驳回申请</view>
+                <view class="status-text" wx:if="{{g}}">审核中</view>
+            </view>
+            <view class="order-desc text-light">
+                <view class="text-light-s" style="margin-top:5upx;color:#fff" wx:if="{{h}}">{{i}}</view>
+                <text class="text-light-s" wx:elif="{{j}}">申请已提交，客服审核中</text>
+                <text class="text-light-s" wx:elif="{{k}}">正在进行退款，请耐心等待</text>
+                <text class="text-light-s" wx:elif="{{l}}">人工介入处理中</text>
+                <text class="text-light-s max-line-four" wx:elif="{{m}}">驳回原因：{{n}}</text>
+                <text class="text-light-s" wx:elif="{{o}}">已退款至原账户： <block wx:if="{{p}}">已退款成功</block>
+                    <block wx:else>已退款成功</block>
+                </text>
+                <text class="text-light-s" wx:elif="{{q}}">售后申请已关闭</text>
+            </view>
+        </block>
+        <block wx:elif="{{r}}">
+            <view class="order-status">
+                <view class="status-text" wx:if="{{s}}">审核中</view>
+                <view class="status-text" wx:if="{{t}}">退货退款中</view>
+                <view class="status-text" wx:if="{{v}}">退货退款成功</view>
+                <view class="status-text" wx:if="{{w}}">关闭退货退款</view>
+                <view class="status-text" wx:if="{{x}}">驳回申请</view>
+            </view>
+            <view class="order-desc text-light">
+                <text class="text-light-s" wx:if="{{y}}">申请已提交，客服审核中</text>
+                <text class="text-light-s" wx:elif="{{z}}">商家收到货物后将进行退款，请耐心等待</text>
+                <text class="text-light-s max-line-four" wx:elif="{{A}}">驳回原因：{{B}}</text>
+                <text class="text-light-s" wx:elif="{{C}}">已退款至原账户： <block wx:if="{{D}}">已退款至原账户</block>
+                    <block wx:else>已退款成功</block>
+                </text>
+                <text class="text-light-s" wx:elif="{{E}}">售后申请已关闭</text>
+            </view>
+        </block>
+        <block wx:elif="{{F}}">
+            <view class="order-status">
+                <view class="status-text" wx:if="{{G}}">审核中</view>
+                <view class="status-text" wx:if="{{H}}">换货中</view>
+                <view class="status-text" wx:if="{{I}}">换货成功</view>
+                <view class="status-text" wx:if="{{J}}">关闭换货</view>
+                <view class="status-text" wx:if="{{K}}">驳回申请</view>
+            </view>
+            <view class="order-desc text-light">
+                <text class="text-light-s" wx:if="{{L}}">申请已提交，客服审核中</text>
+                <text class="text-light-s" wx:elif="{{M}}">商家收到货物后将寄回新品，请耐心等待</text>
+                <text class="text-light-s max-line-four" wx:elif="{{N}}">驳回原因：{{O}}</text>
+                <text class="text-light-s" wx:elif="{{P}}">商品换货成功，欢迎再次购买</text>
+                <text class="text-light-s" wx:elif="{{Q}}">售后申请已关闭</text>
+            </view>
+        </block>
+        <block wx:elif="{{R}}">
+            <view class="order-status">
+                <view class="status-text" wx:if="{{S}}">审核中</view>
+                <view class="status-text" wx:if="{{T}}">补寄中</view>
+                <view class="status-text" wx:if="{{U}}">补寄成功</view>
+                <view class="status-text" wx:if="{{V}}">关闭补寄</view>
+                <view class="status-text" wx:if="{{W}}">驳回申请</view>
+            </view>
+            <view class="order-desc text-light">
+                <text class="text-light-s" wx:if="{{X}}">申请已提交，客服审核中</text>
+                <text class="text-light-s" wx:elif="{{Y}}">审核已通过，请耐心等待商品发货</text>
+                <text class="text-light-s max-line-four" wx:elif="{{Z}}">驳回原因：{{aa}}</text>
+                <text class="text-light-s" wx:elif="{{ab}}">商品补寄成功，欢迎再次购买</text>
+                <text class="text-light-s" wx:elif="{{ac}}">售后申请已关闭</text>
+            </view>
+        </block>
+    </view>
+    <view class="base-container page-content">
+        <view class="order-detail-section base-white-radius-container m-b-10">
+            <view class="order-detail-section-item flex-space-between-center">
+                <view class="text-primary-grey flex-center flex-1">
+                    <view class="badge m-r-5"></view>{{ad}}</view>
+                <view bindtap="{{af}}" class="flex-1 text-gray text-right">查看申请历史<uni-icons bind:__l="__l" class="arrow-icon" uI="26b7c67e-0" uP="{{ae}}" wx:if="{{ae}}"></uni-icons>
+                </view>
+            </view>
+            <view bindtap="{{ai}}" class="order-detail-section-item flex-space-between-center">
+                <text class="text-light">问题描述：</text>
+                <view class="flex order-detail-section-item-desc">
+                    <text class="text-gray max-line-one">{{ag}}</text>
+                    <uni-icons bind:__l="__l" class="arrow-icon" uI="26b7c67e-1" uP="{{ah}}" wx:if="{{ah}}"></uni-icons>
+                </view>
+            </view>
+        </view>
+        <view class="order-detail-section base-white-radius-container m-b-10" wx:if="{{aj}}">
+            <text class="remind">{{ak}}</text>
+            <view bindtap="{{am}}" class="order-detail-section-item flex-space-between-center">
+                <text class="text-light">发货快递</text>
+                <view class="flex order-detail-section-item-desc">
+                    <text class="text-gray max-line-one">{{al}}</text>
+                </view>
+            </view>
+            <view bindtap="{{ao}}" class="order-detail-section-item flex-space-between-center">
+                <text class="text-light">发货运单号</text>
+                <view class="flex order-detail-section-item-desc">
+                    <text class="text-gray max-line-one">{{an}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="order-detail-section base-white-radius-container m-b-10" wx:if="{{ap}}">
+            <view class="order-detail-section-item flex-space-between-center">
+                <view class="text-primary-grey flex-center flex-1">申请退款金额</view>
+                <view bindtap="{{at}}" class="flex-1 text-gray text-right">
+                    <text class="price-name">
+                        <block wx:if="{{aq}}">积分</block>
+                        <block wx:elif="{{ar}}">小葵花</block>
+                    </text>
+                    <price bind:__l="__l" class="text-primary" uI="26b7c67e-2" uP="{{as}}" wx:if="{{as}}"></price>
+                </view>
+            </view>
+        </view>
+        <view class="order-products">
+            <view class="product-goods" wx:for="{{av}}" wx:for-item="product" wx:key="c">
+                <order-product-item bind:__l="__l" uI="{{product.a}}" uP="{{product.b}}" wx:if="{{product.b}}"></order-product-item>
+            </view>
+        </view>
+    </view>
+    <view class="order-detail-section base-white-radius-container m-t-10">
+        <view class="order-detail-section-item flex-space-between-center" wx:if="{{aw}}">
+            <text class="text-primary-grey" wx:if="{{ax}}">退款原因</text>
+            <text class="text-primary-grey" wx:if="{{ay}}">退货退款原因</text>
+            <text class="text-primary-grey" wx:if="{{az}}">换货原因</text>
+            <text class="text-primary-grey" wx:if="{{aA}}">补寄原因</text>
+            <view class="flex-1 text-right text-gray">
+                <text>{{aB}}</text>
+            </view>
+        </view>
+        <view class="order-detail-section-item flex-space-between-center" wx:if="{{aC}}">
+            <text class="text-primary-grey" wx:if="{{aD}}">退货数量</text>
+            <text class="text-primary-grey" wx:if="{{aE}}">换货数量</text>
+            <text class="text-primary-grey" wx:if="{{aF}}">补寄数量</text>
+            <view class="flex-1 text-right text-gray">
+                <text>{{aG}}</text>
+            </view>
+        </view>
+        <view class="order-detail-section-item flex-space-between-center">
+            <text class="text-primary-grey">申请时间</text>
+            <view class="flex-1 text-right text-gray">{{aH}}</view>
+        </view>
+        <view class="order-detail-section-item flex-space-between-center">
+            <text class="text-primary-grey">订单号</text>
+            <view class="flex-1 text-right text-gray">{{aI}}</view>
+        </view>
+        <view class="order-detail-section-item flex-space-between-center">
+            <text class="text-primary-grey">售后单号</text>
+            <view class="flex-1 text-right text-gray">{{aJ}}</view>
+        </view>
+    </view>
+    <view class="order-detail-address" wx:if="{{aK}}">
+        <view class="address-top">
+            <view class="title">
+                <text>请按照以下地址寄回商品</text>
+            </view>
+        </view>
+        <view class="address-bottom">
+            <view class="name">{{aL}} {{aM}}</view>
+            <view class="detail">{{aN}}</view>
+        </view>
+    </view>
+    <view class="order-detail-address" wx:if="{{aO}}">
+        <view class="address-top">
+            <view class="title">
+                <text>我的寄回</text>
+            </view>
+        </view>
+        <view class="order-detail-section-item flex-space-between-center">
+            <text class="text-primary-grey">退货快递</text>
+            <view class="flex-1 text-right text-gray">{{aP}}</view>
+        </view>
+        <view class="order-detail-section-item flex-space-between-center">
+            <text class="text-primary-grey">退货运单号</text>
+            <view class="flex-1 text-right text-gray">{{aQ}}</view>
+        </view>
+    </view>
+    <view class="order-detail-address receive" wx:if="{{aR}}">
+        <view class="address-top">
+            <view class="title">
+                <text>我的收货地址</text>
+            </view>
+        </view>
+        <view class="order-detail-section-item flex-space-between-center">
+            <text class="text-primary-grey">收货人</text>
+            <view class="flex-1 text-right text-gray">{{aS}}</view>
+        </view>
+        <view class="order-detail-section-item flex-space-between-center">
+            <text class="text-primary-grey">联系电话</text>
+            <view class="flex-1 text-right text-gray">{{aT}}</view>
+        </view>
+        <view class="order-detail-section-item flex-space-between">
+            <text class="text-primary-grey">详细地址</text>
+            <view class="flex-1 text-right text-gray">{{aU}}</view>
+        </view>
+    </view>
+    <view style="height:100px;width:100px"></view>
+    <view class="fixed-bottom-container base-white-container">
+        <button bindtap="{{aW}}" class="plain-btn m-l-10 primary-btn" plain="{{true}}" size="mini" type="primary" wx:if="{{aV}}">重新申请</button>
+        <button bindtap="{{aY}}" class="plain-btn m-l-10 primary-btn" plain="{{true}}" size="mini" type="primary" wx:if="{{aX}}">删除</button>
+        <button bindtap="{{ba}}" class="primary-btn m-l-10" size="mini" type="primary" wx:if="{{aZ}}">撤销申请</button>
+        <button bindtap="{{bc}}" class="plain-btn m-l-10" size="mini" type="primary" wx:if="{{bb}}">填写运单</button>
+    </view>
+</view>
+<confirm-modal bind:__l="__l" class="r" uI="26b7c67e-4" uR="confirmModalRef"></confirm-modal>
+<customer-service bind:__l="__l" uI="26b7c67e-5"></customer-service>

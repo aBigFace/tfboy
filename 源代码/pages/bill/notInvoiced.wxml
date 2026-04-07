@@ -1,0 +1,120 @@
+<view class="notInvoiced data-v-4f96c446" wx:if="{{a}}">
+    <view class="bill-top data-v-4f96c446">
+        <view class="bill-state data-v-4f96c446">
+            <image class="state-img data-v-4f96c446" src="{{b}}"></image>未开票</view>
+        <view class="bill-money data-v-4f96c446">可开票金额: ￥{{c}}</view>
+    </view>
+    <view class="bill-bottom data-v-4f96c446">
+        <view class="function-list setting-info data-v-4f96c446">
+            <view class="function-item flex-space-between-center data-v-4f96c446">
+                <text class="text-item-light data-v-4f96c446">发票类型</text>
+                <text class="data-v-4f96c446">数电普票</text>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446">
+                <text class="text-item-light data-v-4f96c446">抬头类型<text class="required-tip data-v-4f96c446">*</text>
+                </text>
+                <uni-data-checkbox bind:__l="__l" bindchange="{{d}}" bindupdateModelValue="{{e}}" class="custom-checkbox data-v-4f96c446" uI="4f96c446-0" uP="{{f}}" wx:if="{{f}}"></uni-data-checkbox>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446" wx:if="{{g}}">
+                <text class="text-item-light data-v-4f96c446">发票抬头<text class="required-tip data-v-4f96c446">*</text>
+                </text>
+                <input bindinput="{{h}}" class="inputWidth data-v-4f96c446" id="headerNamexId" maxlength="20" placeholder="请填写抬头名称" value="{{i}}"></input>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446" wx:if="{{j}}">
+                <text class="text-item-light data-v-4f96c446">发票抬头<text class="required-tip data-v-4f96c446">*</text>
+                </text>
+                <uni-combox bind:__l="__l" bindidValue="{{l}}" bindinput="{{k}}" bindupdateModelValue="{{m}}" class="headerCombox data-v-4f96c446" uI="4f96c446-1" uP="{{n}}" wx:if="{{n}}"></uni-combox>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446" wx:if="{{o}}">
+                <text class="text-item-light data-v-4f96c446">单位税号<text class="required-tip data-v-4f96c446">*</text>
+                </text>
+                <input bindinput="{{p}}" class="inputWidth data-v-4f96c446" maxlength="20" placeholder="请填写单位税号" value="{{q}}"></input>
+            </view>
+        </view>
+        <view class="contact-box function-list setting-info data-v-4f96c446">
+            <view class="function-item flex-space-between-center data-v-4f96c446" wx:if="{{r}}">
+                <text class="text-item-light data-v-4f96c446">手机号</text>
+                <input bindinput="{{s}}" class="inputWidth data-v-4f96c446" id="phoneNumberId" maxlength="11" placeholder="请填写收票人手机号" value="{{t}}"></input>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446">
+                <text class="text-item-light data-v-4f96c446">邮箱<text class="required-tip data-v-4f96c446">*</text>
+                </text>
+                <input bindinput="{{v}}" class="inputWidth data-v-4f96c446" id="mailboxId" maxlength="50" placeholder="请填写收票人邮箱" value="{{w}}"></input>
+            </view>
+        </view>
+        <view class="contact-box function-list setting-info data-v-4f96c446">
+            <view class="function-item flex-space-between-center data-v-4f96c446">
+                <text class="text-item-light data-v-4f96c446">发票备注</text>
+                <view class="invoice-remark-button data-v-4f96c446">
+                    <button bindtap="{{y}}" class="{{['data-v-4f96c446',x]}}">订单编号</button>
+                    <button bindtap="{{A}}" class="{{['data-v-4f96c446',z]}}">会员ID</button>
+                </view>
+            </view>
+        </view>
+    </view>
+    <button bindtap="{{D}}" class="primary-btn flex-justify-center submit-btn data-v-4f96c446" disabled="{{C}}" style="{{'background:'+B}}">申请发票</button>
+</view>
+<view class="invoiced data-v-4f96c446" wx:if="{{E}}">
+    <view class="bill-top data-v-4f96c446">
+        <view class="bill-state data-v-4f96c446" wx:if="{{F}}">
+            <image class="state-img data-v-4f96c446" src="{{G}}"></image>开票中</view>
+        <view class="bill-state data-v-4f96c446" wx:if="{{H}}">
+            <image class="state-img data-v-4f96c446" src="{{I}}"></image>已开票</view>
+        <view class="bill-state data-v-4f96c446" wx:if="{{J}}">
+            <image class="state-img data-v-4f96c446" src="{{K}}"></image>冲红中</view>
+        <view class="bill-state data-v-4f96c446" wx:if="{{L}}">
+            <image class="state-img data-v-4f96c446" src="{{M}}"></image>已冲红</view>
+        <view class="bill-money data-v-4f96c446">开票金额: ￥{{N}}</view>
+    </view>
+    <view class="bill-bottom data-v-4f96c446">
+        <view class="bill-tip data-v-4f96c446" wx:if="{{O}}">发票已成功发送至您的邮箱，请查收</view>
+        <view class="function-list setting-info data-v-4f96c446">
+            <view class="function-item flex-space-between-center data-v-4f96c446">
+                <text class="text-item-light data-v-4f96c446">发票类型</text>
+                <text class="text-item-info data-v-4f96c446">数电普票</text>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446">
+                <text class="text-item-light data-v-4f96c446">抬头类型</text>
+                <text class="text-item-info data-v-4f96c446">{{P}}</text>
+            </view>
+            <view class="function-item flex-space-between-center remark-label data-v-4f96c446">
+                <text class="text-item-light data-v-4f96c446">发票抬头</text>
+                <text class="text-item-info inputWidth textRight data-v-4f96c446">{{Q}}</text>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446" wx:if="{{R}}">
+                <text class="text-item-light data-v-4f96c446">单位税号</text>
+                <text class="text-item-info data-v-4f96c446">{{S}}</text>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446" wx:if="{{T}}">
+                <text class="text-item-light data-v-4f96c446">手机号</text>
+                <text class="text-item-info data-v-4f96c446">{{U}}</text>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446" wx:if="{{V}}">
+                <text class="text-item-light data-v-4f96c446">电子邮箱</text>
+                <text class="text-item-info data-v-4f96c446">{{W}}</text>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446" wx:if="{{X}}">
+                <text class="text-item-light data-v-4f96c446">申请时间</text>
+                <text class="text-item-info data-v-4f96c446">{{Y}}</text>
+            </view>
+            <view class="function-item flex-space-between-center data-v-4f96c446" wx:if="{{Z}}">
+                <text class="text-item-light data-v-4f96c446">开票时间</text>
+                <text class="text-item-info data-v-4f96c446">{{aa}}</text>
+            </view>
+            <view class="function-item flex-space-between-center remark-label data-v-4f96c446" wx:if="{{ab}}">
+                <text class="text-item-light data-v-4f96c446">发票备注</text>
+                <view class="data-v-4f96c446">
+                    <text class="text-item-info remark-disp data-v-4f96c446" wx:if="{{ac}}">{{ad}}</text>
+                    <text class="text-item-info remark-disp data-v-4f96c446" wx:if="{{ae}}">{{af}}</text>
+                </view>
+            </view>
+            <view class="function-item flex-space-between-center remark-label data-v-4f96c446" wx:if="{{ag}}">
+                <text class="text-item-light data-v-4f96c446">发票预览</text>
+                <view class="data-v-4f96c446">
+                    <image bindtap="{{ah}}" class="invoiceImg remark-disp data-v-4f96c446" mode="widthFix" src="{{ai}}"></image>
+                    <text catchtap="{{ak}}" class="text-item-light remark-disp data-v-4f96c446" wx:if="{{aj}}">发票地址(URL) | 复制</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

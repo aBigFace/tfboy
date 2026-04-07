@@ -1,0 +1,23 @@
+<view class="uni-data-pickerview">
+    <scroll-view class="selected-area" scrollX="true" scrollY="false" showScrollbar="{{false}}">
+        <view class="selected-list">
+            <view bindtap="{{item.e}}" class="{{['selected-item',item.c&&'selected-item-active',item.d&&'selected-item-text-overflow']}}" wx:if="{{item.a}}" wx:for="{{a}}">
+                <text class="">{{item.b}}</text>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="tab-c">
+        <scroll-view class="list" key="{{child.c}}" scrollY="{{true}}" wx:if="{{child.a}}" wx:for="{{b}}" wx:for-item="child">
+            <view bindtap="{{item.d}}" class="{{['item',item.c&&'is-disabled']}}" wx:for="{{child.b}}">
+                <text class="item-text item-text-overflow">{{item.a}}</text>
+                <view class="check" wx:if="{{item.b}}"></view>
+            </view>
+        </scroll-view>
+        <view class="loading-cover" wx:if="{{c}}">
+            <uni-load-more bind:__l="__l" class="load-more" uI="b2cc30a0-0" uP="{{d}}" wx:if="{{d}}"></uni-load-more>
+        </view>
+        <view class="error-message" wx:if="{{e}}">
+            <text class="error-text">{{f}}</text>
+        </view>
+    </view>
+</view>

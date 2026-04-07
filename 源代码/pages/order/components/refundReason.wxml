@@ -1,0 +1,15 @@
+<uni-popup bind:__l="__l" class="r" uI="b3cdcdf6-0" uP="{{f}}" uR="refundpopup" uS="{{['d']}}" wx:if="{{f}}">
+    <view class="modal cancel-order-modal">
+        <view class="modal-header">
+            <text class="modal-header-title">{{a}}</text>
+            <uni-icons bind:__l="__l" bindclick="{{b}}" class="close-icon" uI="b3cdcdf6-1,b3cdcdf6-0" uP="{{c}}" wx:if="{{c}}"></uni-icons>
+        </view>
+        <view class="modal-content">
+            <view class="cancel-reason-list">
+                <view bindtap="{{item.d}}" class="{{['reason-item','base-container',item.b&&'active']}}" wx:for="{{d}}" wx:key="c">
+                    <view class="reason">{{item.a}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</uni-popup>

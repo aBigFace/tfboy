@@ -1,0 +1,45 @@
+<view class="accountLogin data-v-1c3b0aa6">
+    <view class="banner data-v-1c3b0aa6"></view>
+    <view class="form data-v-1c3b0aa6">
+        <view class="formBox data-v-1c3b0aa6">
+            <uni-forms bind:__l="__l" class="r data-v-1c3b0aa6" uI="1c3b0aa6-0" uP="{{h}}" uR="formRef" uS="{{['d']}}" wx:if="{{h}}">
+                <uni-forms-item bind:__l="__l" class="data-v-1c3b0aa6" uI="1c3b0aa6-1,1c3b0aa6-0" uP="{{c}}" uS="{{['label','d']}}" wx:if="{{c}}">
+                    <view class="labelSlot data-v-1c3b0aa6" slot="label">登录账号</view>
+                    <uni-easyinput bind:__l="__l" bindupdateModelValue="{{a}}" class="data-v-1c3b0aa6" uI="1c3b0aa6-2,1c3b0aa6-1" uP="{{b}}" wx:if="{{b}}"></uni-easyinput>
+                </uni-forms-item>
+                <uni-forms-item bind:__l="__l" class="data-v-1c3b0aa6" uI="1c3b0aa6-3,1c3b0aa6-0" uP="{{f}}" uS="{{['label','d']}}" wx:if="{{f}}">
+                    <view class="labelSlot data-v-1c3b0aa6" slot="label" style="padding-top:0">登录密码</view>
+                    <uni-easyinput bind:__l="__l" bindupdateModelValue="{{d}}" class="data-v-1c3b0aa6" uI="1c3b0aa6-4,1c3b0aa6-3" uP="{{e}}" wx:if="{{e}}"></uni-easyinput>
+                </uni-forms-item>
+            </uni-forms>
+        </view>
+        <view class="agree-on data-v-1c3b0aa6">
+            <radio bindtap="{{i}}" checked="{{j}}" class="data-v-1c3b0aa6" color="#FF7272" style="transform:scale(0.7)"></radio>
+            <text class="privacy-text data-v-1c3b0aa6">已阅读并同意</text>
+            <text bindtap="{{k}}" class="data-v-1c3b0aa6">《用户协议》</text>
+            <text bindtap="{{l}}" class="data-v-1c3b0aa6">《隐私政策》</text>
+            <text bindtap="{{m}}" class="data-v-1c3b0aa6">《未成年人用户隐私政策》</text>
+        </view>
+        <button bindtap="{{p}}" class="{{['data-v-1c3b0aa6','primary-btn','flex-justify-center','weixin-login-btn',n&&'btn-disabled']}}" disabled="{{o}}" type="default">登录</button>
+        <view class="operationBox data-v-1c3b0aa6">
+            <text bindtap="{{q}}" class="pw data-v-1c3b0aa6">忘记密码</text>
+            <text bindtap="{{r}}" class="find data-v-1c3b0aa6">找回账号</text>
+            <text bindtap="{{s}}" class="reg data-v-1c3b0aa6">注册账号</text>
+        </view>
+    </view>
+    <uni-popup bind:__l="__l" class="r data-v-1c3b0aa6" uI="1c3b0aa6-5" uP="{{C}}" uR="verCodeDialogRef" uS="{{['d']}}" wx:if="{{C}}">
+        <view class="verCodeBox data-v-1c3b0aa6" style="{{'margin-bottom:'+A}}">
+            <view class="title data-v-1c3b0aa6">验证码校验</view>
+            <view class="inputBox data-v-1c3b0aa6">
+                <input bindfocus="{{t}}" bindinput="{{w}}" class="uni-input data-v-1c3b0aa6" maxlength="4" placeholder="请输入验证码" value="{{v}}"></input>
+                <view bindtap="{{x}}" class="firsts_s_r data-v-1c3b0aa6">
+                    <canvas canvasId="canvasW" class="data-v-1c3b0aa6" style="{{'width:'+'140px'+';'+'height:'+'35px'}}"></canvas>
+                </view>
+            </view>
+            <view class="codeBtns data-v-1c3b0aa6">
+                <button bindtap="{{y}}" class="cancel data-v-1c3b0aa6" size="mini" type="default">取消</button>
+                <button bindtap="{{z}}" class="confirm data-v-1c3b0aa6" size="mini" type="primary">确认</button>
+            </view>
+        </view>
+    </uni-popup>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "confirm-modal": "../../components/modal/confirm-modal",
+    "parent-auth-dialog": "parentAuthDialog",
+    "uni-popup": "../../uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

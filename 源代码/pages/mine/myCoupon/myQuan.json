@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的卡券",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "no-data": "../../../components/no-data",
+    "coupon-item": "couponItem",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

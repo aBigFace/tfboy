@@ -1,0 +1,44 @@
+<view class="page address-page base-page data-v-3e920721">
+    <view class="base-white-radius-container base-form address-form data-v-3e920721">
+        <uni-forms bind:__l="__l" class="r data-v-3e920721" uI="3e920721-0" uP="{{B}}" uR="formRef" uS="{{['d']}}" wx:if="{{B}}">
+            <view class="flex data-v-3e920721">
+                <view class="{{['flex-1','m-r-5','data-v-3e920721',d&&'active']}}">
+                    <uni-forms-item bind:__l="__l" class="data-v-3e920721" uI="3e920721-1,3e920721-0" uP="{{c}}" uS="{{['d']}}" wx:if="{{c}}">
+                        <uni-easyinput bind:__l="__l" bindupdateModelValue="{{a}}" class="input data-v-3e920721" uI="3e920721-2,3e920721-1" uP="{{b}}" wx:if="{{b}}"></uni-easyinput>
+                    </uni-forms-item>
+                </view>
+            </view>
+            <view class="flex data-v-3e920721">
+                <view class="flex-1 m-r-5 data-v-3e920721">
+                    <uni-forms-item bind:__l="__l" class="data-v-3e920721" uI="3e920721-3,3e920721-0" uP="{{i}}" uS="{{['d']}}" wx:if="{{i}}">
+                        <uni-data-select bind:__l="__l" bindupdateModelValue="{{e}}" class="select-input data-v-3e920721" uI="3e920721-4,3e920721-3" uP="{{f}}" wx:if="{{f}}"></uni-data-select>
+                        <uni-easyinput bind:__l="__l" bindupdateModelValue="{{g}}" class="input data-v-3e920721" uI="3e920721-5,3e920721-3" uP="{{h}}" wx:if="{{h}}"></uni-easyinput>
+                    </uni-forms-item>
+                </view>
+            </view>
+            <view class="area data-v-3e920721">
+                <uni-forms-item bind:__l="__l" class="{{['data-v-3e920721',m&&'active']}}" uI="3e920721-6,3e920721-0" uP="{{n}}" uS="{{['d']}}" wx:if="{{n}}">
+                    <view class="flex-1 data-v-3e920721">
+                        <uni-data-picker bind:__l="__l" bindchange="{{j}}" bindupdateModelValue="{{k}}" class="data-v-3e920721" uI="3e920721-7,3e920721-6" uP="{{l}}" wx:if="{{l}}"></uni-data-picker>
+                    </view>
+                </uni-forms-item>
+            </view>
+            <view class=" data-v-3e920721">
+                <uni-forms-item bind:__l="__l" class="{{['data-v-3e920721',q&&'active']}}" uI="3e920721-8,3e920721-0" uP="{{r}}" uS="{{['d']}}" wx:if="{{r}}">
+                    <uni-easyinput bind:__l="__l" bindupdateModelValue="{{o}}" class="input data-v-3e920721" uI="3e920721-9,3e920721-8" uP="{{p}}" wx:if="{{p}}"></uni-easyinput>
+                </uni-forms-item>
+            </view>
+            <uni-forms-item bind:__l="__l" class="no-border data-v-3e920721" uI="3e920721-10,3e920721-0" uP="{{w}}" uS="{{['d']}}" wx:if="{{w}}">
+                <view class="flex-space-between-center flex-1 data-v-3e920721">
+                    <view class="data-v-3e920721">
+                        <uni-data-checkbox bind:__l="__l" bindupdateModelValue="{{s}}" class="data-v-3e920721" uI="3e920721-11,3e920721-10" uP="{{t}}" wx:if="{{t}}"></uni-data-checkbox>
+                    </view>
+                    <view bindtap="{{v}}" class="text-light-s data-v-3e920721">清空</view>
+                </view>
+            </uni-forms-item>
+            <view class="base-container fixed-bottom-container shadow data-v-3e920721">
+                <button bindtap="{{y}}" class="submit-btn primary-btn data-v-3e920721" disabled="{{z}}" type="primary">{{x}}</button>
+            </view>
+        </uni-forms>
+    </view>
+</view>

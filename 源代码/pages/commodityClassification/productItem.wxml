@@ -1,0 +1,41 @@
+<view bindtap="{{s}}" class="productItem data-v-3932d332">
+    <view class="img data-v-3932d332">
+        <view class="marketing_icon data-v-3932d332" style="width:55px" wx:if="{{a}}">
+            <text class="info data-v-3932d332" style="font-size:10px"> 即将开售 </text>
+        </view>
+        <view class="marketing_icon data-v-3932d332" style="width:50px" wx:elif="{{b}}">
+            <image class="icon-img data-v-3932d332" mode="scaleToFill" src="/static/icon/hot.png" style="width:10px;height:11.6px"></image>
+            <text class="info data-v-3932d332" style="font-size:10px">   热销  </text>
+        </view>
+        <image class="data-v-3932d332" src="{{c}}"></image>
+        <view class="pre_box data-v-3932d332" wx:if="{{d}}">预售</view>
+    </view>
+    <view class="content data-v-3932d332">
+        <view class="title data-v-3932d332">
+            <view class="info data-v-3932d332">{{e}}</view>
+            <view class="pre_text data-v-3932d332" wx:if="{{f}}">{{g}}</view>
+            <view class="pre_text data-v-3932d332" wx:elif="{{h}}">
+                <text class="presale-time data-v-3932d332" wx:if="{{i}}">{{j}}</text>
+                <view class="presale-time data-v-3932d332" wx:else>
+                    <text class="data-v-3932d332">距结束时间剩余</text>
+                    <uni-countdown bind:__l="__l" class="countdown-box data-v-3932d332" uI="3932d332-0" uP="{{k}}" wx:if="{{k}}"></uni-countdown>
+                </view>
+            </view>
+        </view>
+        <view class="priceAndCart data-v-3932d332">
+            <view class="price data-v-3932d332">
+                <view class="iconNum data-v-3932d332">
+                    <view class="icon data-v-3932d332">￥</view>
+                    <view class="num data-v-3932d332">{{l}}</view>
+                    <view class="icon2 data-v-3932d332" wx:if="{{m}}">起</view>
+                </view>
+                <view class="market data-v-3932d332" wx:if="{{n}}">￥{{o}}</view>
+            </view>
+            <view catchtap="{{r}}" class="cart data-v-3932d332">
+                <view class="data-v-3932d332" wx:if="{{p}}">
+                    <image class="data-v-3932d332" src="{{q}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

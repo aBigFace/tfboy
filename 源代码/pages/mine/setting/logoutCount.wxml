@@ -1,0 +1,44 @@
+<view class="editPassword data-v-57c377a4">
+    <view class="login-password-banner data-v-57c377a4">
+        <image class="data-v-57c377a4" src="{{a}}"></image>
+    </view>
+    <view class="user-know data-v-57c377a4">
+        <view class="title flex-justify-center data-v-57c377a4">
+            <image class="data-v-57c377a4" src="{{b}}"></image>
+            <text class="data-v-57c377a4">用户需知</text>
+            <image class="data-v-57c377a4" src="{{c}}"></image>
+        </view>
+        <view class="item data-v-57c377a4">账号注销，代表您将放弃以下权益</view>
+        <view class="sub-title data-v-57c377a4">1、您的账户、身份信息将被清空</view>
+        <view class="sub-text data-v-57c377a4">清空后您将无法查询历史账户、身份信息</view>
+        <view class="sub-title data-v-57c377a4">2、您的所有交易记录将被清空且无法恢复</view>
+        <view class="sub-text data-v-57c377a4">请确保所有交易记录已完成且无纠纷，账号注销后历史交易产生的资金退回权益视为自动放弃</view>
+        <view class="sub-title data-v-57c377a4">3、您的虚拟权益将被清空</view>
+        <view class="sub-text data-v-57c377a4">请确保您的会员权益、小葵花余额等已全部消费完毕，账号注销后虚拟权益视为放弃</view>
+        <view class="item data-v-57c377a4">账号注销，您需要满足以下条件：</view>
+        <view class="sub-title data-v-57c377a4">1、账户近期无交易</view>
+        <view class="sub-text data-v-57c377a4">需保证您的账户无未完成订单。</view>
+        <view class="btn-box flex-space-between-center data-v-57c377a4">
+            <view bindtap="{{d}}" class="continue-logout flex-justify-center data-v-57c377a4">继续注销</view>
+            <view bindtap="{{e}}" class="not-logout flex-justify-center data-v-57c377a4">暂不注销</view>
+        </view>
+    </view>
+    <uni-popup bind:__l="__l" class="r data-v-57c377a4" uI="57c377a4-0" uP="{{x}}" uR="popupRef" uS="{{['d']}}" wx:if="{{x}}">
+        <view class="modal confirm-modal data-v-57c377a4" style="{{'height:'+v}}">
+            <view class="modal-header data-v-57c377a4">
+                <image class="data-v-57c377a4" src="{{h}}" style="{{'height:'+g}}" wx:if="{{f}}"></image>
+                <image class="data-v-57c377a4" src="{{j}}" style="{{'height:'+i}}" wx:else></image>
+                <uni-icons bind:__l="__l" bindclick="{{k}}" class="close-icon data-v-57c377a4" uI="57c377a4-1,57c377a4-0" uP="{{l}}" wx:if="{{l}}"></uni-icons>
+            </view>
+            <view class="confirm-modal-content data-v-57c377a4">
+                <view class="modal-content data-v-57c377a4">{{m}}</view>
+                <view class="modal-title data-v-57c377a4">{{n}}</view>
+            </view>
+            <view class="modal-footer flex data-v-57c377a4">
+                <button bindtap="{{p}}" class="default-btn data-v-57c377a4" wx:if="{{o}}">再想想</button>
+                <button bindtap="{{r}}" class="default-btn confirm-btn data-v-57c377a4" style="{{'background:'+'#FF7272'}}" wx:if="{{q}}">确定注销</button>
+                <button bindtap="{{t}}" class="default-btn confirm-btn data-v-57c377a4" style="{{'background:'+'#FF7272'}}" wx:if="{{s}}">好的</button>
+            </view>
+        </view>
+    </uni-popup>
+</view>

@@ -1,0 +1,35 @@
+<view class="certify-page page">
+    <view class="certify-bg"></view>
+    <view class="certify-body">
+        <text class="certify-text">请填写账号实名认证的身份信息。</text>
+        <view class="certify-form">
+            <view class="certify-form-item">
+                <view class="certify-form-label">真实姓名</view>
+                <input required bindinput="{{b}}" class="uni-input" placeholder="请输入您的真实姓名" placeholderStyle="font-size: 28rpx;color: #BBBBBB" value="{{a}}"></input>
+            </view>
+            <view class="certify-form-item">
+                <view class="certify-form-label">证件类型</view>
+                <view bindtap="{{h}}" class="{{['certify-type-picker',g]}}">
+                    <view class="{{['picker-current',d]}}">{{c}}</view>
+                    <view class="picker-body" hidden="{{!f}}">
+                        <view bindtap="{{v.c}}" class="picker-item" wx:for="{{e}}" wx:for-item="v" wx:key="b">{{v.a}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="certify-form-item">
+                <view class="certify-form-label">证件号码</view>
+                <input bindinput="{{k}}" class="uni-input" placeholder="{{i}}" placeholderStyle="color: #BBBBBB;font-size:28rpx" value="{{j}}"></input>
+            </view>
+            <view class="certify-argument">
+                <radio bindtap="{{p}}" checked="{{o}}" class="certify-checkbox" color="#ff7272">
+                    <text class="argument-tip">已阅读并同意</text>
+                    <text bindtap="{{l}}">《用户协议》</text>
+                    <text bindtap="{{m}}">《隐私政策》</text>
+                    <text bindtap="{{n}}">《实名认证协议》</text>
+                </radio>
+            </view>
+            <button bindtap="{{s}}" class="{{[q,'primary-btn','m-t-30']}}" disabled="{{r}}" type="button">下一步</button>
+        </view>
+        <text class="certify-text">信息仅用于身份验证，我们将严格保护您的数据与隐私安全。</text>
+    </view>
+</view>

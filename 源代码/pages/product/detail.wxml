@@ -1,0 +1,199 @@
+<view class="product-detail-page data-v-4f1d9475">
+    <view class="product-swipper data-v-4f1d9475">
+        <swiper class="product-swiper data-v-4f1d9475" indicatorActiveColor="{{g}}" indicatorColor="{{f}}" indicatorDots="{{true}}">
+            <block wx:if="{{a}}">
+                <swiper-item class="data-v-4f1d9475" wx:for="{{b}}" wx:key="d">
+                    <video controls binderror="{{c}}" class="product-video data-v-4f1d9475" id="{{item.a}}" objectFit="fill" showMuteBtn="true" src="{{item.b}}" style="{{item.c}}"></video>
+                </swiper-item>
+            </block>
+            <block wx:if="{{d}}">
+                <swiper-item class="data-v-4f1d9475" wx:for="{{e}}" wx:key="c">
+                    <view class="swiper-item data-v-4f1d9475">
+                        <image bindtap="{{item.b}}" class="gallery-image data-v-4f1d9475" mode="scaleToFill" src="{{item.a}}"></image>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="sold-out-container data-v-4f1d9475" wx:if="{{h}}">
+            <view class="sold-out data-v-4f1d9475">已下架</view>
+        </view>
+        <view class="sold-out-container data-v-4f1d9475" wx:elif="{{i}}">
+            <view class="sold-out data-v-4f1d9475">商品售罄</view>
+        </view>
+        <view class="sold-out-container data-v-4f1d9475" wx:if="{{j}}">
+            <view class="pre-sale data-v-4f1d9475">{{k}}</view>
+        </view>
+        <view class="sold-out-container data-v-4f1d9475" style="background:unset" wx:elif="{{l}}">
+            <view class="pre-sale in-sale data-v-4f1d9475" wx:if="{{m}}">{{n}}</view>
+            <view class="pre-sale in-sale data-v-4f1d9475" wx:else>
+                <text class="data-v-4f1d9475">距结束时间剩余  </text>
+                <uni-countdown bind:__l="__l" class="data-v-4f1d9475" uI="4f1d9475-0" uP="{{o}}" wx:if="{{o}}"></uni-countdown>
+            </view>
+        </view>
+        <view class="on_sale_soon-container data-v-4f1d9475" wx:if="{{p}}">
+            <view class="pre-sale in-sale data-v-4f1d9475">
+                <text class="data-v-4f1d9475">本商品将于</text>
+                <text class="data-v-4f1d9475" style="font-weight:bold">{{q}}</text>
+                <text class="data-v-4f1d9475">开始售卖</text>
+            </view>
+            <view class="pre-sale in-sale data-v-4f1d9475">
+                <text class="data-v-4f1d9475">预约用户可在开售前收到APP端提醒</text>
+                <view class="right-text data-v-4f1d9475">
+                    <text class="data-v-4f1d9475">已有</text>
+                    <text class="data-v-4f1d9475" style="font-weight:bold">{{r}}</text>
+                    <text class="data-v-4f1d9475">人预约</text>
+                </view>
+            </view>
+        </view>
+        <view class="on_sale_soon-container data-v-4f1d9475" wx:if="{{s}}">
+            <view class="pre-sale in-sale data-v-4f1d9475">
+                <text class="data-v-4f1d9475">本商品即将售卖</text>
+                <text class="right-text data-v-4f1d9475" style="font-weight:bold">开售倒计时</text>
+            </view>
+            <view class="pre-sale in-sale data-v-4f1d9475">
+                <view class="data-v-4f1d9475">
+                    <text class="data-v-4f1d9475">已有</text>
+                    <text class="data-v-4f1d9475" style="font-weight:bold">{{t}}</text>
+                    <text class="data-v-4f1d9475">人预约</text>
+                </view>
+                <uni-countdown bind:__l="__l" bindtimeup="{{v}}" class="data-v-4f1d9475" style="right:40rpx;font-weight:bold;position:absolute" uI="4f1d9475-1" uP="{{w}}" wx:if="{{w}}"></uni-countdown>
+            </view>
+        </view>
+        <view class="on_sale_soon-container data-v-4f1d9475" style="display:flex" wx:if="{{x}}">
+            <view class="left data-v-4f1d9475">
+                <view class="pre-sale in-sale data-v-4f1d9475">本商品</view>
+                <view class="pre-sale in-sale data-v-4f1d9475">
+                    <view class="data-v-4f1d9475">
+                        <text class="data-v-4f1d9475">已有</text>
+                        <text class="data-v-4f1d9475" style="font-weight:bold">{{y}}</text>
+                        <text class="data-v-4f1d9475">人预约</text>
+                    </view>
+                </view>
+            </view>
+            <view class="right-text data-v-4f1d9475">
+                <view class="pre-sale in-sale data-v-4f1d9475" style="height:120rpx">
+                    <text class="data-v-4f1d9475" style="font-weight:bold;font-size:24px">正在售卖</text>
+                </view>
+            </view>
+        </view>
+        <view bindtap="{{C}}" class="backIcon data-v-4f1d9475" style="{{B}}" wx:if="{{z}}">
+            <uni-icons bind:__l="__l" class="data-v-4f1d9475" uI="4f1d9475-2" uP="{{A}}" wx:if="{{A}}"></uni-icons>
+        </view>
+        <view bindtap="{{F}}" class="backIcon data-v-4f1d9475" style="{{E}}" wx:else>
+            <uni-icons bind:__l="__l" class="data-v-4f1d9475" uI="4f1d9475-3" uP="{{D}}" wx:if="{{D}}"></uni-icons>
+        </view>
+    </view>
+    <view class="base-white-container m-b-6 data-v-4f1d9475" style="padding-bottom:28upx">
+        <view class="flex-space-between-center m-b-6 data-v-4f1d9475" wx:if="{{G}}">
+            <view class="flex-center data-v-4f1d9475" style="align-items:baseline">
+                <price bind:__l="__l" class="m-r-10 data-v-4f1d9475" uI="4f1d9475-4" uP="{{H}}" wx:if="{{H}}"></price>
+                <view class="text-xs m-r-10 data-v-4f1d9475">
+                    <text class="text-gray data-v-4f1d9475" wx:if="{{I}}">价格</text>
+                    <price bind:__l="__l" class="data-v-4f1d9475" uI="4f1d9475-5" uP="{{K}}" wx:if="{{J}}"></price>
+                </view>
+                <text class="distributor-money data-v-4f1d9475" wx:if="{{L}}"> 佣金{{M}}元 </text>
+            </view>
+            <view class="data-v-4f1d9475"></view>
+        </view>
+        <view class="noPrice m-b-6 data-v-4f1d9475" wx:else>暂无报价</view>
+        <view class="product-name data-v-4f1d9475">
+            <text class="pre_sale data-v-4f1d9475" wx:if="{{N}}"> 预售 </text>
+            <text class="data-v-4f1d9475">{{O}}</text>
+        </view>
+        <view class="flex-space-between-center text-gray-xs data-v-4f1d9475">
+            <view class="product-description flex-1 data-v-4f1d9475" wx:if="{{P}}">{{Q}}</view>
+        </view>
+    </view>
+    <view bindtap="{{V}}" class="product-select-spec base-white-container flex-space-between-center m-b-6 new-product-select-spec data-v-4f1d9475" wx:if="{{R}}">
+        <text class="text-gray m-r-20 new-type data-v-4f1d9475">已选</text>
+        <view class="flex-center flex-1 flex-space-between-center new-spec data-v-4f1d9475">
+            <text class="selected-spec data-v-4f1d9475" wx:if="{{S}}">{{T}}</text>
+            <text class="text-gray data-v-4f1d9475" wx:else>请选择规格</text>
+            <uni-icons bind:__l="__l" class="arrow-icon data-v-4f1d9475" uI="4f1d9475-6" uP="{{U}}" wx:if="{{U}}"></uni-icons>
+        </view>
+    </view>
+    <view class="product-select-spec m-b-6 new-active data-v-4f1d9475" wx:if="{{W}}">
+        <view class="flex-space-between-center m-b-6 data-v-4f1d9475">
+            <text class="text-gray m-r-20 new-active-text data-v-4f1d9475">发货</text>
+            <view class="flex-center flex-1 flex-space-between-center data-v-4f1d9475">
+                <text class="text-gray event-details data-v-4f1d9475">{{X}}</text>
+            </view>
+        </view>
+        <view class="flex-space-between-center data-v-4f1d9475" wx:if="{{Y}}">
+            <text class="text-gray m-r-20 new-active-text data-v-4f1d9475">活动</text>
+            <view bindtap="{{ab}}" class="flex-center flex-1 flex-space-between-center data-v-4f1d9475">
+                <view class="text-gray event-details data-v-4f1d9475">{{Z}}</view>
+                <uni-icons bind:__l="__l" class="arrow-icon data-v-4f1d9475" uI="4f1d9475-7" uP="{{aa}}" wx:if="{{aa}}"></uni-icons>
+            </view>
+        </view>
+    </view>
+    <view class="product-select-spec base-white-container flex-space-between-center m-b-6 data-v-4f1d9475">
+        <view class="flex-space-between-center data-v-4f1d9475" style="width:100%">
+            <view class="text-gray m-r-20 evaluate-text data-v-4f1d9475">
+                <text class="data-v-4f1d9475">评价</text>
+                <text class="number data-v-4f1d9475">{{ac}}</text>
+            </view>
+            <view bindtap="{{ae}}" class="flex-end-center data-v-4f1d9475">
+                <view class="data-v-4f1d9475">
+                    <text class="appraise data-v-4f1d9475">查看评价</text>
+                    <uni-icons bind:__l="__l" class="arrow-icon data-v-4f1d9475" uI="4f1d9475-8" uP="{{ad}}" wx:if="{{ad}}"></uni-icons>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="product-rich-text base-white-container data-v-4f1d9475">
+        <view class="pridct-detail-title data-v-4f1d9475">商品详情</view>
+        <view class="data-v-4f1d9475" style="height:300px" wx:if="{{af}}">
+            <image class="detial-cover data-v-4f1d9475" src="{{ag}}"></image>
+        </view>
+        <view class="data-v-4f1d9475" wx:else>
+            <rich-text class="data-v-4f1d9475" nodes="{{ah}}"></rich-text>
+        </view>
+    </view>
+    <view class="fixed-bottom-container data-v-4f1d9475">
+        <view class="flex-center buy-container m-b-5 m-t-5 data-v-4f1d9475">
+            <button class="icon-item share-button data-v-4f1d9475" openType="share">
+                <view class="icon share-icon data-v-4f1d9475">
+                    <image class="data-v-4f1d9475" src="{{ai}}"></image>
+                </view>
+                <text class="text-light data-v-4f1d9475">分享</text>
+            </button>
+            <button bindtap="{{am}}" class="icon-item share-button data-v-4f1d9475">
+                <view class="icon share-icon data-v-4f1d9475" wx:if="{{aj}}">
+                    <image class="data-v-4f1d9475" src="{{ak}}"></image>
+                </view>
+                <view class="icon share-icon data-v-4f1d9475" wx:else>
+                    <image class="data-v-4f1d9475" src="{{al}}"></image>
+                </view>
+                <text class="text-light data-v-4f1d9475">收藏</text>
+            </button>
+            <button bindtap="{{ao}}" class="icon-item share-button data-v-4f1d9475">
+                <view class="icon share-icon data-v-4f1d9475">
+                    <image class="data-v-4f1d9475" src="{{an}}"></image>
+                </view>
+                <text class="text-light data-v-4f1d9475">客服</text>
+            </button>
+            <view class="flex-1 btns flex btnBox data-v-4f1d9475" wx:if="{{ap}}">
+                <button bindtap="{{ar}}" class="{{['joinCart','data-v-4f1d9475',aq&&'disabledBtnCart']}}" disabled="{{as}}" plain="{{true}}" type="primary">加入购物袋</button>
+                <button bindtap="{{at}}" class="{{['buyNow','data-v-4f1d9475',av&&'disabledBtn']}}" disabled="{{aw}}" plain="{{true}}" type="primary">立即购买</button>
+            </view>
+            <view class="flex-1 btns flex btnBox data-v-4f1d9475" wx:if="{{ax}}">
+                <button bindtap="{{az}}" class="buyNow subscribe-btn data-v-4f1d9475" disabled="{{aA}}" plain="{{true}}" type="primary" wx:if="{{ay}}">立即预约</button>
+                <button class="disabledBtnCart subscribe-btn data-v-4f1d9475" plain="{{true}}" style="border:#c5c5c5" type="primary" wx:else>已预约</button>
+            </view>
+        </view>
+    </view>
+    <uni-popup bind:__l="__l" class="r data-v-4f1d9475" uI="4f1d9475-9" uP="{{aD}}" uR="popupRef" uS="{{['d']}}" wx:if="{{aD}}">
+        <view class="eventDetailsRules data-v-4f1d9475">
+            <view class="title data-v-4f1d9475">
+                <view class="left data-v-4f1d9475"></view>
+                <view class="name data-v-4f1d9475">活动规则</view>
+                <view class="right data-v-4f1d9475"></view>
+            </view>
+            <view class="detail data-v-4f1d9475">{{aB}}</view>
+        </view>
+    </uni-popup>
+    <select-sku bind:__l="__l" bindonSuccess="{{aF}}" class="r data-v-4f1d9475" uI="4f1d9475-10" uP="{{aG}}" uR="selectSkuRef" wx:if="{{aG}}"></select-sku>
+    <cost-per-popup bind:__l="__l" class="data-v-4f1d9475" uI="4f1d9475-11" uP="{{aH}}" wx:if="{{aH}}"></cost-per-popup>
+    <real-name-popup bind:__l="__l" class="r data-v-4f1d9475" uI="4f1d9475-12" uR="realNamePopupRef"></real-name-popup>
+</view>

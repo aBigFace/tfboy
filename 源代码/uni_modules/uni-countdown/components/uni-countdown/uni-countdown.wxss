@@ -1,0 +1,22 @@
+.uni-countdown.data-v-d8982dea {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start
+}
+
+.uni-countdown__splitor.data-v-d8982dea {
+    color: #333;
+    font-size: 14px;
+    margin: 0 2px
+}
+
+.uni-countdown__number.data-v-d8982dea {
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center
+}

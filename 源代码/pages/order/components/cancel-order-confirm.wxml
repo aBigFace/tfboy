@@ -1,0 +1,24 @@
+<uni-popup bind:__l="__l" class="r" uI="61050057-0" uP="{{i}}" uR="popupRef" uS="{{['d']}}" wx:if="{{i}}">
+    <view class="modal cancel-order-modal">
+        <view class="modal-header">
+            <text class="modal-header-title">取消订单</text>
+            <uni-icons bind:__l="__l" bindclick="{{a}}" class="close-icon" uI="61050057-1,61050057-0" uP="{{b}}" wx:if="{{b}}"></uni-icons>
+        </view>
+        <view class="modal-content">
+            <view class="cancel-tips">请选择取消原因，我们将为您提供更好的服务</view>
+            <view class="cancel-reason-list">
+                <view bindtap="{{item.h}}" class="reason-item base-container" wx:for="{{c}}" wx:key="g">
+                    <view>{{item.a}}</view>
+                    <view class="check-box">
+                        <uni-icons bind:__l="__l" uI="{{item.c}}" uP="{{item.d}}" wx:if="{{item.b}}"></uni-icons>
+                        <uni-icons bind:__l="__l" uI="{{item.e}}" uP="{{item.f||''}}" wx:else></uni-icons>
+                    </view>
+                </view>
+            </view>
+            <input bindinput="{{f}}" placeholder="请输入取消原因" value="{{e}}" wx:if="{{d}}"></input>
+        </view>
+        <view class="modal-footer bottom-modal-footer flex base-white-container">
+            <button bindtap="{{g}}" class="primary-btn btn-radius" type="primary">确认取消</button>
+        </view>
+    </view>
+</uni-popup>

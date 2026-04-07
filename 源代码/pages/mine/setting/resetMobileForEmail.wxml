@@ -1,0 +1,26 @@
+<view class="page base-container data-v-b79b9766">
+    <uni-forms bind:__l="__l" class="mobileForm r data-v-b79b9766" uI="b79b9766-0" uP="{{n}}" uR="formRef" uS="{{['d']}}" wx:if="{{n}}">
+        <uni-forms-item bind:__l="__l" class="data-v-b79b9766" uI="b79b9766-1,b79b9766-0" uP="{{b}}" uS="{{['label']}}" wx:if="{{b}}">
+            <view bindtap="{{a}}" class="data-v-b79b9766" slot="label" style="padding-bottom:0;margin-bottom:0;display:flex;justify-content:flex-end;color:#aeaeae;font-weight:normal">跳过</view>
+        </uni-forms-item>
+        <uni-forms-item bind:__l="__l" class="data-v-b79b9766" uI="b79b9766-2,b79b9766-0" uP="{{f}}" uS="{{['label','d']}}" wx:if="{{f}}">
+            <view class="labelSlot data-v-b79b9766" slot="label" style="padding-top:0">设置新号码</view>
+            <view class="mobile data-v-b79b9766">
+                <uni-easyinput bind:__l="__l" bindupdateModelValue="{{d}}" class="mobile-input r data-v-b79b9766" uI="b79b9766-3,b79b9766-2" uP="{{e}}" uR="mobile" wx:if="{{e}}"></uni-easyinput>
+                <view class="tip font-28 data-v-b79b9766">+86</view>
+            </view>
+        </uni-forms-item>
+        <uni-forms-item bind:__l="__l" class="text-primary-grey font-28 data-v-b79b9766" uI="b79b9766-4,b79b9766-0" uP="{{l}}" uS="{{['label','d']}}" wx:if="{{l}}">
+            <view class="labelSlot data-v-b79b9766" slot="label" style="padding-top:0">验证码</view>
+            <view class="codeNum data-v-b79b9766">
+                <uni-easyinput bind:__l="__l" bindupdateModelValue="{{j}}" class="data-v-b79b9766" uI="b79b9766-5,b79b9766-4" uP="{{k}}" uS="{{['right']}}" wx:if="{{k}}">
+                    <view slot="right">
+                        <view bindtap="{{h}}" class="codeSlot data-v-b79b9766" wx:if="{{g}}">获取验证码</view>
+                        <view class="codeSlot data-v-b79b9766" wx:else>{{i}}s重新获取</view>
+                    </view>
+                </uni-easyinput>
+            </view>
+        </uni-forms-item>
+    </uni-forms>
+    <button bindtap="{{p}}" class="primary-btn data-v-b79b9766" disabled="{{o}}" type="primary">绑定手机</button>
+</view>

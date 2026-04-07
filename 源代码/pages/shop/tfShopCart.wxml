@@ -1,0 +1,20 @@
+<view class="tfShopCart data-v-2205172d">
+    <view class="data-v-2205172d">
+        <block wx:if="{{a}}">
+            <c_shopp-cart bind:__l="__l" bindvalidState="{{c}}" class="data-v-2205172d" uI="2205172d-0" uP="{{d}}" wx:if="{{b}}"></c_shopp-cart>
+        </block>
+        <view class="nodata data-v-2205172d" wx:if="{{e}}">
+            <view class="nodata-tip data-v-2205172d">
+                <view class="miss-image data-v-2205172d">
+                    <image class="data-v-2205172d" mode="widthFix" src="{{f}}"></image>
+                </view>
+                <view class="miss-content data-v-2205172d">
+                    <text class="data-v-2205172d">空空如也</text>
+                </view>
+                <view class="text-tip data-v-2205172d">
+                    <text class="data-v-2205172d">快去加购您喜欢的吧</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

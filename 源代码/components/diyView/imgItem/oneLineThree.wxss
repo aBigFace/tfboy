@@ -1,0 +1,26 @@
+.oneLineThree.data-v-76aa607a {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.oneLineThree .txt.data-v-76aa607a {
+    background: rgba(0,0,0,.08);
+    bottom: 0;
+    color: #9b9b9b;
+    font-size: 13px;
+    line-height: 24px;
+    max-height: 48px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    word-break: break-word
+}
+
+.content-fillet-txt.data-v-76aa607a {
+    border-radius: 0 0 6px 6px
+}

@@ -1,0 +1,19 @@
+.custom-tabs.data-v-6261480f {
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-bottom: 16rpx;
+    padding: 0 20rpx;
+    white-space: nowrap
+}
+
+.custom-tabs-item.data-v-6261480f {
+    display: inline-block;
+    font-size: 30rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-right: 30rpx;
+    text-align: center
+}

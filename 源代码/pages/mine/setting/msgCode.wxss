@@ -1,0 +1,202 @@
+.page.data-v-02f13797 {
+    background-color: #fff;
+    height: 100vh
+}
+
+.page .code-tip.data-v-02f13797 {
+    margin: 170rpx 0 48rpx
+}
+
+.page .codeNum.data-v-02f13797 {
+    position: relative
+}
+
+.page .codeNum .code-input-item.data-v-02f13797 {
+    border: 2rpx solid #ddd;
+    border-radius: 12rpx 12rpx 12rpx 12rpx;
+    color: #333;
+    font-size: 40rpx;
+    height: 136rpx;
+    text-align: center;
+    width: 100rpx
+}
+
+.page .codeNum .code-input-item.active.data-v-02f13797 {
+    border: 2rpx solid #e85252
+}
+
+.page .codeNum .code-input.data-v-02f13797 {
+    height: 0;
+    width: 0
+}
+
+.page .codeNum .second.data-v-02f13797 {
+    bottom: -12rpx;
+    position: absolute;
+    right: 15rpx
+}
+
+.page .primary-btn.data-v-02f13797 {
+    margin-top: 72rpx
+}
+
+.page .confirm-modal.data-v-02f13797 {
+    background-color: #fff;
+    border-radius: 32rpx;
+    box-sizing: border-box;
+    height: 816rpx;
+    width: 600rpx
+}
+
+.page .confirm-modal .modal-header.data-v-02f13797 {
+    position: relative;
+    width: 600rpx
+}
+
+.page .confirm-modal .modal-header wx-image.data-v-02f13797 {
+    height: 518rpx;
+    width: 100%
+}
+
+.page .confirm-modal .modal-header .close-icon.data-v-02f13797 {
+    height: 48rpx;
+    position: absolute;
+    right: 24rpx;
+    top: 32rpx;
+    width: 48rpx
+}
+
+.page .confirm-modal .confirm-modal-content.data-v-02f13797 {
+    font-size: 30rpx;
+    padding: 0 50rpx 50rpx;
+    text-align: center
+}
+
+.page .confirm-modal .modal-content.data-v-02f13797 {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 400;
+    margin-bottom: 16rpx
+}
+
+.page .confirm-modal .modal-content .modal-image.data-v-02f13797 {
+    height: 320rpx;
+    margin: 40rpx auto;
+    width: 400rpx
+}
+
+.page .confirm-modal .modal-title.data-v-02f13797 {
+    color: #999;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.page .confirm-modal .modal-footer.data-v-02f13797 {
+    display: -webkit-flex;
+    display: flex
+}
+
+.page .confirm-modal .modal-footer wx-button.data-v-02f13797 {
+    border: 2rpx solid #ff7272;
+    border-radius: 44rpx;
+    color: #ff7272;
+    font-size: 32rpx;
+    font-weight: 400;
+    height: 88rpx;
+    width: 220rpx
+}
+
+.page .confirm-modal .modal-footer wx-button.data-v-02f13797::after {
+    border: none;
+    border-radius: 0
+}
+
+.page .confirm-modal .modal-footer .confirm-btn.data-v-02f13797 {
+    color: #fff
+}
+
+.page .fail-confirm-modal.data-v-02f13797 {
+    background-color: #fff;
+    border-radius: 32rpx;
+    box-sizing: border-box;
+    height: 516rpx;
+    width: 600rpx
+}
+
+.page .fail-confirm-modal .fail-modal-header.data-v-02f13797 {
+    background: linear-gradient(319deg,#ffc0c0,#d9fbff);
+    color: #7d4b4b;
+    font-size: 32rpx;
+    font-weight: 500;
+    height: 120rpx;
+    margin-bottom: 48rpx;
+    position: relative;
+    width: 600rpx
+}
+
+.page .fail-confirm-modal .fail-modal-header wx-image.data-v-02f13797 {
+    height: 52rpx;
+    margin-right: 12rpx;
+    width: 52rpx
+}
+
+.page .fail-confirm-modal .confirm-modal-content.data-v-02f13797 {
+    font-size: 30rpx;
+    padding: 0 50rpx 50rpx;
+    text-align: center
+}
+
+.page .fail-confirm-modal .modal-content.data-v-02f13797 {
+    color: #222;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-bottom: 32rpx;
+    text-align: left
+}
+
+.page .fail-confirm-modal .modal-content .modal-image.data-v-02f13797 {
+    height: 320rpx;
+    margin: 40rpx auto;
+    width: 400rpx
+}
+
+.page .fail-confirm-modal .modal-title.data-v-02f13797 {
+    background: #f5f5f5;
+    border-radius: 10rpx;
+    color: #666;
+    font-size: 28rpx;
+    font-weight: 400;
+    height: 80rpx;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding-left: 16rpx;
+    width: 528rpx
+}
+
+.page .fail-confirm-modal .modal-footer.data-v-02f13797 {
+    display: -webkit-flex;
+    display: flex
+}
+
+.page .fail-confirm-modal .modal-footer wx-button.data-v-02f13797 {
+    border: 2rpx solid #ff7272;
+    border-radius: 44rpx;
+    color: #ff7272;
+    font-size: 32rpx;
+    font-weight: 400;
+    height: 88rpx;
+    width: 220rpx
+}
+
+.page .fail-confirm-modal .modal-footer wx-button.data-v-02f13797::after {
+    border: none;
+    border-radius: 0
+}
+
+.page .fail-confirm-modal .modal-footer .confirm-btn.data-v-02f13797 {
+    color: #fff
+}
+
+.disabledColor.data-v-02f13797 {
+    background-color: #efa0a0
+}

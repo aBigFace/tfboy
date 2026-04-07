@@ -1,0 +1,13 @@
+<view class="page data-v-74e6edbe">
+    <view class="codeNum data-v-74e6edbe">
+        <view class="flex-space-between-center data-v-74e6edbe">
+            <view class="pay-box data-v-74e6edbe">
+                <view class="pay-item-box data-v-74e6edbe" wx:for="{{a}}" wx:for-index="i0" wx:for-item="index" wx:key="a">
+                    <view class="pay-item-box-num data-v-74e6edbe"></view>
+                </view>
+            </view>
+            <input disabled bindtap="{{c}}" class="{{['data-v-74e6edbe','code-input-item',item.c]}}" type="number" value="{{item.b}}" wx:for="{{b}}" wx:key="a"></input>
+        </view>
+        <input bindblur="{{e}}" bindinput="{{d}}" class="code-input data-v-74e6edbe" focus="{{g}}" maxlength="{{f}}" type="number" value="{{h}}"></input>
+    </view>
+</view>

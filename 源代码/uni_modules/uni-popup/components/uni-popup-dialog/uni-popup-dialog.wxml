@@ -1,0 +1,21 @@
+<view class="uni-popup-dialog">
+    <view class="uni-dialog-title">
+        <text class="{{['uni-dialog-title-text',b]}}">{{a}}</text>
+    </view>
+    <view class="uni-dialog-content" wx:if="{{c}}">
+        <slot wx:if="{{$slots.d}}"></slot>
+        <text class="uni-dialog-content-text" wx:else>{{d}}</text>
+    </view>
+    <view class="uni-dialog-content" wx:else>
+        <slot wx:if="{{$slots.d}}"></slot>
+        <input bindinput="{{h}}" class="uni-dialog-input" focus="{{f}}" placeholder="{{e}}" type="text" value="{{g}}" wx:else></input>
+    </view>
+    <view class="uni-dialog-button-group">
+        <view bindtap="{{j}}" class="uni-dialog-button">
+            <text class="uni-dialog-button-text">{{i}}</text>
+        </view>
+        <view bindtap="{{l}}" class="uni-dialog-button uni-border-left">
+            <text class="uni-dialog-button-text uni-button-color">{{k}}</text>
+        </view>
+    </view>
+</view>

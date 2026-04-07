@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "商品列表",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "c_goods-list": "../../components/diyView/c_goodsList",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

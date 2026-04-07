@@ -1,0 +1,69 @@
+<view class="base-container count-safe-page">
+    <view class="function-list">
+        <view bindtap="{{c}}" class="function-item flex-space-between-center">
+            <text class="text-item-light">手机号</text>
+            <view>
+                <text class="text-grey">{{a}}</text>
+                <uni-icons bind:__l="__l" class="arrow-icon" uI="122398a1-0" uP="{{b}}" wx:if="{{b}}"></uni-icons>
+            </view>
+        </view>
+        <view bindtap="{{f}}" class="function-item flex-space-between-center">
+            <text class="text-item-light">电子邮箱</text>
+            <view class="flex">
+                <view class="text-grey">{{d}}</view>
+                <uni-icons bind:__l="__l" class="arrow-icon" uI="122398a1-1" uP="{{e}}" wx:if="{{e}}"></uni-icons>
+            </view>
+        </view>
+        <view bindtap="{{k}}" class="function-item flex-space-between-center">
+            <view>
+                <text class="text-item-light">绑定微信</text>
+                <image class="order-item-icon-red" src="{{h}}" wx:if="{{g}}"></image>
+            </view>
+            <view class="flex">
+                <view class="text-grey">{{i}}</view>
+                <uni-icons bind:__l="__l" class="arrow-icon" uI="122398a1-2" uP="{{j}}" wx:if="{{j}}"></uni-icons>
+            </view>
+        </view>
+        <view bindtap="{{s}}" class="function-item flex-space-between-center">
+            <view>
+                <text class="text-item-light">实名认证</text>
+                <image class="order-item-icon-other" src="{{m}}" wx:if="{{l}}"></image>
+                <image class="order-item-icon-red" src="{{o}}" wx:if="{{n}}"></image>
+            </view>
+            <view class="has-certify" wx:if="{{p}}">已认证</view>
+            <view class="flex" wx:if="{{q}}">
+                <view class="text-grey">未认证</view>
+                <uni-icons bind:__l="__l" class="arrow-icon" uI="122398a1-3" uP="{{r}}" wx:if="{{r}}"></uni-icons>
+            </view>
+        </view>
+        <view bindtap="{{v}}" class="function-item flex-space-between-center">
+            <text class="text-item-light">登录密码</text>
+            <uni-icons bind:__l="__l" class="arrow-icon" uI="122398a1-4" uP="{{t}}" wx:if="{{t}}"></uni-icons>
+        </view>
+        <view bindtap="{{x}}" class="function-item flex-space-between-center">
+            <text class="text-item-light">注销账号</text>
+            <uni-icons bind:__l="__l" class="arrow-icon" uI="122398a1-5" uP="{{w}}" wx:if="{{w}}"></uni-icons>
+        </view>
+    </view>
+    <uni-popup bind:__l="__l" class="r" uI="122398a1-6" uP="{{B}}" uR="wxNickNameRef" uS="{{['d']}}" wx:if="{{B}}">
+        <view class="pop-confirm-dialog" style="padding:50rpx 0rpx">
+            <text class="msg">输入微信昵称</text>
+            <form bindsubmit="{{z}}">
+                <input class="weui-input" name="inputWxNickName" placeholder="昵称" style="padding:50rpx 50rpx" type="nickname"></input>
+                <view class="codeBtns">
+                    <button bindtap="{{y}}" class="cancel" size="mini" type="default">取消</button>
+                    <button class="confirm" formType="submit" size="mini" type="primary">确认</button>
+                </view>
+            </form>
+        </view>
+    </uni-popup>
+    <uni-popup bind:__l="__l" class="r" uI="122398a1-7" uP="{{F}}" uR="unBindRef" uS="{{['d']}}" wx:if="{{F}}">
+        <view class="pop-confirm-dialog" style="padding:50rpx 0rpx">
+            <text class="msg" style="padding:40rpx 120rpx">您是否要解除绑定？解除绑定后将不能使用微信账号快速登录</text>
+            <view class="codeBtns">
+                <button bindtap="{{C}}" class="cancel" size="mini" type="default">取消</button>
+                <button bindtap="{{D}}" class="confirm" size="mini" type="primary">确认</button>
+            </view>
+        </view>
+    </uni-popup>
+</view>

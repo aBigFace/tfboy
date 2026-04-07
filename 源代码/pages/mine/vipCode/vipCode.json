@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "高会兑换码",
+  "usingComponents": {
+    "confirm-modal": "modal/confirm-modal",
+    "uni-forms-item": "../../../uni_modules/uni-forms/components/uni-forms-item/uni-forms-item",
+    "uni-forms": "../../../uni_modules/uni-forms/components/uni-forms/uni-forms",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

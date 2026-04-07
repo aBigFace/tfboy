@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "外部链接",
+  "usingComponents": {
+    "custom-nav": "components/customNav/customNav"
+  }
+}

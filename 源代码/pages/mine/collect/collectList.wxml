@@ -1,0 +1,27 @@
+<view class="page">
+    <view class="page-content base-container">
+        <view class="main-goods">
+            <view bindtouchend="{{c}}" bindtouchstart="{{item.j}}" class="shop_list" style="{{'transform:'+item.k+';'+'transition:'+'all 0.2s'}}" wx:for="{{a}}" wx:key="i">
+                <image alt="" src="{{item.a}}"></image>
+                <view class="shop-name">
+                    <view class="name max-line-one">{{item.b}}</view>
+                    <view class="msg">
+                        <text class="num">{{item.c}}人收藏</text>
+                    </view>
+                    <view class="price">¥{{item.d}}</view>
+                </view>
+                <view bindtap="{{item.e}}" class="{{['evaluation-btn','review']}}">
+                    <text>看详情</text>
+                </view>
+                <view catchtap="{{item.f}}" catchtouchend="{{b}}" class="cancel-box">
+                    <view class="txt">取消收藏</view>
+                </view>
+                <view class="sold-out-container" wx:if="{{item.g}}">已下架</view>
+                <view class="sold-out-container" wx:elif="{{item.h}}">商品售罄</view>
+            </view>
+        </view>
+        <no-data bind:__l="__l" uI="6d2de546-0" uP="{{e}}" uS="{{['d']}}" wx:if="{{d}}">暂无收藏记录</no-data>
+        <uni-load-more bind:__l="__l" uI="6d2de546-1" uP="{{f||''}}" wx:else></uni-load-more>
+    </view>
+    <confirm-modal bind:__l="__l" class="r" uI="6d2de546-2" uR="confirmModalRef"></confirm-modal>
+</view>

@@ -1,0 +1,64 @@
+<uni-popup bind:__l="__l" class="r" uI="deeac3fe-0" uP="{{E}}" uR="popupRef" uS="{{['d']}}" wx:if="{{E}}">
+    <view class="modal select-sku-modal">
+        <uni-icons bind:__l="__l" bindclick="{{a}}" class="close-icon" uI="deeac3fe-1,deeac3fe-0" uP="{{b}}" wx:if="{{b}}"></uni-icons>
+        <view class="modal-content m-b-20">
+            <view class="product-info flex m-b-20 m-t-10">
+                <image class="sku-image" src="{{c}}"></image>
+                <view class="select-sku-info">
+                    <price bind:__l="__l" uI="deeac3fe-2,deeac3fe-0" uP="{{e}}" wx:if="{{d}}"></price>
+                    <view className="product-detail-main-price" wx:else>暂无报价</view>
+                    <view class="product-name max-line-two m-b-5" wx:if="{{f}}">{{g}}</view>
+                    <view class="sku max-line-two text-gray-xs" wx:if="{{h}}">已选：{{i}}</view>
+                </view>
+            </view>
+            <view class="sku-list">
+                <view wx:for="{{j}}" wx:key="c">
+                    <view class="spec-name">{{item.a}}</view>
+                    <scroll-view scrollY="true" style="max-height:30vh">
+                        <view class="spec-value-list">
+                            <view bindtap="{{spec.j}}" class="{{['spec-value',spec.g&&'active',spec.h&&'disabled']}}" style="margin-top:10px" wx:for="{{item.b}}" wx:for-item="spec" wx:key="i">
+                                <view class="hot-sell" wx:if="{{spec.a}}">
+                                    <image src="/static/icon/hot-1.png" style="width:10px;height:19px"></image>
+                                </view>
+                                <view class="hot-sell" wx:if="{{spec.b}}">
+                                    <image src="/static/icon/hot-2.png" style="width:15px;height:21px"></image>
+                                </view>
+                                <view class="hot-sell" wx:if="{{spec.c}}">
+                                    <image src="/static/icon/hot-3.png" style="width:20px;height:23px"></image>
+                                </view>
+                                <view class="hot-sell" wx:if="{{spec.d}}">
+                                    <image src="/static/icon/hot-new.png" style="width:26px;height:26px"></image>
+                                </view>{{spec.e}}<view class="outSale" wx:if="{{spec.f}}">售罄</view>
+                            </view>
+                        </view>
+                    </scroll-view>
+                </view>
+            </view>
+            <view wx:if="{{k}}">
+                <view class="select-count">
+                    <view class="select-count-label">选择数量</view>
+                    <view class="text-right">
+                        <uni-number-box bind:__l="__l" bindblur="{{m}}" bindchange="{{l}}" bindupdateModelValue="{{n}}" class="base-number-box" uI="deeac3fe-3,deeac3fe-0" uP="{{o}}" wx:if="{{o}}"></uni-number-box>
+                    </view>
+                </view>
+                <view class="m-t-10 text-right text-xs text-red new-text-red" wx:if="{{p}}">即将售罄</view>
+            </view>
+        </view>
+        <view class="modal-footer bottom-modal-footer flex base-white-container">
+            <block wx:if="{{q}}">
+                <block wx:if="{{r}}">
+                    <block wx:if="{{s}}">
+                        <button bindtap="{{t}}" class="primary-btn joinCart" plain="{{true}}" type="primary">加入购物袋</button>
+                        <button bindtap="{{v}}" class="{{['primary-btn','buyNow',x&&'disabledBtn']}}" disabled="{{w}}" plain="{{true}}" type="primary">立即购买</button>
+                    </block>
+                    <button bindtap="{{z}}" class="primary-btn buyNow w100" plain="{{true}}" type="primary" wx:elif="{{y}}">立即购买</button>
+                    <button bindtap="{{A}}" class="primary-btn joinCart w100" plain="{{true}}" type="primary" wx:else>确定</button>
+                </block>
+                <button disabled class="primary-btn buyNow disabledBtn w100" plain="{{true}}" type="primary" wx:else>已售罄</button>
+            </block>
+            <button disabled class="primary-btn buyNow disabledBtn w100" plain="{{true}}" type="primary" wx:else>已下架</button>
+        </view>
+        <real-name-popup bind:__l="__l" class="r" uI="deeac3fe-4,deeac3fe-0" uR="realNamePopupRef"></real-name-popup>
+        <parent-dialog bind:__l="__l" class="r" uI="deeac3fe-5,deeac3fe-0" uR="parentDialogRef"></parent-dialog>
+    </view>
+</uni-popup>

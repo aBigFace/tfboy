@@ -1,0 +1,95 @@
+.ceefaxPage {
+    background-color: #fff
+}
+
+.ceefaxPage .ceefax-title {
+    color: #222;
+    font-family: SourceHanSansCN-Medium,SourceHanSansCN;
+    font-size: 36rpx;
+    font-weight: 500;
+    margin-bottom: 26rpx
+}
+
+.ceefaxPage .presaleList .productContent {
+    border-radius: 32rpx 32rpx 0rpx 0rpx
+}
+
+.ceefaxPage .presaleList .productContent .productItem {
+    background-color: #f8f8f8;
+    border-radius: 8rpx;
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 12rpx;
+    padding: 20rpx 24rpx
+}
+
+.ceefaxPage .presaleList .productContent .productItem .item-image {
+    margin-right: 14rpx
+}
+
+.ceefaxPage .presaleList .productContent .productItem .img {
+    background: #d8d8d8;
+    border-radius: 8rpx;
+    height: 88rpx;
+    width: 88rpx
+}
+
+.ceefaxPage .presaleList .productContent .productItem .img wx-image {
+    border-radius: 8rpx;
+    height: 88rpx;
+    width: 88rpx
+}
+
+.ceefaxPage .presaleList .productContent .productItem .content {
+    position: relative;
+    width: 100%
+}
+
+.ceefaxPage .presaleList .productContent .productItem .content .title {
+    color: #222;
+    font-size: 26rpx;
+    font-weight: 500;
+    font-weight: 400;
+    line-height: 36rpx;
+    margin-bottom: 8rpx
+}
+
+.ceefaxPage .presaleList .productContent .productItem .content .priceAndCart .price {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 500
+}
+
+.ceefaxPage .presaleList .productContent .productItem .content .priceAndCart .price .iconNum {
+    display: -webkit-flex;
+    display: flex
+}
+
+.ceefaxPage .presaleList .productContent .productItem .content .priceAndCart .price .lookDetail {
+    background: #ff7272;
+    border-radius: 28rpx;
+    bottom: 0;
+    box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(255,90,113,.44);
+    color: #fff;
+    font-size: 28rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 132rpx
+}
+
+.ceefaxPage .presaleList .productContent .productItem .content .priceAndCart .price .market {
+    color: #bbb;
+    font-size: 11px;
+    line-height: 17px;
+    margin-left: 2px;
+    text-decoration: line-through
+}
+
+.ceefaxPage .presaleList .productContent .productItem .content .priceAndCart .price .icon {
+    font-size: 32rpx
+}

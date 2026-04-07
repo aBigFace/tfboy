@@ -1,0 +1,31 @@
+.btn-group {
+    background: #fff;
+    bottom: 0;
+    box-shadow: 0rpx -2rpx 8rpx 0rpx rgba(0,0,0,.08);
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 12rpx 0rpx 16rpx;
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+
+.btn-group .primary-btn {
+    background: #ff7272;
+    border-radius: 40rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    width: 340rpx
+}
+
+.btn-group .default-btn {
+    background-color: #fff!important;
+    border: 2rpx solid #ddd;
+    border-radius: 40rpx!important;
+    height: 72rpx;
+    line-height: 72rpx;
+    width: 340rpx
+}

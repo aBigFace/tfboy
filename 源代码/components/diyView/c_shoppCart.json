@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "style-three": "shoppCartItem/styleThree",
+    "c_img-box": "c_imgBox",
+    "c_swiper": "c_swiper",
+    "c_goods-list": "c_goodsList",
+    "c_title": "c_title",
+    "c_rolling-notice": "c_rollingNotice",
+    "c_module-spacing": "c_moduleSpacing",
+    "c_search": "c_search",
+    "c_magic": "c_magic",
+    "c_presale": "c_presale",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

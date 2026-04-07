@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "选择商品",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "no-data": "../../../components/no-data",
+    "select-sku": "../../../components/select-sku",
+    "uni-load-more": "../../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

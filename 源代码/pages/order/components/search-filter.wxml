@@ -1,0 +1,17 @@
+<uni-popup bind:__l="__l" class="r" uI="1ceeb0e4-0" uP="{{e}}" uR="popupRef" uS="{{['d']}}" wx:if="{{e}}">
+    <view class="modal search-filter-modal">
+        <view class="modal-header">
+            <text class="modal-header-title">全部筛选</text>
+        </view>
+        <view class="modal-content m-b-20">
+            <view class="sub-title text-semi-bold m-b-10 filter-title">按时间</view>
+            <view class="list m-b-30">
+                <view bindtap="{{item.d}}" class="{{['item',item.b&&'active']}}" wx:for="{{a}}" wx:key="c">{{item.a}}</view>
+            </view>
+        </view>
+        <view class="modal-footer flex base-white-container">
+            <button plain bindtap="{{b}}" class="primary-btn m-r-10 reset-btn" type="primary">重置</button>
+            <button bindtap="{{c}}" class="primary-btn m-l-10" type="primary">确定</button>
+        </view>
+    </view>
+</uni-popup>

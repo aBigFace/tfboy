@@ -1,0 +1,40 @@
+<view class="uni-data-tree">
+    <view bindtap="{{n}}" class="uni-data-tree-input">
+        <slot name="d" wx:if="{{$slots.d}}"></slot>
+        <view class="{{['input-value',l&&'input-value-border']}}" wx:else>
+            <text class="selected-area error-text" wx:if="{{a}}">{{b}}</text>
+            <view class="selected-area" wx:elif="{{c}}">
+                <uni-load-more bind:__l="__l" class="load-more" uI="7be4ff66-0" uP="{{d}}" wx:if="{{d}}"></uni-load-more>
+            </view>
+            <scroll-view class="selected-area" scrollX="true" wx:elif="{{e}}">
+                <view class="selected-list">
+                    <view class="selected-item" wx:for="{{f}}" wx:key="d">
+                        <text>{{item.a}}</text>
+                        <text class="input-split-line" wx:if="{{item.b}}">{{item.c}}</text>
+                    </view>
+                </view>
+            </scroll-view>
+            <text class="selected-area placeholder" wx:else>{{g}}</text>
+            <view catchtap="{{j}}" class="icon-clear" wx:if="{{h}}">
+                <uni-icons bind:__l="__l" uI="7be4ff66-1" uP="{{i}}" wx:if="{{i}}"></uni-icons>
+            </view>
+            <view class="arrow-area" wx:if="{{k}}">
+                <view class="input-arrow"></view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="{{p}}" class="uni-data-tree-cover" wx:if="{{o}}"></view>
+    <view class="uni-data-tree-dialog" wx:if="{{q}}">
+        <view class="uni-popper__arrow"></view>
+        <view class="dialog-caption">
+            <view class="title-area">
+                <text class="dialog-title">{{r}}</text>
+            </view>
+            <view bindtap="{{s}}" class="dialog-close">
+                <view class="dialog-close-plus" data-id="close"></view>
+                <view class="dialog-close-plus dialog-close-rotate" data-id="close"></view>
+            </view>
+        </view>
+        <data-picker-view bind:__l="__l" bindchange="{{v}}" binddatachange="{{w}}" bindnodeclick="{{x}}" bindupdateModelValue="{{y}}" class="picker-view r" uI="7be4ff66-2" uP="{{z}}" uR="pickerView" wx:if="{{z}}"></data-picker-view>
+    </view>
+</view>

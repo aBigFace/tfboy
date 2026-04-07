@@ -1,0 +1,8 @@
+<view class="data-v-308f2d6a">
+    <view class="c_imgBox data-v-308f2d6a" style="{{'background:'+i}}">
+        <one-line-one bind:__l="__l" class="data-v-308f2d6a" uI="308f2d6a-0" uP="{{b}}" wx:if="{{a}}"></one-line-one>
+        <one-line-two bind:__l="__l" class="data-v-308f2d6a" uI="308f2d6a-1" uP="{{d}}" wx:elif="{{c}}"></one-line-two>
+        <one-line-three bind:__l="__l" class="data-v-308f2d6a" uI="308f2d6a-2" uP="{{f}}" wx:elif="{{e}}"></one-line-three>
+        <one-line-four bind:__l="__l" class="data-v-308f2d6a" uI="308f2d6a-3" uP="{{h}}" wx:elif="{{g}}"></one-line-four>
+    </view>
+</view>

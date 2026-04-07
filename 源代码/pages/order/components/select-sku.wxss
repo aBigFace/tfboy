@@ -1,0 +1,53 @@
+.select-sku-modal {
+    background-color: #fff;
+    border-top-left-radius: 24rpx;
+    border-top-right-radius: 24rpx;
+    box-sizing: border-box;
+    width: 100%
+}
+
+.select-sku-modal .modal-header {
+    font-weight: 500;
+    margin: 0 28rpx;
+    padding-top: 20rpx
+}
+
+.select-sku-modal .select-modal-content {
+    font-size: 30rpx;
+    padding: 0 50rpx 50rpx;
+    text-align: center
+}
+
+.select-sku-modal .modal-content {
+    border-top: none
+}
+
+.select-sku-modal .modal-content .modal-image {
+    height: 320rpx;
+    margin: 40rpx auto;
+    width: 400rpx
+}
+
+.select-sku-modal .sku-list .sku-item {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx
+}
+
+.select-sku-modal .sku-list .sku-item:not(:last-child) {
+    border-bottom: 1px solid #eee
+}
+
+.select-sku-modal .modal-footer {
+    display: -webkit-flex;
+    display: flex
+}
+
+.select-sku-modal .modal-footer wx-button {
+    width: 100%
+}

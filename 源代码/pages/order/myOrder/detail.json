@@ -1,0 +1,15 @@
+{
+  "navigationBarBackgroundColor": "#f6f6f6",
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "confirm-modal": "../../../components/modal/confirm-modal",
+    "confirm-modal-reason": "../../../components/modal/confirm-modal-reason",
+    "order-product-item": "../../../components/order-product-item-detail",
+    "price": "../../../components/price",
+    "customer-service": "../components/customer-service",
+    "cancel-order-confirm": "../components/cancel-order-confirm",
+    "post-age-dialog": "../../dialog/PostAgeDialog",
+    "uni-countdown": "../../../uni_modules/uni-countdown/components/uni-countdown/uni-countdown",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

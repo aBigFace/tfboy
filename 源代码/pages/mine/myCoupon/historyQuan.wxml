@@ -1,0 +1,40 @@
+<view class="page data-v-7e5bb260" style="{{'background:'+q}}">
+    <view class="tab_nav flex data-v-7e5bb260">
+        <view class="navTitle data-v-7e5bb260" wx:for="{{a}}" wx:for-item="v" wx:key="d">
+            <view bindtap="{{v.c}}" class="{{['data-v-7e5bb260',v.b&&'active']}}">
+                <text class="title data-v-7e5bb260">
+                    <text class="data-v-7e5bb260">{{v.a}}</text>
+                </text>
+            </view>
+        </view>
+    </view>
+    <view class="content base-container data-v-7e5bb260">
+        <block wx:if="{{b}}">
+            <view class="card data-v-7e5bb260" wx:for="{{c}}" wx:for-item="i" wx:key="c">
+                <coupon-item bind:__l="__l" class="data-v-7e5bb260" uI="{{i.a}}" uP="{{i.b}}" uS="{{['checkbox']}}" wx:if="{{i.b}}">
+                    <image class="use-logo data-v-7e5bb260" slot="checkbox" src="{{d}}"></image>
+                </coupon-item>
+            </view>
+        </block>
+        <block wx:if="{{e}}">
+            <view class="card data-v-7e5bb260" wx:for="{{f}}" wx:for-item="i" wx:key="c">
+                <coupon-item bind:__l="__l" class="data-v-7e5bb260" uI="{{i.a}}" uP="{{i.b}}" uS="{{['checkbox']}}" wx:if="{{i.b}}">
+                    <image class="use-logo data-v-7e5bb260" slot="checkbox" src="{{g}}"></image>
+                </coupon-item>
+            </view>
+        </block>
+        <block wx:if="{{h}}">
+            <view class="card data-v-7e5bb260" wx:for="{{i}}" wx:for-item="i" wx:key="c">
+                <coupon-item bind:__l="__l" class="data-v-7e5bb260" uI="{{i.a}}" uP="{{i.b}}" uS="{{['checkbox']}}" wx:if="{{i.b}}">
+                    <image class="use-logo data-v-7e5bb260" slot="checkbox" src="{{j}}"></image>
+                </coupon-item>
+            </view>
+        </block>
+    </view>
+    <no-data bind:__l="__l" class="data-v-7e5bb260" uI="7e5bb260-3" uP="{{o}}" uS="{{['d']}}" wx:if="{{k}}">
+        <view class="data-v-7e5bb260" wx:if="{{l}}">无已使用卡券哦</view>
+        <view class="data-v-7e5bb260" wx:if="{{m}}">无已过期卡券哦</view>
+        <view class="data-v-7e5bb260" wx:if="{{n}}">无已作废卡券哦</view>
+    </no-data>
+    <uni-load-more bind:__l="__l" class="data-v-7e5bb260" uI="7e5bb260-4" uP="{{p||''}}" wx:else></uni-load-more>
+</view>

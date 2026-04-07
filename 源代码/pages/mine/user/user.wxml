@@ -1,0 +1,45 @@
+<view class="page user-info-page base-container">
+    <view class="form-section user-info-box user-info-form">
+        <view class="avatar-info flex">
+            <view class="user-info-item-label avatar-label">头像</view>
+            <button bindchooseavatar="{{f}}" class="avatar-wrapper btn" openType="chooseAvatar">
+                <image class="avatar imgStyle" src="{{c}}" wx:if="{{a}}">
+                    <uni-icons bind:__l="__l" class="arrow-icon" uI="f490dddc-0" uP="{{b}}" wx:if="{{b}}"></uni-icons>
+                </image>
+                <image class="avatar imgStyle" src="{{e}}" wx:else>
+                    <uni-icons bind:__l="__l" class="arrow-icon" uI="f490dddc-1" uP="{{d}}" wx:if="{{d}}"></uni-icons>
+                </image>
+            </button>
+        </view>
+        <view class="mask"></view>
+        <view bindtap="{{i}}" class="user-info-item">
+            <view class="user-info-item-label">昵称</view>
+            <view class="user-info-item-value">{{g}}<uni-icons bind:__l="__l" class="arrow-icon" uI="f490dddc-2" uP="{{h}}" wx:if="{{h}}"></uni-icons>
+            </view>
+        </view>
+        <view bindtap="{{l}}" class="user-info-item">
+            <view class="user-info-item-label">性别</view>
+            <view class="user-info-item-value">{{j}}<uni-icons bind:__l="__l" class="arrow-icon" uI="f490dddc-3" uP="{{k}}" wx:if="{{k}}"></uni-icons>
+            </view>
+        </view>
+        <view class="user-info-item">
+            <view class="user-info-item-label">会员ID</view>
+            <view class="user-info-item-value item-center">{{m}} |<image catchtap="{{o}}" class="icon-copy" src="{{n}}"></image>
+            </view>
+        </view>
+        <view class="user-info-item">
+            <view class="user-info-item-label">年龄</view>
+            <view class="user-info-item-value">{{p}}</view>
+        </view>
+        <view bindtap="{{x}}" class="user-info-item">
+            <view style="display:inline-flex">
+                <view class="user-info-item-label">实名认证</view>
+                <image class="order-item-icon-other" src="{{r}}" wx:if="{{q}}"></image>
+                <image class="order-item-icon-red" src="{{t}}" wx:if="{{s}}"></image>
+            </view>
+            <view class="has-certify" wx:if="{{v}}">已认证</view>
+            <view class="user-info-item-value no-certify" wx:else>未认证<uni-icons bind:__l="__l" class="arrow-icon" uI="f490dddc-4" uP="{{w}}" wx:if="{{w}}"></uni-icons>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+<text class="{{['price-label',i]}}">
+    <text class="price-number" wx:if="{{a}}">
+        <text wx:if="{{b}}">¥</text>{{c}}</text>
+    <text wx:else>
+        <text class="money-sign" wx:if="{{d}}">¥</text>
+        <text class="price-number">{{e}}</text>
+        <text class="dot" wx:if="{{f}}">.</text>
+        <text class="price-deciaml" wx:if="{{g}}">{{h}}</text>
+    </text>
+</text>

@@ -1,0 +1,85 @@
+.waybill-box {
+    background: #fff;
+    border-radius: 12rpx;
+    height: 236rpx;
+    margin-bottom: 64rpx;
+    width: 702rpx
+}
+
+.waybill-box .express-item {
+    padding: 44rpx 24rpx
+}
+
+.waybill-box .express-item:not(:last-child) {
+    border-bottom: 1rpx solid #eee
+}
+
+.waybill-box .express-item .text-item-express,.waybill-box .express-item .text-item-left {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.waybill-box .express-item .text-item-right {
+    color: #bbb;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.cancel-order-modal {
+    background-color: #fff;
+    border-top-left-radius: 24rpx;
+    border-top-right-radius: 24rpx
+}
+
+.cancel-order-modal .modal-content,.cancel-order-modal .modal-header {
+    padding: 24rpx 24rpx 0
+}
+
+.cancel-order-modal .cancel-tips {
+    font-size: 26rpx;
+    margin-bottom: 20rpx
+}
+
+.cancel-order-modal .express-list {
+    border-radius: 44rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 640rpx;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start
+}
+
+.cancel-order-modal .express-list .item {
+    word-wrap: break-word;
+    background: #f5f5f5;
+    border-radius: 44rpx;
+    height: 88rpx;
+    margin-right: 20rpx;
+    width: 220rpx;
+    word-break: break-all
+}
+
+.cancel-order-modal .express-list .item .reason {
+    color: #333;
+    font-size: 30rpx;
+    font-weight: 400
+}
+
+.cancel-order-modal .express-list .item:nth-child(3n) {
+    margin-right: 0
+}
+
+.cancel-order-modal .express-list .active {
+    background: #ffeaea
+}
+
+.cancel-order-modal .express-list .active .reason {
+    color: #ff7272
+}
+
+.submit-btn {
+    border-radius: 44rpx
+}

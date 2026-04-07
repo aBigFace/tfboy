@@ -1,0 +1,64 @@
+.select-input.data-v-3e920721 {
+    border-right: 4px solid #eee;
+    margin-right: 12rpx;
+    width: 160rpx
+}
+
+.data-v-3e920721 .uni-select {
+    border: 0 solid!important;
+    padding-left: 2px!important
+}
+
+.data-v-3e920721 .uni-select__input-text,.data-v-3e920721 .uni-select__selector-item {
+    font-size: 24rpx!important
+}
+
+.address-form.data-v-3e920721 {
+    margin-top: 20rpx
+}
+
+.base-white-radius-container.data-v-3e920721 {
+    padding-bottom: 0!important
+}
+
+.data-v-3e920721 .uni-easyinput__content {
+    margin-left: -20rpx!important
+}
+
+.data-v-3e920721 .input-value,.data-v-3e920721 .uni-data-tree {
+    padding: 0!important
+}
+
+.data-v-3e920721 .address-form.base-form .placeholder {
+    font-size: 28rpx!important
+}
+
+.smart-address.data-v-3e920721 {
+    margin-bottom: 20rpx;
+    margin-top: 20rpx
+}
+
+.smart-address wx-textarea.data-v-3e920721 {
+    font-size: 26rpx;
+    height: 120rpx;
+    width: 100%
+}
+
+.smart-address .smart-btn.data-v-3e920721 {
+    background-color: #333;
+    border-radius: 60rpx;
+    color: #fff
+}
+
+.smart-address .smart-btn[disabled].data-v-3e920721 {
+    background: #c9c9c9
+}
+
+.data-v-3e920721 .uni-forms .uni-forms-item:nth-last-of-type(2) {
+    border-bottom: 0
+}
+
+.area.data-v-3e920721 .uni-forms-item__content {
+    max-width: 75%;
+    overflow: hidden
+}

@@ -1,0 +1,27 @@
+<view class="page">
+    <view class="{{['top-bar',c&&'high-index']}}">
+        <view class="tab-bar" hidden="{{!b}}">
+            <view class="flex-space-between-center">
+                <view class="flex-1 flex">
+                    <view bindtap="{{item.d}}" class="{{['tab-bar-item','flex-1',item.b]}}" wx:for="{{a}}" wx:key="c">{{item.a}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page-content base-container">
+        <view class="main-goods" style="{{'overflow:'+h+';'+'max-height:'+i}}" wx:if="{{d}}">
+            <view class="shop_list" wx:for="{{e}}" wx:key="f">
+                <image alt="" src="{{item.a}}"></image>
+                <view class="shop-name">
+                    <view class="name double">{{item.b}}</view>
+                    <view class="msg">
+                        <text>数量:{{item.c}}规格:{{item.d}}</text>
+                    </view>
+                </view>
+                <view bindtap="{{item.e}}" class="{{['evaluation-btn',g&&'review']}}">{{f}}</view>
+            </view>
+        </view>
+        <no-data bind:__l="__l" uI="d1cd561c-0" uP="{{k}}" uS="{{['d']}}" wx:if="{{j}}">暂无评价记录</no-data>
+        <uni-load-more bind:__l="__l" uI="d1cd561c-1" uP="{{l||''}}" wx:else></uni-load-more>
+    </view>
+</view>

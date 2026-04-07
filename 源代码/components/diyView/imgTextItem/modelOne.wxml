@@ -1,0 +1,13 @@
+<view class="modelOne">
+    <view bindtap="{{i.i}}" class="item" style="{{'margin-left:'+f+';'+'margin-right:'+g}}" wx:for="{{a}}" wx:for-item="i" wx:key="h">
+        <view class="{{['item-left',b&&'circle','circle']}}" style="{{'height:'+c+';'+'width:'+d}}">
+            <image alt="" class="{{[i.c&&'circle']}}" src="{{i.b}}" style="{{'height:'+i.d+';'+'width:'+i.e}}" wx:if="{{i.a}}"></image>
+        </view>
+        <view class="item-right">
+            <view class="item-right-txt">{{i.f}}</view>
+            <view>
+                <button class="mini-btn btn" size="mini" type="primary" wx:if="{{e}}">{{i.g}}</button>
+            </view>
+        </view>
+    </view>
+</view>

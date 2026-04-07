@@ -1,0 +1,1 @@
+<text bindtap="{{f}}" class="{{['uni-icons',c,d,e]}}" style="{{'color:'+a+';'+'font-size:'+b}}"></text>

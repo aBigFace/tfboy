@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "支付",
+  "usingComponents": {
+    "confirm-modal": "../../../components/modal/confirm-modal",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

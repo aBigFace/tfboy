@@ -1,0 +1,178 @@
+<view class="certify-page page">
+    <view class="certify-bg"></view>
+    <view class="certify-body">
+        <view class="head">
+            <image class="head-img" src="{{b}}" wx:if="{{a}}"></image>
+            <image class="head-img" mode="widthFix" src="{{c}}" wx:else></image>
+        </view>
+        <view class="nick-name">
+            <text>{{d}}</text>
+            <image class="certify-icon" mode="widthFix" src="{{f}}" wx:if="{{e}}"></image>
+            <image class="certify-icon" mode="widthFix" src="{{g}}" wx:else></image>
+        </view>
+        <view class="certify-form" wx:if="{{h}}">
+            <view class="certify-form-item">
+                <view class="certify-form-label">您的姓名</view>
+                <input required bindinput="{{j}}" class="uni-input" placeholder="请输入您的姓名" placeholderStyle="font-size: 28rpx;color: #BBBBBB" value="{{i}}"></input>
+            </view>
+            <view class="certify-form-item">
+                <view class="certify-form-label">证件类型</view>
+                <view bindtap="{{p}}" class="{{['certify-type-picker',o]}}">
+                    <view class="{{['picker-current',l]}}">{{k}}</view>
+                    <view class="picker-body" hidden="{{!n}}">
+                        <view bindtap="{{v.c}}" class="picker-item" wx:for="{{m}}" wx:for-item="v" wx:key="b">{{v.a}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="certify-form-item">
+                <view class="certify-form-label">您的证件号</view>
+                <input bindinput="{{s}}" class="uni-input" placeholder="{{q}}" placeholderStyle="color: #BBBBBB;font-size:28rpx" value="{{r}}"></input>
+            </view>
+            <view class="certify-argument">
+                <radio bindtap="{{w}}" checked="{{v}}" class="certify-checkbox" color="#ff7272">
+                    <text class="argument-tip">已阅读并同意</text>
+                    <text bindtap="{{t}}">《实名认证协议》</text>
+                </radio>
+            </view>
+            <button bindtap="{{z}}" class="{{[x,'primary-btn','m-t-30']}}" disabled="{{y}}" type="button">提交</button>
+        </view>
+        <view class="certify-msg-block" wx:if="{{A}}">
+            <view>
+                <image class="icon-warn" src="{{B}}"></image>
+            </view>
+            <view class="certify-msg">{{C}}</view>
+        </view>
+        <view class="certify-show" wx:if="{{D}}">
+            <view class="user-info-item">
+                <view class="user-info-item-label">姓名</view>
+                <view class="user-info-item-value">{{E}}</view>
+            </view>
+            <view class="user-info-item">
+                <view class="user-info-item-label">证件类型</view>
+                <view class="user-info-item-value">{{F}}</view>
+            </view>
+            <view class="user-info-item">
+                <view class="user-info-item-label">证件号</view>
+                <view class="user-info-item-value">{{G}}</view>
+            </view>
+        </view>
+        <view class="user-info-show-parent" wx:if="{{H}}">
+            <button bindtap="{{J}}" class="btn" size="mini" type="default" wx:if="{{I}}">查看完整信息</button>
+            <button bindtap="{{L}}" class="btn" size="mini" type="default" wx:if="{{K}}">查看家长认证信息</button>
+        </view>
+    </view>
+    <view class="certify-modify" wx:if="{{M}}">
+        <view class="certify-msg">{{N}}</view>
+        <view class="modify-btn">
+            <button canCommit bindtap="{{Q}}" class="{{[O,'btn']}}" disabled="{{P}}" type="default">修改实名信息</button>
+        </view>
+    </view>
+    <view class="certify-view-send" wx:if="{{R}}">
+        <uni-forms bind:__l="__l" class="r" uI="923b98a2-0" uP="{{ad}}" uR="formRef" uS="{{['d']}}" wx:if="{{ad}}">
+            <uni-forms-item bind:__l="__l" uI="923b98a2-1,923b98a2-0" uP="{{V}}" uS="{{['label','d']}}" wx:if="{{V}}">
+                <view class="labelSlot" slot="label" style="padding-top:0">{{S}}</view>
+                <view class="mobile">
+                    <uni-easyinput bind:__l="__l" bindupdateModelValue="{{T}}" uI="923b98a2-2,923b98a2-1" uP="{{U}}" wx:if="{{U}}"></uni-easyinput>
+                    <view class="tip font-28"></view>
+                </view>
+            </uni-forms-item>
+            <uni-forms-item bind:__l="__l" class="text-primary-grey font-28" uI="923b98a2-3,923b98a2-0" uP="{{ab}}" uS="{{['label','d']}}" wx:if="{{ab}}">
+                <view class="labelSlot" slot="label" style="padding-top:0">验证码</view>
+                <view class="codeNum">
+                    <uni-easyinput bind:__l="__l" bindupdateModelValue="{{Z}}" uI="923b98a2-4,923b98a2-3" uP="{{aa}}" uS="{{['right']}}" wx:if="{{aa}}">
+                        <view slot="right">
+                            <view bindtap="{{X}}" class="codeSlot" wx:if="{{W}}">获取验证码</view>
+                            <view class="codeSlot" wx:else>{{Y}}s重新获取</view>
+                        </view>
+                    </uni-easyinput>
+                </view>
+            </uni-forms-item>
+        </uni-forms>
+        <button bindtap="{{ae}}" class="primary-btn" type="primary">修改实名信息</button>
+    </view>
+    <view class="certify-view-send" wx:if="{{af}}">
+        <uni-forms bind:__l="__l" class="r" uI="923b98a2-5" uP="{{ar}}" uR="formRef" uS="{{['d']}}" wx:if="{{ar}}">
+            <uni-forms-item bind:__l="__l" uI="923b98a2-6,923b98a2-5" uP="{{aj}}" uS="{{['label','d']}}" wx:if="{{aj}}">
+                <view class="labelSlot" slot="label" style="padding-top:0">手机号</view>
+                <view class="mobile">
+                    <uni-easyinput bind:__l="__l" bindupdateModelValue="{{ah}}" class="mobile-input r" uI="923b98a2-7,923b98a2-6" uP="{{ai}}" uR="mobile" wx:if="{{ai}}"></uni-easyinput>
+                    <view class="tip font-28"></view>
+                </view>
+            </uni-forms-item>
+            <uni-forms-item bind:__l="__l" class="text-primary-grey font-28" uI="923b98a2-8,923b98a2-5" uP="{{ap}}" uS="{{['label','d']}}" wx:if="{{ap}}">
+                <view class="labelSlot" slot="label" style="padding-top:0">验证码</view>
+                <view class="codeNum">
+                    <uni-easyinput bind:__l="__l" bindupdateModelValue="{{an}}" uI="923b98a2-9,923b98a2-8" uP="{{ao}}" uS="{{['right']}}" wx:if="{{ao}}">
+                        <view slot="right">
+                            <view bindtap="{{al}}" class="codeSlot" wx:if="{{ak}}">获取验证码</view>
+                            <view class="codeSlot" wx:else>{{am}}s重新获取</view>
+                        </view>
+                    </uni-easyinput>
+                </view>
+            </uni-forms-item>
+        </uni-forms>
+        <button bindtap="{{as}}" class="primary-btn" type="primary">查看完整信息</button>
+    </view>
+    <uni-popup bind:__l="__l" class="r" uI="923b98a2-10" uP="{{aA}}" uR="popup" uS="{{['d']}}" wx:if="{{aA}}">
+        <view class="popup-content">
+            <view class="popup-head">
+                <text>家长认证信息</text>
+                <view catchtap="{{at}}" class="close-icon">x</view>
+            </view>
+            <view class="popup-body">
+                <view class="certify-show">
+                    <view class="user-info-item">
+                        <view class="user-info-item-label">姓名</view>
+                        <view class="user-info-item-value">{{av}}</view>
+                    </view>
+                    <view class="user-info-item">
+                        <view class="user-info-item-label">证件号</view>
+                        <view class="user-info-item-value">{{aw}}</view>
+                    </view>
+                    <view class="user-info-item">
+                        <view class="user-info-item-label">手机号</view>
+                        <view class="user-info-item-value">{{ax}}<view bindtap="{{ay}}" class="change-btn">修改</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </uni-popup>
+    <uni-popup bind:__l="__l" class="r" uI="923b98a2-11" uP="{{aJ}}" uR="realConfirmDialogRef" uS="{{['d']}}" wx:if="{{aJ}}">
+        <view class="pop-confirm-dialog" style="padding:20rpx 0rpx">
+            <view class="title">
+                <text class="text">确认实名信息</text>
+            </view>
+            <text class="msg">您即将提交的实名信息如下：</text>
+            <text class="content-text">姓名：{{aB}}</text>
+            <text class="content-text">证件类型：{{aC}}</text>
+            <text class="content-text">证件号：{{aD}}</text>
+            <text class="msg-red">*请务必确认信息准确无误。</text>
+            <view class="codeBtns">
+                <button bindtap="{{aE}}" class="cancel" size="mini" type="default">取消</button>
+                <button class="confirm" size="mini" type="primary" wx:if="{{aF}}">确认({{aG}})</button>
+                <button bindtap="{{aH}}" class="confirm" size="mini" type="primary" wx:else>确认</button>
+            </view>
+        </view>
+    </uni-popup>
+    <uni-popup bind:__l="__l" class="r" uI="923b98a2-12" uP="{{aM}}" uR="noHasPhoneRef" uS="{{['d']}}" wx:if="{{aM}}">
+        <view class="pop-confirm-dialog" style="padding:50rpx 0rpx">
+            <text class="msg">提示：查看用户完整信息需要手机验证码。</text>
+            <text class="msg">请先到【设置】 - 【账户与安全】绑定手机号。</text>
+            <view class="codeBtns">
+                <button bindtap="{{aK}}" class="confirm" size="mini" style="margin-top:40rpx" type="primary">确认</button>
+            </view>
+        </view>
+    </uni-popup>
+    <uni-popup bind:__l="__l" class="r" uI="923b98a2-13" uP="{{aR}}" uR="repeatRef" uS="{{['d']}}" wx:if="{{aR}}">
+        <view class="pop-confirm-dialog" style="padding:20rpx 0rpx">
+            <text class="title" style="font-weight:bold">此证件信息已被认证过</text>
+            <text class="msg" style="margin:40rpx 40rpx;text-align:left">{{aN}}</text>
+            <text class="title">确认提交吗？</text>
+            <view class="codeBtns">
+                <button bindtap="{{aO}}" class="cancel" size="mini" style="margin-top:20rpx" type="default">更换证件</button>
+                <button bindtap="{{aP}}" class="confirm" size="mini" style="margin-top:20rpx" type="primary">确认提交</button>
+            </view>
+        </view>
+    </uni-popup>
+</view>

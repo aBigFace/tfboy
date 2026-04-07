@@ -1,0 +1,17 @@
+<view class="page base-container data-v-0e9fccba">
+    <view class="uni-form-item data-v-0e9fccba">
+        <view class="text-primary-grey title data-v-0e9fccba">您的性别是？</view>
+        <view bindtap="{{item.g}}" class="{{['data-v-0e9fccba','card','flex','m-b-15',item.f]}}" wx:for="{{a}}" wx:key="e">
+            <view class="image data-v-0e9fccba">
+                <image class="img-max data-v-0e9fccba" src="{{item.a}}"></image>
+            </view>
+            <view class="text-primary-grey m-l-25 tip data-v-0e9fccba">我是{{item.b}}</view>
+            <view class="{{['data-v-0e9fccba',item.d&&'selected']}}">
+                <image class="img-max data-v-0e9fccba" hidden="{{!item.c}}" src="{{b}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="space data-v-0e9fccba">
+        <button bindtap="{{c}}" class="primary-btn data-v-0e9fccba" type="primary">确定</button>
+    </view>
+</view>

@@ -1,0 +1,70 @@
+.page.data-v-97f2de92 {
+    height: 100vh
+}
+
+.page .tab_nav.data-v-97f2de92 {
+    position: fixed;
+    width: 100%;
+    z-index: 2
+}
+
+.page .tab_nav .navTitle.data-v-97f2de92 {
+    background-color: #fff;
+    color: #888;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    height: 92rpx;
+    line-height: 92rpx;
+    text-align: center;
+    width: 100%
+}
+
+.page .tab_nav .navTitle .title.data-v-97f2de92 {
+    position: relative
+}
+
+.page .tab_nav .navTitle .title .count.data-v-97f2de92 {
+    background: #ffe7e5;
+    border-radius: 20rpx 20rpx 20rpx 0rpx;
+    color: #e85252;
+    font-weight: 500;
+    height: 40rpx;
+    position: absolute;
+    right: -85rpx;
+    top: -20rpx;
+    width: 80rpx
+}
+
+.page .tab_nav .active.data-v-97f2de92 {
+    color: #222;
+    position: relative
+}
+
+.page .tab_nav .active.data-v-97f2de92::after {
+    background-color: #e85252;
+    bottom: 0;
+    content: "";
+    height: 8rpx;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 84rpx
+}
+
+.page .content.data-v-97f2de92 {
+    padding-top: 110rpx
+}
+
+.page .content .card .checkbox-group.data-v-97f2de92 {
+    margin-left: 90rpx
+}
+
+.page .primary-btn.data-v-97f2de92 {
+    border-radius: 8rpx 8rpx 8rpx 8rpx;
+    margin: 0 24rpx 40rpx
+}
+
+.bottom-bar.data-v-97f2de92 {
+    padding-bottom: 140rpx
+}

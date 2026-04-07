@@ -1,0 +1,11 @@
+<view class="page data-v-f3840aba">
+    <view class="noMessage-box data-v-f3840aba">
+        <view class="service-img data-v-f3840aba">
+            <image class="noMessage-img data-v-f3840aba" src="/static/service.jpg"></image>
+        </view>
+        <view class="service-txt data-v-f3840aba">
+            <view class="noMessage-tip-one data-v-f3840aba">智能客服系统改造中!</view>
+            <view class="noMessage-tip-one data-v-f3840aba">售后问题处理，请参照首页《售后指南》流程。给您带来的不便，敬请谅解。</view>
+        </view>
+    </view>
+</view>

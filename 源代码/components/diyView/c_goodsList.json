@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "big-list": "goodsListItem/bigList",
+    "one-line-two": "goodsListItem/oneLineTwo",
+    "little-list": "goodsListItem/littleList",
+    "one-line-three": "goodsListItem/oneLineThree",
+    "more-img-roll": "goodsListItem/moreImgRoll",
+    "tabs": "../tabs/tabs",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

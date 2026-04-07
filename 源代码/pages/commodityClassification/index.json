@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "全部商品",
+  "usingComponents": {
+    "one_-one": "classItems/one/one_one",
+    "select-sku": "../../components/select-sku",
+    "uni-easyinput": "../../uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

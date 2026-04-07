@@ -1,0 +1,164 @@
+.oneLineThree .content.data-v-232fa892 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.oneLineThree .content-item.data-v-232fa892 {
+    margin-bottom: 16rpx;
+    margin-right: 16rpx;
+    width: 224rpx
+}
+
+.oneLineThree .content-item .item-image.data-v-232fa892 {
+    background-color: #faebd7;
+    border-radius: 8rpx 8rpx 0rpx 0rpx;
+    height: 224rpx;
+    overflow: hidden;
+    position: relative;
+    width: 224rpx
+}
+
+.oneLineThree .content-item .item-image wx-image.data-v-232fa892 {
+    height: 224rpx;
+    width: 224rpx
+}
+
+.oneLineThree .content-item .item-image .item-tips.data-v-232fa892 {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #e85252;
+    border-radius: 8rpx 2rpx 12rpx 2rpx;
+    display: -webkit-flex;
+    display: flex;
+    height: 28rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    line-height: 28rpx;
+    position: absolute;
+    top: 0;
+    width: 72rpx
+}
+
+.oneLineThree .content-item .item-image .item-tips-text.data-v-232fa892 {
+    color: #fff;
+    display: block;
+    font-size: 18rpx;
+    font-weight: 500;
+    line-height: 1
+}
+
+.oneLineThree .content-item .item-image .item-tips .icon-img.data-v-232fa892 {
+    height: 100%;
+    width: 100%
+}
+
+.oneLineThree .content-item .item-info.data-v-232fa892 {
+    background-color: #fff;
+    border-radius: 0rpx 0rpx 8rpx 8rpx;
+    box-sizing: border-box;
+    padding: 16rpx 20rpx;
+    width: 224rpx
+}
+
+.oneLineThree .content-item .item-info .product-name.data-v-232fa892 {
+    color: #333;
+    font-size: 24rpx;
+    font-weight: 400;
+    max-height: 65rpx
+}
+
+.oneLineThree .content-item .item-info .product-keywords.data-v-232fa892 {
+    color: #999;
+    font-size: 20rpx;
+    font-weight: 400;
+    height: 28rpx;
+    margin: 5rpx 0
+}
+
+.oneLineThree .content-item .item-info .product-tags.data-v-232fa892 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 8rpx 0;
+    width: 160rpx
+}
+
+.oneLineThree .content-item .item-info .product-tags wx-view.data-v-232fa892:nth-child(1) {
+    background: #ffe5e5;
+    border: 1px solid #ffe5e5;
+    border-radius: 4rpx;
+    box-sizing: border-box;
+    color: #e85252;
+    font-size: 20rpx;
+    font-weight: 400;
+    height: 36rpx;
+    line-height: 31rpx;
+    margin-right: 8rpx;
+    padding: 0rpx 16rpx;
+    text-align: center
+}
+
+.oneLineThree .content-item .item-info .product-tags wx-view.data-v-232fa892:nth-child(2) {
+    border: 1px solid #e85252;
+    border-radius: 4rpx;
+    box-sizing: border-box;
+    color: #e85252;
+    font-size: 20rpx;
+    font-weight: 400;
+    height: 36rpx;
+    line-height: 31rpx;
+    padding: 0rpx 16rpx;
+    text-align: center
+}
+
+.oneLineThree .content-item .item-info .product-sales.data-v-232fa892 {
+    color: #999;
+    font-size: 20rpx;
+    font-weight: 400
+}
+
+.oneLineThree .content-item .item-info .product-sales wx-text.data-v-232fa892 {
+    margin-left: 10rpx
+}
+
+.oneLineThree .content-item .item-info .product-stock.data-v-232fa892 {
+    color: #999;
+    font-size: 20rpx;
+    font-weight: 400;
+    margin-bottom: 10rpx
+}
+
+.oneLineThree .content-item .item-info .product-stock wx-text.data-v-232fa892 {
+    margin-left: 10rpx
+}
+
+.oneLineThree .content-item .item-info .product-box.data-v-232fa892 {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    display: -webkit-flex;
+    display: flex
+}
+
+.oneLineThree .content-item .item-info .product-box .product-price.data-v-232fa892 {
+    color: #e85252;
+    display: block;
+    font-size: 20rpx;
+    font-weight: 600;
+    line-height: 1;
+    margin-right: 4rpx
+}
+
+.oneLineThree .content-item .item-info .product-box .product-price-text.data-v-232fa892 {
+    font-size: 26rpx!important
+}
+
+.oneLineThree .content-item .item-info .product-box .product-market.data-v-232fa892 {
+    color: #858585;
+    font-size: 18rpx;
+    font-weight: 400;
+    text-decoration: line-through!important
+}

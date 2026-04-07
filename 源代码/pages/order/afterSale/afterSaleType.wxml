@@ -1,0 +1,16 @@
+<view class="page search-page">
+    <view class="page-content base-container">
+        <view class="apply-list">
+            <view class="title">申请类型</view>
+            <view bindtap="{{item.f}}" class="item" wx:for="{{a}}" wx:key="e">
+                <image class="icon" src="{{item.a}}"></image>
+                <view class="text">
+                    <view class="name">{{item.b}}</view>
+                    <view class="desc">{{item.c}}</view>
+                </view>
+                <uni-icons bind:__l="__l" class="arrow-icon" uI="{{item.d}}" uP="{{b}}" wx:if="{{b}}"></uni-icons>
+            </view>
+        </view>
+    </view>
+    <refund-reason bind:__l="__l" bindreasonData="{{d}}" class="r" uI="532d3a21-1" uP="{{e}}" uR="popupRef" wx:if="{{e}}"></refund-reason>
+</view>

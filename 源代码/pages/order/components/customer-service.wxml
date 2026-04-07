@@ -1,0 +1,3 @@
+<view bindtap="{{b}}" class="customer-service">
+    <image src="{{a}}"></image>
+</view>

@@ -1,0 +1,61 @@
+.login-page.data-v-23b3be22 {
+    text-align: center
+}
+
+.login-page .app-logo.data-v-23b3be22 {
+    margin: 120rpx auto 0rpx
+}
+
+.login-page .app-logo .logo-img.data-v-23b3be22 {
+    height: 260rpx;
+    width: 260rpx
+}
+
+.login-page .login-title.data-v-23b3be22 {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 700;
+    margin-bottom: 54rpx
+}
+
+.login-page .primary-btn.data-v-23b3be22 {
+    margin-bottom: 20rpx
+}
+
+.login-page .weixin-logo.data-v-23b3be22 {
+    height: 48rpx;
+    width: 48rpx
+}
+
+.login-page .weixin-login-btn.data-v-23b3be22 {
+    background: #ff7272;
+    border-radius: 44rpx;
+    height: 88rpx;
+    width: 660rpx
+}
+
+.login-page .account-login.data-v-23b3be22 {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    font-weight: 500
+}
+
+.login-page .privacy-text.data-v-23b3be22 {
+    color: #999
+}
+
+.login-page .agree-on.data-v-23b3be22 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 22rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 40rpx
+}
+
+page {
+    background-color: #fff
+}

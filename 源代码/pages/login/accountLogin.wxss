@@ -1,0 +1,151 @@
+.accountLogin.data-v-1c3b0aa6 {
+    position: relative
+}
+
+.accountLogin .banner.data-v-1c3b0aa6 {
+    background: url("https://cos.tfent.cn/xgg-file-folder/tf-app/wechat/static/image/login/account_banner.png") no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    height: 240rpx;
+    padding-left: 32rpx
+}
+
+.accountLogin .form.data-v-1c3b0aa6 {
+    background: #fff;
+    border-radius: 32rpx 32rpx 0 0;
+    height: calc(100vh - 210rpx);
+    position: relative;
+    top: -30rpx
+}
+
+.accountLogin .form .formBox.data-v-1c3b0aa6 {
+    padding: 28rpx 28rpx 0
+}
+
+.accountLogin .form .formBox.data-v-1c3b0aa6 .uni-easyinput__content {
+    border-radius: 50rpx!important;
+    height: 100rpx!important
+}
+
+.accountLogin .form .formBox.data-v-1c3b0aa6 .uni-easyinput__content-input {
+    padding-left: 28rpx!important
+}
+
+.accountLogin .form .formBox.data-v-1c3b0aa6 .content-clear-icon {
+    padding-right: 28rpx!important
+}
+
+.accountLogin .form .formBox .labelSlot.data-v-1c3b0aa6 {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 700;
+    line-height: 28rpx;
+    padding: 26rpx 0 28rpx
+}
+
+.accountLogin .form .uni-form-item.data-v-1c3b0aa6 {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 50rpx;
+    margin: 20rpx 26rpx 0
+}
+
+.accountLogin .form .uni-form-item wx-input.data-v-1c3b0aa6 {
+    height: 100rpx
+}
+
+.accountLogin .agree-on.data-v-1c3b0aa6 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 22rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-bottom: 54rpx;
+    position: relative;
+    top: -6rpx
+}
+
+.accountLogin .privacy-text.data-v-1c3b0aa6 {
+    color: #999
+}
+
+.accountLogin .weixin-login-btn.data-v-1c3b0aa6 {
+    background: #ff7272;
+    border-radius: 44rpx;
+    color: #fff;
+    height: 88rpx;
+    width: 660rpx
+}
+
+.accountLogin .btn-disabled.data-v-1c3b0aa6 {
+    background: #ffc6c6
+}
+
+.accountLogin .operationBox.data-v-1c3b0aa6 {
+    color: #666;
+    font-size: 26rpx;
+    margin-top: 46rpx;
+    width: 100%
+}
+
+.accountLogin .operationBox .pw.data-v-1c3b0aa6 {
+    margin-left: 32rpx
+}
+
+.accountLogin .operationBox .find.data-v-1c3b0aa6 {
+    margin-left: 30rpx
+}
+
+.accountLogin .operationBox .reg.data-v-1c3b0aa6 {
+    float: right;
+    margin-right: 32rpx
+}
+
+.accountLogin wx-button.data-v-1c3b0aa6::after {
+    border: none
+}
+
+.accountLogin.data-v-1c3b0aa6 .uni-easyinput__content-input {
+    font-family: PingFang-SC-Medium,PingFang-SC;
+    font-size: 28rpx!important
+}
+
+.verCodeBox.data-v-1c3b0aa6 {
+    background: #fff;
+    border-radius: 20rpx;
+    padding: 20rpx
+}
+
+.verCodeBox .title.data-v-1c3b0aa6 {
+    font-size: 32rpx;
+    line-height: 1.5;
+    margin-bottom: 20rpx;
+    text-align: center
+}
+
+.verCodeBox .inputBox.data-v-1c3b0aa6 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 20rpx
+}
+
+.verCodeBox .codeBtns.data-v-1c3b0aa6 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.verCodeBox .codeBtns wx-button.data-v-1c3b0aa6 {
+    border-radius: 30rpx;
+    width: 30%
+}
+
+.verCodeBox .codeBtns .confirm.data-v-1c3b0aa6 {
+    background: #ff7272;
+    color: #fff
+}

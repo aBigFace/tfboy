@@ -1,0 +1,33 @@
+<view class="base-container setting-page data-v-61a3b3d9">
+    <view class="function-list setting-info data-v-61a3b3d9">
+        <view bindtap="{{f}}" class="function-item flex-space-between-center data-v-61a3b3d9">
+            <view class="data-v-61a3b3d9">
+                <text class="text-item-light data-v-61a3b3d9">账号与安全</text>
+                <image class="order-item-icon-red data-v-61a3b3d9" src="{{b}}" wx:if="{{a}}"></image>
+                <image class="order-item-icon-other data-v-61a3b3d9" src="{{d}}" wx:elif="{{c}}"></image>
+            </view>
+            <uni-icons bind:__l="__l" class="arrow-icon data-v-61a3b3d9" uI="61a3b3d9-0" uP="{{e}}" wx:if="{{e}}"></uni-icons>
+        </view>
+        <view bindtap="{{h}}" class="function-item flex-space-between-center setting-pay data-v-61a3b3d9">
+            <text class="text-item-light data-v-61a3b3d9">支付密码设置</text>
+            <uni-icons bind:__l="__l" class="arrow-icon data-v-61a3b3d9" uI="61a3b3d9-1" uP="{{g}}" wx:if="{{g}}"></uni-icons>
+        </view>
+        <view bindtap="{{j}}" class="function-item flex-space-between-center data-v-61a3b3d9">
+            <text class="text-item-light data-v-61a3b3d9">用户协议</text>
+            <uni-icons bind:__l="__l" class="arrow-icon data-v-61a3b3d9" uI="61a3b3d9-2" uP="{{i}}" wx:if="{{i}}"></uni-icons>
+        </view>
+        <view bindtap="{{l}}" class="function-item flex-space-between-center data-v-61a3b3d9">
+            <text class="text-item-light data-v-61a3b3d9">隐私协议</text>
+            <uni-icons bind:__l="__l" class="arrow-icon data-v-61a3b3d9" uI="61a3b3d9-3" uP="{{k}}" wx:if="{{k}}"></uni-icons>
+        </view>
+        <view bindtap="{{n}}" class="function-item flex-space-between-center data-v-61a3b3d9">
+            <text class="text-item-light data-v-61a3b3d9">实名认证协议</text>
+            <uni-icons bind:__l="__l" class="arrow-icon data-v-61a3b3d9" uI="61a3b3d9-4" uP="{{m}}" wx:if="{{m}}"></uni-icons>
+        </view>
+        <view bindtap="{{p}}" class="function-item flex-space-between-center data-v-61a3b3d9">
+            <text class="text-item-light data-v-61a3b3d9">企业资质</text>
+            <uni-icons bind:__l="__l" class="arrow-icon data-v-61a3b3d9" uI="61a3b3d9-5" uP="{{o}}" wx:if="{{o}}"></uni-icons>
+        </view>
+    </view>
+    <view bindtap="{{q}}" class="primary-btn logout-btn flex-justify-center data-v-61a3b3d9">退出登录</view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "price": "../../price",
+    "uni-countdown": "../../../uni_modules/uni-countdown/components/uni-countdown/uni-countdown",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

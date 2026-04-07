@@ -1,0 +1,20 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "c_img-box": "../../components/diyView/c_imgBox",
+    "c_swiper": "../../components/diyView/c_swiper",
+    "c_goods-list": "../../components/diyView/c_goodsList",
+    "c_title": "../../components/diyView/c_title",
+    "c_video": "../../components/diyView/c_video",
+    "c_rolling-notice": "../../components/diyView/c_rollingNotice",
+    "c_module-spacing": "../../components/diyView/c_moduleSpacing",
+    "c_presale": "../../components/diyView/c_presale",
+    "c_search": "../../components/diyView/c_search",
+    "c_img-text": "../../components/diyView/c_imgText",
+    "c_magic": "../../components/diyView/c_magic",
+    "cost-per-popup": "../../components/popupWindow/costPerPopup",
+    "select-sku": "../../components/select-sku",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

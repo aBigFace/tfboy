@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "售后订单",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "confirm-modal": "../../../components/modal/confirm-modal",
+    "no-data": "../../../components/no-data",
+    "after-order-product-item": "../../../components/after-order-product-item",
+    "uni-load-more": "../../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

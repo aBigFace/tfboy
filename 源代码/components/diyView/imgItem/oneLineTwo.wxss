@@ -1,0 +1,26 @@
+.oneLineTwo.data-v-dfd5b69e {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.oneLineTwo .txt.data-v-dfd5b69e {
+    background: rgba(0,0,0,.08);
+    bottom: 0;
+    color: #9b9b9b;
+    font-size: 13px;
+    line-height: 24px;
+    max-height: 48px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    word-break: break-word
+}
+
+.content-fillet-txt.data-v-dfd5b69e {
+    border-radius: 0 0 6px 6px
+}

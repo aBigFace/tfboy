@@ -1,0 +1,17 @@
+{
+  "name": "sdfj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "account-login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "crypto": "^1.0.1",
+    "https-proxy-agent": "^7.0.6",
+    "undici": "^6.21.0"
+  }
+}

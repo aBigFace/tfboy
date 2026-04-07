@@ -1,0 +1,33 @@
+.outer-box.data-v-6415a256 {
+    background-color: #fff
+}
+
+.typeThree.data-v-6415a256 {
+    padding: 14rpx 0
+}
+
+.typeThree .input-box.data-v-6415a256 {
+    height: 68rpx;
+    position: relative
+}
+
+.typeThree .input-box .search-box.data-v-6415a256 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.typeThree .input-box .search-input.data-v-6415a256 {
+    height: 68rpx;
+    margin: 0 24rpx;
+    width: 702rpx
+}
+
+.typeThree .input-box .search-icon.data-v-6415a256 {
+    height: 33rpx;
+    left: 40rpx;
+    position: absolute;
+    top: 20rpx;
+    width: 33rpx
+}

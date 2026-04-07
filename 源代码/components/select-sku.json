@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "price": "price",
+    "real-name-popup": "../pages/order/components/realNamePopup",
+    "parent-dialog": "../pages/dialog/parentAuthDialog",
+    "uni-icons": "../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-number-box": "../uni_modules/uni-number-box/components/uni-number-box/uni-number-box",
+    "uni-popup": "../uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "custom-nav": "components/customNav/customNav"
+  }
+}

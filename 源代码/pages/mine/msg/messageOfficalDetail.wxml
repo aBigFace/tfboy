@@ -1,0 +1,7 @@
+<view class="page data-v-7b6bccd8">
+    <view class="title data-v-7b6bccd8">{{a}}</view>
+    <view class="time data-v-7b6bccd8">{{b}}</view>
+    <view class="html-content data-v-7b6bccd8">
+        <rich-text class="data-v-7b6bccd8" nodes="{{c}}"></rich-text>
+    </view>
+</view>

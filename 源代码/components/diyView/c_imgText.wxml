@@ -1,0 +1,5 @@
+<view class="diy_view_c_imgText" style="{{'background:'+b}}">
+    <view class="diy_view_c_imgText-view">
+        <model-one bind:__l="__l" uI="76e6424e-0" uP="{{a}}" wx:if="{{a}}"></model-one>
+    </view>
+</view>

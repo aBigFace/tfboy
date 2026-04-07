@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "家长认证信息",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "backgroundColorTop": "#FFFFFF",
+  "usingComponents": {
+    "custom-nav": "components/customNav/customNav"
+  }
+}

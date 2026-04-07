@@ -1,0 +1,52 @@
+.forbid-cargo-wrapper {
+    background: #fff;
+    line-height: 1.6;
+    overflow-y: auto;
+    padding: 20rpx
+}
+
+.forbid-cargo-wrapper .title {
+    font-size: 32rpx;
+    font-weight: 400;
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
+    text-align: center
+}
+
+.forbid-cargo-wrapper .hand-tile {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30rpx
+}
+
+.forbid-cargo-wrapper .sub-title {
+    font-size: 30rpx;
+    font-weight: 600;
+    margin-bottom: 10rpx;
+    margin-top: 20rpx
+}
+
+.forbid-cargo-wrapper .na-title {
+    font-size: 30rpx;
+    font-weight: 600;
+    margin-bottom: 20rpx;
+    margin-top: 20rpx
+}
+
+.forbid-cargo-wrapper .text {
+    color: #666;
+    font-size: 28rpx
+}
+
+.forbid-cargo-wrapper .text.space {
+    text-indent: 2em
+}
+
+.forbid-cargo-wrapper .text wx-view {
+    margin-bottom: 10rpx
+}
+
+.forbid-cargo-wrapper .bold {
+    color: #000;
+    font-weight: 600
+}

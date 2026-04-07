@@ -1,0 +1,28 @@
+<view class="diyView_c_shoppCart data-v-323f1408">
+    <view class="styleOne-miss data-v-323f1408" wx:if="{{a}}">
+        <view class="miss-image data-v-323f1408">
+            <image class="data-v-323f1408" mode="widthFix" src="{{b}}"></image>
+        </view>
+        <view class="miss-content data-v-323f1408">
+            <text class="data-v-323f1408">空空如也</text>
+        </view>
+        <view class="text-tip data-v-323f1408">
+            <text class="data-v-323f1408">快去加购您喜欢的吧</text>
+        </view>
+    </view>
+    <view class="shopCart data-v-323f1408" wx:else>
+        <block wx:for="{{c}}" wx:key="J">
+            <style-three bind:__l="__l" bindvalidState="{{item.b}}" class="data-v-323f1408" uI="{{item.c}}" uP="{{item.d}}" wx:if="{{item.a}}"></style-three>
+            <c_swiper bind:__l="__l" class="data-v-323f1408" uI="{{item.f}}" uP="{{item.g}}" wx:elif="{{item.e}}"></c_swiper>
+            <c_img-box bind:__l="__l" class="data-v-323f1408" uI="{{item.i}}" uP="{{item.j}}" wx:elif="{{item.h}}"></c_img-box>
+            <c_goods-list bind:__l="__l" class="data-v-323f1408" uI="{{item.l}}" uP="{{item.m}}" wx:elif="{{item.k}}"></c_goods-list>
+            <c_magic bind:__l="__l" class="data-v-323f1408" uI="{{item.o}}" uP="{{item.p}}" wx:elif="{{item.n}}"></c_magic>
+            <c_rolling-notice bind:__l="__l" class="data-v-323f1408" uI="{{item.r}}" uP="{{item.s}}" wx:elif="{{item.q}}"></c_rolling-notice>
+            <c_search bind:__l="__l" class="data-v-323f1408" uI="{{item.v}}" uP="{{item.w}}" wx:elif="{{item.t}}"></c_search>
+            <c_module-spacing bind:__l="__l" class="data-v-323f1408" uI="{{item.y}}" uP="{{item.z}}" wx:elif="{{item.x}}"></c_module-spacing>
+            <c_rolling-notice bind:__l="__l" class="data-v-323f1408" uI="{{item.B}}" uP="{{item.C}}" wx:elif="{{item.A}}"></c_rolling-notice>
+            <c_title bind:__l="__l" class="data-v-323f1408" uI="{{item.E}}" uP="{{item.F}}" wx:elif="{{item.D}}"></c_title>
+            <c_presale bind:__l="__l" class="data-v-323f1408" uI="{{item.H}}" uP="{{item.I}}" wx:elif="{{item.G}}"></c_presale>
+        </block>
+    </view>
+</view>

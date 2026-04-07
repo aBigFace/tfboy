@@ -1,0 +1,49 @@
+.container {
+    background-color: #fff;
+    border-radius: 0 0 8rpx 8rpx;
+    box-sizing: border-box;
+    margin-bottom: 16rpx;
+    padding: 24rpx;
+    widows: 702rpx
+}
+
+.container .box {
+    width: 100%
+}
+
+.container .box .box-video {
+    border-radius: 8rpx;
+    height: 372rpx;
+    overflow: hidden;
+    width: 100%
+}
+
+.container .box .box-video .product-video {
+    height: 100%;
+    -o-object-fit: fill;
+    object-fit: fill;
+    width: 100%
+}
+
+.container .box .box-content {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 20rpx 0rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%
+}
+
+.container .box .box-content wx-h3 {
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-bottom: 12rpx
+}
+
+.container .box .box-content-div {
+    color: #999;
+    font-size: 26rpx;
+    line-height: 36rpx;
+    white-space: normal;
+    width: 650rpx
+}

@@ -1,0 +1,177 @@
+.searchForm.data-v-e4ae0ac8 {
+    background: #fff;
+    border-radius: 24rpx 24rpx 0rpx 0rpx;
+    box-sizing: border-box;
+    padding: 24rpx;
+    width: 750rpx
+}
+
+.searchForm .search-title.data-v-e4ae0ac8 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.searchForm .search-title .title-text.data-v-e4ae0ac8 {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 500
+}
+
+.searchForm .search-title .title-icon.data-v-e4ae0ac8 {
+    height: 48rpx;
+    width: 48rpx
+}
+
+.searchForm .search-price.data-v-e4ae0ac8 {
+    margin-top: 36rpx
+}
+
+.searchForm .search-price .price-text.data-v-e4ae0ac8 {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500
+}
+
+.searchForm .search-price .price-section.data-v-e4ae0ac8 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 16rpx;
+    width: 472rpx
+}
+
+.searchForm .search-price .price-section .price-min.data-v-e4ae0ac8 {
+    background: #eee;
+    border-radius: 8rpx;
+    height: 68rpx;
+    line-height: 68rpx;
+    text-align: center;
+    width: 216rpx
+}
+
+.searchForm .search-price .price-section .price-min-text.data-v-e4ae0ac8 {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.searchForm .search-price .price-section .price-content.data-v-e4ae0ac8 {
+    border: 2rpx solid #888;
+    height: 0rpx;
+    opacity: 1;
+    width: 16rpx
+}
+
+.searchForm .search-price .price-section .price-max.data-v-e4ae0ac8 {
+    background: #eee;
+    border-radius: 8rpx;
+    height: 68rpx;
+    line-height: 68rpx;
+    text-align: center;
+    width: 216rpx
+}
+
+.searchForm .search-price .price-section .price-max-text.data-v-e4ae0ac8 {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.searchForm .search-price .price-section .price-inp.data-v-e4ae0ac8 {
+    border: 1px solid #eee;
+    border-radius: 8rpx;
+    height: 68rpx;
+    line-height: 68rpx;
+    text-align: center;
+    width: 216rpx
+}
+
+.searchForm .search-class.data-v-e4ae0ac8 {
+    margin-top: 36rpx
+}
+
+.searchForm .search-class .class-text.data-v-e4ae0ac8 {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500
+}
+
+.searchForm .search-class .class-list.data-v-e4ae0ac8 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 16rpx;
+    width: 900rpx
+}
+
+.searchForm .search-class .class-list .class-item.data-v-e4ae0ac8 {
+    background: #eee;
+    border-radius: 8rpx;
+    height: 68rpx;
+    line-height: 68rpx;
+    margin-bottom: 24rpx;
+    margin-right: 24rpx;
+    text-align: center;
+    width: 216rpx
+}
+
+.searchForm .search-class .class-list .class-item-text.data-v-e4ae0ac8 {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 400
+}
+
+.searchForm .search-btn.data-v-e4ae0ac8 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 80rpx
+}
+
+.searchForm .search-btn .btn-res.data-v-e4ae0ac8 {
+    border: 2rpx solid #e85252;
+    border-radius: 8rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    width: 328rpx
+}
+
+.searchForm .search-btn .btn-res-text.data-v-e4ae0ac8 {
+    color: #e85252;
+    font-size: 32rpx;
+    font-weight: 400
+}
+
+.searchForm .search-btn .btn-confirm.data-v-e4ae0ac8 {
+    background: #e85252;
+    border-radius: 8rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    width: 328rpx
+}
+
+.searchForm .search-btn .btn-confirm-text.data-v-e4ae0ac8 {
+    color: #fff;
+    font-size: 32rpx;
+    font-weight: 400
+}
+
+.activeView.data-v-e4ae0ac8 {
+    background: #ffe7e5!important;
+    border: 2rpx solid #e85252!important
+}
+
+.activeText.data-v-e4ae0ac8 {
+    color: #e85252!important
+}

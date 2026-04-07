@@ -1,0 +1,243 @@
+.littleList-box.data-v-6b110082 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.littleList-box .container.data-v-6b110082 {
+    background-color: #fff;
+    border-radius: 8rpx;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 16rpx;
+    padding: 24rpx;
+    width: 702rpx
+}
+
+.littleList-box .container .goods_image.data-v-6b110082 {
+    border-radius: 8rpx;
+    height: 186rpx;
+    overflow: hidden;
+    position: relative;
+    width: 186rpx
+}
+
+.littleList-box .container .goods_image .shopping-state.data-v-6b110082 {
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    color: #fff;
+    font-size: 24rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    position: absolute;
+    text-align: center;
+    width: 100%
+}
+
+.littleList-box .container .goods_image wx-image.data-v-6b110082 {
+    height: 186rpx;
+    width: 186rpx
+}
+
+.littleList-box .container .goods_image .marketing_icon.data-v-6b110082 {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #e85252;
+    border-radius: 8rpx 2rpx 12rpx 2rpx;
+    display: -webkit-flex;
+    display: flex;
+    height: 28rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0rpx;
+    position: absolute;
+    top: 0rpx;
+    width: 72rpx
+}
+
+.littleList-box .container .goods_image .marketing_icon .icon-text.data-v-6b110082 {
+    color: #fff;
+    display: block;
+    font-size: 20rpx;
+    font-weight: 400rpx;
+    line-height: 1
+}
+
+.littleList-box .container .goods_image .marketing_icon .icon-img.data-v-6b110082 {
+    height: 100%;
+    width: 100%
+}
+
+.littleList-box .container .goods_info.data-v-6b110082 {
+    width: 450rpx
+}
+
+.littleList-box .container .goods_info .goods_name.data-v-6b110082 {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #333;
+    display: -webkit-box;
+    font-size: 28rpx;
+    line-height: 36rpx;
+    max-height: 72rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all
+}
+
+.littleList-box .container .goods_info .finish-tip.data-v-6b110082 {
+    color: #e85252;
+    line-height: 34rpx
+}
+
+.littleList-box .container .goods_info .finish-tip .countdown-box.data-v-6b110082 {
+    line-height: 34rpx
+}
+
+.littleList-box .container .goods_info .presale-time.data-v-6b110082 {
+    color: #e85252;
+    font-size: 22rpx;
+    line-height: 34rpx
+}
+
+.littleList-box .container .goods_info .goods_sell.data-v-6b110082 {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #999;
+    display: -webkit-box;
+    font-size: 24rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.littleList-box .container .goods_info .goods_tag.data-v-6b110082 {
+    display: -webkit-flex;
+    display: flex;
+    margin: 8rpx 0rpx
+}
+
+.littleList-box .container .goods_info .goods_tag wx-view.data-v-6b110082:nth-child(1) {
+    background: #ffe5e5;
+    border: 1px solid #ffe5e5;
+    border-radius: 4rpx;
+    box-sizing: border-box;
+    color: #e85252;
+    font-size: 20rpx;
+    font-weight: 400;
+    height: 36rpx;
+    line-height: 31rpx;
+    margin-right: 8rpx;
+    padding: 0rpx 16rpx;
+    text-align: center
+}
+
+.littleList-box .container .goods_info .goods_tag wx-view.data-v-6b110082:nth-child(2) {
+    border: 1px solid #e85252;
+    border-radius: 4rpx;
+    box-sizing: border-box;
+    color: #e85252;
+    font-size: 20rpx;
+    font-weight: 400;
+    height: 36rpx;
+    line-height: 31rpx;
+    padding: 0rpx 16rpx;
+    text-align: center
+}
+
+.littleList-box .container .goods_info .showinfo-sales.data-v-6b110082 {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #bbb;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 24rpx
+}
+
+.littleList-box .container .goods_info .showinfo-sales .slicer.data-v-6b110082 {
+    margin: 0rpx 16rpx
+}
+
+.littleList-box .container .goods_info .item-shopinfo.data-v-6b110082 {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 100%
+}
+
+.littleList-box .container .goods_info .item-shopinfo .item-shopBox.data-v-6b110082 {
+    -webkit-align-content: baseline;
+    align-content: baseline;
+    display: -webkit-flex;
+    display: flex
+}
+
+.littleList-box .container .goods_info .item-shopinfo .item-shopBox .item-sellPrice.data-v-6b110082 {
+    -webkit-align-items: baseline;
+    align-items: baseline;
+    color: #e85252;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    font-weight: 600;
+    line-height: 1;
+    margin-right: 8rpx
+}
+
+.littleList-box .container .goods_info .item-shopinfo .item-shopBox .item-sellPrice wx-text.data-v-6b110082 {
+    font-size: 40rpx!important
+}
+
+.littleList-box .container .goods_info .item-shopinfo .item-shopBox .item-marketPrice.data-v-6b110082 {
+    color: #858585;
+    font-size: 22rpx;
+    font-weight: 400;
+    padding-top: 6rpx;
+    text-decoration: line-through
+}
+
+.littleList-box .container .goods_info .item-shopinfo .item-shopIcon.data-v-6b110082 {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #ff7272;
+    border-radius: 22rpx;
+    display: -webkit-flex;
+    display: flex;
+    height: 44rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 44rpx
+}
+
+.littleList-box .container .goods_info .item-shopinfo .item-shopIcon wx-image.data-v-6b110082 {
+    height: 32rpx;
+    vertical-align: bottom;
+    width: 32rpx
+}
+
+.littleList-box .container .goods_info .item-shopinfo .item-shopIcon .item-shop-box.data-v-6b110082 {
+    background: #e85252;
+    border-radius: 8rpx;
+    color: #fff;
+    font-size: 32rpx;
+    font-weight: 400;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    width: 168rpx
+}
+
+.littleList-box .icon2.data-v-6b110082 {
+    color: #e85252;
+    font-size: 20rpx;
+    margin-left: 2rpx;
+    margin-top: 2rpx
+}

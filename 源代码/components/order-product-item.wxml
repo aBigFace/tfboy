@@ -1,0 +1,48 @@
+<view class="{{['order-product','flex',J&&'invalid-product']}}">
+    <view class="left-image" wx:if="{{a}}">
+        <image class="img-max" src="{{b}}"></image>
+        <view class="invalid-tip" wx:if="{{c}}">已失效</view>
+        <view class="img-tips" wx:if="{{d}}">{{e}}</view>
+        <view class="img-tips" wx:if="{{f}}">赠品</view>
+    </view>
+    <view class="flex-1">
+        <view class="product-info flex-space-between">
+            <view class="">
+                <view class="product-name max-line-two flex-1">{{g}}</view>
+            </view>
+            <view class="product-price-number" wx:if="{{h}}">
+                <price bind:__l="__l" uI="019d3f85-0" uP="{{j}}" wx:if="{{i}}"></price>
+            </view>
+        </view>
+        <view class="product-spec" wx:if="{{k}}">
+            <view class="flex-space-between-center">
+                <view bindtap="{{r}}" class="spec-name flex-center" wx:if="{{l}}">
+                    <text class="spec-text text-gray-xs m-r-5">数量: {{m}}</text>
+                    <text class="spec-text text-gray-xs" wx:if="{{n}}">{{o}}</text>
+                    <uni-icons bind:__l="__l" class="arrow-icon" uI="019d3f85-1" uP="{{q}}" wx:if="{{p}}"></uni-icons>
+                </view>
+                <view class="product-number text-gray"></view>
+            </view>
+        </view>
+        <view class="product-spec" wx:else>
+            <view class="flex-space-between-center">
+                <view bindtap="{{y}}" class="spec-name flex-center" wx:if="{{s}}">
+                    <text class="spec-text text-gray-xs" wx:if="{{t}}">{{v}}</text>
+                    <uni-icons bind:__l="__l" class="arrow-icon" uI="019d3f85-2" uP="{{x}}" wx:if="{{w}}"></uni-icons>
+                </view>
+                <view bindtap="{{C}}" class="spec-name2 flex-center" wx:if="{{z}}">
+                    <text class="spec-text text-gray-xs">下单时间：{{A}}</text>
+                    <view></view>
+                    <text class="spec-text text-gray-xs">支付方式：{{B}}</text>
+                </view>
+                <view class="product-number text-gray" wx:if="{{D}}">
+                    <text class="icon">x{{E}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="product-spec m-t-5" wx:if="{{F}}">
+            <price bind:__l="__l" uI="019d3f85-3" uP="{{G}}" wx:if="{{G}}"></price>
+        </view>
+        <view class="error-message m-t-5" wx:if="{{H}}">{{I}}</view>
+    </view>
+</view>

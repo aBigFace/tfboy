@@ -1,0 +1,13 @@
+<view class="{{['uni-forms-item',i,j,k]}}">
+    <slot name="label"></slot>
+    <view class="{{['uni-forms-item__label',d&&'no-label']}}" style="{{'width:'+e+';'+'justify-content:'+f}}" wx:if="{{a}}">
+        <text class="is-required" wx:if="{{b}}">*</text>
+        <text>{{c}}</text>
+    </view>
+    <view class="uni-forms-item__content">
+        <slot></slot>
+        <view class="{{['uni-forms-item__error',h&&'msg--active']}}">
+            <text>{{g}}</text>
+        </view>
+    </view>
+</view>

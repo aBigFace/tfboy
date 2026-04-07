@@ -1,0 +1,46 @@
+.outer-box.data-v-b9acfff8 {
+    background-color: #fff
+}
+
+.typeTwo.data-v-b9acfff8 {
+    padding: 14rpx 0
+}
+
+.typeTwo .input-box.data-v-b9acfff8 {
+    height: 68rpx;
+    position: relative
+}
+
+.typeTwo .input-box .search-input.data-v-b9acfff8 {
+    height: 68rpx;
+    margin-right: 20rpx;
+    width: 610rpx
+}
+
+.typeTwo .input-box .search-box.data-v-b9acfff8 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    margin: 0 24rpx
+}
+
+.typeTwo .input-box .search-icon.data-v-b9acfff8 {
+    height: 33rpx;
+    left: 40rpx;
+    position: absolute;
+    top: 20rpx;
+    width: 33rpx
+}
+
+.typeTwo .btn-box.data-v-b9acfff8 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.typeTwo .btn-box .search-img.data-v-b9acfff8 {
+    height: 50rpx;
+    width: 58rpx
+}

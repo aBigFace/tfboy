@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "申请详情",
+  "navigationBarBackgroundColor": "#f6f6f6",
+  "usingComponents": {
+    "confirm-modal": "../../../components/modal/confirm-modal",
+    "order-product-item": "../../../components/order-product-item",
+    "price": "../../../components/price",
+    "customer-service": "../components/customer-service",
+    "uni-icons": "../../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "custom-nav": "components/customNav/customNav"
+  }
+}
