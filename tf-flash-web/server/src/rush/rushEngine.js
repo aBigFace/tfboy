@@ -112,10 +112,10 @@ const PLACE_ORDER_FANOUT = (() => {
 })();
 
 /**
- * placeOrder 全失败且含 401 时：刷新 token 再整轮 fanout；可连续执行多次（默认 2 次）。
- * 环境变量 TF_RUSH_PLACE_401_RETRIES（0～5，默认 2）；0 表示不重试。
+ * placeOrder 全失败且含 401 时：刷新 token 再整轮 fanout；可连续执行多次（默认 1 次）。
+ * 环境变量 TF_RUSH_PLACE_401_RETRIES（0～5，默认 1）；0 表示不重试。
  */
-const DEFAULT_PLACE_ORDER_401_RETRIES = 2;
+const DEFAULT_PLACE_ORDER_401_RETRIES = 1;
 const PLACE_ORDER_401_RETRIES = (() => {
   const raw = Number(process.env.TF_RUSH_PLACE_401_RETRIES);
   const n =
@@ -531,7 +531,7 @@ async function withAccountApi(accountId, apiCall) {
 
 /**
  * 已确认有货后的下单链：只用任务里已保存的 addressBookSnapshot 组单。
- * 若配置了 DM_PROXY_FETCH_URL（或 data/proxy-pool-fetch-url.txt），placeOrder 从代理池轮询取线；否则直连官方。
+ * 若配置了 DM_PROXY_FETCH_URL（或 data/proxy-pool-fetch-url.txt），placeOrder 每次从代理池 **随机** 选一条线（用后仍在池中，定时刷新整批替换）；否则直连官方。
  * 错误写入该任务日志，不向外抛。任意时刻任务已停止或不在轮询窗口则不再调用 placeOrder。
  */
 async function tryPlaceOrderForTask(task, detail, sku, wave, skuMs) {
@@ -951,18 +951,21 @@ async function runWaveForGoods(goodsId) {
       )
     );
 
-    logs.pushMonitor({
-      event: "shelf_poll",
-      goodsId: gid,
-      skuCount: skuList.length,
-      durationMs: skuMs,
-      shelfDirect: true,
-      placeDirect: !proxyCache.isPlaceProxyConfigured(),
-      proxyUsed: pxMeta.used,
-      proxyHost: pxMeta.host,
-      proxyPort: pxMeta.port,
-      watched,
-    });
+    /** 无满足库存的任务时不推货架轮询卡片，避免监控页被「现货 0」刷屏 */
+    if (toPlace.length > 0) {
+      logs.pushMonitor({
+        event: "shelf_poll",
+        goodsId: gid,
+        skuCount: skuList.length,
+        durationMs: skuMs,
+        shelfDirect: true,
+        placeDirect: !proxyCache.isPlaceProxyConfigured(),
+        proxyUsed: pxMeta.used,
+        proxyHost: pxMeta.host,
+        proxyPort: pxMeta.port,
+        watched,
+      });
+    }
 
     await placeP;
   } catch (e) {

@@ -7,6 +7,7 @@ const {
 } = require("./httpClient");
 const { DATA_DIR } = require("./store/persist");
 const { formatLocalTimestamp } = require("./rush/logs");
+const appSettings = require("./rush/appSettings");
 const { getShelvesSkuReachableProbe } = require("./tfApi");
 const { DEFAULT_GOODS_BODY } = require("./apiDefaults");
 
@@ -65,34 +66,53 @@ const PLACE_ORDER_SLOT = "place_order";
 
 /** @type {{ host: string, port: number }[]} */
 let pool = [];
-let rrIndex = 0;
 
 let intervalId = null;
 let lastFailMonitored = 0;
 
 function resolveFetchUrl() {
+  let url;
   const env = process.env.DM_PROXY_FETCH_URL;
-  if (env != null && String(env).trim()) return String(env).trim();
-  try {
-    const p = resolveFetchUrlPath();
-    if (p && fs.existsSync(p)) {
-      const lines = fs.readFileSync(p, "utf8").split(/\r?\n/);
-      for (const line of lines) {
-        const t = String(line || "").trim();
-        if (t && !t.startsWith("#")) return t;
+  if (env != null && String(env).trim()) {
+    url = String(env).trim();
+  } else {
+    try {
+      const p = resolveFetchUrlPath();
+      if (p && fs.existsSync(p)) {
+        const lines = fs.readFileSync(p, "utf8").split(/\r?\n/);
+        for (const line of lines) {
+          const t = String(line || "").trim();
+          if (t && !t.startsWith("#")) {
+            url = t;
+            break;
+          }
+        }
       }
+    } catch (_) {
+      /* ignore */
     }
-  } catch (_) {
-    /* ignore */
+    if (!url) url = DEFAULT_DM_PROXY_FETCH_URL;
   }
-  return DEFAULT_DM_PROXY_FETCH_URL;
+  return applyProxyFetchGetNum(url);
 }
 
 function resolveFetchUrlPath() {
   return path.join(DATA_DIR, "proxy-pool-fetch-url.txt");
 }
 
+/** 替换取号 URL 中的 getnum（多米等）；TF_PROXY_FETCH_NUM：1～100，不设则用 URL 自带值（默认链接已为 10 条） */
+function applyProxyFetchGetNum(url) {
+  const raw = process.env.TF_PROXY_FETCH_NUM;
+  if (raw == null || String(raw).trim() === "") return url;
+  const r = Number(String(raw).trim());
+  if (!Number.isFinite(r) || r < 1 || r > 100) return url;
+  const n = Math.floor(r);
+  if (!/[?&]getnum=\d+/i.test(url)) return url;
+  return url.replace(/([?&]getnum=)\d+/i, `$1${n}`);
+}
+
 function isPlaceProxyConfigured() {
+  if (!appSettings.getUsePlaceProxy()) return false;
   return Boolean(resolveFetchUrl());
 }
 
@@ -226,25 +246,33 @@ function buildWaveProxyFromEntry(entry) {
 }
 
 /**
- * 每轮抢购 fanout 内每次 placeOrder 调用一次：从池里轮询取一条线路（可重叠波次并发取用）。
- * 未配置取号 URL 或池为空时返回 null，由下层直连官方。
+ * 每次 placeOrder 从池中 **随机** 取一条线路，**不移除**（条目保留在池内直至定时刷新整池替换）。
  */
 function takeProxyWaveOptions() {
+  if (!appSettings.getUsePlaceProxy()) return null;
   const url = resolveFetchUrl();
   if (!url || !pool.length) return null;
-  const entry = pool[rrIndex % pool.length];
-  rrIndex++;
+  const entry = pool[Math.floor(Math.random() * pool.length)];
+  if (!entry) return null;
   return buildWaveProxyFromEntry(entry);
 }
 
 function peekPlaceEndpoint() {
   if (!resolveFetchUrl() || !pool.length) return null;
-  const entry = pool[rrIndex % pool.length];
+  const entry = pool[Math.floor(Math.random() * pool.length)];
   return { host: entry.host, port: entry.port };
 }
 
 /** 与 rushEngine place_intent / proxyEndpointMeta 展示一致 */
 function getPlaceIntentLogMeta() {
+  if (!appSettings.getUsePlaceProxy()) {
+    return {
+      used: false,
+      host: null,
+      port: null,
+      label: "未走代理（直连下单）",
+    };
+  }
   const ep = peekPlaceEndpoint();
   if (ep) {
     return {
@@ -413,6 +441,7 @@ async function refreshOnce() {
 
 /** 提交订单前：若已配置取号线且池空，尽力补一轮（不阻塞其它波次的定时刷新） */
 async function ensurePlaceProxyAvailable() {
+  if (!appSettings.getUsePlaceProxy()) return;
   if (!resolveFetchUrl()) return;
   if (pool.length > 0) return;
   const r = await refreshOnce();
@@ -452,6 +481,5 @@ module.exports = {
   _refreshOnce: refreshOnce,
   _resetForTest: () => {
     pool = [];
-    rrIndex = 0;
   },
 };

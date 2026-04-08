@@ -37,6 +37,8 @@ const tasks = ref([]);
 /** 任务列表多选（一键启动） */
 const taskTableRef = ref(null);
 const selectedTasks = ref([]);
+/** 服务端 rush-app-settings.json：提交订单是否走代理，默认 true */
+const rushSettings = ref({ usePlaceProxy: true });
 /** 与后端一致最多保留条数（仅内存）；展示用解析结果增量更新，避免每条推送全量 parse */
 const MAX_TASK_LOG_LINES = 400;
 /** 与 rushEngine MAX_PLACE_RECORDS 一致；Socket 合并 placeRecords 时淘汰最旧 */
@@ -610,11 +612,39 @@ async function loadTasks() {
   tasks.value = data.data;
 }
 
+async function loadRushSettings() {
+  try {
+    const { data } = await http.get("/api/rush/settings");
+    if (data.ok && data.data && typeof data.data.usePlaceProxy === "boolean") {
+      rushSettings.value.usePlaceProxy = data.data.usePlaceProxy;
+    }
+  } catch {
+    /* 保持默认 true */
+  }
+}
+
+async function onUsePlaceProxyChange(v) {
+  err.value = "";
+  try {
+    const { data } = await http.patch("/api/rush/settings", {
+      usePlaceProxy: v,
+    });
+    if (!data.ok) throw new Error(data.message || "保存失败");
+    if (data.data && typeof data.data.usePlaceProxy === "boolean") {
+      rushSettings.value.usePlaceProxy = data.data.usePlaceProxy;
+    }
+  } catch (e) {
+    rushSettings.value.usePlaceProxy = !v;
+    err.value = e.response?.data?.message || e.message;
+  }
+}
+
 async function refreshAll() {
   err.value = "";
   try {
     await loadAccounts();
     await loadTasks();
+    await loadRushSettings();
     const sel = taskForm.value.accountId;
     if (sel) {
       const still = accounts.value.some((a) => a.id === sel);
@@ -2120,6 +2150,17 @@ onUnmounted(() => {
       <header class="task-list-panel-header">
         <span class="task-list-panel-title">任务列表</span>
         <div class="task-list-toolbar">
+          <div class="task-proxy-switch">
+            <span class="task-proxy-label">下单走代理</span>
+            <el-switch
+              v-model="rushSettings.usePlaceProxy"
+              size="small"
+              inline-prompt
+              active-text="开"
+              inactive-text="关"
+              @change="onUsePlaceProxyChange"
+            />
+          </div>
           <el-button
             type="primary"
             size="small"
@@ -2350,6 +2391,17 @@ onUnmounted(() => {
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+}
+.task-proxy-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 4px;
+}
+.task-proxy-label {
+  font-size: 13px;
+  color: var(--el-text-color-regular);
+  white-space: nowrap;
 }
 .task-list-panel-title {
   font-size: 16px;

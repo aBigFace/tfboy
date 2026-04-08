@@ -1,6 +1,7 @@
 const express = require("express");
 const rush = require("../rush/rushEngine");
 const rushLogs = require("../rush/logs");
+const appSettings = require("../rush/appSettings");
 const {
   goodsPageList,
   getShelvesSku,
@@ -23,6 +24,24 @@ function sendErr(res, e, code = 400) {
     detail: e.response?.data ?? e.detail,
   });
 }
+
+router.get("/settings", (_, res) => {
+  try {
+    res.json({ ok: true, data: appSettings.get() });
+  } catch (e) {
+    sendErr(res, e);
+  }
+});
+
+router.patch("/settings", (req, res) => {
+  try {
+    const body = req.body && typeof req.body === "object" ? req.body : {};
+    const data = appSettings.patch(body);
+    res.json({ ok: true, data });
+  } catch (e) {
+    sendErr(res, e);
+  }
+});
 
 router.get("/accounts", (_, res) => {
   try {
