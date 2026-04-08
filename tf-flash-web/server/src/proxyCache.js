@@ -1,7 +1,10 @@
 const fs = require("fs");
 const path = require("path");
-const axios = require("axios");
-const { HttpsProxyAgent } = require("https-proxy-agent");
+const {
+  createProxyDispatcher,
+  request,
+  proxyPullDispatcher,
+} = require("./httpClient");
 const { DATA_DIR } = require("./store/persist");
 const { formatLocalTimestamp } = require("./rush/logs");
 const { getShelvesSkuReachableProbe } = require("./tfApi");
@@ -14,15 +17,18 @@ const POOL_REFRESH_MS = 15_000;
 const POOL_CAP = 200;
 const FETCH_TIMEOUT_MS = 12_000;
 
-/** 延迟探活：走 getShelvesSku，仅当耗时 < 此值才入池（毫秒） */
+/**
+ * 延迟探活：走 getShelvesSku，仅当耗时 < 此值才入池（毫秒）。
+ * 默认 2500：1000 对「代理→app.tfent.cn」常过严，易大批丢弃；更紧可设环境变量 TF_PROXY_SHELF_LATENCY_MAX_MS。
+ */
 const SHELF_LATENCY_MAX_MS = (() => {
   const r = Number(process.env.TF_PROXY_SHELF_LATENCY_MAX_MS);
   if (Number.isFinite(r) && r >= 100 && r <= 60_000) return Math.floor(r);
-  return 1000;
+  return 2500;
 })();
 
-/** 探活请求 axios 超时（应大于 SHELF_LATENCY_MAX_MS，避免慢响应被误判为网络错误） */
-const SHELF_PROBE_AXIOS_TIMEOUT_MS = (() => {
+/** 探活请求超时（应大于 SHELF_LATENCY_MAX_MS，避免慢响应被误判为网络错误） */
+const SHELF_PROBE_TIMEOUT_MS = (() => {
   const r = Number(process.env.TF_PROXY_SHELF_PROBE_TIMEOUT_MS);
   if (Number.isFinite(r) && r >= 2000 && r <= 120_000) return Math.floor(r);
   return Math.max(8000, SHELF_LATENCY_MAX_MS * 3);
@@ -39,11 +45,21 @@ const SHELF_LATENCY_TEST_ON = (() => {
 })();
 
 /**
+ * 一批代理探活全弃时，立刻再请求取号接口拉新一批；封顶避免刷爆取号线。
+ * `TF_PROXY_LATENCY_ALL_FAIL_RETRIES`：1～30，默认 8。
+ */
+const PROXY_LATENCY_ALL_FAIL_MAX_RETRIES = (() => {
+  const r = Number(process.env.TF_PROXY_LATENCY_ALL_FAIL_RETRIES);
+  if (Number.isFinite(r) && r >= 1 && r <= 30) return Math.floor(r);
+  return 8;
+})();
+
+/**
  * 多米 dmgetip 默认取号（可被 DM_PROXY_FETCH_URL 或 data/proxy-pool-fetch-url.txt 覆盖）。
  * apikey/pwd 写在源码中有泄露风险，仓库若公开请改用环境变量。
  */
 const DEFAULT_DM_PROXY_FETCH_URL =
-  "http://api.dmdaili.com/dmgetip.asp?apikey=c5fc82ee&pwd=2812093347f27c21fe81a1d8bc144645&getnum=5&httptype=1&geshi=1&fenge=1&fengefu=&operate=all";
+  "http://api.dmdaili.com/dmgetip.asp?apikey=29a0386e&pwd=327470a5e147f4c4ace722d4c75fe09d&getnum=10&httptype=1&geshi=1&fenge=1&fengefu=&operate=all";
 
 const PLACE_ORDER_SLOT = "place_order";
 
@@ -94,34 +110,26 @@ function resolveShelfProbeGoodsId() {
 }
 
 /**
- * 经代理打 getShelvesSku 同一路径；返回耗时毫秒（仅 HTTP 200 且耗时 < 阈才算通过）。
- */
-async function probeShelfLatencyMs(entry, goodsId) {
-  const wave = buildWaveProxyFromEntry(entry);
-  const r = await getShelvesSkuReachableProbe(goodsId, 1, {
-    ...wave,
-    timeout: SHELF_PROBE_AXIOS_TIMEOUT_MS,
-  });
-  if (!r.ok || r.ms >= SHELF_LATENCY_MAX_MS) return null;
-  return r.ms;
-}
-
-/**
- * 并行探活，仅保留 ms < SHELF_LATENCY_MAX_MS 的线路；用于日志的 (xxxms) 与入池列表一致。
+ * 并行探活，仅保留 ms < SHELF_LATENCY_MAX_MS 的线路。
  */
 async function measureShelfLatencyAndFilter(list) {
   const goodsId = resolveShelfProbeGoodsId();
   const results = await Promise.all(
     list.map(async (entry) => {
-      const ms = await probeShelfLatencyMs(entry, goodsId);
-      return { entry, ms };
+      const wave = buildWaveProxyFromEntry(entry);
+      const probe = await getShelvesSkuReachableProbe(goodsId, 1, {
+        ...wave,
+        timeout: SHELF_PROBE_TIMEOUT_MS,
+      });
+      return { entry, probe };
     })
   );
   /** @type {{ entry: (typeof list)[0]; ms: number }[]} */
   const kept = [];
   for (const r of results) {
-    if (r.ms != null && r.ms < SHELF_LATENCY_MAX_MS) {
-      kept.push({ entry: r.entry, ms: r.ms });
+    const { entry, probe } = r;
+    if (probe.ok && probe.ms < SHELF_LATENCY_MAX_MS) {
+      kept.push({ entry, ms: probe.ms });
     }
   }
   return { kept, total: list.length, goodsId };
@@ -208,13 +216,11 @@ function dedupeCap(list) {
 
 function buildWaveProxyFromEntry(entry) {
   const proxyUrl = `http://${entry.host}:${entry.port}`;
-  const agent = new HttpsProxyAgent(proxyUrl, {
-    timeout: PROXY_AGENT_TIMEOUT_MS,
+  const dispatcher = createProxyDispatcher(proxyUrl, {
+    connectTimeout: PROXY_AGENT_TIMEOUT_MS,
   });
   return {
-    httpsAgent: agent,
-    httpAgent: agent,
-    proxy: false,
+    dispatcher,
     _proxyPoolMeta: { host: entry.host, port: entry.port },
   };
 }
@@ -312,78 +318,97 @@ function maybePushFetchFail(reason, tag = "background") {
 async function refreshOnce() {
   const url = resolveFetchUrl();
   if (!url) return { ok: false, reason: "no_url" };
-  try {
-    const res = await axios.get(url, {
-      timeout: FETCH_TIMEOUT_MS,
-      responseType: "text",
-      validateStatus: () => true,
-      transformResponse: [(data) => data],
-      headers: { "User-Agent": "tf-flash-server/proxy-pool" },
-    });
-    if (res.status < 200 || res.status >= 300) {
-      console.warn(
-        `[proxy-pool] ${formatLocalTimestamp()} 拉取失败 HTTP ${res.status}`
+
+  for (
+    let attempt = 0;
+    attempt < PROXY_LATENCY_ALL_FAIL_MAX_RETRIES;
+    attempt++
+  ) {
+    if (attempt > 0) {
+      console.log(
+        `[proxy-pool] ${formatLocalTimestamp()} 货架探活全弃，立即重新取号（第 ${attempt + 1}/${PROXY_LATENCY_ALL_FAIL_MAX_RETRIES} 批）`
       );
-      return { ok: false, reason: `http_${res.status}` };
-    }
-    const text = res.data == null ? "" : String(res.data);
-    try {
-      const j = JSON.parse(text);
-      if (j && typeof j === "object") {
-        if (j.success === false) {
-          const reason = `dm_${j.code}:${String(j.msg || "").slice(0, 200)}`;
-          console.warn(`[proxy-pool] ${formatLocalTimestamp()} ${reason}`);
-          return { ok: false, reason };
-        }
-        const c = j.code;
-        if (c !== undefined && c !== 0 && c !== "0") {
-          const reason = `dm_${c}:${String(j.msg || "").slice(0, 200)}`;
-          console.warn(`[proxy-pool] ${formatLocalTimestamp()} ${reason}`);
-          return { ok: false, reason };
-        }
-      }
-    } catch (_) {
-      /* 非 JSON（如纯文本 ip:port）正常走下方解析 */
-    }
-    let list = dedupeCap(parseProxyPayload(text));
-    if (!list.length) {
-      console.warn(
-        `[proxy-pool] ${formatLocalTimestamp()} 拉取失败 响应中未解析到 ip:port（empty_parse）`
-      );
-      return { ok: false, reason: "empty_parse" };
     }
 
-    const ts = formatLocalTimestamp();
-    if (SHELF_LATENCY_TEST_ON) {
-      const { kept, total, goodsId } = await measureShelfLatencyAndFilter(list);
-      if (!kept.length) {
+    try {
+      const res = await request({
+        method: "GET",
+        url,
+        timeout: FETCH_TIMEOUT_MS,
+        dispatcher: proxyPullDispatcher,
+        headers: { "User-Agent": "tf-flash-server/proxy-pool" },
+        parseJson: false,
+      });
+      if (res.status < 200 || res.status >= 300) {
         console.warn(
-          `[proxy-pool] ${ts} 货架探活 getShelvesSku goodsId=${goodsId} 无线路 <${SHELF_LATENCY_MAX_MS}ms（${total} 条全弃）`
+          `[proxy-pool] ${formatLocalTimestamp()} 拉取失败 HTTP ${res.status}`
         );
-        return { ok: false, reason: "latency_all_fail" };
+        return { ok: false, reason: `http_${res.status}` };
       }
-      pool = kept.map((k) => k.entry);
-      const lines = kept
-        .map((k) => `${k.entry.host}:${k.entry.port}(${k.ms}ms)`)
-        .join(", ");
-      const drop = total - kept.length;
-      const dropHint = drop > 0 ? ` 丢弃${drop}条` : "";
-      console.log(
-        `[proxy-pool] ${ts} 拉取成功 共 ${pool.length}/${total} 条 goodsId=${goodsId} 延迟<${SHELF_LATENCY_MAX_MS}ms${dropHint} → ${lines}`
-      );
-    } else {
-      pool = list;
-      const lines = list.map((e) => `${e.host}:${e.port}`).join(", ");
-      console.log(
-        `[proxy-pool] ${ts} 拉取成功 共 ${list.length} 条 → ${lines}`
-      );
+      const text = res.data == null ? "" : String(res.data);
+      try {
+        const j = JSON.parse(text);
+        if (j && typeof j === "object") {
+          if (j.success === false) {
+            const reason = `dm_${j.code}:${String(j.msg || "").slice(0, 200)}`;
+            console.warn(`[proxy-pool] ${formatLocalTimestamp()} ${reason}`);
+            return { ok: false, reason };
+          }
+          const c = j.code;
+          if (c !== undefined && c !== 0 && c !== "0") {
+            const reason = `dm_${c}:${String(j.msg || "").slice(0, 200)}`;
+            console.warn(`[proxy-pool] ${formatLocalTimestamp()} ${reason}`);
+            return { ok: false, reason };
+          }
+        }
+      } catch (_) {
+        /* 非 JSON（如纯文本 ip:port）正常走下方解析 */
+      }
+      let list = dedupeCap(parseProxyPayload(text));
+      if (!list.length) {
+        console.warn(
+          `[proxy-pool] ${formatLocalTimestamp()} 拉取失败 响应中未解析到 ip:port（empty_parse）`
+        );
+        return { ok: false, reason: "empty_parse" };
+      }
+
+      const ts = formatLocalTimestamp();
+      if (SHELF_LATENCY_TEST_ON) {
+        const { kept, total, goodsId } = await measureShelfLatencyAndFilter(list);
+        if (!kept.length) {
+          console.warn(
+            `[proxy-pool] ${ts} 货架探活 getShelvesSku goodsId=${goodsId} 无线路 <${SHELF_LATENCY_MAX_MS}ms（${total} 条全弃）`
+          );
+          if (attempt + 1 >= PROXY_LATENCY_ALL_FAIL_MAX_RETRIES) {
+            return { ok: false, reason: "latency_all_fail" };
+          }
+          continue;
+        }
+        pool = kept.map((k) => k.entry);
+        const lines = kept
+          .map((k) => `${k.entry.host}:${k.entry.port}(${k.ms}ms)`)
+          .join(", ");
+        const drop = total - kept.length;
+        const dropHint = drop > 0 ? ` 丢弃${drop}条` : "";
+        console.log(
+          `[proxy-pool] ${ts} 拉取成功 共 ${pool.length}/${total} 条 goodsId=${goodsId} 延迟<${SHELF_LATENCY_MAX_MS}ms${dropHint} → ${lines}`
+        );
+      } else {
+        pool = list;
+        const lines = list.map((e) => `${e.host}:${e.port}`).join(", ");
+        console.log(
+          `[proxy-pool] ${ts} 拉取成功 共 ${list.length} 条 → ${lines}`
+        );
+      }
+      return { ok: true, count: pool.length };
+    } catch (e) {
+      const reason = e.code || e.message || "fetch_error";
+      console.warn(`[proxy-pool] ${formatLocalTimestamp()} 拉取异常 ${reason}`);
+      return { ok: false, reason };
     }
-    return { ok: true, count: pool.length };
-  } catch (e) {
-    const reason = e.code || e.message || "fetch_error";
-    console.warn(`[proxy-pool] ${formatLocalTimestamp()} 拉取异常 ${reason}`);
-    return { ok: false, reason };
   }
+
+  return { ok: false, reason: "latency_all_fail" };
 }
 
 /** 提交订单前：若已配置取号线且池空，尽力补一轮（不阻塞其它波次的定时刷新） */

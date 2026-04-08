@@ -426,12 +426,16 @@ const MAX_ACCOUNT_REMARK = 512;
 
 function maskAccount(a) {
   const { id, username, updatedAt, currentUser } = a;
+  const nickRaw = currentUser?.nickName;
+  const nickName =
+    nickRaw != null && String(nickRaw).trim() ? String(nickRaw).trim() : "";
   return {
     id,
     username,
     updatedAt,
     hasToken: !!a.access_token,
     phone: currentUser?.phone || currentUser?.account,
+    nickName,
     memberSummary: memberSummaryForMask(a),
     remark: a.remark != null ? String(a.remark) : "",
   };
@@ -457,11 +461,11 @@ async function getToken(account) {
 }
 
 /**
- * 与本次波次实际传入 axios 的 waveProxy 一致（看是否带 httpsAgent），
+ * 与本次波次实际传入 tfApi 的 waveProxy 一致（看是否带 dispatcher），
  * 避免仅用 getProxyEndpoint 缓存、在 TTL 边界上误标成「直连」。
  */
 function proxyEndpointMeta(waveProxy, proxySlot) {
-  if (waveProxy?.httpsAgent) {
+  if (waveProxy?.dispatcher || waveProxy?.httpsAgent) {
     const meta = waveProxy._proxyPoolMeta;
     if (meta && meta.host != null && meta.port != null) {
       return {

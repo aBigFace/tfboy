@@ -8,11 +8,11 @@
     "fetch-stock": "node scripts/fetch-stock-once.js"
   },
   "dependencies": {
-    "dotenv": "^16.4.7",
-    "https-proxy-agent": "^7.0.6",
-    "axios": "^1.7.9",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "socket.io": "^4.8.1"
+    "sdfj": "file:../..",
+    "socket.io": "^4.8.1",
+    "undici": "^6.21.1"
   }
 }

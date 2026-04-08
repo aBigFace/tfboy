@@ -14,6 +14,7 @@ const path = require("path");
   }
 })();
 
+/** Node 内置模块：仅用于 `createServer` 入站；出站请求由 `./httpClient`（undici） */
 const http = require("http");
 const express = require("express");
 const cors = require("cors");

@@ -815,7 +815,7 @@ async function openOrderListModal(acc) {
   if (!id) return;
   orderListModal.value.open = true;
   orderListModal.value.accountId = id;
-  orderListModal.value.username = acc.username || "";
+  orderListModal.value.username = accountSelectLabel(acc);
   orderListModal.value.filterId = "all";
   orderListModal.value.pageNum = 1;
   orderListModal.value.pageSize = ORDER_LIST_PAGE_SIZE;
@@ -1345,14 +1345,39 @@ function parseRushLogLines(rawLines) {
   return rawLines.map(parseOneRushLogLine);
 }
 
-function accountLabel(id) {
+/** 一次查找：上排账号+昵称、下排备注（任务列表） */
+function accountCellParts(id) {
   const a = accounts.value.find((x) => x.id === id);
-  if (!a) return id;
+  if (!a) return { primary: id, remark: "" };
   const phone = (a.phone || "").trim();
   const u = (a.username || "").trim();
-  if (phone && u === phone) return phone;
-  if (phone) return `${u} · ${phone}`;
-  return u || id;
+  const nick = (a.nickName || "").trim();
+  const remark = String(a.remark || "").trim();
+  let base = u;
+  if (phone && u === phone) base = phone;
+  else if (phone) base = `${u} · ${phone}`;
+  const parts = [base];
+  if (nick) parts.push(nick);
+  return { primary: parts.join(" · ") || id, remark };
+}
+
+/** 登录账号 + 可选昵称、备注（单行），供成单表等 */
+function accountLabel(id) {
+  const { primary, remark } = accountCellParts(id);
+  if (!remark) return primary;
+  return `${primary} · ${remark}`;
+}
+
+/** el-select 选项文案（与 accountLabel 同结构，便于 filterable 按备注/昵称搜索） */
+function accountSelectLabel(a) {
+  if (!a) return "";
+  const u = String(a.username || "").trim();
+  const nick = String(a.nickName || "").trim();
+  const remark = String(a.remark || "").trim();
+  const parts = [u || "—"];
+  if (nick) parts.push(nick);
+  if (remark) parts.push(remark);
+  return parts.join(" · ");
 }
 
 /** 表格「任务名」列：空名称占位，避免列被压成一字宽 */
@@ -1452,6 +1477,7 @@ const rushPlaceSuccessFeed = computed(() => {
       rows.push({
         ...rec,
         taskId: t.id,
+        accountId: t.accountId,
         taskName: taskDisplayName(t),
         accountLabel: accountLabel(t.accountId),
         goodsName: t.goodsName || "—",
@@ -1484,6 +1510,28 @@ async function removePlaceSuccessRow(row) {
     });
     ok.value = "已删除该条记录";
     await loadTasks();
+  } catch (e) {
+    err.value = e.response?.data?.message || e.message;
+  }
+}
+
+async function removePlaceSuccessRowAndAccount(row) {
+  if (!row?.accountId) return;
+  try {
+    await ElMessageBox.confirm(
+      "将删除该条对应的抢购账号（服务端 rush-accounts.json），并移除该账号下全部任务（rush-tasks.json）。若该账号有多条成单或多任务，会一并清空。不会在官方取消订单。",
+      "删除账号及全部关联任务？",
+      { type: "warning", confirmButtonText: "删除", cancelButtonText: "取消" }
+    );
+  } catch {
+    return;
+  }
+  err.value = "";
+  ok.value = "";
+  try {
+    await http.delete(`/api/rush/accounts/${encodeURIComponent(String(row.accountId))}`);
+    ok.value = "已删除账号及相关任务";
+    await refreshAll();
   } catch (e) {
     err.value = e.response?.data?.message || e.message;
   }
@@ -1595,6 +1643,9 @@ onUnmounted(() => {
         <el-table-column prop="username" label="用户" min-width="120" />
         <el-table-column label="手机" min-width="120">
           <template #default="{ row: a }">{{ a.phone || "—" }}</template>
+        </el-table-column>
+        <el-table-column label="昵称" min-width="100" show-overflow-tooltip>
+          <template #default="{ row: a }">{{ (a.nickName || "").trim() || "—" }}</template>
         </el-table-column>
         <el-table-column label="会员" min-width="200" show-overflow-tooltip>
           <template #default="{ row: a }">{{ a.memberSummary ?? "—" }}</template>
@@ -1762,7 +1813,7 @@ onUnmounted(() => {
           <el-col :xs="24" :sm="12" :md="8">
             <el-form-item label="账号">
               <el-select v-model="editForm.accountId" filterable clearable placeholder="选择" style="width: 100%">
-                <el-option v-for="a in accounts" :key="a.id" :label="a.username" :value="a.id" />
+                <el-option v-for="a in accounts" :key="a.id" :label="accountSelectLabel(a)" :value="a.id" />
               </el-select>
             </el-form-item>
           </el-col>
@@ -1889,7 +1940,7 @@ onUnmounted(() => {
           <el-col :xs="24" :sm="12" :md="8">
             <el-form-item label="账号">
               <el-select v-model="taskForm.accountId" filterable clearable placeholder="选择" style="width: 100%">
-                <el-option v-for="a in accounts" :key="a.id" :label="a.username" :value="a.id" />
+                <el-option v-for="a in accounts" :key="a.id" :label="accountSelectLabel(a)" :value="a.id" />
               </el-select>
             </el-form-item>
           </el-col>
@@ -2002,7 +2053,7 @@ onUnmounted(() => {
       </template>
       <el-text type="info" size="small" class="hint-block">
         与<strong>全局监控</strong>同源推送：<code>place_ok</code> 到达后<strong>立即</strong>写入下表与对应任务的「提交记录」，并持久化到
-        <code>rush-tasks.json</code>；无需手动刷新页面。行末<strong>删除</strong>仅从本地移除展示，不会在官方取消订单。
+        <code>rush-tasks.json</code>；无需手动刷新页面。<strong>删除</strong>仅从本地去掉该条成单记录；<strong>删账号</strong>会删除该条对应的抢购账号及其下全部任务（两文件写盘）。均不会在官方取消订单。
       </el-text>
       <el-table
         v-if="rushPlaceSuccessFeed.length"
@@ -2048,11 +2099,16 @@ onUnmounted(() => {
             <span class="mono">{{ row.accountLabel }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="72" fixed="right" align="center">
+        <el-table-column label="操作" min-width="152" fixed="right" align="center">
           <template #default="{ row }">
-            <el-button size="small" type="danger" plain @click="removePlaceSuccessRow(row)">
-              删除
-            </el-button>
+            <div class="rush-success-actions">
+              <el-button size="small" type="danger" plain @click="removePlaceSuccessRow(row)">
+                删除
+              </el-button>
+              <el-button size="small" type="danger" @click="removePlaceSuccessRowAndAccount(row)">
+                删账号
+              </el-button>
+            </div>
           </template>
         </el-table-column>
       </el-table>
@@ -2127,9 +2183,19 @@ onUnmounted(() => {
           <el-table-column label="任务名" min-width="100" show-overflow-tooltip>
             <template #default="{ row: t }">{{ taskDisplayName(t) }}</template>
           </el-table-column>
-          <el-table-column label="抢购账号" min-width="130" show-overflow-tooltip>
+          <el-table-column label="抢购账号" min-width="150" align="left" header-align="left">
             <template #default="{ row: t }">
-              <span class="mono">{{ accountLabel(t.accountId) }}</span>
+              <template v-for="c in [accountCellParts(t.accountId)]" :key="t.id">
+                <div class="task-account-cell">
+                  <div class="mono task-account-primary">{{ c.primary }}</div>
+                  <div
+                    class="task-account-remark"
+                    :class="{ 'task-account-remark--empty': !c.remark }"
+                  >
+                    {{ c.remark || "无备注" }}
+                  </div>
+                </div>
+              </template>
             </template>
           </el-table-column>
           <el-table-column label="商品与规格" min-width="200">
@@ -2222,6 +2288,44 @@ onUnmounted(() => {
 }
 .section-card {
   margin-bottom: 16px;
+}
+.rush-success-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+.task-account-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: flex-start;
+  gap: 4px;
+  line-height: 1.35;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  box-sizing: border-box;
+}
+.task-account-primary {
+  word-break: break-all;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.task-account-remark {
+  font-size: var(--el-font-size-extra-small);
+  color: var(--el-text-color-secondary);
+  line-height: 1.4;
+  max-width: 100%;
+  word-break: break-word;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.task-account-remark--empty {
+  opacity: 0.65;
 }
 .task-list-panel {
   margin-bottom: 16px;

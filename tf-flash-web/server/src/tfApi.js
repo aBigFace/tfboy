@@ -1,19 +1,12 @@
-const http = require("http");
-const https = require("https");
-const axios = require("axios");
 const { derBase64ToPemPublicKey, getRsaCode } = require("./rsa");
+const {
+  createOfficialDispatcher,
+  createHttpClient,
+} = require("./httpClient");
 
 const BASE = "https://app.tfent.cn";
 
-/** 复用 TCP/TLS，减少抢购时重复握手（对 app.tfent.cn 长连） */
-const officialHttpAgent = new http.Agent({
-  keepAlive: true,
-  maxSockets: 128,
-});
-const officialHttpsAgent = new https.Agent({
-  keepAlive: true,
-  maxSockets: 128,
-});
+const officialDispatcher = createOfficialDispatcher();
 
 /** 仅当 TF_DEBUG_API=1 / true 时打印 [官方接口请求]（默认关闭，避免控制台刷屏） */
 function debugApiOn() {
@@ -92,23 +85,28 @@ function headers(token) {
   };
 }
 
-const ax = axios.create({
+/**
+ * 全部商城官方请求（含下单 placeOrder）均走 undici + keep-alive 连接池，非 axios。
+ */
+const tfHttp = createHttpClient({
   baseURL: BASE,
-  validateStatus: () => true,
-  timeout: 60000,
-  httpAgent: officialHttpAgent,
-  httpsAgent: officialHttpsAgent,
-});
-
-ax.interceptors.request.use((config) => {
-  logOfficialRequest(config);
-  return config;
+  dispatcher: officialDispatcher,
+  defaultTimeout: 60_000,
+  onRequest: (cfg) =>
+    logOfficialRequest({
+      method: cfg.method,
+      baseURL: cfg.baseURL,
+      url: cfg.url,
+      headers: cfg.headers,
+      params: cfg.params,
+      data: cfg.data,
+    }),
 });
 
 /**
  * 控制台 / 监控用：压缩官方失败响应（尤其 EdgeOne 整页 HTML），避免刷屏。
  * @param {number} [status] HTTP 状态码
- * @param {*} data 响应 body（axios res.data）
+ * @param {*} data 响应 body（已解析 JSON，见 httpClient）
  * @param {number} [maxLen]
  */
 function summarizeTfErrorForLog(status, data, maxLen = 360) {
@@ -169,7 +167,7 @@ async function assertTfOk(res, label) {
 }
 
 async function loginPassword(username, passwordPlain) {
-  const pkRes = await ax.get("/out-api/auth/login/getPublicKey", {
+  const pkRes = await tfHttp.get("/out-api/auth/login/getPublicKey", {
     headers: headers(),
   });
   const pkJson = await assertTfOk(pkRes, "getPublicKey");
@@ -182,7 +180,7 @@ async function loginPassword(username, passwordPlain) {
     `&client_id=tf&client_secret=123` +
     `&password=${passwordParam}` +
     `&loginPlatform=2`;
-  const tokenRes = await ax.post(tokenUrl, {}, { headers: headers() });
+  const tokenRes = await tfHttp.post(tokenUrl, {}, { headers: headers() });
   if (tokenRes.status >= 400) {
     const err = new Error(
       tokenRes.data?.error_description || "登录失败"
@@ -199,7 +197,7 @@ async function loginPassword(username, passwordPlain) {
 
 /** rush 商品列表传 null 时不带 Bearer（与 getShelvesSku 为仅两种不带 token 的查询） */
 async function goodsPageList(token, body) {
-  const res = await ax.post("/goods/goodsSpu/pageListForShopMall", body, {
+  const res = await tfHttp.post("/goods/goodsSpu/pageListForShopMall", body, {
     headers: headers(token),
   });
   return assertTfOk(res, "pageListForShopMall");
@@ -209,13 +207,11 @@ async function goodsPageList(token, body) {
 async function getShelvesSku(token, goodsId, applyType = 1, reqOptions = {}) {
   const { _proxyPoolMeta: _omitPoolMeta, ...restReq } =
     reqOptions && typeof reqOptions === "object" ? reqOptions : {};
-  const opts =
-    restReq.httpsAgent != null ? { ...restReq, proxy: false } : restReq;
-  const res = await ax.get(
+  const res = await tfHttp.get(
     `/goods/shelves/getShelvesSku/${goodsId}?applyType=${applyType}`,
     {
       headers: headers(token),
-      ...opts,
+      ...restReq,
     }
   );
   return assertTfOk(res, "getShelvesSku");
@@ -231,15 +227,13 @@ async function getShelvesSkuReachableProbe(
 ) {
   const { _proxyPoolMeta: _omitPoolMeta, ...restReq } =
     reqOptions && typeof reqOptions === "object" ? reqOptions : {};
-  const opts =
-    restReq.httpsAgent != null ? { ...restReq, proxy: false } : restReq;
   const t0 = Date.now();
   try {
-    const res = await ax.get(
+    const res = await tfHttp.get(
       `/goods/shelves/getShelvesSku/${goodsId}?applyType=${applyType}`,
       {
         headers: headers(null),
-        ...opts,
+        ...restReq,
       }
     );
     const ms = Date.now() - t0;
@@ -257,14 +251,14 @@ async function getShelvesSkuReachableProbe(
 }
 
 async function personal(token) {
-  const res = await ax.post("/member-v2/my/personal", {}, {
+  const res = await tfHttp.post("/member-v2/my/personal", {}, {
     headers: headers(token),
   });
   return assertTfOk(res, "personal");
 }
 
 async function bookPageQuery(token, body, reqOptions = {}) {
-  const res = await ax.post("/gis/book/pageQuery", body, {
+  const res = await tfHttp.post("/gis/book/pageQuery", body, {
     headers: headers(token),
     ...reqOptions,
   });
@@ -272,7 +266,7 @@ async function bookPageQuery(token, body, reqOptions = {}) {
 }
 
 async function orderFee(token, body, reqOptions = {}) {
-  const res = await ax.post("/fee/compute/order-fee", body, {
+  const res = await tfHttp.post("/fee/compute/order-fee", body, {
     headers: headers(token),
     ...reqOptions,
   });
@@ -286,6 +280,7 @@ async function orderFee(token, body, reqOptions = {}) {
 }
 
 /**
+ * 提交订单：HTTP 由 tfHttp（undici + 直连连接池；`reqOptions.dispatcher` 为代理池线路）。
  * @param {string | null} [logAccountTag] 控制台失败日志附加：任务名·用户名·手机等，由调用方拼好
  */
 async function placeOrder(token, body, reqOptions = {}, logAccountTag = null) {
@@ -312,12 +307,10 @@ async function placeOrder(token, body, reqOptions = {}, logAccountTag = null) {
   const t0 = Date.now();
   let res;
   const opts = reqOptions && typeof reqOptions === "object" ? reqOptions : {};
-  const axiosOpts =
-    opts.httpsAgent != null ? { ...opts, proxy: false } : opts;
   try {
-    res = await ax.post("/place-order/mallOrder/placeOrder", body, {
+    res = await tfHttp.post("/place-order/mallOrder/placeOrder", body, {
       headers: headers(token),
-      ...axiosOpts,
+      ...opts,
     });
   } catch (e) {
     const elapsed = Date.now() - t0;
@@ -369,7 +362,7 @@ async function placeOrder(token, body, reqOptions = {}, logAccountTag = null) {
 
 /** 订单分页列表（须登录 token，与小程序一致） */
 async function orderPageQueryV2(token, body, reqOptions = {}) {
-  const res = await ax.post(
+  const res = await tfHttp.post(
     "/sale-order/saleOrderManager/mobile/pageQueryV2",
     body,
     { headers: headers(token), ...reqOptions }
@@ -379,7 +372,7 @@ async function orderPageQueryV2(token, body, reqOptions = {}) {
 
 /** 取消订单（待付款等，小程序 apiCancelListOrder：body 为 id 数组） */
 async function cancelMallOrder(token, orderIds, reqOptions = {}) {
-  const res = await ax.post(
+  const res = await tfHttp.post(
     "/place-order/mallOrder/cancelOrder",
     orderIds,
     { headers: headers(token), ...reqOptions }

@@ -1,5 +1,6 @@
 /**
- * 独立脚本：直连 GET 一次货架 SKU（无 token，与抢购波次内查库存一致，不经代理）
+ * 独立脚本：直连 GET 一次货架 SKU（无 token，与抢购波次内查库存一致，不经代理）。
+ * 出站 HTTP 经 `../src/tfApi` → `httpClient`（undici）。
  *
  * 用法（在 server 目录下）：
  *   node scripts/fetch-stock-once.js 1541
