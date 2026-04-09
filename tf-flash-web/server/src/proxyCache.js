@@ -60,7 +60,7 @@ const PROXY_LATENCY_ALL_FAIL_MAX_RETRIES = (() => {
  * apikey/pwd 写在源码中有泄露风险，仓库若公开请改用环境变量。
  */
 const DEFAULT_DM_PROXY_FETCH_URL =
-  "http://api.dmdaili.com/dmgetip.asp?apikey=29a0386e&pwd=327470a5e147f4c4ace722d4c75fe09d&getnum=10&httptype=1&geshi=1&fenge=1&fengefu=&operate=all";
+  "http://api.dmdaili.com/dmgetip.asp?apikey=29a0386e&pwd=327470a5e147f4c4ace722d4c75fe09d&getnum=5&httptype=1&geshi=1&fenge=1&fengefu=&operate=all";
 
 const PLACE_ORDER_SLOT = "place_order";
 
@@ -100,7 +100,7 @@ function resolveFetchUrlPath() {
   return path.join(DATA_DIR, "proxy-pool-fetch-url.txt");
 }
 
-/** 替换取号 URL 中的 getnum（多米等）；TF_PROXY_FETCH_NUM：1～100，不设则用 URL 自带值（默认链接已为 10 条） */
+/** 替换取号 URL 中的 getnum（多米等）；TF_PROXY_FETCH_NUM：1～100，不设则用 URL 自带值（默认链接已为 5 条） */
 function applyProxyFetchGetNum(url) {
   const raw = process.env.TF_PROXY_FETCH_NUM;
   if (raw == null || String(raw).trim() === "") return url;
